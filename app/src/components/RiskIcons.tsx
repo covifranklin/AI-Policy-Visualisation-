@@ -1,5 +1,4 @@
-import React from 'react';
-import '../index.css';
+import React, { useState, useEffect } from 'react';
 
 interface IconProps {
   color?: string;
@@ -7,321 +6,416 @@ interface IconProps {
   className?: string;
 }
 
-// Pixel art style risk icons with glow effects and hover animations
-// Using shape-rendering="crispEdges" for pixelated look
+// Pixel art icons with precise pixel placement and frame-by-frame sprite animations
+// Limited high-contrast palette: #1e293b (dark), #475569 (mid), #94a3b8 (light), #f1f5f9 (bright)
 
-// 1. Alignment & Control — cracked compass with twitching needle
-const AlignmentControlIcon: React.FC<IconProps> = ({ color = 'currentColor', size = 48, className = '' }) => (
-  <svg
-    viewBox="0 0 48 48"
-    width={size}
-    height={size}
-    fill="none"
-    stroke={color}
-    strokeWidth="2.5"
-    strokeLinecap="square"
-    strokeLinejoin="miter"
-    shapeRendering="crispEdges"
-    className={`${className} risk-icon`}
-    aria-label="Alignment & Control Risks"
-  >
-    {/* Compass circle - pixelated octagon */}
-    <path d="M24 4 L38 10 L44 24 L38 38 L24 44 L10 38 L4 24 L10 10 Z" />
-    {/* Cardinal markers */}
-    <rect x="23" y="5" width="2" height="4" fill={color} />
-    <rect x="23" y="39" width="2" height="4" fill={color} />
-    <rect x="5" y="23" width="4" height="2" fill={color} />
-    <rect x="39" y="23" width="4" height="2" fill={color} />
-    {/* Center pivot */}
-    <rect x="23" y="23" width="2" height="2" fill={color} />
-    {/* North needle - intact */}
-    <path d="M24 24 L22 14 L24 12 L26 14 Z" fill={color} />
-    {/* South needle - cracked and twitching */}
-    <g className="icon-twitch">
-      <path d="M24 24 L26 32 L28 34 L30 32 Z" fill={color} />
+// 1. Alignment & Control — Cracked compass with rotating broken needle
+const AlignmentControlIcon: React.FC<IconProps> = ({ color = '#94a3b8', size = 32, className = '' }) => {
+  const [frame, setFrame] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => setFrame(f => (f + 1) % 8), 100);
+    return () => clearInterval(interval);
+  }, []);
+
+  const needleAngle = frame * 45;
+
+  return (
+    <svg viewBox="0 0 32 32" width={size} height={size} className={className} shapeRendering="crispEdges">
+      {/* Compass ring - 8-bit circle */}
+      <rect x="12" y="4" width="8" height="1" fill={color} />
+      <rect x="12" y="27" width="8" height="1" fill={color} />
+      <rect x="4" y="12" width="1" height="8" fill={color} />
+      <rect x="27" y="12" width="1" height="8" fill={color} />
+      <rect x="8" y="2" width="2" height="2" fill={color} />
+      <rect x="22" y="2" width="2" height="2" fill={color} />
+      <rect x="8" y="28" width="2" height="2" fill={color} />
+      <rect x="22" y="28" width="2" height="2" fill={color} />
+      <rect x="2" y="8" width="2" height="2" fill={color} />
+      <rect x="2" y="22" width="2" height="2" fill={color} />
+      <rect x="28" y="8" width="2" height="2" fill={color} />
+      <rect x="28" y="22" width="2" height="2" fill={color} />
+
+      {/* Cardinal markers */}
+      <rect x="15" y="1" width="2" height="3" fill="#f1f5f9" />
+      <rect x="15" y="26" width="2" height="3" fill="#475569" />
+      <rect x="1" y="15" width="3" height="2" fill="#f1f5f9" />
+      <rect x="26" y="15" width="3" height="2" fill="#475569" />
+
+      {/* Center pivot */}
+      <rect x="15" y="15" width="2" height="2" fill="#f1f5f9" />
+
+      {/* Rotating needle - intact north */}
+      <g style={{ transformOrigin: '16px 16px', transform: `rotate(${needleAngle}deg)` }}>
+        {/* North needle - solid */}
+        <rect x="15" y="8" width="1" height="7" fill="#f1f5f9" />
+        <rect x="16" y="10" width="1" height="5" fill="#f1f5f9" />
+        {/* South needle - cracked/broken */}
+        <rect x="15" y="18" width="1" height="4" fill="#475569" />
+        <rect x="16" y="20" width="1" height="3" fill="#475569" />
+        {/* Crack offset */}
+        <rect x="17" y="19" width="1" height="2" fill="#475569" />
+      </g>
+
       {/* Crack lines */}
-      <path d="M25 26 L27 28 M26 29 L29 27" strokeWidth="1" />
-    </g>
-    {/* Fragment particles */}
-    <g className="icon-float">
-      <rect x="31" y="30" width="1" height="1" fill={color} opacity="0.6" />
-      <rect x="33" y="28" width="1" height="1" fill={color} opacity="0.4" />
-    </g>
-  </svg>
-);
+      <rect x="18" y="17" width="1" height="1" fill={color} />
+      <rect x="19" y="18" width="1" height="1" fill={color} />
+    </svg>
+  );
+};
 
-// 2. Operational & Infrastructure — circuit board with pulse
-const OperationalInfrastructureIcon: React.FC<IconProps> = ({ color = 'currentColor', size = 48, className = '' }) => (
-  <svg
-    viewBox="0 0 48 48"
-    width={size}
-    height={size}
-    fill="none"
-    stroke={color}
-    strokeWidth="2.5"
-    strokeLinecap="square"
-    strokeLinejoin="miter"
-    shapeRendering="crispEdges"
-    className={`${className} risk-icon`}
-    aria-label="Operational & Infrastructure Risks"
-  >
-    {/* PCB outline */}
-    <rect x="6" y="10" width="36" height="28" />
-    {/* Corner mounts */}
-    <rect x="5" y="9" width="2" height="2" fill={color} />
-    <rect x="41" y="9" width="2" height="2" fill={color} />
-    <rect x="5" y="37" width="2" height="2" fill={color} />
-    <rect x="41" y="37" width="2" height="2" fill={color} />
-    {/* Center chip */}
-    <rect x="18" y="18" width="12" height="12" />
-    {/* Chip pins */}
-    <rect x="18" y="14" width="2" height="4" fill={color} />
-    <rect x="28" y="14" width="2" height="4" fill={color} />
-    <rect x="18" y="30" width="2" height="4" fill={color} />
-    <rect x="28" y="30" width="2" height="4" fill={color} />
-    {/* Circuit traces - left */}
-    <path d="M6 20 L16 20 L16 18 M6 28 L16 28 L16 30" />
-    {/* Circuit traces - right */}
-    <path d="M32 20 L42 20 M32 28 L42 28" />
-    {/* Fracture line with pulse */}
-    <g className="icon-pulse">
-      <path d="M12 12 L20 20 L24 24 L32 32 L38 36" strokeWidth="3" />
-      {/* Gap in fracture */}
-      <rect x="22" y="22" width="4" height="4" fill="#0f172a" />
-    </g>
-  </svg>
-);
+// 2. Operational & Infrastructure — Circuit board with pulsing fracture
+const OperationalInfrastructureIcon: React.FC<IconProps> = ({ color = '#94a3b8', size = 32, className = '' }) => {
+  const [frame, setFrame] = useState(0);
 
-// 3. Information & Epistemic — glitching eye
-const InformationEpistemicIcon: React.FC<IconProps> = ({ color = 'currentColor', size = 48, className = '' }) => (
-  <svg
-    viewBox="0 0 48 48"
-    width={size}
-    height={size}
-    fill="none"
-    stroke={color}
-    strokeWidth="2.5"
-    strokeLinecap="square"
-    strokeLinejoin="miter"
-    shapeRendering="crispEdges"
-    className={`${className} risk-icon`}
-    aria-label="Information & Epistemic Risks"
-  >
-    {/* Eye outline - pixelated */}
-    <path d="M4 24 L8 16 L14 12 L24 10 L34 12 L40 16 L44 24 L40 32 L34 36 L24 38 L14 36 L8 32 Z" />
-    {/* Iris */}
-    <rect x="20" y="20" width="8" height="8" />
-    {/* Pupil with dilation animation */}
-    <g className="icon-pupil">
-      <rect x="23" y="23" width="2" height="2" fill={color} />
-    </g>
-    {/* Horizontal glitch lines */}
-    <g className="icon-glitch">
-      <rect x="8" y="18" width="6" height="1" fill={color} opacity="0.8" />
-      <rect x="16" y="18" width="4" height="1" fill={color} opacity="0.6" />
-      <rect x="34" y="18" width="6" height="1" fill={color} opacity="0.8" />
-      <rect x="8" y="29" width="5" height="1" fill={color} opacity="0.7" />
-      <rect x="35" y="29" width="5" height="1" fill={color} opacity="0.7" />
-    </g>
-    {/* Vertical glitch bar */}
-    <rect x="22" y="18" width="2" height="12" fill={color} opacity="0.3" className="icon-glitch-bar" />
-  </svg>
-);
+  useEffect(() => {
+    const interval = setInterval(() => setFrame(f => (f + 1) % 4), 150);
+    return () => clearInterval(interval);
+  }, []);
 
-// 4. Security & Conflict — shield with rotating reticle
-const SecurityConflictIcon: React.FC<IconProps> = ({ color = 'currentColor', size = 48, className = '' }) => (
-  <svg
-    viewBox="0 0 48 48"
-    width={size}
-    height={size}
-    fill="none"
-    stroke={color}
-    strokeWidth="2.5"
-    strokeLinecap="square"
-    strokeLinejoin="miter"
-    shapeRendering="crispEdges"
-    className={`${className} risk-icon`}
-    aria-label="Security & Conflict Risks"
-  >
-    {/* Shield outline */}
-    <path d="M24 4 L40 10 L40 26 L24 42 L8 26 L8 10 Z" />
-    {/* Shield boss */}
-    <rect x="22" y="20" width="4" height="4" fill={color} opacity="0.3" />
-    {/* Reticle ring */}
-    <g className="icon-rotate">
-      <circle cx="24" cy="24" r="10" strokeWidth="2" />
-    </g>
-    {/* Crosshair - static outer */}
-    <rect x="23" y="10" width="2" height="6" fill={color} />
-    <rect x="23" y="32" width="2" height="6" fill={color} />
-    <rect x="10" y="23" width="6" height="2" fill={color} />
-    <rect x="32" y="23" width="6" height="2" fill={color} />
-    {/* Center dot with pulse */}
-    <g className="icon-pulse">
-      <rect x="23" y="23" width="2" height="2" fill={color} />
-    </g>
-  </svg>
-);
+  const pulse = frame < 2;
 
-// 5. Governance & Institutional — cracked gavel with shake
-const GovernanceInstitutionalIcon: React.FC<IconProps> = ({ color = 'currentColor', size = 48, className = '' }) => (
-  <svg
-    viewBox="0 0 48 48"
-    width={size}
-    height={size}
-    fill="none"
-    stroke={color}
-    strokeWidth="2.5"
-    strokeLinecap="square"
-    strokeLinejoin="miter"
-    shapeRendering="crispEdges"
-    className={`${className} risk-icon`}
-    aria-label="Governance & Institutional Risks"
-  >
-    {/* Strike base */}
-    <rect x="8" y="40" width="20" height="3" fill={color} opacity="0.5" />
-    {/* Gavel handle */}
-    <g className="icon-shake">
-      <rect x="12" y="32" width="4" height="12" transform="rotate(45 14 38)" fill={color} />
-    </g>
-    {/* Gavel head - cracked */}
-    <g className="icon-shake">
-      <rect x="26" y="8" width="14" height="10" transform="rotate(45 33 13)" />
-      {/* Crack pattern */}
-      <path d="M30 10 L34 14 L32 18" strokeWidth="1.5" />
-      <path d="M34 14 L38 11" strokeWidth="1" />
-    </g>
-    {/* Impact particles */}
-    <g className="icon-float">
-      <rect x="20" y="38" width="1" height="1" fill={color} opacity="0.5" />
-      <rect x="24" y="40" width="1" height="1" fill={color} opacity="0.4" />
-      <rect x="18" y="42" width="1" height="1" fill={color} opacity="0.3" />
-    </g>
-  </svg>
-);
+  return (
+    <svg viewBox="0 0 32 32" width={size} height={size} className={className} shapeRendering="crispEdges">
+      {/* PCB outline */}
+      <rect x="4" y="8" width="24" height="1" fill={color} />
+      <rect x="4" y="23" width="24" height="1" fill={color} />
+      <rect x="4" y="8" width="1" height="16" fill={color} />
+      <rect x="27" y="8" width="1" height="16" fill={color} />
 
-// 6. Economic & Systemic — tipping scales
-const EconomicSystemicIcon: React.FC<IconProps> = ({ color = 'currentColor', size = 48, className = '' }) => (
-  <svg
-    viewBox="0 0 48 48"
-    width={size}
-    height={size}
-    fill="none"
-    stroke={color}
-    strokeWidth="2.5"
-    strokeLinecap="square"
-    strokeLinejoin="miter"
-    shapeRendering="crispEdges"
-    className={`${className} risk-icon`}
-    aria-label="Economic & Systemic Risks"
-  >
-    {/* Base */}
-    <rect x="18" y="42" width="12" height="2" fill={color} />
-    {/* Post */}
-    <rect x="23" y="10" width="2" height="32" fill={color} />
-    {/* Pivot */}
-    <rect x="22" y="12" width="4" height="4" fill={color} />
-    {/* Beam - tilting animation */}
-    <g className="icon-tip">
-      <rect x="8" y="20" width="32" height="2" fill={color} />
-    </g>
-    {/* Left pan - heavy, low */}
-    <g className="icon-tip">
-      <rect x="8" y="22" width="2" height="8" fill={color} />
-      <path d="M4 34 L14 34 L10 30 Z" fill={color} opacity="0.5" />
-      {/* Weight */}
-      <rect x="7" y="35" width="6" height="4" fill={color} opacity="0.6" />
-    </g>
-    {/* Right pan - light, high */}
-    <g className="icon-tip">
-      <rect x="38" y="18" width="2" height="4" fill={color} />
-      <path d="M34 22 L44 22 L40 26 Z" fill={color} opacity="0.3" />
-    </g>
-  </svg>
-);
+      {/* Corner mounts */}
+      <rect x="3" y="7" width="2" height="2" fill="#f1f5f9" />
+      <rect x="27" y="7" width="2" height="2" fill="#f1f5f9" />
+      <rect x="3" y="23" width="2" height="2" fill="#f1f5f9" />
+      <rect x="27" y="23" width="2" height="2" fill="#f1f5f9" />
 
-// 7. Human & Societal — fragmenting silhouette
-const HumanSocietalIcon: React.FC<IconProps> = ({ color = 'currentColor', size = 48, className = '' }) => (
-  <svg
-    viewBox="0 0 48 48"
-    width={size}
-    height={size}
-    fill="none"
-    stroke={color}
-    strokeWidth="2.5"
-    strokeLinecap="square"
-    strokeLinejoin="miter"
-    shapeRendering="crispEdges"
-    className={`${className} risk-icon`}
-    aria-label="Human & Societal Risks"
-  >
-    {/* Head */}
-    <rect x="21" y="8" width="6" height="6" />
-    {/* Body */}
-    <rect x="22" y="16" width="4" height="14" fill={color} />
-    {/* Left arm - intact */}
-    <rect x="16" y="18" width="8" height="2" fill={color} />
-    <rect x="14" y="20" width="2" height="6" fill={color} />
-    {/* Right arm - fragmenting */}
-    <g className="icon-fragment">
-      <rect x="26" y="18" width="6" height="2" fill={color} />
-      <rect x="32" y="19" width="3" height="2" fill={color} opacity="0.6" />
-    </g>
-    {/* Left leg - intact */}
-    <rect x="20" y="30" width="3" height="10" fill={color} />
-    <rect x="18" y="40" width="5" height="2" fill={color} />
-    {/* Right leg - fragmenting */}
-    <g className="icon-fragment">
-      <rect x="25" y="30" width="3" height="8" fill={color} />
-      <rect x="26" y="38" width="3" height="3" fill={color} opacity="0.5" />
-    </g>
-    {/* Floating fragments */}
-    <g className="icon-float">
-      <rect x="35" y="16" width="2" height="2" fill={color} opacity="0.4" />
-      <rect x="38" y="20" width="1" height="1" fill={color} opacity="0.3" />
-      <rect x="30" y="40" width="2" height="2" fill={color} opacity="0.4" />
-    </g>
-  </svg>
-);
+      {/* Center chip */}
+      <rect x="12" y="12" width="8" height="8" fill={color} />
+      <rect x="14" y="14" width="4" height="4" fill="#1e293b" />
 
-// 8. Long-term / Existential — draining hourglass
-const LongtermExistentialIcon: React.FC<IconProps> = ({ color = 'currentColor', size = 48, className = '' }) => (
-  <svg
-    viewBox="0 0 48 48"
-    width={size}
-    height={size}
-    fill="none"
-    stroke={color}
-    strokeWidth="2.5"
-    strokeLinecap="square"
-    strokeLinejoin="miter"
-    shapeRendering="crispEdges"
-    className={`${className} risk-icon`}
-    aria-label="Long-term / Existential Risks"
-  >
-    {/* Top cap */}
-    <rect x="14" y="6" width="20" height="2" fill={color} />
-    {/* Bottom cap */}
-    <rect x="14" y="40" width="20" height="2" fill={color} />
-    {/* Glass outline - top chamber */}
-    <path d="M16 8 L16 22 L24 24 L32 22 L32 8 Z" />
-    {/* Glass outline - bottom chamber */}
-    <path d="M16 40 L16 26 L24 24 L32 26 L32 40 Z" />
-    {/* Sand in top - depleting */}
-    <g className="icon-drain">
-      <path d="M18 10 L30 10 L28 18 L20 18 Z" fill={color} opacity="0.4" />
-    </g>
-    {/* Sand stream */}
-    <rect x="23" y="20" width="2" height="8" fill={color} className="icon-stream" />
-    {/* Sand pile in bottom - growing */}
-    <path d="M18 38 L30 38 L28 30 L20 30 Z" fill={color} opacity="0.5" />
-    {/* Falling grains */}
-    <g className="icon-float">
-      <rect x="21" y="32" width="1" height="1" fill={color} opacity="0.6" />
-      <rect x="25" y="34" width="1" height="1" fill={color} opacity="0.5" />
-    </g>
-  </svg>
-);
+      {/* Chip pins */}
+      <rect x="13" y="10" width="1" height="2" fill={color} />
+      <rect x="15" y="10" width="1" height="2" fill={color} />
+      <rect x="18" y="10" width="1" height="2" fill={color} />
+      <rect x="13" y="20" width="1" height="2" fill={color} />
+      <rect x="15" y="20" width="1" height="2" fill={color} />
+      <rect x="18" y="20" width="1" height="2" fill={color} />
+
+      {/* Circuit traces */}
+      <rect x="5" y="12" width="7" height="1" fill={color} />
+      <rect x="5" y="19" width="7" height="1" fill={color} />
+      <rect x="20" y="12" width="7" height="1" fill={color} />
+      <rect x="20" y="19" width="7" height="1" fill={color} />
+
+      {/* Fracture - animated */}
+      {pulse && <rect x="8" y="10" width="2" height="1" fill="#f1f5f9" />}
+      <rect x="10" y="11" width="2" height="1" fill={color} />
+      <rect x="12" y="12" width="1" height="1" fill={color} />
+      <rect x="19" y="19" width="1" height="1" fill={color} />
+      <rect x="20" y="20" width="2" height="1" fill={color} />
+      {pulse && <rect x="22" y="21" width="2" height="1" fill="#f1f5f9" />}
+    </svg>
+  );
+};
+
+// 3. Information & Epistemic — Glitching eye
+const InformationEpistemicIcon: React.FC<IconProps> = ({ color = '#94a3b8', size = 32, className = '' }) => {
+  const [frame, setFrame] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => setFrame(f => (f + 1) % 6), 80);
+    return () => clearInterval(interval);
+  }, []);
+
+  const glitchOffset = frame % 3;
+
+  return (
+    <svg viewBox="0 0 32 32" width={size} height={size} className={className} shapeRendering="crispEdges">
+      {/* Eye outline - almond shape */}
+      <rect x="8" y="10" width="2" height="1" fill={color} />
+      <rect x="10" y="9" width="2" height="1" fill={color} />
+      <rect x="12" y="8" width="8" height="1" fill={color} />
+      <rect x="20" y="9" width="2" height="1" fill={color} />
+      <rect x="22" y="10" width="2" height="1" fill={color} />
+
+      <rect x="6" y="11" width="2" height="1" fill={color} />
+      <rect x="24" y="11" width="2" height="1" fill={color} />
+
+      <rect x="4" y="12" width="2" height="8" fill={color} />
+      <rect x="26" y="12" width="2" height="8" fill={color} />
+
+      <rect x="6" y="20" width="2" height="1" fill={color} />
+      <rect x="24" y="20" width="2" height="1" fill={color} />
+
+      <rect x="8" y="21" width="2" height="1" fill={color} />
+      <rect x="10" y="22" width="2" height="1" fill={color} />
+      <rect x="12" y="23" width="8" height="1" fill={color} />
+      <rect x="20" y="22" width="2" height="1" fill={color} />
+      <rect x="22" y="21" width="2" height="1" fill={color} />
+
+      {/* Iris */}
+      <rect x="12" y="13" width="8" height="6" fill={color} />
+      <rect x="13" y="14" width="6" height="4" fill="#1e293b" />
+
+      {/* Pupil - dilating */}
+      <rect x={14 + glitchOffset} y="15" width="2" height="2" fill="#f1f5f9" />
+      <rect x={15 + glitchOffset} y="16" width="1" height="1" fill="#1e293b" />
+
+      {/* Glitch lines - horizontal */}
+      {frame % 2 === 0 && (
+        <>
+          <rect x="6" y="14" width="4" height="1" fill="#f1f5f9" opacity="0.7" />
+          <rect x="22" y="14" width="4" height="1" fill="#f1f5f9" opacity="0.7" />
+          <rect x="6" y="18" width="3" height="1" fill="#f1f5f9" opacity="0.5" />
+          <rect x="23" y="18" width="3" height="1" fill="#f1f5f9" opacity="0.5" />
+        </>
+      )}
+
+      {/* Glitch bar - vertical */}
+      {frame % 3 === 0 && (
+        <rect x="18" y="12" width="1" height="8" fill="#f1f5f9" opacity="0.4" />
+      )}
+    </svg>
+  );
+};
+
+// 4. Security & Conflict — Shield with rotating reticle
+const SecurityConflictIcon: React.FC<IconProps> = ({ color = '#94a3b8', size = 32, className = '' }) => {
+  const [frame, setFrame] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => setFrame(f => (f + 1) % 8), 120);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <svg viewBox="0 0 32 32" width={size} height={size} className={className} shapeRendering="crispEdges">
+      {/* Shield outline */}
+      <rect x="16" y="2" width="1" height="1" fill={color} />
+      <rect x="14" y="3" width="5" height="1" fill={color} />
+      <rect x="12" y="4" width="9" height="1" fill={color} />
+      <rect x="10" y="5" width="3" height="1" fill={color} />
+      <rect x="20" y="5" width="3" height="1" fill={color} />
+
+      <rect x="8" y="6" width="2" height="12" fill={color} />
+      <rect x="23" y="6" width="2" height="12" fill={color} />
+
+      <rect x="10" y="18" width="2" height="2" fill={color} />
+      <rect x="21" y="18" width="2" height="2" fill={color} />
+      <rect x="12" y="20" width="2" height="2" fill={color} />
+      <rect x="19" y="20" width="2" height="2" fill={color} />
+      <rect x="14" y="22" width="5" height="1" fill={color} />
+      <rect x="15" y="23" width="3" height="1" fill={color} />
+      <rect x="16" y="24" width="1" height="1" fill={color} />
+
+      {/* Shield boss */}
+      <rect x="14" y="14" width="5" height="5" fill={color} opacity="0.5" />
+      <rect x="15" y="15" width="3" height="3" fill="#1e293b" />
+
+      {/* Rotating reticle */}
+      <g style={{ transformOrigin: '16px 16px', transform: `rotate(${frame * 45}deg)` }}>
+        <rect x="15" y="8" width="1" height="3" fill="#f1f5f9" />
+        <rect x="15" y="21" width="1" height="3" fill="#f1f5f9" />
+        <rect x="8" y="15" width="3" height="1" fill="#f1f5f9" />
+        <rect x="21" y="15" width="3" height="1" fill="#f1f5f9" />
+      </g>
+
+      {/* Center dot */}
+      <rect x="15" y="15" width="2" height="2" fill="#f1f5f9" />
+    </svg>
+  );
+};
+
+// 5. Governance & Institutional — Cracked gavel
+const GovernanceInstitutionalIcon: React.FC<IconProps> = ({ color = '#94a3b8', size = 32, className = '' }) => {
+  const [frame, setFrame] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => setFrame(f => (f + 1) % 4), 100);
+    return () => clearInterval(interval);
+  }, []);
+
+  const shake = frame % 2;
+
+  return (
+    <svg viewBox="0 0 32 32" width={size} height={size} className={className} shapeRendering="crispEdges">
+      {/* Strike base */}
+      <rect x="6" y="28" width="14" height="2" fill={color} />
+      <rect x="8" y="26" width="10" height="2" fill={color} opacity="0.5" />
+
+      {/* Gavel handle - shaking */}
+      <g style={{ transform: `translate(${shake}px, 0)` }}>
+        <rect x="8" y="18" width="3" height="10" fill={color} transform="rotate(45 9.5 23)" />
+        <rect x="9" y="19" width="1" height="8" fill="#1e293b" transform="rotate(45 9.5 23)" />
+      </g>
+
+      {/* Gavel head - shaking with cracks */}
+      <g style={{ transform: `translate(${shake}px, 0)` }}>
+        <rect x="16" y="6" width="10" height="8" fill={color} transform="rotate(45 21 10)" />
+        <rect x="17" y="7" width="8" height="6" fill="#1e293b" transform="rotate(45 21 10)" />
+
+        {/* Crack pattern */}
+        <rect x="18" y="8" width="2" height="1" fill="#f1f5f9" transform="rotate(45 21 10)" />
+        <rect x="20" y="9" width="1" height="2" fill="#f1f5f9" transform="rotate(45 21 10)" />
+        <rect x="19" y="11" width="2" height="1" fill="#f1f5f9" transform="rotate(45 21 10)" />
+      </g>
+
+      {/* Impact particles */}
+      {frame === 0 && <rect x="12" y="25" width="1" height="1" fill="#f1f5f9" opacity="0.6" />}
+      {frame === 1 && <rect x="14" y="25" width="1" height="1" fill="#f1f5f9" opacity="0.5" />}
+      {frame === 2 && <rect x="11" y="26" width="1" height="1" fill="#f1f5f9" opacity="0.4" />}
+    </svg>
+  );
+};
+
+// 6. Economic & Systemic — Tipping scales
+const EconomicSystemicIcon: React.FC<IconProps> = ({ color = '#94a3b8', size = 32, className = '' }) => {
+  const [frame, setFrame] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => setFrame(f => (f + 1) % 8), 150);
+    return () => clearInterval(interval);
+  }, []);
+
+  const tip = Math.sin(frame * 0.785) * 3;
+
+  return (
+    <svg viewBox="0 0 32 32" width={size} height={size} className={className} shapeRendering="crispEdges">
+      {/* Base */}
+      <rect x="12" y="29" width="8" height="2" fill={color} />
+      <rect x="14" y="27" width="4" height="2" fill={color} />
+
+      {/* Post */}
+      <rect x="15" y="8" width="2" height="19" fill={color} />
+
+      {/* Pivot */}
+      <rect x="14" y="6" width="4" height="4" fill="#f1f5f9" />
+      <rect x="15" y="7" width="2" height="2" fill="#1e293b" />
+
+      {/* Beam - tipping */}
+      <g style={{ transformOrigin: '16px 8px', transform: `rotate(${tip}deg)` }}>
+        <rect x="4" y="7" width="24" height="2" fill={color} />
+
+        {/* Left pan - heavy, low */}
+        <rect x="5" y="9" width="1" height="6" fill={color} />
+        <rect x="3" y="15" width="6" height="1" fill={color} />
+        <rect x="4" y="14" width="4" height="1" fill={color} opacity="0.5" />
+        {/* Weight */}
+        <rect x="4" y="16" width="4" height="3" fill={color} opacity="0.7" />
+        <rect x="5" y="17" width="2" height="2" fill="#f1f5f9" />
+
+        {/* Right pan - light, high */}
+        <rect x="26" y="9" width="1" height="3" fill={color} />
+        <rect x="24" y="12" width="6" height="1" fill={color} />
+        <rect x="25" y="11" width="4" height="1" fill={color} opacity="0.3" />
+      </g>
+    </svg>
+  );
+};
+
+// 7. Human & Societal — Fragmenting silhouette
+const HumanSocietalIcon: React.FC<IconProps> = ({ color = '#94a3b8', size = 32, className = '' }) => {
+  const [frame, setFrame] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => setFrame(f => (f + 1) % 6), 120);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <svg viewBox="0 0 32 32" width={size} height={size} className={className} shapeRendering="crispEdges">
+      {/* Head */}
+      <rect x="13" y="4" width="6" height="6" fill={color} />
+      <rect x="14" y="5" width="4" height="4" fill="#1e293b" />
+
+      {/* Body */}
+      <rect x="13" y="10" width="6" height="8" fill={color} />
+      <rect x="14" y="11" width="4" height="6" fill="#1e293b" />
+
+      {/* Left arm - intact */}
+      <rect x="8" y="12" width="5" height="2" fill={color} />
+      <rect x="6" y="14" width="2" height="5" fill={color} />
+
+      {/* Right arm - fragmenting */}
+      <rect x="19" y="12" width="4" height="2" fill={color} />
+      {frame < 3 ? (
+        <rect x={23 + (frame % 2)} y={13 + Math.floor(frame / 2)} width="2" height="1" fill={color} opacity="0.6" />
+      ) : (
+        <rect x="24" y="14" width="1" height="1" fill={color} opacity="0.3" />
+      )}
+
+      {/* Left leg - intact */}
+      <rect x="12" y="18" width="3" height="9" fill={color} />
+      <rect x="11" y="27" width="5" height="2" fill={color} />
+
+      {/* Right leg - fragmenting */}
+      <rect x="17" y="18" width="3" height="6" fill={color} />
+      {frame >= 2 && (
+        <rect x={17 + (frame - 2)} y={24 + (frame - 2)} width="2" height="2" fill={color} opacity="0.5" />
+      )}
+
+      {/* Floating fragments */}
+      {frame === 0 && <rect x="25" y="10" width="1" height="1" fill={color} opacity="0.4" />}
+      {frame === 1 && <rect x="26" y="12" width="1" height="1" fill={color} opacity="0.3" />}
+      {frame === 2 && <rect x="21" y="27" width="1" height="1" fill={color} opacity="0.4" />}
+      {frame === 3 && <rect x="23" y="28" width="1" height="1" fill={color} opacity="0.3" />}
+    </svg>
+  );
+};
+
+// 8. Long-term / Existential — Draining hourglass
+const LongtermExistentialIcon: React.FC<IconProps> = ({ color = '#94a3b8', size = 32, className = '' }) => {
+  const [frame, setFrame] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => setFrame(f => (f + 1) % 12), 200);
+    return () => clearInterval(interval);
+  }, []);
+
+  const sandLevel = 10 - Math.floor(frame * 0.8);
+  const pileHeight = Math.floor(frame * 0.5);
+
+  return (
+    <svg viewBox="0 0 32 32" width={size} height={size} className={className} shapeRendering="crispEdges">
+      {/* Top cap */}
+      <rect x="10" y="2" width="12" height="2" fill={color} />
+
+      {/* Bottom cap */}
+      <rect x="10" y="28" width="12" height="2" fill={color} />
+
+      {/* Glass outline - top chamber */}
+      <rect x="10" y="4" width="2" height="10" fill={color} />
+      <rect x="20" y="4" width="2" height="10" fill={color} />
+      <rect x="12" y="13" width="8" height="1" fill={color} />
+
+      {/* Glass outline - bottom chamber */}
+      <rect x="10" y="18" width="2" height="10" fill={color} />
+      <rect x="20" y="18" width="2" height="10" fill={color} />
+      <rect x="12" y="17" width="8" height="1" fill={color} />
+
+      {/* Sand in top - depleting */}
+      {sandLevel > 0 && (
+        <rect x="12" y={13 - sandLevel} width="8" height={sandLevel} fill="#f1f5f9" opacity="0.5" />
+      )}
+
+      {/* Neck */}
+      <rect x="15" y="14" width="2" height="3" fill={color} />
+
+      {/* Sand stream - flowing */}
+      {frame % 2 === 0 && <rect x="15" y="17" width="1" height="4" fill="#f1f5f9" />}
+      {frame % 2 === 1 && <rect x="16" y="17" width="1" height="4" fill="#f1f5f9" />}
+
+      {/* Sand pile in bottom - growing */}
+      {pileHeight > 0 && (
+        <rect x={14 - Math.floor(pileHeight / 2)} y={27 - pileHeight} width={4 + pileHeight} height={pileHeight} fill="#f1f5f9" opacity="0.6" />
+      )}
+
+      {/* Falling grains */}
+      {frame % 3 === 0 && <rect x="14" y="22" width="1" height="1" fill="#f1f5f9" opacity="0.5" />}
+      {frame % 3 === 1 && <rect x="17" y="24" width="1" height="1" fill="#f1f5f9" opacity="0.4" />}
+    </svg>
+  );
+};
 
 const ICON_MAP: Record<string, React.FC<IconProps>> = {
   'alignment-control': AlignmentControlIcon,
