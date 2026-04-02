@@ -139,8 +139,14 @@ function computeSummaryStats(
     const scoresForSub = entries
       .filter(e => e.subcategory_id === sub.id)
       .map(e => e.score)
-    const maxScore = scoresForSub.length > 0 ? Math.max(...scoresForSub) : 0
-    if (maxScore < 1.5) {
+
+    // Adequate coverage: either 2+ policies with provisions (≥2) OR 1+ with enforcement (3)
+    const policiesWithProvisions = scoresForSub.filter(s => s >= 2).length
+    const policiesWithEnforcement = scoresForSub.filter(s => s === 3).length
+    const hasAdequateCoverage = policiesWithProvisions >= 2 || policiesWithEnforcement >= 1
+
+    if (!hasAdequateCoverage) {
+      const maxScore = scoresForSub.length > 0 ? Math.max(...scoresForSub) : 0
       const category = categories.find(c => c.subcategories.some(s => s.id === sub.id))!
       criticalGaps.push({
         subcategory: sub,
@@ -551,7 +557,7 @@ export const PolicyMatrix: FC = () => {
             </div>
             <div>
               <p className="text-slate-500 text-[10px] font-medium uppercase tracking-wider group-hover:text-amber-400 transition-colors">Critical Gaps</p>
-              <p className="text-slate-300 text-sm">subcategories &lt;1.5 max score</p>
+              <p className="text-slate-300 text-sm">subcategories lacking adequate coverage</p>
             </div>
           </button>
 
@@ -1186,7 +1192,7 @@ const CriticalGapsPanel: FC<CriticalGapsPanelProps> = ({ gaps, onClose }) => {
               </span>
             </div>
             <p className="text-slate-400 text-sm">
-              Subcategories where no policy scores above 1.5 (below 'provisions')
+              Subcategories without adequate coverage (need 2+ policies with provisions OR 1+ with enforcement)
             </p>
           </div>
           <button
