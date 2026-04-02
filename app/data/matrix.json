@@ -3259,6 +3259,1050 @@
         "Article 4: Adherence to socialist core values"
       ],
       "notes": "State-mandated value alignment rather than philosophical concern."
+    },
+    {
+      "policy_id": "oecd-ai-principles",
+      "subcategory_id": "goal-misalignment",
+      "score": 1,
+      "summary": "AI safety is mentioned in principles but without specific alignment provisions.",
+      "clauses": [],
+      "notes": "Principles-only document."
+    },
+    {
+      "policy_id": "oecd-ai-principles",
+      "subcategory_id": "deceptive-alignment",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Principles-only document."
+    },
+    {
+      "policy_id": "oecd-ai-principles",
+      "subcategory_id": "emergent-capabilities",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Principles-only document."
+    },
+    {
+      "policy_id": "oecd-ai-principles",
+      "subcategory_id": "loss-of-oversight",
+      "score": 1,
+      "summary": "Human-centered values mentioned but no operative provisions.",
+      "clauses": [],
+      "notes": "Principles-only document."
+    },
+    {
+      "policy_id": "oecd-ai-principles",
+      "subcategory_id": "supply-chain",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Principles-only document."
+    },
+    {
+      "policy_id": "oecd-ai-principles",
+      "subcategory_id": "model-theft",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Principles-only document."
+    },
+    {
+      "policy_id": "oecd-ai-principles",
+      "subcategory_id": "data-poisoning",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Principles-only document."
+    },
+    {
+      "policy_id": "oecd-ai-principles",
+      "subcategory_id": "dependency-monoculture",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Principles-only document."
+    },
+    {
+      "policy_id": "oecd-ai-principles",
+      "subcategory_id": "epistemic-collapse",
+      "score": 1,
+      "summary": "Fairness and transparency principles referenced.",
+      "clauses": [],
+      "notes": "Principles-only document."
+    },
+    {
+      "policy_id": "oecd-ai-principles",
+      "subcategory_id": "synthetic-data-loops",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Principles-only document."
+    },
+    {
+      "policy_id": "oecd-ai-principles",
+      "subcategory_id": "persuasion-manipulation",
+      "score": 1,
+      "summary": "Fairness principle could encompass manipulation concerns.",
+      "clauses": [],
+      "notes": "Principles-only document."
+    },
+    {
+      "policy_id": "oecd-ai-principles",
+      "subcategory_id": "cbrn-misuse",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Principles-only document."
+    },
+    {
+      "policy_id": "oecd-ai-principles",
+      "subcategory_id": "cyber-offense",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Principles-only document."
+    },
+    {
+      "policy_id": "oecd-ai-principles",
+      "subcategory_id": "military-escalation",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Principles-only document."
+    },
+    {
+      "policy_id": "oecd-ai-principles",
+      "subcategory_id": "strategic-instability",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Principles-only document."
+    },
+    {
+      "policy_id": "oecd-ai-principles",
+      "subcategory_id": "regulatory-capture",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Principles-only document."
+    },
+    {
+      "policy_id": "oecd-ai-principles",
+      "subcategory_id": "capability-overhang",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Principles-only document."
+    },
+    {
+      "policy_id": "oecd-ai-principles",
+      "subcategory_id": "enforcement-gaps",
+      "score": 0,
+      "summary": "Principles-only document with no enforcement.",
+      "clauses": [],
+      "notes": "Principles-only document."
+    },
+    {
+      "policy_id": "oecd-ai-principles",
+      "subcategory_id": "jurisdictional-arbitrage",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Principles-only document."
+    },
+    {
+      "policy_id": "oecd-ai-principles",
+      "subcategory_id": "economic-concentration",
+      "score": 1,
+      "summary": "Inclusive growth mentioned as a principle.",
+      "clauses": [],
+      "notes": "Principles-only document."
+    },
+    {
+      "policy_id": "oecd-ai-principles",
+      "subcategory_id": "labor-polarization",
+      "score": 1,
+      "summary": "Future of work referenced in principles.",
+      "clauses": [],
+      "notes": "Principles-only document."
+    },
+    {
+      "policy_id": "oecd-ai-principles",
+      "subcategory_id": "productivity-paradox",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Principles-only document."
+    },
+    {
+      "policy_id": "oecd-ai-principles",
+      "subcategory_id": "deskilling",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Principles-only document."
+    },
+    {
+      "policy_id": "oecd-ai-principles",
+      "subcategory_id": "loss-of-agency",
+      "score": 1,
+      "summary": "Human agency referenced in principles.",
+      "clauses": [],
+      "notes": "Principles-only document."
+    },
+    {
+      "policy_id": "oecd-ai-principles",
+      "subcategory_id": "social-isolation",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Principles-only document."
+    },
+    {
+      "policy_id": "oecd-ai-principles",
+      "subcategory_id": "cultural-homogenization",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Principles-only document."
+    },
+    {
+      "policy_id": "oecd-ai-principles",
+      "subcategory_id": "misaligned-superintelligence",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Principles-only document."
+    },
+    {
+      "policy_id": "oecd-ai-principles",
+      "subcategory_id": "irreversible-loss-of-control",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Principles-only document."
+    },
+    {
+      "policy_id": "oecd-ai-principles",
+      "subcategory_id": "value-lock-in",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Principles-only document."
+    },
+    {
+      "policy_id": "unesco-ai-ethics",
+      "subcategory_id": "goal-misalignment",
+      "score": 1,
+      "summary": "Trustworthy AI mentioned but no technical alignment provisions.",
+      "clauses": [],
+      "notes": "Ethics framework - soft law."
+    },
+    {
+      "policy_id": "unesco-ai-ethics",
+      "subcategory_id": "deceptive-alignment",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Ethics framework - soft law."
+    },
+    {
+      "policy_id": "unesco-ai-ethics",
+      "subcategory_id": "emergent-capabilities",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Ethics framework - soft law."
+    },
+    {
+      "policy_id": "unesco-ai-ethics",
+      "subcategory_id": "loss-of-oversight",
+      "score": 2,
+      "summary": "Human oversight and human control are operational principles with some provisions.",
+      "clauses": [],
+      "notes": "Ethics framework - soft law."
+    },
+    {
+      "policy_id": "unesco-ai-ethics",
+      "subcategory_id": "supply-chain",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Ethics framework - soft law."
+    },
+    {
+      "policy_id": "unesco-ai-ethics",
+      "subcategory_id": "model-theft",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Ethics framework - soft law."
+    },
+    {
+      "policy_id": "unesco-ai-ethics",
+      "subcategory_id": "data-poisoning",
+      "score": 1,
+      "summary": "Data governance mentioned in ethics framework.",
+      "clauses": [],
+      "notes": "Ethics framework - soft law."
+    },
+    {
+      "policy_id": "unesco-ai-ethics",
+      "subcategory_id": "dependency-monoculture",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Ethics framework - soft law."
+    },
+    {
+      "policy_id": "unesco-ai-ethics",
+      "subcategory_id": "epistemic-collapse",
+      "score": 1,
+      "summary": "Transparency and explainability principles referenced.",
+      "clauses": [],
+      "notes": "Ethics framework - soft law."
+    },
+    {
+      "policy_id": "unesco-ai-ethics",
+      "subcategory_id": "synthetic-data-loops",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Ethics framework - soft law."
+    },
+    {
+      "policy_id": "unesco-ai-ethics",
+      "subcategory_id": "persuasion-manipulation",
+      "score": 1,
+      "summary": "Human rights and dignity principles could encompass manipulation.",
+      "clauses": [],
+      "notes": "Ethics framework - soft law."
+    },
+    {
+      "policy_id": "unesco-ai-ethics",
+      "subcategory_id": "cbrn-misuse",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Ethics framework - soft law."
+    },
+    {
+      "policy_id": "unesco-ai-ethics",
+      "subcategory_id": "cyber-offense",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Ethics framework - soft law."
+    },
+    {
+      "policy_id": "unesco-ai-ethics",
+      "subcategory_id": "military-escalation",
+      "score": 1,
+      "summary": "Peace and security mentioned but without operative provisions.",
+      "clauses": [],
+      "notes": "Ethics framework - soft law."
+    },
+    {
+      "policy_id": "unesco-ai-ethics",
+      "subcategory_id": "strategic-instability",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Ethics framework - soft law."
+    },
+    {
+      "policy_id": "unesco-ai-ethics",
+      "subcategory_id": "regulatory-capture",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Ethics framework - soft law."
+    },
+    {
+      "policy_id": "unesco-ai-ethics",
+      "subcategory_id": "capability-overhang",
+      "score": 1,
+      "summary": "Precautionary approach mentioned.",
+      "clauses": [],
+      "notes": "Ethics framework - soft law."
+    },
+    {
+      "policy_id": "unesco-ai-ethics",
+      "subcategory_id": "enforcement-gaps",
+      "score": 1,
+      "summary": "Implementation mechanisms are weak - relies on member state reporting.",
+      "clauses": [],
+      "notes": "Ethics framework - soft law."
+    },
+    {
+      "policy_id": "unesco-ai-ethics",
+      "subcategory_id": "jurisdictional-arbitrage",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Ethics framework - soft law."
+    },
+    {
+      "policy_id": "unesco-ai-ethics",
+      "subcategory_id": "economic-concentration",
+      "score": 1,
+      "summary": "Equity and fair distribution mentioned.",
+      "clauses": [],
+      "notes": "Ethics framework - soft law."
+    },
+    {
+      "policy_id": "unesco-ai-ethics",
+      "subcategory_id": "labor-polarization",
+      "score": 1,
+      "summary": "Decent work referenced.",
+      "clauses": [],
+      "notes": "Ethics framework - soft law."
+    },
+    {
+      "policy_id": "unesco-ai-ethics",
+      "subcategory_id": "productivity-paradox",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Ethics framework - soft law."
+    },
+    {
+      "policy_id": "unesco-ai-ethics",
+      "subcategory_id": "deskilling",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Ethics framework - soft law."
+    },
+    {
+      "policy_id": "unesco-ai-ethics",
+      "subcategory_id": "loss-of-agency",
+      "score": 2,
+      "summary": "Human autonomy and agency are core ethical principles with some guidance.",
+      "clauses": [],
+      "notes": "Ethics framework - soft law."
+    },
+    {
+      "policy_id": "unesco-ai-ethics",
+      "subcategory_id": "social-isolation",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Ethics framework - soft law."
+    },
+    {
+      "policy_id": "unesco-ai-ethics",
+      "subcategory_id": "cultural-homogenization",
+      "score": 1,
+      "summary": "Cultural diversity mentioned in values.",
+      "clauses": [],
+      "notes": "Ethics framework - soft law."
+    },
+    {
+      "policy_id": "unesco-ai-ethics",
+      "subcategory_id": "misaligned-superintelligence",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Ethics framework - soft law."
+    },
+    {
+      "policy_id": "unesco-ai-ethics",
+      "subcategory_id": "irreversible-loss-of-control",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Ethics framework - soft law."
+    },
+    {
+      "policy_id": "unesco-ai-ethics",
+      "subcategory_id": "value-lock-in",
+      "score": 1,
+      "summary": "UNESCO values embedded but as ethical framework not lock-in concern.",
+      "clauses": [],
+      "notes": "Ethics framework - soft law."
+    },
+    {
+      "policy_id": "iso-42001",
+      "subcategory_id": "goal-misalignment",
+      "score": 1,
+      "summary": "AI system requirements mention intended purpose but not alignment specifics.",
+      "clauses": [
+        "ISO/IEC 42001:2023 clauses"
+      ],
+      "notes": "Management system standard - certification available."
+    },
+    {
+      "policy_id": "iso-42001",
+      "subcategory_id": "deceptive-alignment",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 42001:2023 clauses"
+      ],
+      "notes": "Management system standard - certification available."
+    },
+    {
+      "policy_id": "iso-42001",
+      "subcategory_id": "emergent-capabilities",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 42001:2023 clauses"
+      ],
+      "notes": "Management system standard - certification available."
+    },
+    {
+      "policy_id": "iso-42001",
+      "subcategory_id": "loss-of-oversight",
+      "score": 2,
+      "summary": "Management system requires human oversight mechanisms.",
+      "clauses": [
+        "ISO/IEC 42001:2023 clauses"
+      ],
+      "notes": "Management system standard - certification available."
+    },
+    {
+      "policy_id": "iso-42001",
+      "subcategory_id": "supply-chain",
+      "score": 1,
+      "summary": "Supplier relationships mentioned in management system context.",
+      "clauses": [
+        "ISO/IEC 42001:2023 clauses"
+      ],
+      "notes": "Management system standard - certification available."
+    },
+    {
+      "policy_id": "iso-42001",
+      "subcategory_id": "model-theft",
+      "score": 1,
+      "summary": "Information security controls referenced.",
+      "clauses": [
+        "ISO/IEC 42001:2023 clauses"
+      ],
+      "notes": "Management system standard - certification available."
+    },
+    {
+      "policy_id": "iso-42001",
+      "subcategory_id": "data-poisoning",
+      "score": 1,
+      "summary": "Data quality and integrity mentioned.",
+      "clauses": [
+        "ISO/IEC 42001:2023 clauses"
+      ],
+      "notes": "Management system standard - certification available."
+    },
+    {
+      "policy_id": "iso-42001",
+      "subcategory_id": "dependency-monoculture",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 42001:2023 clauses"
+      ],
+      "notes": "Management system standard - certification available."
+    },
+    {
+      "policy_id": "iso-42001",
+      "subcategory_id": "epistemic-collapse",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 42001:2023 clauses"
+      ],
+      "notes": "Management system standard - certification available."
+    },
+    {
+      "policy_id": "iso-42001",
+      "subcategory_id": "synthetic-data-loops",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 42001:2023 clauses"
+      ],
+      "notes": "Management system standard - certification available."
+    },
+    {
+      "policy_id": "iso-42001",
+      "subcategory_id": "persuasion-manipulation",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 42001:2023 clauses"
+      ],
+      "notes": "Management system standard - certification available."
+    },
+    {
+      "policy_id": "iso-42001",
+      "subcategory_id": "cbrn-misuse",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 42001:2023 clauses"
+      ],
+      "notes": "Management system standard - certification available."
+    },
+    {
+      "policy_id": "iso-42001",
+      "subcategory_id": "cyber-offense",
+      "score": 1,
+      "summary": "Security controls in management system.",
+      "clauses": [
+        "ISO/IEC 42001:2023 clauses"
+      ],
+      "notes": "Management system standard - certification available."
+    },
+    {
+      "policy_id": "iso-42001",
+      "subcategory_id": "military-escalation",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 42001:2023 clauses"
+      ],
+      "notes": "Management system standard - certification available."
+    },
+    {
+      "policy_id": "iso-42001",
+      "subcategory_id": "strategic-instability",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 42001:2023 clauses"
+      ],
+      "notes": "Management system standard - certification available."
+    },
+    {
+      "policy_id": "iso-42001",
+      "subcategory_id": "regulatory-capture",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 42001:2023 clauses"
+      ],
+      "notes": "Management system standard - certification available."
+    },
+    {
+      "policy_id": "iso-42001",
+      "subcategory_id": "capability-overhang",
+      "score": 1,
+      "summary": "Risk assessment requirements could catch overhang.",
+      "clauses": [
+        "ISO/IEC 42001:2023 clauses"
+      ],
+      "notes": "Management system standard - certification available."
+    },
+    {
+      "policy_id": "iso-42001",
+      "subcategory_id": "enforcement-gaps",
+      "score": 2,
+      "summary": "Certification and audit mechanisms exist for compliance.",
+      "clauses": [
+        "ISO/IEC 42001:2023 clauses"
+      ],
+      "notes": "Management system standard - certification available."
+    },
+    {
+      "policy_id": "iso-42001",
+      "subcategory_id": "jurisdictional-arbitrage",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 42001:2023 clauses"
+      ],
+      "notes": "Management system standard - certification available."
+    },
+    {
+      "policy_id": "iso-42001",
+      "subcategory_id": "economic-concentration",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 42001:2023 clauses"
+      ],
+      "notes": "Management system standard - certification available."
+    },
+    {
+      "policy_id": "iso-42001",
+      "subcategory_id": "labor-polarization",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 42001:2023 clauses"
+      ],
+      "notes": "Management system standard - certification available."
+    },
+    {
+      "policy_id": "iso-42001",
+      "subcategory_id": "productivity-paradox",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 42001:2023 clauses"
+      ],
+      "notes": "Management system standard - certification available."
+    },
+    {
+      "policy_id": "iso-42001",
+      "subcategory_id": "deskilling",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 42001:2023 clauses"
+      ],
+      "notes": "Management system standard - certification available."
+    },
+    {
+      "policy_id": "iso-42001",
+      "subcategory_id": "loss-of-agency",
+      "score": 1,
+      "summary": "Human-machine interaction mentioned.",
+      "clauses": [
+        "ISO/IEC 42001:2023 clauses"
+      ],
+      "notes": "Management system standard - certification available."
+    },
+    {
+      "policy_id": "iso-42001",
+      "subcategory_id": "social-isolation",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 42001:2023 clauses"
+      ],
+      "notes": "Management system standard - certification available."
+    },
+    {
+      "policy_id": "iso-42001",
+      "subcategory_id": "cultural-homogenization",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 42001:2023 clauses"
+      ],
+      "notes": "Management system standard - certification available."
+    },
+    {
+      "policy_id": "iso-42001",
+      "subcategory_id": "misaligned-superintelligence",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 42001:2023 clauses"
+      ],
+      "notes": "Management system standard - certification available."
+    },
+    {
+      "policy_id": "iso-42001",
+      "subcategory_id": "irreversible-loss-of-control",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 42001:2023 clauses"
+      ],
+      "notes": "Management system standard - certification available."
+    },
+    {
+      "policy_id": "iso-42001",
+      "subcategory_id": "value-lock-in",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 42001:2023 clauses"
+      ],
+      "notes": "Management system standard - certification available."
+    },
+    {
+      "policy_id": "iso-23894",
+      "subcategory_id": "goal-misalignment",
+      "score": 1,
+      "summary": "Risk management guidance could encompass alignment risks.",
+      "clauses": [
+        "ISO/IEC 23894:2023 clauses"
+      ],
+      "notes": "Risk management guidance - voluntary adoption."
+    },
+    {
+      "policy_id": "iso-23894",
+      "subcategory_id": "deceptive-alignment",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 23894:2023 clauses"
+      ],
+      "notes": "Risk management guidance - voluntary adoption."
+    },
+    {
+      "policy_id": "iso-23894",
+      "subcategory_id": "emergent-capabilities",
+      "score": 1,
+      "summary": "Risk identification processes could catch emergent risks.",
+      "clauses": [
+        "ISO/IEC 23894:2023 clauses"
+      ],
+      "notes": "Risk management guidance - voluntary adoption."
+    },
+    {
+      "policy_id": "iso-23894",
+      "subcategory_id": "loss-of-oversight",
+      "score": 2,
+      "summary": "Human oversight is a key risk treatment option.",
+      "clauses": [
+        "ISO/IEC 23894:2023 clauses"
+      ],
+      "notes": "Risk management guidance - voluntary adoption."
+    },
+    {
+      "policy_id": "iso-23894",
+      "subcategory_id": "supply-chain",
+      "score": 1,
+      "summary": "Supply chain risk mentioned in context.",
+      "clauses": [
+        "ISO/IEC 23894:2023 clauses"
+      ],
+      "notes": "Risk management guidance - voluntary adoption."
+    },
+    {
+      "policy_id": "iso-23894",
+      "subcategory_id": "model-theft",
+      "score": 1,
+      "summary": "Asset protection in risk framework.",
+      "clauses": [
+        "ISO/IEC 23894:2023 clauses"
+      ],
+      "notes": "Risk management guidance - voluntary adoption."
+    },
+    {
+      "policy_id": "iso-23894",
+      "subcategory_id": "data-poisoning",
+      "score": 1,
+      "summary": "Data risk management covered.",
+      "clauses": [
+        "ISO/IEC 23894:2023 clauses"
+      ],
+      "notes": "Risk management guidance - voluntary adoption."
+    },
+    {
+      "policy_id": "iso-23894",
+      "subcategory_id": "dependency-monoculture",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 23894:2023 clauses"
+      ],
+      "notes": "Risk management guidance - voluntary adoption."
+    },
+    {
+      "policy_id": "iso-23894",
+      "subcategory_id": "epistemic-collapse",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 23894:2023 clauses"
+      ],
+      "notes": "Risk management guidance - voluntary adoption."
+    },
+    {
+      "policy_id": "iso-23894",
+      "subcategory_id": "synthetic-data-loops",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 23894:2023 clauses"
+      ],
+      "notes": "Risk management guidance - voluntary adoption."
+    },
+    {
+      "policy_id": "iso-23894",
+      "subcategory_id": "persuasion-manipulation",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 23894:2023 clauses"
+      ],
+      "notes": "Risk management guidance - voluntary adoption."
+    },
+    {
+      "policy_id": "iso-23894",
+      "subcategory_id": "cbrn-misuse",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 23894:2023 clauses"
+      ],
+      "notes": "Risk management guidance - voluntary adoption."
+    },
+    {
+      "policy_id": "iso-23894",
+      "subcategory_id": "cyber-offense",
+      "score": 1,
+      "summary": "Cybersecurity risk in scope.",
+      "clauses": [
+        "ISO/IEC 23894:2023 clauses"
+      ],
+      "notes": "Risk management guidance - voluntary adoption."
+    },
+    {
+      "policy_id": "iso-23894",
+      "subcategory_id": "military-escalation",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 23894:2023 clauses"
+      ],
+      "notes": "Risk management guidance - voluntary adoption."
+    },
+    {
+      "policy_id": "iso-23894",
+      "subcategory_id": "strategic-instability",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 23894:2023 clauses"
+      ],
+      "notes": "Risk management guidance - voluntary adoption."
+    },
+    {
+      "policy_id": "iso-23894",
+      "subcategory_id": "regulatory-capture",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 23894:2023 clauses"
+      ],
+      "notes": "Risk management guidance - voluntary adoption."
+    },
+    {
+      "policy_id": "iso-23894",
+      "subcategory_id": "capability-overhang",
+      "score": 1,
+      "summary": "Risk assessment methodology applicable.",
+      "clauses": [
+        "ISO/IEC 23894:2023 clauses"
+      ],
+      "notes": "Risk management guidance - voluntary adoption."
+    },
+    {
+      "policy_id": "iso-23894",
+      "subcategory_id": "enforcement-gaps",
+      "score": 0,
+      "summary": "Guidance standard - no enforcement.",
+      "clauses": [
+        "ISO/IEC 23894:2023 clauses"
+      ],
+      "notes": "Risk management guidance - voluntary adoption."
+    },
+    {
+      "policy_id": "iso-23894",
+      "subcategory_id": "jurisdictional-arbitrage",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 23894:2023 clauses"
+      ],
+      "notes": "Risk management guidance - voluntary adoption."
+    },
+    {
+      "policy_id": "iso-23894",
+      "subcategory_id": "economic-concentration",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 23894:2023 clauses"
+      ],
+      "notes": "Risk management guidance - voluntary adoption."
+    },
+    {
+      "policy_id": "iso-23894",
+      "subcategory_id": "labor-polarization",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 23894:2023 clauses"
+      ],
+      "notes": "Risk management guidance - voluntary adoption."
+    },
+    {
+      "policy_id": "iso-23894",
+      "subcategory_id": "productivity-paradox",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 23894:2023 clauses"
+      ],
+      "notes": "Risk management guidance - voluntary adoption."
+    },
+    {
+      "policy_id": "iso-23894",
+      "subcategory_id": "deskilling",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 23894:2023 clauses"
+      ],
+      "notes": "Risk management guidance - voluntary adoption."
+    },
+    {
+      "policy_id": "iso-23894",
+      "subcategory_id": "loss-of-agency",
+      "score": 1,
+      "summary": "Human-in-the-loop mentioned as risk treatment.",
+      "clauses": [
+        "ISO/IEC 23894:2023 clauses"
+      ],
+      "notes": "Risk management guidance - voluntary adoption."
+    },
+    {
+      "policy_id": "iso-23894",
+      "subcategory_id": "social-isolation",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 23894:2023 clauses"
+      ],
+      "notes": "Risk management guidance - voluntary adoption."
+    },
+    {
+      "policy_id": "iso-23894",
+      "subcategory_id": "cultural-homogenization",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 23894:2023 clauses"
+      ],
+      "notes": "Risk management guidance - voluntary adoption."
+    },
+    {
+      "policy_id": "iso-23894",
+      "subcategory_id": "misaligned-superintelligence",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 23894:2023 clauses"
+      ],
+      "notes": "Risk management guidance - voluntary adoption."
+    },
+    {
+      "policy_id": "iso-23894",
+      "subcategory_id": "irreversible-loss-of-control",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 23894:2023 clauses"
+      ],
+      "notes": "Risk management guidance - voluntary adoption."
+    },
+    {
+      "policy_id": "iso-23894",
+      "subcategory_id": "value-lock-in",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [
+        "ISO/IEC 23894:2023 clauses"
+      ],
+      "notes": "Risk management guidance - voluntary adoption."
     }
   ],
   "metadata": {
