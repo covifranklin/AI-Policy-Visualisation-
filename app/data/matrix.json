@@ -4303,6 +4303,944 @@
         "ISO/IEC 23894:2023 clauses"
       ],
       "notes": "Risk management guidance - voluntary adoption."
+    },
+    {
+      "policy_id": "eu-dsa",
+      "subcategory_id": "goal-misalignment",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Content/platform regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-dsa",
+      "subcategory_id": "deceptive-alignment",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Content/platform regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-dsa",
+      "subcategory_id": "emergent-capabilities",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Content/platform regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-dsa",
+      "subcategory_id": "loss-of-oversight",
+      "score": 1,
+      "summary": "Human content moderation referenced but not central to the framework.",
+      "clauses": [
+        "Article 16: Notice mechanism"
+      ],
+      "notes": "Content/platform regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-dsa",
+      "subcategory_id": "supply-chain",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Content/platform regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-dsa",
+      "subcategory_id": "model-theft",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Content/platform regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-dsa",
+      "subcategory_id": "data-poisoning",
+      "score": 1,
+      "summary": "Data quality implied through transparency obligations.",
+      "clauses": [
+        "Article 15: Transparency reports"
+      ],
+      "notes": "Content/platform regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-dsa",
+      "subcategory_id": "dependency-monoculture",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Content/platform regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-dsa",
+      "subcategory_id": "epistemic-collapse",
+      "score": 3,
+      "summary": "DSA establishes comprehensive disinformation mitigation through content moderation, notice-and-action, and risk assessments for VLOPs.",
+      "clauses": [
+        "Article 34: Risk assessments",
+        "Article 35: Crisis response",
+        "Article 26: Notice-and-action"
+      ],
+      "notes": "Content/platform regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-dsa",
+      "subcategory_id": "synthetic-data-loops",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Content/platform regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-dsa",
+      "subcategory_id": "persuasion-manipulation",
+      "score": 2,
+      "summary": "Dark patterns prohibited; transparency requirements for recommender systems.",
+      "clauses": [
+        "Article 25: Dark patterns prohibition",
+        "Article 27: Recommender system transparency"
+      ],
+      "notes": "Content/platform regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-dsa",
+      "subcategory_id": "cbrn-misuse",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Content/platform regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-dsa",
+      "subcategory_id": "cyber-offense",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Content/platform regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-dsa",
+      "subcategory_id": "military-escalation",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Content/platform regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-dsa",
+      "subcategory_id": "strategic-instability",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Content/platform regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-dsa",
+      "subcategory_id": "regulatory-capture",
+      "score": 1,
+      "summary": "Independent DSC structure but capture risk not explicitly addressed.",
+      "clauses": [
+        "Article 49: DSC independence"
+      ],
+      "notes": "Content/platform regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-dsa",
+      "subcategory_id": "capability-overhang",
+      "score": 0,
+      "summary": "Not addressed - DSA focuses on content not capabilities.",
+      "notes": "Content/platform regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-dsa",
+      "subcategory_id": "enforcement-gaps",
+      "score": 3,
+      "summary": "Strong enforcement: DSC coordinates national authorities, fines up to 6% global turnover.",
+      "clauses": [
+        "Article 49: Digital Services Coordinator",
+        "Article 52: Penalties"
+      ],
+      "notes": "Content/platform regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-dsa",
+      "subcategory_id": "jurisdictional-arbitrage",
+      "score": 2,
+      "summary": "Country of origin principle with DSC oversight reduces arbitrage within EU.",
+      "clauses": [
+        "Article 3: Scope",
+        "Article 49: DSC powers"
+      ],
+      "notes": "Content/platform regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-dsa",
+      "subcategory_id": "economic-concentration",
+      "score": 1,
+      "summary": "VLOP designation addresses market power but not concentration itself.",
+      "clauses": [
+        "Article 33: VLOP threshold"
+      ],
+      "notes": "Content/platform regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-dsa",
+      "subcategory_id": "labor-polarization",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Content/platform regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-dsa",
+      "subcategory_id": "productivity-paradox",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Content/platform regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-dsa",
+      "subcategory_id": "deskilling",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Content/platform regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-dsa",
+      "subcategory_id": "loss-of-agency",
+      "score": 1,
+      "summary": "User choice in recommender systems mentioned.",
+      "clauses": [
+        "Article 27: Recommender options"
+      ],
+      "notes": "Content/platform regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-dsa",
+      "subcategory_id": "social-isolation",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Content/platform regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-dsa",
+      "subcategory_id": "cultural-homogenization",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Content/platform regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-dsa",
+      "subcategory_id": "misaligned-superintelligence",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Content/platform regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-dsa",
+      "subcategory_id": "irreversible-loss-of-control",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Content/platform regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-dsa",
+      "subcategory_id": "value-lock-in",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Content/platform regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-data-act",
+      "subcategory_id": "goal-misalignment",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Data governance, not AI-specific."
+    },
+    {
+      "policy_id": "eu-data-act",
+      "subcategory_id": "deceptive-alignment",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Data governance, not AI-specific."
+    },
+    {
+      "policy_id": "eu-data-act",
+      "subcategory_id": "emergent-capabilities",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Data governance, not AI-specific."
+    },
+    {
+      "policy_id": "eu-data-act",
+      "subcategory_id": "loss-of-oversight",
+      "score": 1,
+      "summary": "Human control over data use referenced.",
+      "clauses": [
+        "Article 3: User rights"
+      ],
+      "notes": "Data governance, not AI-specific."
+    },
+    {
+      "policy_id": "eu-data-act",
+      "subcategory_id": "supply-chain",
+      "score": 1,
+      "summary": "Supply chain data sharing facilitated.",
+      "clauses": [
+        "Article 4: B2B sharing"
+      ],
+      "notes": "Data governance, not AI-specific."
+    },
+    {
+      "policy_id": "eu-data-act",
+      "subcategory_id": "model-theft",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Data governance, not AI-specific."
+    },
+    {
+      "policy_id": "eu-data-act",
+      "subcategory_id": "data-poisoning",
+      "score": 1,
+      "summary": "Data quality and integrity mentioned in context of IoT.",
+      "clauses": [
+        "Article 3: Data generation"
+      ],
+      "notes": "Data governance, not AI-specific."
+    },
+    {
+      "policy_id": "eu-data-act",
+      "subcategory_id": "dependency-monoculture",
+      "score": 1,
+      "summary": "Switching requirements reduce cloud dependency.",
+      "clauses": [
+        "Article 10: Cloud switching"
+      ],
+      "notes": "Data governance, not AI-specific."
+    },
+    {
+      "policy_id": "eu-data-act",
+      "subcategory_id": "epistemic-collapse",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Data governance, not AI-specific."
+    },
+    {
+      "policy_id": "eu-data-act",
+      "subcategory_id": "synthetic-data-loops",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Data governance, not AI-specific."
+    },
+    {
+      "policy_id": "eu-data-act",
+      "subcategory_id": "persuasion-manipulation",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Data governance, not AI-specific."
+    },
+    {
+      "policy_id": "eu-data-act",
+      "subcategory_id": "cbrn-misuse",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Data governance, not AI-specific."
+    },
+    {
+      "policy_id": "eu-data-act",
+      "subcategory_id": "cyber-offense",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Data governance, not AI-specific."
+    },
+    {
+      "policy_id": "eu-data-act",
+      "subcategory_id": "military-escalation",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Data governance, not AI-specific."
+    },
+    {
+      "policy_id": "eu-data-act",
+      "subcategory_id": "strategic-instability",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Data governance, not AI-specific."
+    },
+    {
+      "policy_id": "eu-data-act",
+      "subcategory_id": "regulatory-capture",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Data governance, not AI-specific."
+    },
+    {
+      "policy_id": "eu-data-act",
+      "subcategory_id": "capability-overhang",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Data governance, not AI-specific."
+    },
+    {
+      "policy_id": "eu-data-act",
+      "subcategory_id": "enforcement-gaps",
+      "score": 2,
+      "summary": "National competent authorities with enforcement powers.",
+      "clauses": [
+        "Article 27: Competent authorities",
+        "Article 28: Penalties"
+      ],
+      "notes": "Data governance, not AI-specific."
+    },
+    {
+      "policy_id": "eu-data-act",
+      "subcategory_id": "jurisdictional-arbitrage",
+      "score": 1,
+      "summary": "EU-wide framework but international data flows addressed.",
+      "clauses": [
+        "Article 26: International transfers"
+      ],
+      "notes": "Data governance, not AI-specific."
+    },
+    {
+      "policy_id": "eu-data-act",
+      "subcategory_id": "economic-concentration",
+      "score": 2,
+      "summary": "B2B data sharing obligations reduce vendor lock-in and concentration.",
+      "clauses": [
+        "Article 10: Switching between data processing services",
+        "Article 13: Lock-in prevention"
+      ],
+      "notes": "Data governance, not AI-specific."
+    },
+    {
+      "policy_id": "eu-data-act",
+      "subcategory_id": "labor-polarization",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Data governance, not AI-specific."
+    },
+    {
+      "policy_id": "eu-data-act",
+      "subcategory_id": "productivity-paradox",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Data governance, not AI-specific."
+    },
+    {
+      "policy_id": "eu-data-act",
+      "subcategory_id": "deskilling",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Data governance, not AI-specific."
+    },
+    {
+      "policy_id": "eu-data-act",
+      "subcategory_id": "loss-of-agency",
+      "score": 2,
+      "summary": "Data portability and user control over IoT data enhances agency.",
+      "clauses": [
+        "Article 4: Data access rights",
+        "Article 5: Portability"
+      ],
+      "notes": "Data governance, not AI-specific."
+    },
+    {
+      "policy_id": "eu-data-act",
+      "subcategory_id": "social-isolation",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Data governance, not AI-specific."
+    },
+    {
+      "policy_id": "eu-data-act",
+      "subcategory_id": "cultural-homogenization",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Data governance, not AI-specific."
+    },
+    {
+      "policy_id": "eu-data-act",
+      "subcategory_id": "misaligned-superintelligence",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Data governance, not AI-specific."
+    },
+    {
+      "policy_id": "eu-data-act",
+      "subcategory_id": "irreversible-loss-of-control",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Data governance, not AI-specific."
+    },
+    {
+      "policy_id": "eu-data-act",
+      "subcategory_id": "value-lock-in",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Data governance, not AI-specific."
+    },
+    {
+      "policy_id": "eu-cra",
+      "subcategory_id": "goal-misalignment",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Cybersecurity regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-cra",
+      "subcategory_id": "deceptive-alignment",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Cybersecurity regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-cra",
+      "subcategory_id": "emergent-capabilities",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Cybersecurity regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-cra",
+      "subcategory_id": "loss-of-oversight",
+      "score": 1,
+      "summary": "Human control mentioned in security context.",
+      "clauses": [
+        "Article 9: Secure by design"
+      ],
+      "notes": "Cybersecurity regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-cra",
+      "subcategory_id": "supply-chain",
+      "score": 2,
+      "summary": "Supply chain security requirements for connected products.",
+      "clauses": [
+        "Article 8: Supply chain security",
+        "Annex I: Essential requirements"
+      ],
+      "notes": "Cybersecurity regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-cra",
+      "subcategory_id": "model-theft",
+      "score": 1,
+      "summary": "Security-by-design could encompass model protection.",
+      "clauses": [
+        "Article 9: Security requirements"
+      ],
+      "notes": "Cybersecurity regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-cra",
+      "subcategory_id": "data-poisoning",
+      "score": 1,
+      "summary": "Data integrity as part of security requirements.",
+      "clauses": [
+        "Article 9: Data protection"
+      ],
+      "notes": "Cybersecurity regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-cra",
+      "subcategory_id": "dependency-monoculture",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Cybersecurity regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-cra",
+      "subcategory_id": "epistemic-collapse",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Cybersecurity regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-cra",
+      "subcategory_id": "synthetic-data-loops",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Cybersecurity regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-cra",
+      "subcategory_id": "persuasion-manipulation",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Cybersecurity regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-cra",
+      "subcategory_id": "cbrn-misuse",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Cybersecurity regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-cra",
+      "subcategory_id": "cyber-offense",
+      "score": 2,
+      "summary": "Vulnerability handling and incident reporting requirements.",
+      "clauses": [
+        "Article 10: Vulnerability handling",
+        "Article 11: Incident reporting"
+      ],
+      "notes": "Cybersecurity regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-cra",
+      "subcategory_id": "military-escalation",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Cybersecurity regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-cra",
+      "subcategory_id": "strategic-instability",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Cybersecurity regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-cra",
+      "subcategory_id": "regulatory-capture",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Cybersecurity regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-cra",
+      "subcategory_id": "capability-overhang",
+      "score": 1,
+      "summary": "Security assessment before market placement.",
+      "clauses": [
+        "Article 24: Conformity assessment"
+      ],
+      "notes": "Cybersecurity regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-cra",
+      "subcategory_id": "enforcement-gaps",
+      "score": 2,
+      "summary": "Market surveillance authorities with enforcement powers.",
+      "clauses": [
+        "Article 37: Market surveillance",
+        "Article 42: Penalties"
+      ],
+      "notes": "Cybersecurity regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-cra",
+      "subcategory_id": "jurisdictional-arbitrage",
+      "score": 1,
+      "summary": "EU-wide application reduces internal arbitrage.",
+      "clauses": [
+        "Article 2: Scope"
+      ],
+      "notes": "Cybersecurity regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-cra",
+      "subcategory_id": "economic-concentration",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Cybersecurity regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-cra",
+      "subcategory_id": "labor-polarization",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Cybersecurity regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-cra",
+      "subcategory_id": "productivity-paradox",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Cybersecurity regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-cra",
+      "subcategory_id": "deskilling",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Cybersecurity regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-cra",
+      "subcategory_id": "loss-of-agency",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Cybersecurity regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-cra",
+      "subcategory_id": "social-isolation",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Cybersecurity regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-cra",
+      "subcategory_id": "cultural-homogenization",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Cybersecurity regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-cra",
+      "subcategory_id": "misaligned-superintelligence",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Cybersecurity regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-cra",
+      "subcategory_id": "irreversible-loss-of-control",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Cybersecurity regulation, not AI-specific."
+    },
+    {
+      "policy_id": "eu-cra",
+      "subcategory_id": "value-lock-in",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Cybersecurity regulation, not AI-specific."
+    },
+    {
+      "policy_id": "nist-ai-rmf",
+      "subcategory_id": "goal-misalignment",
+      "score": 2,
+      "summary": "RMF addresses alignment through risk mapping and measurement functions.",
+      "clauses": [
+        "MAP: Risk identification",
+        "MEASURE: Risk assessment"
+      ],
+      "notes": "Voluntary framework - widely adopted but no enforcement."
+    },
+    {
+      "policy_id": "nist-ai-rmf",
+      "subcategory_id": "deceptive-alignment",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Voluntary framework - widely adopted but no enforcement."
+    },
+    {
+      "policy_id": "nist-ai-rmf",
+      "subcategory_id": "emergent-capabilities",
+      "score": 1,
+      "summary": "Risk identification could catch emergent risks but not explicit.",
+      "clauses": [
+        "MAP: Context identification"
+      ],
+      "notes": "Voluntary framework - widely adopted but no enforcement."
+    },
+    {
+      "policy_id": "nist-ai-rmf",
+      "subcategory_id": "loss-of-oversight",
+      "score": 2,
+      "summary": "Human oversight emphasized throughout RMF framework.",
+      "clauses": [
+        "GOVERN: Oversight mechanisms",
+        "MAP: Human involvement"
+      ],
+      "notes": "Voluntary framework - widely adopted but no enforcement."
+    },
+    {
+      "policy_id": "nist-ai-rmf",
+      "subcategory_id": "supply-chain",
+      "score": 1,
+      "summary": "Supply chain risk mentioned.",
+      "clauses": [
+        "MAP: Third-party risks"
+      ],
+      "notes": "Voluntary framework - widely adopted but no enforcement."
+    },
+    {
+      "policy_id": "nist-ai-rmf",
+      "subcategory_id": "model-theft",
+      "score": 1,
+      "summary": "Security risk management included.",
+      "clauses": [
+        "GOVERN: Security policies"
+      ],
+      "notes": "Voluntary framework - widely adopted but no enforcement."
+    },
+    {
+      "policy_id": "nist-ai-rmf",
+      "subcategory_id": "data-poisoning",
+      "score": 1,
+      "summary": "Data quality and integrity in risk management.",
+      "clauses": [
+        "MAP: Data assessment"
+      ],
+      "notes": "Voluntary framework - widely adopted but no enforcement."
+    },
+    {
+      "policy_id": "nist-ai-rmf",
+      "subcategory_id": "dependency-monoculture",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Voluntary framework - widely adopted but no enforcement."
+    },
+    {
+      "policy_id": "nist-ai-rmf",
+      "subcategory_id": "epistemic-collapse",
+      "score": 1,
+      "summary": "Transparency and explainability addressed.",
+      "clauses": [
+        "GOVERN: Transparency",
+        "MAP: Explainability"
+      ],
+      "notes": "Voluntary framework - widely adopted but no enforcement."
+    },
+    {
+      "policy_id": "nist-ai-rmf",
+      "subcategory_id": "synthetic-data-loops",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Voluntary framework - widely adopted but no enforcement."
+    },
+    {
+      "policy_id": "nist-ai-rmf",
+      "subcategory_id": "persuasion-manipulation",
+      "score": 1,
+      "summary": "Societal risks mentioned in scope.",
+      "clauses": [
+        "MAP: Societal impact"
+      ],
+      "notes": "Voluntary framework - widely adopted but no enforcement."
+    },
+    {
+      "policy_id": "nist-ai-rmf",
+      "subcategory_id": "cbrn-misuse",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Voluntary framework - widely adopted but no enforcement."
+    },
+    {
+      "policy_id": "nist-ai-rmf",
+      "subcategory_id": "cyber-offense",
+      "score": 1,
+      "summary": "Cybersecurity risks in scope.",
+      "clauses": [
+        "GOVERN: Cyber risk"
+      ],
+      "notes": "Voluntary framework - widely adopted but no enforcement."
+    },
+    {
+      "policy_id": "nist-ai-rmf",
+      "subcategory_id": "military-escalation",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Voluntary framework - widely adopted but no enforcement."
+    },
+    {
+      "policy_id": "nist-ai-rmf",
+      "subcategory_id": "strategic-instability",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Voluntary framework - widely adopted but no enforcement."
+    },
+    {
+      "policy_id": "nist-ai-rmf",
+      "subcategory_id": "regulatory-capture",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Voluntary framework - widely adopted but no enforcement."
+    },
+    {
+      "policy_id": "nist-ai-rmf",
+      "subcategory_id": "capability-overhang",
+      "score": 1,
+      "summary": "Pre-deployment risk assessment recommended.",
+      "clauses": [
+        "MAP: Pre-deployment assessment"
+      ],
+      "notes": "Voluntary framework - widely adopted but no enforcement."
+    },
+    {
+      "policy_id": "nist-ai-rmf",
+      "subcategory_id": "enforcement-gaps",
+      "score": 0,
+      "summary": "Voluntary framework - no enforcement mechanism.",
+      "clauses": [],
+      "notes": "Voluntary framework - widely adopted but no enforcement."
+    },
+    {
+      "policy_id": "nist-ai-rmf",
+      "subcategory_id": "jurisdictional-arbitrage",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Voluntary framework - widely adopted but no enforcement."
+    },
+    {
+      "policy_id": "nist-ai-rmf",
+      "subcategory_id": "economic-concentration",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Voluntary framework - widely adopted but no enforcement."
+    },
+    {
+      "policy_id": "nist-ai-rmf",
+      "subcategory_id": "labor-polarization",
+      "score": 1,
+      "summary": "Workforce impact mentioned.",
+      "clauses": [
+        "MAP: Workforce assessment"
+      ],
+      "notes": "Voluntary framework - widely adopted but no enforcement."
+    },
+    {
+      "policy_id": "nist-ai-rmf",
+      "subcategory_id": "productivity-paradox",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Voluntary framework - widely adopted but no enforcement."
+    },
+    {
+      "policy_id": "nist-ai-rmf",
+      "subcategory_id": "deskilling",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Voluntary framework - widely adopted but no enforcement."
+    },
+    {
+      "policy_id": "nist-ai-rmf",
+      "subcategory_id": "loss-of-agency",
+      "score": 1,
+      "summary": "Human agency referenced.",
+      "clauses": [
+        "GOVERN: Human oversight"
+      ],
+      "notes": "Voluntary framework - widely adopted but no enforcement."
+    },
+    {
+      "policy_id": "nist-ai-rmf",
+      "subcategory_id": "social-isolation",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Voluntary framework - widely adopted but no enforcement."
+    },
+    {
+      "policy_id": "nist-ai-rmf",
+      "subcategory_id": "cultural-homogenization",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Voluntary framework - widely adopted but no enforcement."
+    },
+    {
+      "policy_id": "nist-ai-rmf",
+      "subcategory_id": "misaligned-superintelligence",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Voluntary framework - widely adopted but no enforcement."
+    },
+    {
+      "policy_id": "nist-ai-rmf",
+      "subcategory_id": "irreversible-loss-of-control",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Voluntary framework - widely adopted but no enforcement."
+    },
+    {
+      "policy_id": "nist-ai-rmf",
+      "subcategory_id": "value-lock-in",
+      "score": 0,
+      "summary": "Not addressed.",
+      "notes": "Voluntary framework - widely adopted but no enforcement."
     }
   ],
   "metadata": {
