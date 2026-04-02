@@ -44,6 +44,12 @@ type ActiveCell =
   | { type: 'category'; policyId: string; categoryId: string }
   | { type: 'subcategory'; policyId: string; categoryId: string; subcategoryId: string }
 
+type PanelView =
+  | null
+  | { type: 'detail'; cell: ActiveCell }
+  | { type: 'critical-gaps' }
+  | { type: 'category-detail'; categoryId: string }
+
 // ── Data ──────────────────────────────────────────────────────────────────
 
 const categories = taxonomyJson.categories as Category[]
@@ -53,8 +59,10 @@ const matrixEntries = (matrixJson as { scores: MatrixEntry[] }).scores
 // ── Constants ─────────────────────────────────────────────────────────────
 
 const CREATOR_GROUPS: { id: string; label: string }[] = [
-  { id: 'western-gov', label: 'Western Gov' },
-  { id: 'non-western-gov', label: 'Non-Western Gov' },
+  { id: 'eu', label: 'European Union' },
+  { id: 'us', label: 'United States' },
+  { id: 'china', label: 'China' },
+  { id: 'other-gov', label: 'Other Governments' },
   { id: 'multilateral', label: 'Multilateral' },
   { id: 'private-sector', label: 'Private Sector' },
 ]
@@ -102,35 +110,53 @@ function scoreToColor(score: number): string {
 
 // ── Summary Stats ─────────────────────────────────────────────────────────
 
+interface CriticalGap {
+  subcategory: Subcategory
+  categoryId: string
+  categoryName: string
+  maxScore: number
+  policiesWithScores: number
+}
+
 interface SummaryStats {
   policiesAnalyzed: number
   avgCoverageScore: number
   criticalGapsCount: number
+  criticalGaps: CriticalGap[]
 }
 
 function computeSummaryStats(
   entries: MatrixEntry[],
-  allSubcategories: Subcategory[]
+  allSubcategories: Subcategory[],
+  categories: Category[]
 ): SummaryStats {
   const analyzedPolicyIds = new Set(entries.map(e => e.policy_id))
   const totalScore = entries.reduce((sum, e) => sum + e.score, 0)
   const avgCoverageScore = entries.length > 0 ? totalScore / entries.length : 0
 
-  let criticalGapsCount = 0
+  const criticalGaps: CriticalGap[] = []
   for (const sub of allSubcategories) {
     const scoresForSub = entries
       .filter(e => e.subcategory_id === sub.id)
       .map(e => e.score)
     const maxScore = scoresForSub.length > 0 ? Math.max(...scoresForSub) : 0
     if (maxScore <= 1) {
-      criticalGapsCount++
+      const category = categories.find(c => c.subcategories.some(s => s.id === sub.id))!
+      criticalGaps.push({
+        subcategory: sub,
+        categoryId: category.id,
+        categoryName: category.name,
+        maxScore,
+        policiesWithScores: scoresForSub.length,
+      })
     }
   }
 
   return {
     policiesAnalyzed: analyzedPolicyIds.size,
     avgCoverageScore,
-    criticalGapsCount,
+    criticalGapsCount: criticalGaps.length,
+    criticalGaps,
   }
 }
 
@@ -344,7 +370,7 @@ const CollapsibleSection: FC<CollapsibleSectionProps> = ({ title, children, defa
 
 export const PolicyMatrix: FC = () => {
   const [expanded, setExpanded] = useState<Set<string>>(new Set())
-  const [activeCell, setActiveCell] = useState<ActiveCell | null>(null)
+  const [panelView, setPanelView] = useState<PanelView>(null)
   const [creatorFilter, setCreatorFilter] = useState<Set<string>>(new Set())
   const [bindingFilter, setBindingFilter] = useState<Set<string>>(new Set())
   const [gapsOnly, setGapsOnly] = useState(false)
@@ -364,7 +390,7 @@ export const PolicyMatrix: FC = () => {
     []
   )
   const summaryStats = useMemo(
-    () => computeSummaryStats(matrixEntries, allSubcategories),
+    () => computeSummaryStats(matrixEntries, allSubcategories, categories),
     [allSubcategories]
   )
 
@@ -395,7 +421,7 @@ export const PolicyMatrix: FC = () => {
       else next.add(catId)
       return next
     })
-    setActiveCell(cur => (cur?.categoryId === catId ? null : cur))
+    setPanelView(cur => (cur?.type === 'detail' && cur.cell.categoryId === catId ? null : cur))
   }
 
   function toggleFilter<T extends string>(
@@ -493,15 +519,18 @@ export const PolicyMatrix: FC = () => {
 
           <div className="w-px h-10 bg-slate-800" />
 
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-amber-600/20 border border-amber-500/30 flex items-center justify-center">
+          <button
+            onClick={() => setPanelView({ type: 'critical-gaps' })}
+            className="flex items-center gap-3 group text-left hover:bg-amber-900/20 rounded-lg p-1 -ml-1 pr-1 transition-colors"
+          >
+            <div className="w-10 h-10 rounded-lg bg-amber-600/20 border border-amber-500/30 flex items-center justify-center group-hover:border-amber-400/50 transition-colors">
               <span className="text-amber-400 font-bold text-lg">{summaryStats.criticalGapsCount}</span>
             </div>
             <div>
-              <p className="text-slate-500 text-[10px] font-medium uppercase tracking-wider">Critical Gaps</p>
+              <p className="text-slate-500 text-[10px] font-medium uppercase tracking-wider group-hover:text-amber-400 transition-colors">Critical Gaps</p>
               <p className="text-slate-300 text-sm">subcategories ≤1 max score</p>
             </div>
-          </div>
+          </button>
 
           <div className="ml-auto flex items-center gap-3">
             <span className="text-slate-500 text-[11px] font-medium uppercase tracking-wider">Score</span>
@@ -523,22 +552,37 @@ export const PolicyMatrix: FC = () => {
       <div className="px-4 sm:px-6 py-4 border-b border-slate-800 shrink-0">
         <CollapsibleSection title="Risk Category Legend" defaultOpen={true}>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-2">
-            {categories.map(cat => (
-              <div
-                key={cat.id}
-                className="flex items-start gap-3 p-3 rounded-lg bg-slate-800/30 border border-slate-700/50 hover:border-slate-600 transition-colors"
-              >
-                <div className="shrink-0">
-                  <RiskIcon categoryId={cat.id} size={28} color="#94a3b8" />
-                </div>
-                <div className="min-w-0">
-                  <p className="text-slate-200 text-sm font-medium leading-tight">{cat.name}</p>
-                  <p className="text-slate-500 text-xs mt-1 leading-relaxed line-clamp-2">
-                    {cat.subcategories[0]?.description || 'Risk category'}
-                  </p>
-                </div>
-              </div>
-            ))}
+            {categories.map(cat => {
+              const catAvg = categoryAverages.find(a => a.categoryId === cat.id)
+              const avg = catAvg?.average
+              return (
+                <button
+                  key={cat.id}
+                  onClick={() => setPanelView({ type: 'category-detail', categoryId: cat.id })}
+                  className="flex items-start gap-3 p-3 rounded-lg bg-slate-800/30 border border-slate-700/50 hover:border-slate-600 hover:bg-slate-800/50 transition-colors text-left w-full"
+                >
+                  <div className="shrink-0">
+                    <RiskIcon categoryId={cat.id} size={28} color="#94a3b8" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center gap-2 mb-0.5">
+                      <p className="text-slate-200 text-sm font-medium leading-tight truncate">{cat.name}</p>
+                      {avg !== null && avg !== undefined && (
+                        <span
+                          className="shrink-0 w-6 h-6 rounded text-[10px] font-bold flex items-center justify-center text-white"
+                          style={{ backgroundColor: scoreToColor(avg) }}
+                        >
+                          {avg.toFixed(1)}
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-slate-500 text-xs mt-1 leading-relaxed line-clamp-2">
+                      {cat.subcategories[0]?.description || 'Risk category'}
+                    </p>
+                  </div>
+                </button>
+              )
+            })}
           </div>
         </CollapsibleSection>
       </div>
@@ -829,9 +873,10 @@ export const PolicyMatrix: FC = () => {
                             return cat.subcategories.map(sub => {
                               const entry = scoreLookup[policy.id]?.[sub.id] as MatrixEntry | undefined
                               const isActive =
-                                activeCell?.type === 'subcategory' &&
-                                activeCell.policyId === policy.id &&
-                                activeCell.subcategoryId === sub.id
+                                panelView?.type === 'detail' &&
+                                panelView.cell.type === 'subcategory' &&
+                                panelView.cell.policyId === policy.id &&
+                                panelView.cell.subcategoryId === sub.id
                               const dimmed = cellIsDimmed(entry?.score ?? null)
 
                               return (
@@ -851,11 +896,14 @@ export const PolicyMatrix: FC = () => {
                                     transition: 'opacity 0.15s',
                                   }}
                                   onClick={() =>
-                                    setActiveCell({
-                                      type: 'subcategory',
-                                      policyId: policy.id,
-                                      categoryId: cat.id,
-                                      subcategoryId: sub.id,
+                                    setPanelView({
+                                      type: 'detail',
+                                      cell: {
+                                        type: 'subcategory',
+                                        policyId: policy.id,
+                                        categoryId: cat.id,
+                                        subcategoryId: sub.id,
+                                      }
                                     })
                                   }
                                 >
@@ -869,9 +917,10 @@ export const PolicyMatrix: FC = () => {
                           } else {
                             const avg = getCategoryAvg(policy.id, cat)
                             const isActive =
-                              activeCell?.type === 'category' &&
-                              activeCell.policyId === policy.id &&
-                              activeCell.categoryId === cat.id
+                              panelView?.type === 'detail' &&
+                              panelView.cell.type === 'category' &&
+                              panelView.cell.policyId === policy.id &&
+                              panelView.cell.categoryId === cat.id
                             const dimmed = cellIsDimmed(avg)
 
                             return (
@@ -891,10 +940,13 @@ export const PolicyMatrix: FC = () => {
                                   transition: 'opacity 0.15s',
                                 }}
                                 onClick={() =>
-                                  setActiveCell({
-                                    type: 'category',
-                                    policyId: policy.id,
-                                    categoryId: cat.id,
+                                  setPanelView({
+                                    type: 'detail',
+                                    cell: {
+                                      type: 'category',
+                                      policyId: policy.id,
+                                      categoryId: cat.id,
+                                    }
                                   })
                                 }
                               >
@@ -1059,13 +1111,201 @@ export const PolicyMatrix: FC = () => {
       </div>
 
       {/* ── Detail panel ─────────────────────────────────────── */}
-      {activeCell && (
+      {panelView && panelView.type === 'detail' && (
         <DetailPanel
-          cell={activeCell}
+          cell={panelView.cell}
           scoreLookup={scoreLookup}
-          onClose={() => setActiveCell(null)}
+          onClose={() => setPanelView(null)}
+        />
+      )}
+
+      {/* ── Critical Gaps Panel ──────────────────────────────── */}
+      {panelView && panelView.type === 'critical-gaps' && (
+        <CriticalGapsPanel
+          gaps={summaryStats.criticalGaps}
+          onClose={() => setPanelView(null)}
+        />
+      )}
+
+      {/* ── Category Detail Panel ────────────────────────────── */}
+      {panelView && panelView.type === 'category-detail' && (
+        <CategoryDetailPanel
+          categoryId={panelView.categoryId}
+          categoryAverages={categoryAverages}
+          scoreLookup={scoreLookup}
+          onClose={() => setPanelView(null)}
         />
       )}
     </div>
+  )
+}
+
+// ── Critical Gaps Panel ───────────────────────────────────────
+
+interface CriticalGapsPanelProps {
+  gaps: CriticalGap[]
+  onClose: () => void
+}
+
+const CriticalGapsPanel: FC<CriticalGapsPanelProps> = ({ gaps, onClose }) => {
+  return (
+    <>
+      <div className="fixed inset-0 bg-black/25 z-30" onClick={onClose} />
+      <div className="fixed right-0 top-0 h-full w-[480px] max-w-[90vw] bg-slate-900 border-l border-slate-700 overflow-y-auto z-40 shadow-2xl flex flex-col">
+        <div className="sticky top-0 bg-slate-900/98 backdrop-blur border-b border-slate-700 px-5 py-4 flex items-start justify-between gap-3 shrink-0">
+          <div>
+            <div className="flex items-center gap-2 mb-1">
+              <span className="text-amber-500 text-xl font-bold">{gaps.length}</span>
+              <span className="text-slate-500 text-[11px] font-medium uppercase tracking-wider">
+                Critical Gaps Identified
+              </span>
+            </div>
+            <p className="text-slate-400 text-sm">
+              Subcategories where no policy scores above 1 (mentioned only)
+            </p>
+          </div>
+          <button
+            onClick={onClose}
+            className="shrink-0 w-7 h-7 flex items-center justify-center rounded text-slate-500 hover:text-slate-200 hover:bg-slate-700 transition-colors text-xl leading-none"
+            aria-label="Close"
+          >
+            ×
+          </button>
+        </div>
+
+        <div className="px-5 py-4 space-y-3">
+          {gaps.map((gap, i) => (
+            <div key={i} className="rounded-lg bg-slate-800/50 border border-slate-700/50 p-4">
+              <div className="flex items-start justify-between gap-3 mb-2">
+                <div className="flex items-center gap-2">
+                  <RiskIcon categoryId={gap.categoryId} size={20} color="#f59e0b" />
+                  <div>
+                    <p className="text-slate-200 text-sm font-medium">{gap.subcategory.name}</p>
+                    <p className="text-slate-500 text-xs">{gap.categoryName}</p>
+                  </div>
+                </div>
+                <span
+                  className="shrink-0 w-8 h-8 rounded flex items-center justify-center font-bold text-white"
+                  style={{ backgroundColor: scoreToColor(gap.maxScore) }}
+                >
+                  {gap.maxScore}
+                </span>
+              </div>
+              <p className="text-slate-400 text-xs leading-relaxed mb-3">
+                {gap.subcategory.description}
+              </p>
+              <div className="flex items-center gap-4 text-xs text-slate-500">
+                <span>Max score: {gap.maxScore}/3</span>
+                <span>{gap.policiesWithScores} policies scored</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
+  )
+}
+
+// ── Category Detail Panel ─────────────────────────────────────
+
+interface CategoryDetailPanelProps {
+  categoryId: string
+  categoryAverages: { categoryId: string; average: number | null; count: number }[]
+  scoreLookup: Record<string, Record<string, MatrixEntry>>
+  onClose: () => void
+}
+
+const CategoryDetailPanel: FC<CategoryDetailPanelProps> = ({ categoryId, categoryAverages, scoreLookup, onClose }) => {
+  const category = categories.find(c => c.id === categoryId)!
+  const catAvg = categoryAverages.find(a => a.categoryId === categoryId)
+
+  return (
+    <>
+      <div className="fixed inset-0 bg-black/25 z-30" onClick={onClose} />
+      <div className="fixed right-0 top-0 h-full w-[480px] max-w-[90vw] bg-slate-900 border-l border-slate-700 overflow-y-auto z-40 shadow-2xl flex flex-col">
+        <div className="sticky top-0 bg-slate-900/98 backdrop-blur border-b border-slate-700 px-5 py-4 flex items-start justify-between gap-3 shrink-0">
+          <div className="min-w-0">
+            <div className="flex items-center gap-2 mb-1">
+              <RiskIcon categoryId={category.id} size={18} color="#94a3b8" />
+              <span className="text-slate-500 text-[11px] font-medium uppercase tracking-wider truncate">
+                {category.name}
+              </span>
+            </div>
+            <h2 className="text-slate-200 text-lg font-semibold leading-tight">{category.name}</h2>
+          </div>
+          <button
+            onClick={onClose}
+            className="shrink-0 w-7 h-7 flex items-center justify-center rounded text-slate-500 hover:text-slate-200 hover:bg-slate-700 transition-colors text-xl leading-none"
+            aria-label="Close"
+          >
+            ×
+          </button>
+        </div>
+
+        <div className="px-5 py-4 border-b border-slate-800 shrink-0">
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
+              {catAvg?.average !== null ? (
+                <span
+                  className="text-3xl font-bold px-4 py-2 rounded-lg text-white"
+                  style={{ backgroundColor: scoreToColor(catAvg!.average!) }}
+                >
+                  {catAvg!.average!.toFixed(2)}
+                </span>
+              ) : (
+                <span className="text-xl font-medium px-4 py-2 rounded-lg bg-slate-800 text-slate-500">
+                  No data
+                </span>
+              )}
+              <div>
+                <p className="text-slate-400 text-xs">Average Score</p>
+                <p className="text-slate-500 text-xs">across all policies</p>
+              </div>
+            </div>
+            <div className="ml-auto text-right">
+              <p className="text-slate-300 text-sm font-medium">{category.subcategories.length} subcategories</p>
+              <p className="text-slate-500 text-xs">{catAvg?.count || 0} individual scores</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="px-5 py-4 space-y-3">
+          <p className="text-slate-400 text-sm leading-relaxed">
+            This category covers {category.subcategories.map(s => s.name.toLowerCase()).join(', ')}.
+          </p>
+
+          <div className="space-y-2">
+            <p className="text-slate-500 text-[11px] font-medium uppercase tracking-wider mb-2">
+              Subcategories
+            </p>
+            {category.subcategories.map(sub => {
+              const subScores: number[] = []
+              for (const policy of policies) {
+                const entry = scoreLookup[policy.id]?.[sub.id]
+                if (entry) subScores.push(entry.score)
+              }
+              const subAvg = subScores.length > 0 ? subScores.reduce((a, b) => a + b, 0) / subScores.length : null
+
+              return (
+                <div key={sub.id} className="rounded-lg bg-slate-800/50 border border-slate-700/50 p-3">
+                  <div className="flex items-start gap-2 mb-1.5">
+                    <span
+                      className="shrink-0 w-6 h-6 rounded text-xs font-bold flex items-center justify-center text-white mt-0.5"
+                      style={{ backgroundColor: subAvg !== null ? scoreToColor(subAvg) : '#1e293b' }}
+                    >
+                      {subAvg !== null ? subAvg.toFixed(1) : '–'}
+                    </span>
+                    <div className="min-w-0">
+                      <p className="text-slate-200 text-sm font-medium leading-tight">{sub.name}</p>
+                      <p className="text-slate-500 text-xs mt-1 leading-relaxed">{sub.description}</p>
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </div>
+    </>
   )
 }
