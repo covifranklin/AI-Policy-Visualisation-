@@ -5241,6 +5241,259 @@
       "score": 0,
       "summary": "Not addressed.",
       "notes": "Voluntary framework - widely adopted but no enforcement."
+    },
+    {
+      "policy_id": "coe-ai-convention",
+      "subcategory_id": "goal-misalignment",
+      "score": 1,
+      "summary": "Convention references safe and trustworthy AI but no technical alignment provisions.",
+      "clauses": [
+        "Article 4: General principles"
+      ],
+      "notes": "Framework convention - high-level principles."
+    },
+    {
+      "policy_id": "coe-ai-convention",
+      "subcategory_id": "deceptive-alignment",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Framework convention - high-level principles."
+    },
+    {
+      "policy_id": "coe-ai-convention",
+      "subcategory_id": "emergent-capabilities",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Framework convention - high-level principles."
+    },
+    {
+      "policy_id": "coe-ai-convention",
+      "subcategory_id": "loss-of-oversight",
+      "score": 1,
+      "summary": "Human oversight mentioned as principle without operative provisions.",
+      "clauses": [
+        "Article 5: Human oversight"
+      ],
+      "notes": "Framework convention - high-level principles."
+    },
+    {
+      "policy_id": "coe-ai-convention",
+      "subcategory_id": "supply-chain",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Framework convention - high-level principles."
+    },
+    {
+      "policy_id": "coe-ai-convention",
+      "subcategory_id": "model-theft",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Framework convention - high-level principles."
+    },
+    {
+      "policy_id": "coe-ai-convention",
+      "subcategory_id": "data-poisoning",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Framework convention - high-level principles."
+    },
+    {
+      "policy_id": "coe-ai-convention",
+      "subcategory_id": "dependency-monoculture",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Framework convention - high-level principles."
+    },
+    {
+      "policy_id": "coe-ai-convention",
+      "subcategory_id": "epistemic-collapse",
+      "score": 1,
+      "summary": "Information integrity referenced in democratic principles.",
+      "clauses": [
+        "Article 4: Democratic principles"
+      ],
+      "notes": "Framework convention - high-level principles."
+    },
+    {
+      "policy_id": "coe-ai-convention",
+      "subcategory_id": "synthetic-data-loops",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Framework convention - high-level principles."
+    },
+    {
+      "policy_id": "coe-ai-convention",
+      "subcategory_id": "persuasion-manipulation",
+      "score": 1,
+      "summary": "Manipulation referenced for democratic integrity.",
+      "clauses": [
+        "Article 4: Democratic principles"
+      ],
+      "notes": "Framework convention - high-level principles."
+    },
+    {
+      "policy_id": "coe-ai-convention",
+      "subcategory_id": "cbrn-misuse",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Framework convention - high-level principles."
+    },
+    {
+      "policy_id": "coe-ai-convention",
+      "subcategory_id": "cyber-offense",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Framework convention - high-level principles."
+    },
+    {
+      "policy_id": "coe-ai-convention",
+      "subcategory_id": "military-escalation",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Framework convention - high-level principles."
+    },
+    {
+      "policy_id": "coe-ai-convention",
+      "subcategory_id": "strategic-instability",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Framework convention - high-level principles."
+    },
+    {
+      "policy_id": "coe-ai-convention",
+      "subcategory_id": "regulatory-capture",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Framework convention - high-level principles."
+    },
+    {
+      "policy_id": "coe-ai-convention",
+      "subcategory_id": "capability-overhang",
+      "score": 1,
+      "summary": "Risk-based approach mentioned without gating mechanisms.",
+      "clauses": [
+        "Article 6: Risk management"
+      ],
+      "notes": "Framework convention - high-level principles."
+    },
+    {
+      "policy_id": "coe-ai-convention",
+      "subcategory_id": "enforcement-gaps",
+      "score": 2,
+      "summary": "Conference of Parties for implementation monitoring.",
+      "clauses": [
+        "Article 18: Conference of Parties",
+        "Article 19: Implementation monitoring"
+      ],
+      "notes": "Framework convention - high-level principles."
+    },
+    {
+      "policy_id": "coe-ai-convention",
+      "subcategory_id": "jurisdictional-arbitrage",
+      "score": 1,
+      "summary": "International cooperation referenced.",
+      "clauses": [
+        "Article 20: International cooperation"
+      ],
+      "notes": "Framework convention - high-level principles."
+    },
+    {
+      "policy_id": "coe-ai-convention",
+      "subcategory_id": "economic-concentration",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Framework convention - high-level principles."
+    },
+    {
+      "policy_id": "coe-ai-convention",
+      "subcategory_id": "labor-polarization",
+      "score": 1,
+      "summary": "Labor impacts mentioned in passing.",
+      "clauses": [
+        "Article 4: Social rights"
+      ],
+      "notes": "Framework convention - high-level principles."
+    },
+    {
+      "policy_id": "coe-ai-convention",
+      "subcategory_id": "productivity-paradox",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Framework convention - high-level principles."
+    },
+    {
+      "policy_id": "coe-ai-convention",
+      "subcategory_id": "deskilling",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Framework convention - high-level principles."
+    },
+    {
+      "policy_id": "coe-ai-convention",
+      "subcategory_id": "loss-of-agency",
+      "score": 1,
+      "summary": "Human autonomy referenced as principle.",
+      "clauses": [
+        "Article 4: Human autonomy"
+      ],
+      "notes": "Framework convention - high-level principles."
+    },
+    {
+      "policy_id": "coe-ai-convention",
+      "subcategory_id": "social-isolation",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Framework convention - high-level principles."
+    },
+    {
+      "policy_id": "coe-ai-convention",
+      "subcategory_id": "cultural-homogenization",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Framework convention - high-level principles."
+    },
+    {
+      "policy_id": "coe-ai-convention",
+      "subcategory_id": "misaligned-superintelligence",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Framework convention - high-level principles."
+    },
+    {
+      "policy_id": "coe-ai-convention",
+      "subcategory_id": "irreversible-loss-of-control",
+      "score": 0,
+      "summary": "Not addressed.",
+      "clauses": [],
+      "notes": "Framework convention - high-level principles."
+    },
+    {
+      "policy_id": "coe-ai-convention",
+      "subcategory_id": "value-lock-in",
+      "score": 1,
+      "summary": "Democratic values central as framing.",
+      "clauses": [
+        "Article 1: Purpose"
+      ],
+      "notes": "Framework convention - high-level principles."
     }
   ],
   "metadata": {
