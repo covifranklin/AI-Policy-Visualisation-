@@ -844,6 +844,72 @@ export const PolicyMatrix: FC = () => {
             </thead>
 
             <tbody>
+              {/* Category Average Row - Top of matrix */}
+              <tr className="bg-slate-900/80">
+                <td
+                  className="border-b-2 border-r border-slate-700 px-3 py-3"
+                  style={{
+                    position: 'sticky',
+                    left: 0,
+                    zIndex: 100,
+                    width: 192,
+                    minWidth: 192,
+                  }}
+                >
+                  <span className="text-slate-200 text-xs font-bold uppercase tracking-wider">Category Average</span>
+                </td>
+                {categories.map(cat => {
+                  const catAvg = categoryAverages.find(a => a.categoryId === cat.id)
+                  const isExpanded = expanded.has(cat.id)
+                  const avgValue = catAvg?.average ?? null
+
+                  if (isExpanded) {
+                    return cat.subcategories.map(sub => {
+                      const subScores: number[] = []
+                      for (const policy of filteredPolicies) {
+                        const entry = scoreLookup[policy.id]?.[sub.id]
+                        if (entry) subScores.push(entry.score)
+                      }
+                      const subAvg = subScores.length > 0 ? subScores.reduce((a, b) => a + b, 0) / subScores.length : null
+                      return (
+                        <td
+                          key={sub.id}
+                          className="border-b-2 border-r border-slate-700"
+                          style={{
+                            width: 52,
+                            minWidth: 52,
+                            height: 44,
+                            backgroundColor: subAvg !== null ? scoreToColor(subAvg) : '#0f172a',
+                          }}
+                        >
+                          <span className="flex items-center justify-center h-full w-full text-xs font-bold text-white/95 tabular-nums">
+                            {subAvg !== null ? subAvg.toFixed(1) : ''}
+                          </span>
+                        </td>
+                      )
+                    })
+                  } else {
+                    return (
+                      <td
+                        key={cat.id}
+                        title={`${cat.name}: ${avgValue?.toFixed(2) ?? 'no data'} average across filtered policies`}
+                        className="border-b-2 border-r border-slate-700"
+                        style={{
+                          width: 72,
+                          minWidth: 72,
+                          height: 44,
+                          backgroundColor: avgValue !== null ? scoreToColor(avgValue) : '#0f172a',
+                        }}
+                      >
+                        <span className="flex items-center justify-center h-full w-full text-xs font-bold text-white/95 tabular-nums">
+                          {avgValue !== null ? avgValue.toFixed(2) : ''}
+                        </span>
+                      </td>
+                    )
+                  }
+                })}
+              </tr>
+
               {groupedPolicies.map(group => (
                 <Fragment key={group.id}>
                   <tr>
@@ -987,72 +1053,6 @@ export const PolicyMatrix: FC = () => {
                   })}
                 </Fragment>
               ))}
-
-              {/* Category Average Row */}
-              <tr className="bg-slate-900/80">
-                <td
-                  className="border-b border-r border-slate-800 px-3 py-2"
-                  style={{
-                    position: 'sticky',
-                    left: 0,
-                    zIndex: 100,
-                    width: 192,
-                    minWidth: 192,
-                  }}
-                >
-                  <span className="text-slate-300 text-xs font-semibold uppercase tracking-wider">Category Average</span>
-                </td>
-                {categories.map(cat => {
-                  const catAvg = categoryAverages.find(a => a.categoryId === cat.id)
-                  const isExpanded = expanded.has(cat.id)
-                  const avgValue = catAvg?.average ?? null
-
-                  if (isExpanded) {
-                    return cat.subcategories.map(sub => {
-                      const subScores: number[] = []
-                      for (const policy of filteredPolicies) {
-                        const entry = scoreLookup[policy.id]?.[sub.id]
-                        if (entry) subScores.push(entry.score)
-                      }
-                      const subAvg = subScores.length > 0 ? subScores.reduce((a, b) => a + b, 0) / subScores.length : null
-                      return (
-                        <td
-                          key={sub.id}
-                          className="border-b border-r border-slate-800"
-                          style={{
-                            width: 52,
-                            minWidth: 52,
-                            height: 40,
-                            backgroundColor: subAvg !== null ? scoreToColor(subAvg) : '#0f172a',
-                          }}
-                        >
-                          <span className="flex items-center justify-center h-full w-full text-xs font-bold text-white/90 tabular-nums">
-                            {subAvg !== null ? subAvg.toFixed(1) : ''}
-                          </span>
-                        </td>
-                      )
-                    })
-                  } else {
-                    return (
-                      <td
-                        key={cat.id}
-                        title={`${cat.name}: ${avgValue?.toFixed(2) ?? 'no data'} average across all policies`}
-                        className="border-b border-r border-slate-800"
-                        style={{
-                          width: 72,
-                          minWidth: 72,
-                          height: 40,
-                          backgroundColor: avgValue !== null ? scoreToColor(avgValue) : '#0f172a',
-                        }}
-                      >
-                        <span className="flex items-center justify-center h-full w-full text-xs font-bold text-white/90 tabular-nums">
-                          {avgValue !== null ? avgValue.toFixed(2) : ''}
-                        </span>
-                      </td>
-                    )
-                  }
-                })}
-              </tr>
             </tbody>
           </table>
         </div>
