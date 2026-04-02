@@ -140,7 +140,7 @@ function computeSummaryStats(
       .filter(e => e.subcategory_id === sub.id)
       .map(e => e.score)
     const maxScore = scoresForSub.length > 0 ? Math.max(...scoresForSub) : 0
-    if (maxScore <= 1) {
+    if (maxScore < 1.5) {
       const category = categories.find(c => c.subcategories.some(s => s.id === sub.id))!
       criticalGaps.push({
         subcategory: sub,
@@ -695,7 +695,8 @@ export const PolicyMatrix: FC = () => {
         )}
 
         {/* Matrix content */}
-        <div className="flex-1 overflow-x-auto">
+        <div className="flex-1 overflow-x-auto relative">
+          <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-slate-950 to-transparent pointer-events-none z-50" style={{ zIndex: 50 }} />
           <table className="border-collapse" style={{ minWidth: 'max-content', tableLayout: 'fixed' }}>
             <thead>
               <tr>
@@ -705,7 +706,7 @@ export const PolicyMatrix: FC = () => {
                     position: 'sticky',
                     top: 0,
                     left: 0,
-                    zIndex: 30,
+                    zIndex: 100,
                     width: 192,
                     minWidth: 192,
                     height: CATEGORY_HEADER_HEIGHT,
@@ -864,7 +865,7 @@ export const PolicyMatrix: FC = () => {
                           style={{
                             position: 'sticky',
                             left: 0,
-                            zIndex: 10,
+                            zIndex: 100,
                             width: 192,
                             minWidth: 192,
                           }}
@@ -994,7 +995,7 @@ export const PolicyMatrix: FC = () => {
                   style={{
                     position: 'sticky',
                     left: 0,
-                    zIndex: 10,
+                    zIndex: 100,
                     width: 192,
                     minWidth: 192,
                   }}
