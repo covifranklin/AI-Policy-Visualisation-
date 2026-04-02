@@ -1,0 +1,215 @@
+{
+  "policy_id": "anthropic-rsp",
+  "analyzed_date": "2026-04-01",
+  "scores": [
+    {
+      "subcategory_id": "goal-misalignment",
+      "score": 2,
+      "summary": "RSP v3 frames its entire ASL framework around the risk of models pursuing unintended objectives; ASL-3 and ASL-4 requirements mandate alignment evaluations before deployment and after any significant capability uplift.",
+      "clauses": ["Section: Alignment Science Requirements (ASL-3)", "Section: Core Views on AI Risk"],
+      "notes": "Commitment language is specific ('we will require') but external verification of eval results is not mandated."
+    },
+    {
+      "subcategory_id": "deceptive-alignment",
+      "score": 2,
+      "summary": "Scheming and deceptive alignment are explicitly named threat models; the RSP requires interpretability and anomaly-detection evaluations targeting deceptive behaviour before ASL-3/4 deployment.",
+      "clauses": ["Section: Core Views on AI Risk", "Section: ASL-3 Alignment Requirements"],
+      "notes": "Defined procedure exists; no external audit of whether evals adequately detect deception."
+    },
+    {
+      "subcategory_id": "emergent-capabilities",
+      "score": 3,
+      "summary": "The entire ASL framework is built around detecting emergent dangerous capabilities at each capability threshold; Anthropic commits to halting deployment if critical capabilities emerge unexpectedly, with public disclosure of level changes.",
+      "clauses": ["Section: Capability Evaluations", "Section: ASL Thresholds and Definitions"],
+      "notes": "Public disclosure of ASL level changes constitutes a weak accountability mechanism; no independent auditor required to confirm capability findings."
+    },
+    {
+      "subcategory_id": "loss-of-oversight",
+      "score": 2,
+      "summary": "RSP requires that models at ASL-3 and above not be granted autonomous capabilities that undermine human oversight; 'minimal footprint' and corrigibility requirements are specified.",
+      "clauses": ["Section: ASL-3 Deployment Requirements", "Section: Agentic Use"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "supply-chain",
+      "score": 0,
+      "summary": "Supply chain vulnerabilities (chip/cloud dependencies) are not addressed in the RSP.",
+      "clauses": [],
+      "notes": "Out of scope for this document."
+    },
+    {
+      "subcategory_id": "model-theft",
+      "score": 2,
+      "summary": "ASL-3 security requirements include specific commitments around model weight protection, network segmentation, and access controls to prevent exfiltration by sophisticated actors.",
+      "clauses": ["Section: ASL-3 Security Requirements"],
+      "notes": "Requirements are operationally specific but self-assessed; no third-party penetration testing mandated."
+    },
+    {
+      "subcategory_id": "data-poisoning",
+      "score": 1,
+      "summary": "Data integrity is mentioned in the context of training pipeline integrity at high ASL levels, but no specific procedures or requirements are defined.",
+      "clauses": ["Section: Core Views on AI Risk"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "dependency-monoculture",
+      "score": 0,
+      "summary": "AI monoculture / systemic dependency risk is not addressed in the RSP.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "epistemic-collapse",
+      "score": 1,
+      "summary": "RSP briefly acknowledges that widespread AI use could affect societal epistemics, but this is framed as a general risk rather than a committed mitigation.",
+      "clauses": ["Section: Core Views on AI Risk"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "synthetic-data-loops",
+      "score": 0,
+      "summary": "Synthetic data feedback loops and model collapse are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "persuasion-manipulation",
+      "score": 1,
+      "summary": "Manipulation and persuasion at scale are noted as societal concerns in the framing section but no deployment-level commitments are made within the RSP.",
+      "clauses": ["Section: Core Views on AI Risk"],
+      "notes": "Covered more operationally in Anthropic's Acceptable Use Policy, not this document."
+    },
+    {
+      "subcategory_id": "cbrn-misuse",
+      "score": 3,
+      "summary": "CBRN uplift is the primary trigger for ASL-3 classification; Anthropic commits to specific evaluation thresholds for biological and chemical weapons uplift, halting deployment if crossed, with public disclosure of level changes constituting a disclosure obligation.",
+      "clauses": ["Section: ASL-3 Capability Thresholds — CBRN", "Section: Capability Evaluations"],
+      "notes": "Strongest scored category; bio uplift evals are named and operationally defined. Public reporting on ASL status provides a limited accountability hook."
+    },
+    {
+      "subcategory_id": "cyber-offense",
+      "score": 3,
+      "summary": "Cyber offense capability is an explicit ASL-3 trigger; Anthropic specifies evaluation criteria (ability to autonomously conduct end-to-end cyberattacks) and commits to deployment restrictions if thresholds are met, with public ASL-level disclosure.",
+      "clauses": ["Section: ASL-3 Capability Thresholds — Cyber", "Section: Capability Evaluations"],
+      "notes": "Parallel treatment to CBRN."
+    },
+    {
+      "subcategory_id": "military-escalation",
+      "score": 1,
+      "summary": "Autonomous weapons and military escalation are not addressed directly; the RSP refers briefly to 'destabilising power concentration' which could encompass this.",
+      "clauses": ["Section: Core Views on AI Risk"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "strategic-instability",
+      "score": 2,
+      "summary": "Anthropic explicitly frames competitive racing dynamics as a risk and commits to not cutting safety corners to win the race; the RSP is partly designed to create coordination-forcing norms.",
+      "clauses": ["Section: Introduction — Why This Policy Exists", "Section: Core Views on AI Risk"],
+      "notes": "Named commitment but no mechanism to bind competitors."
+    },
+    {
+      "subcategory_id": "regulatory-capture",
+      "score": 1,
+      "summary": "The RSP does not address regulatory capture; Anthropic's participation in policy discussions is noted in passing but no anti-capture commitments are made.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "capability-overhang",
+      "score": 2,
+      "summary": "The RSP's capability evaluation gate — requiring pre-deployment evals at each threshold — is explicitly designed to prevent sudden release of overhung capabilities; staging commitments are specific.",
+      "clauses": ["Section: ASL Thresholds and Definitions", "Section: Capability Evaluations"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "enforcement-gaps",
+      "score": 2,
+      "summary": "RSP acknowledges its own potential enforcement gaps and includes a 'what if Anthropic fails to comply' section committing to third-party review mechanisms and board-level escalation.",
+      "clauses": ["Section: Accountability and Verification"],
+      "notes": "Internal accountability mechanism; the RSP v3 references SB-53 compliance as an external hook."
+    },
+    {
+      "subcategory_id": "jurisdictional-arbitrage",
+      "score": 0,
+      "summary": "Jurisdictional arbitrage is not addressed; the RSP does not commit to applying its standards globally regardless of regulatory environment.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "economic-concentration",
+      "score": 1,
+      "summary": "The RSP mentions avoiding 'inappropriate concentration of power' as a core goal, but this is aspirational framing without specific commitments.",
+      "clauses": ["Section: Core Views on AI Risk"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "labor-polarization",
+      "score": 0,
+      "summary": "Labor market polarization is not addressed in the RSP.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "productivity-paradox",
+      "score": 0,
+      "summary": "Productivity paradox / uneven gains are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "deskilling",
+      "score": 0,
+      "summary": "Human deskilling and cognitive atrophy are not addressed in the RSP.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "loss-of-agency",
+      "score": 1,
+      "summary": "Loss of human agency is implicitly addressed through corrigibility requirements for deployed models, but the document does not address end-user autonomy.",
+      "clauses": ["Section: ASL-3 Deployment Requirements"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "social-isolation",
+      "score": 0,
+      "summary": "Social isolation and AI companionship effects are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "cultural-homogenization",
+      "score": 0,
+      "summary": "Cultural homogenization is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "misaligned-superintelligence",
+      "score": 2,
+      "summary": "Misaligned superintelligence is explicitly the existential motivating risk for the entire RSP; ASL-4 requirements (not yet triggered) are designed to address transformative AI; commitments to halt development if safety cannot be assured are stated.",
+      "clauses": ["Section: Core Views on AI Risk", "Section: ASL-4 Requirements"],
+      "notes": "Strong framing; ASL-4 commitments remain prospective and untested."
+    },
+    {
+      "subcategory_id": "irreversible-loss-of-control",
+      "score": 2,
+      "summary": "Preventing irreversible outcomes is a stated design principle of the ASL framework; 'if in doubt, don't deploy' and deployment halt conditions are defined.",
+      "clauses": ["Section: Core Views on AI Risk", "Section: ASL Thresholds"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "value-lock-in",
+      "score": 2,
+      "summary": "Avoiding value lock-in and power concentration by any single entity — including Anthropic itself — is explicitly named as a core commitment.",
+      "clauses": ["Section: Core Views on AI Risk"],
+      "notes": "Named commitment; no mechanism prevents Anthropic from changing this position over time."
+    }
+  ],
+  "meta_observations": [
+    "The RSP is the most operationally detailed of the six policies for the risks it covers — particularly CBRN, cyber, and emergent capabilities — but its scope is deliberately narrow: it addresses catastrophic/existential tail risks and largely ignores socioeconomic, epistemic, and societal harms.",
+    "The ASL framework creates a tiered commitment structure with named thresholds, which is stronger than most peers, but accountability remains primarily self-reported; the SB-53 compliance hook (addressed in the FCF) adds external accountability that this document alone does not provide.",
+    "The policy is unusually candid about competitive dynamics and racing pressures, and explicitly frames itself as an attempt to create industry norms — a governance function beyond pure self-regulation.",
+    "Scores of 0 across most socioeconomic categories (labor, productivity, cultural, social) are a deliberate scope choice, not an oversight — Anthropic handles these in separate policy documents."
+  ]
+}

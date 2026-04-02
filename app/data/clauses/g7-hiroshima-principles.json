@@ -1,0 +1,216 @@
+{
+  "policy_id": "g7-hiroshima-principles",
+  "analyzed_date": "2026-04-01",
+  "scores": [
+    {
+      "subcategory_id": "goal-misalignment",
+      "score": 1,
+      "summary": "Principle 1 calls for risk identification and mitigation across the AI lifecycle and Principle 7 covers research on 'AI development risks including model risks', implicitly encompassing misalignment, but neither operationalises this as a distinct concept.",
+      "clauses": ["Principle 1", "Principle 7"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "deceptive-alignment",
+      "score": 0,
+      "summary": "Deceptive alignment is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "emergent-capabilities",
+      "score": 1,
+      "summary": "Principle 1 covers risk identification and evaluation including 'capabilities present in advanced AI', and Principle 10 addresses post-deployment monitoring, together providing a partial framework for tracking emergent behaviour.",
+      "clauses": ["Principle 1", "Principle 10"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "loss-of-oversight",
+      "score": 1,
+      "summary": "Principle 1 includes 'appropriate human oversight measures' as part of lifecycle risk management, but no provisions operationalise this requirement.",
+      "clauses": ["Principle 1"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "supply-chain",
+      "score": 0,
+      "summary": "Supply chain vulnerabilities (chip/cloud dependencies) are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "model-theft",
+      "score": 1,
+      "summary": "Principle 5 explicitly calls for 'cybersecurity controls and physical security measures to protect proprietary and unreleased model weights', directly naming weight protection as a concern.",
+      "clauses": ["Principle 5"],
+      "notes": "This is one of the more specific provisions in the document, though it remains aspirational."
+    },
+    {
+      "subcategory_id": "data-poisoning",
+      "score": 0,
+      "summary": "Data poisoning and training pipeline attacks are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "dependency-monoculture",
+      "score": 0,
+      "summary": "AI monoculture and systemic provider concentration are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "epistemic-collapse",
+      "score": 1,
+      "summary": "Principle 6 calls for AI content provenance and watermarking mechanisms 'with the goal of enabling a trustworthy digital information ecosystem', directly targeting epistemic integrity.",
+      "clauses": ["Principle 6"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "synthetic-data-loops",
+      "score": 0,
+      "summary": "Synthetic data feedback loops and model collapse are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "persuasion-manipulation",
+      "score": 1,
+      "summary": "Principle 6 on detecting and labelling AI-generated content addresses the detection side of manipulation risk; Principle 7's focus on societal risks covers this implicitly.",
+      "clauses": ["Principle 6", "Principle 7"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "cbrn-misuse",
+      "score": 0,
+      "summary": "CBRN misuse is not named; Principle 7's 'societal risks' language is too general to constitute a mention of this specific risk.",
+      "clauses": [],
+      "notes": "Unlike the Bletchley Declaration, the G7 Principles do not explicitly name biotechnology or CBRN risks."
+    },
+    {
+      "subcategory_id": "cyber-offense",
+      "score": 1,
+      "summary": "Principle 2 addresses vulnerability disclosure and misuse mitigation post-deployment, and Principle 5 addresses cybersecurity broadly, together touching on cyber risk without addressing offense acceleration specifically.",
+      "clauses": ["Principle 2", "Principle 5"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "military-escalation",
+      "score": 0,
+      "summary": "Military applications and autonomous weapons are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "strategic-instability",
+      "score": 0,
+      "summary": "Strategic instability and AI arms race dynamics are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "regulatory-capture",
+      "score": 0,
+      "summary": "Regulatory capture is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "capability-overhang",
+      "score": 1,
+      "summary": "Principle 3 requires public reporting on AI system capabilities and limitations including safety evaluations, providing a partial disclosure mechanism relevant to capability overhang.",
+      "clauses": ["Principle 3"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "enforcement-gaps",
+      "score": 0,
+      "summary": "The Principles are entirely voluntary with no enforcement mechanisms.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "jurisdictional-arbitrage",
+      "score": 0,
+      "summary": "Jurisdictional arbitrage is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "economic-concentration",
+      "score": 0,
+      "summary": "Economic concentration from AI is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "labor-polarization",
+      "score": 0,
+      "summary": "Labour market impacts are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "productivity-paradox",
+      "score": 0,
+      "summary": "Uneven distribution of productivity gains is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "deskilling",
+      "score": 0,
+      "summary": "Human deskilling is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "loss-of-agency",
+      "score": 1,
+      "summary": "Principle 1 includes human oversight as part of lifecycle risk management, implying a commitment to preserving human agency in AI-assisted decisions.",
+      "clauses": ["Principle 1"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "social-isolation",
+      "score": 0,
+      "summary": "Social isolation and AI companionship effects are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "cultural-homogenization",
+      "score": 0,
+      "summary": "Cultural homogenization is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "misaligned-superintelligence",
+      "score": 1,
+      "summary": "Principles 1 and 7 together call for risk assessment and research on AI development risks, providing a framework that encompasses long-range alignment risk, though without naming it.",
+      "clauses": ["Principle 1", "Principle 7"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "irreversible-loss-of-control",
+      "score": 1,
+      "summary": "Principle 1's lifecycle risk management and Principle 7's safety research investment implicitly address loss-of-control scenarios without naming them.",
+      "clauses": ["Principle 1", "Principle 7"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "value-lock-in",
+      "score": 0,
+      "summary": "Value lock-in is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    }
+  ],
+  "meta_observations": [
+    "Source note: The MOFA Japan PDF (the primary source) returned HTTP 403 on all fetch attempts. Scores are based on training knowledge of the published October 2023 G7 Hiroshima AI Guiding Principles.",
+    "The Principles are voluntary guidance for AI-developing organisations, with no enforcement or verification mechanisms — maximum possible score is 1 across all subcategories.",
+    "The document is notably more focused on operational safety practices (lifecycle management, cybersecurity, content provenance) than on the frontier AI risks that dominate the Bletchley Declaration. CBRN, military, and existential risks are largely absent.",
+    "Principle 5's explicit reference to protecting 'unreleased model weights' is one of the more technically specific provisions in any multilateral document of this era.",
+    "The Principles are essentially a voluntary code framework — the Code of Conduct published alongside them operationalises the same 11 points with more concrete language."
+  ]
+}

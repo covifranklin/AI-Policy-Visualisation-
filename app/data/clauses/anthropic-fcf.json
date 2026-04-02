@@ -1,0 +1,215 @@
+{
+  "policy_id": "anthropic-fcf",
+  "analyzed_date": "2026-04-01",
+  "scores": [
+    {
+      "subcategory_id": "goal-misalignment",
+      "score": 2,
+      "summary": "The FCF incorporates RSP alignment evaluation requirements by reference and adds SB-53 compliance obligations that require alignment testing to be documented and disclosed to California regulators.",
+      "clauses": ["Section: Safety Testing Requirements", "Section: Compliance with SB-53"],
+      "notes": "The SB-53 hook elevates this above pure self-regulation for California-jurisdiction activities."
+    },
+    {
+      "subcategory_id": "deceptive-alignment",
+      "score": 2,
+      "summary": "FCF requires documentation of evaluations targeting deceptive or scheming behaviour as part of the pre-deployment safety case required under SB-53.",
+      "clauses": ["Section: Safety Testing Requirements", "Section: Transparency Report Obligations"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "emergent-capabilities",
+      "score": 3,
+      "summary": "FCF requires public annual safety reports disclosing capability evaluation findings, including any unexpected capability emergence, creating a public disclosure accountability mechanism aligned with SB-53 reporting obligations.",
+      "clauses": ["Section: Annual Safety Report", "Section: SB-53 Compliance Schedule"],
+      "notes": "SB-53 legal obligation constitutes a genuine external accountability mechanism for this subcategory."
+    },
+    {
+      "subcategory_id": "loss-of-oversight",
+      "score": 2,
+      "summary": "FCF includes commitments to document human oversight protocols for deployed systems and report oversight mechanisms in the annual safety report.",
+      "clauses": ["Section: Transparency Report Obligations", "Section: Deployment Safeguards"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "supply-chain",
+      "score": 0,
+      "summary": "Supply chain vulnerabilities are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "model-theft",
+      "score": 2,
+      "summary": "FCF requires disclosure of security measures protecting model weights as part of SB-53 compliance reporting, giving external visibility to security commitments.",
+      "clauses": ["Section: Security Commitments under SB-53"],
+      "notes": "Disclosure obligation to regulator adds accountability beyond RSP's self-assessment."
+    },
+    {
+      "subcategory_id": "data-poisoning",
+      "score": 0,
+      "summary": "Data poisoning and training pipeline attacks are not addressed in the FCF.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "dependency-monoculture",
+      "score": 0,
+      "summary": "Dependency monoculture is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "epistemic-collapse",
+      "score": 1,
+      "summary": "Epistemic risks from AI are mentioned in the FCF's broader framing of societal impact but no compliance requirements are tied to this.",
+      "clauses": ["Section: Scope of Framework"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "synthetic-data-loops",
+      "score": 0,
+      "summary": "Synthetic data loops are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "persuasion-manipulation",
+      "score": 1,
+      "summary": "The FCF references Anthropic's usage policies around manipulation, but does not operationalize anti-manipulation commitments within the compliance framework itself.",
+      "clauses": ["Section: Scope of Framework"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "cbrn-misuse",
+      "score": 3,
+      "summary": "CBRN misuse evaluation is a named compliance requirement under SB-53; Anthropic must document CBRN evaluation results in the annual safety report disclosed to the California Attorney General.",
+      "clauses": ["Section: SB-53 Safety Evaluation Requirements", "Section: Annual Safety Report"],
+      "notes": "The SB-53 legal obligation means this is the only category in this document with a genuine legal accountability hook."
+    },
+    {
+      "subcategory_id": "cyber-offense",
+      "score": 3,
+      "summary": "Cyber offense capability evaluation is a named compliance requirement under SB-53, with results to be disclosed in the annual public safety report.",
+      "clauses": ["Section: SB-53 Safety Evaluation Requirements", "Section: Annual Safety Report"],
+      "notes": "Parallel to CBRN treatment."
+    },
+    {
+      "subcategory_id": "military-escalation",
+      "score": 1,
+      "summary": "Military applications are mentioned as a category requiring heightened scrutiny but no specific compliance requirements are articulated.",
+      "clauses": ["Section: Scope of Framework"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "strategic-instability",
+      "score": 1,
+      "summary": "Strategic instability from AI racing is mentioned as context for why the FCF was created but is not the subject of specific compliance commitments.",
+      "clauses": ["Section: Introduction"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "regulatory-capture",
+      "score": 1,
+      "summary": "The FCF includes a brief commitment to engage constructively with regulators without seeking to weaken safety standards, but this is aspirational rather than operational.",
+      "clauses": ["Section: Regulatory Engagement"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "capability-overhang",
+      "score": 2,
+      "summary": "FCF requires pre-deployment safety cases and evaluation documentation before release, which operationalises the staged release principle aimed at preventing capability overhang.",
+      "clauses": ["Section: Pre-Deployment Requirements under SB-53"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "enforcement-gaps",
+      "score": 3,
+      "summary": "The FCF is explicitly structured around SB-53 compliance, which gives the California Attorney General enforcement powers; this is the strongest enforcement hook among the six policies.",
+      "clauses": ["Section: SB-53 Compliance Schedule", "Section: Accountability Mechanisms"],
+      "notes": "The SB-53 legal framework converts voluntary commitments into legally enforceable obligations for California-scope activities."
+    },
+    {
+      "subcategory_id": "jurisdictional-arbitrage",
+      "score": 1,
+      "summary": "The FCF acknowledges that SB-53 applies to covered frontier models regardless of where development occurs, providing limited anti-arbitrage protection for California-nexus activities.",
+      "clauses": ["Section: Scope of Framework"],
+      "notes": "Only addresses California jurisdiction; no global commitment."
+    },
+    {
+      "subcategory_id": "economic-concentration",
+      "score": 0,
+      "summary": "Economic concentration is not addressed in the FCF.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "labor-polarization",
+      "score": 0,
+      "summary": "Labor market polarization is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "productivity-paradox",
+      "score": 0,
+      "summary": "Productivity paradox is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "deskilling",
+      "score": 0,
+      "summary": "Human deskilling is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "loss-of-agency",
+      "score": 0,
+      "summary": "Loss of agency / autonomy is not addressed as a compliance requirement.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "social-isolation",
+      "score": 0,
+      "summary": "Social isolation effects are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "cultural-homogenization",
+      "score": 0,
+      "summary": "Cultural homogenization is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "misaligned-superintelligence",
+      "score": 2,
+      "summary": "The FCF incorporates the RSP's catastrophic risk framework by reference, including commitments around preventing misaligned superintelligence, and requires disclosure of these safety measures under SB-53.",
+      "clauses": ["Section: Safety Testing Requirements", "Section: Annual Safety Report"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "irreversible-loss-of-control",
+      "score": 2,
+      "summary": "Commitments to avoid irreversible outcomes are embedded in the FCF's deployment gating requirements, with SB-53 reporting creating external visibility.",
+      "clauses": ["Section: Pre-Deployment Requirements under SB-53"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "value-lock-in",
+      "score": 1,
+      "summary": "Value lock-in is acknowledged as a societal risk in the framework's preamble but no specific compliance requirement addresses it.",
+      "clauses": ["Section: Introduction"],
+      "notes": ""
+    }
+  ],
+  "meta_observations": [
+    "The FCF's primary contribution is translating Anthropic's voluntary RSP commitments into a SB-53 compliance structure, which adds genuine legal accountability for the categories SB-53 targets (principally CBRN, cyber, and safety reporting).",
+    "The document is narrower in scope than the RSP — it is essentially a compliance operationalisation document rather than a policy document — so most scores reflect inherited RSP commitments plus the SB-53 legal hook.",
+    "The FCF scores higher than the RSP on enforcement-gaps precisely because SB-53 provides an external legal mechanism; in all other respects the FCF's scoring tracks or falls below the RSP.",
+    "Socioeconomic and societal risk categories all score 0 or 1, consistent with Anthropic's narrow scoping of its frontier safety governance documents."
+  ]
+}

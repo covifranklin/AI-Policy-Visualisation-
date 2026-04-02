@@ -1,0 +1,17 @@
+{
+  "name": "ai-policy-scripts",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "analyze": "tsx analyze-policy.ts",
+    "build-matrix": "tsx build-matrix.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.54.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "typescript": "~5.9.3",
+    "@types/node": "^24.0.0"
+  }
+}

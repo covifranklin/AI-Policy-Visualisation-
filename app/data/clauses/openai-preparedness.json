@@ -1,0 +1,216 @@
+{
+  "policy_id": "openai-preparedness",
+  "analyzed_date": "2026-04-01",
+  "scores": [
+    {
+      "subcategory_id": "goal-misalignment",
+      "score": 2,
+      "summary": "The Preparedness Framework defines a Safety Level (SL) scoring system that includes alignment-related evaluations; SL3 and SL4 require specific alignment testing before deployment, with named criteria for 'autonomy' and 'model behaviour' risk categories.",
+      "clauses": ["Section: Risk Assessment — Model Behavior / Autonomy", "Section: Safety Levels Overview"],
+      "notes": "The Preparedness Committee provides internal sign-off but no external audit is required."
+    },
+    {
+      "subcategory_id": "deceptive-alignment",
+      "score": 2,
+      "summary": "The 'Model Behavior / Autonomy' risk category explicitly addresses scheming and deceptive behaviour; models scoring 'high' or 'critical' on this dimension cannot be deployed without mitigations.",
+      "clauses": ["Section: Risk Assessment — Model Behavior / Autonomy"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "emergent-capabilities",
+      "score": 3,
+      "summary": "The framework requires continuous monitoring for emergent dangerous capabilities across all tracked risk categories; the Safety Advisory Group and board-level Safety Committee provide oversight, constituting an internal accountability mechanism.",
+      "clauses": ["Section: Governance — Preparedness Committee", "Section: Ongoing Monitoring"],
+      "notes": "Board-level Safety Committee is a meaningful accountability mechanism even though it is internal."
+    },
+    {
+      "subcategory_id": "loss-of-oversight",
+      "score": 2,
+      "summary": "Loss of human oversight is explicitly named as a risk dimension under 'Model Behavior / Autonomy'; SL3+ requirements include commitments to preserve human ability to oversee and correct deployed systems.",
+      "clauses": ["Section: Risk Assessment — Model Behavior / Autonomy", "Section: Deployment Commitments"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "supply-chain",
+      "score": 0,
+      "summary": "Supply chain vulnerabilities are not addressed in the Preparedness Framework.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "model-theft",
+      "score": 2,
+      "summary": "Model weight security is addressed under infrastructure security requirements for SL3+ models, with specific commitments to access controls and network isolation.",
+      "clauses": ["Section: Infrastructure Security Requirements (SL3)"],
+      "notes": "Requirements are operationally specific but self-assessed."
+    },
+    {
+      "subcategory_id": "data-poisoning",
+      "score": 1,
+      "summary": "Training pipeline integrity is mentioned as a background concern in the framework's threat model but no specific evaluation procedure is defined.",
+      "clauses": ["Section: Threat Model Overview"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "dependency-monoculture",
+      "score": 0,
+      "summary": "AI monoculture / dependency risk is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "epistemic-collapse",
+      "score": 0,
+      "summary": "Epistemic collapse and erosion of shared reality are not addressed in the Preparedness Framework.",
+      "clauses": [],
+      "notes": "OpenAI addresses influence operations in separate policy documents."
+    },
+    {
+      "subcategory_id": "synthetic-data-loops",
+      "score": 0,
+      "summary": "Synthetic data feedback loops are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "persuasion-manipulation",
+      "score": 1,
+      "summary": "The framework's 'Influence Operations' risk track acknowledges manipulation risk but the Preparedness Framework v2 focuses evaluation on election-related influence operations rather than behavioural manipulation broadly.",
+      "clauses": ["Section: Risk Assessment — Influence Operations"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "cbrn-misuse",
+      "score": 3,
+      "summary": "CBRN is one of four core tracked risk categories with a defined safety level rubric; models scoring SL3+ on CBRN cannot be deployed without mitigations; the board Safety Committee must approve deployment of SL4 CBRN-risk models.",
+      "clauses": ["Section: Risk Assessment — CBRN", "Section: Safety Levels — CBRN Definitions"],
+      "notes": "Board-level sign-off requirement for SL4 constitutes a genuine accountability mechanism."
+    },
+    {
+      "subcategory_id": "cyber-offense",
+      "score": 3,
+      "summary": "Cyber offense is one of four core tracked risk categories with defined SL rubric; SL3+ cyber-risk models require mitigations; board Safety Committee approval required for SL4 deployment.",
+      "clauses": ["Section: Risk Assessment — Cybersecurity", "Section: Safety Levels — Cybersecurity Definitions"],
+      "notes": "Parallel to CBRN treatment."
+    },
+    {
+      "subcategory_id": "military-escalation",
+      "score": 1,
+      "summary": "Military and weapons applications are noted as out-of-scope uses in the framework's boundaries, but autonomous weapons and escalation risk are not a scored evaluation category.",
+      "clauses": ["Section: Scope and Boundaries"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "strategic-instability",
+      "score": 1,
+      "summary": "Arms race dynamics and strategic instability are acknowledged in the framework's motivation section but no specific commitment addresses them.",
+      "clauses": ["Section: Introduction"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "regulatory-capture",
+      "score": 0,
+      "summary": "Regulatory capture is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "capability-overhang",
+      "score": 2,
+      "summary": "The framework's safety level gating — requiring evaluation and mitigation before deployment at each level — directly addresses capability overhang by preventing deployment of models whose capabilities exceed safety measures.",
+      "clauses": ["Section: Deployment Commitments", "Section: Safety Level Gating"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "enforcement-gaps",
+      "score": 2,
+      "summary": "Internal enforcement is provided by the Preparedness Committee and board Safety Committee; the framework specifies escalation paths and sign-off requirements, though no external enforcement exists.",
+      "clauses": ["Section: Governance — Preparedness Committee", "Section: Board Safety Committee"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "jurisdictional-arbitrage",
+      "score": 0,
+      "summary": "Jurisdictional arbitrage is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "economic-concentration",
+      "score": 0,
+      "summary": "Economic concentration is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "labor-polarization",
+      "score": 0,
+      "summary": "Labor market polarization is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "productivity-paradox",
+      "score": 0,
+      "summary": "Productivity paradox is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "deskilling",
+      "score": 0,
+      "summary": "Human deskilling is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "loss-of-agency",
+      "score": 1,
+      "summary": "Loss of user autonomy is briefly acknowledged under the societal risks framing but is not a scored risk category in the framework.",
+      "clauses": ["Section: Introduction"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "social-isolation",
+      "score": 0,
+      "summary": "Social isolation effects are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "cultural-homogenization",
+      "score": 0,
+      "summary": "Cultural homogenization is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "misaligned-superintelligence",
+      "score": 2,
+      "summary": "The framework's SL4 (critical risk) category is defined in terms of models capable of causing human-level or civilizational harm with misaligned or catastrophic behaviour; specific pre-deployment requirements are defined for this level.",
+      "clauses": ["Section: Safety Levels — Critical", "Section: Risk Assessment — Model Behavior / Autonomy"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "irreversible-loss-of-control",
+      "score": 2,
+      "summary": "SL4 definitions explicitly include models that could enable irreversible societal harm; the framework commits to not deploying such models without sufficient mitigations.",
+      "clauses": ["Section: Safety Levels — Critical"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "value-lock-in",
+      "score": 1,
+      "summary": "Value lock-in is mentioned in the framework's existential risk framing but is not a scored evaluation category.",
+      "clauses": ["Section: Introduction"],
+      "notes": ""
+    }
+  ],
+  "meta_observations": [
+    "The Preparedness Framework v2 is tightly focused on four quantified risk tracks (CBRN, cyber, model behavior/autonomy, influence operations) with a clear four-level safety scoring rubric — this makes it operationally strong within its scope but narrow.",
+    "The board-level Safety Committee governance structure is a genuine accountability mechanism, distinguishing this framework from pure self-assessment; however the committee is internal and there is no external audit requirement.",
+    "The framework has no coverage of socioeconomic risks, epistemic risks, or most societal harms — these are addressed (if at all) in OpenAI's separate usage policies and charter.",
+    "The Preparedness Framework is comparably strong to Anthropic's RSP on CBRN and cyber (both score 3), but the RSP's ASL architecture provides more granular capability thresholds while OpenAI's four-level SL rubric is simpler and potentially more actionable.",
+    "The influence operations track is a notable differentiator from Anthropic's RSP, though the scoring in v2 remains at level 1 due to limited operational specificity."
+  ]
+}

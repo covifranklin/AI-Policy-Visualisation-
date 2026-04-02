@@ -1,0 +1,215 @@
+{
+  "policy_id": "bletchley-declaration",
+  "analyzed_date": "2026-04-01",
+  "scores": [
+    {
+      "subcategory_id": "goal-misalignment",
+      "score": 1,
+      "summary": "The declaration explicitly names 'unintended issues of control relating to alignment with human intent' as a key frontier AI risk, but contains no operative provisions.",
+      "clauses": ["Para. 4"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "deceptive-alignment",
+      "score": 0,
+      "summary": "Deceptive alignment is not mentioned; the reference to 'deceptive content' in Para. 3 concerns user-facing misinformation, not model evaluation behaviour.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "emergent-capabilities",
+      "score": 1,
+      "summary": "The declaration notes that frontier AI capabilities 'are not fully understood and are therefore hard to predict', directly acknowledging the emergence problem, but takes no action beyond calling for research.",
+      "clauses": ["Para. 4"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "loss-of-oversight",
+      "score": 1,
+      "summary": "'Appropriate human oversight' is listed among the issues that must be addressed, and 'issues of control' are cited as a frontier-specific concern, but no provisions operationalise this.",
+      "clauses": ["Para. 3", "Para. 4", "Para. 7"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "supply-chain",
+      "score": 0,
+      "summary": "Supply chain vulnerabilities are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "model-theft",
+      "score": 0,
+      "summary": "Model theft or weights exfiltration is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "data-poisoning",
+      "score": 0,
+      "summary": "Data poisoning is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "dependency-monoculture",
+      "score": 0,
+      "summary": "AI monoculture or concentration of providers is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "epistemic-collapse",
+      "score": 1,
+      "summary": "The declaration notes frontier AI may 'amplify risks such as disinformation' and flags 'capability to manipulate content or generate deceptive content' as a concern requiring action.",
+      "clauses": ["Para. 3", "Para. 4"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "synthetic-data-loops",
+      "score": 0,
+      "summary": "Synthetic data feedback loops and model collapse are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "persuasion-manipulation",
+      "score": 1,
+      "summary": "The declaration notes 'unforeseen risks stemming from the capability to manipulate content or generate deceptive content' as a concern, but takes no action beyond acknowledgement.",
+      "clauses": ["Para. 3"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "cbrn-misuse",
+      "score": 1,
+      "summary": "'Biotechnology' is explicitly named alongside cybersecurity as a domain of 'especially concerned' frontier AI risk, but this is acknowledgement only.",
+      "clauses": ["Para. 4"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "cyber-offense",
+      "score": 1,
+      "summary": "'Cybersecurity' is explicitly named as a domain of special frontier AI concern, but no provisions or commitments follow.",
+      "clauses": ["Para. 4"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "military-escalation",
+      "score": 0,
+      "summary": "Military applications, autonomous weapons, and escalation risks are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "strategic-instability",
+      "score": 0,
+      "summary": "AI arms race dynamics or strategic instability are not mentioned; the declaration focuses on cooperation rather than competition risks.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "regulatory-capture",
+      "score": 0,
+      "summary": "Regulatory capture is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "capability-overhang",
+      "score": 1,
+      "summary": "The declaration acknowledges 'the rapid and uncertain rate of change of AI' and the need to understand risks 'as capabilities continue to increase', implicitly recognising overhang dynamics.",
+      "clauses": ["Para. 4", "Agenda bullet 1"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "enforcement-gaps",
+      "score": 0,
+      "summary": "The declaration has no enforcement mechanisms of any kind; all language is aspirational.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "jurisdictional-arbitrage",
+      "score": 0,
+      "summary": "Jurisdictional arbitrage is not addressed; the declaration promotes international cooperation but not against regulatory avoidance.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "economic-concentration",
+      "score": 0,
+      "summary": "Economic concentration from AI is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "labor-polarization",
+      "score": 0,
+      "summary": "Labour market impacts are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "productivity-paradox",
+      "score": 0,
+      "summary": "Uneven distribution of productivity gains is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "deskilling",
+      "score": 0,
+      "summary": "Human deskilling or cognitive atrophy from AI use is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "loss-of-agency",
+      "score": 1,
+      "summary": "The declaration affirms AI should be 'human-centric' and calls for 'appropriate human oversight', implicitly addressing agency preservation, but without operative provisions.",
+      "clauses": ["Para. 1", "Para. 3"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "social-isolation",
+      "score": 0,
+      "summary": "Social isolation or AI companionship effects are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "cultural-homogenization",
+      "score": 0,
+      "summary": "Cultural homogenization is not mentioned; references to 'inclusive AI' concern access and the digital divide, not cultural diversity.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "misaligned-superintelligence",
+      "score": 1,
+      "summary": "The declaration warns of 'serious, even catastrophic, harm' from frontier AI and names alignment with human intent as a core risk, but contains no provisions targeting this scenario.",
+      "clauses": ["Para. 4"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "irreversible-loss-of-control",
+      "score": 1,
+      "summary": "Potential for 'catastrophic harm, either deliberate or unintentional' is explicitly acknowledged as a frontier AI risk, but no provisions address irreversibility or control loss.",
+      "clauses": ["Para. 4"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "value-lock-in",
+      "score": 0,
+      "summary": "Value lock-in is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    }
+  ],
+  "meta_observations": [
+    "The Bletchley Declaration is a political statement of intent with no operative provisions — maximum possible score across all subcategories is 1, and most score 0.",
+    "Its primary value is naming frontier AI as the distinctive locus of risk and explicitly citing alignment, CBRN (biotechnology), cybersecurity, and catastrophic harm — a significant step for a 28-nation political declaration.",
+    "The declaration launched the AI Safety Summit process and the mandate for international AI safety research collaboration, which is its substantive governance output rather than any direct provision.",
+    "Notable omissions: military/autonomous weapons, economic concentration, and any accountability or verification language for the commitments made."
+  ]
+}

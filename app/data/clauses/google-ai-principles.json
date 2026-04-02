@@ -1,0 +1,216 @@
+{
+  "policy_id": "google-ai-principles",
+  "analyzed_date": "2026-04-01",
+  "scores": [
+    {
+      "subcategory_id": "goal-misalignment",
+      "score": 1,
+      "summary": "Principle 1 (Be socially beneficial) and Principle 5 (Build and test for safety) acknowledge misalignment risks at a high level, but no specific evaluation procedures or thresholds are defined.",
+      "clauses": ["Principle 1: Be Socially Beneficial", "Principle 5: Build and Test for Safety"],
+      "notes": "This is a principles document, not an operational framework; specificity is inherently limited."
+    },
+    {
+      "subcategory_id": "deceptive-alignment",
+      "score": 0,
+      "summary": "Deceptive alignment is not addressed as a distinct risk in the principles.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "emergent-capabilities",
+      "score": 1,
+      "summary": "Principle 5 acknowledges that AI systems may have unintended or harmful capabilities and commits to testing during development, but no threshold-based evaluation system is specified.",
+      "clauses": ["Principle 5: Build and Test for Safety"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "loss-of-oversight",
+      "score": 2,
+      "summary": "Principle 5 includes a specific named commitment to preserve human ability to adjust, correct, retrain, or shut down AI systems; this is one of the more operationally specific commitments in the document.",
+      "clauses": ["Principle 5: Build and Test for Safety — Human Oversight Commitment"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "supply-chain",
+      "score": 0,
+      "summary": "Supply chain vulnerabilities are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "model-theft",
+      "score": 0,
+      "summary": "Model theft / weights exfiltration is not addressed in the principles.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "data-poisoning",
+      "score": 0,
+      "summary": "Data poisoning is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "dependency-monoculture",
+      "score": 0,
+      "summary": "Dependency monoculture is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "epistemic-collapse",
+      "score": 1,
+      "summary": "Principle 7 (Make available to society) and the 'Applications we will not pursue' section acknowledge AI's potential to distort information environments, but commitments remain aspirational.",
+      "clauses": ["Principle 7: Make Available for Uses that Accord with Principles", "Section: Applications We Will Not Pursue"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "synthetic-data-loops",
+      "score": 0,
+      "summary": "Synthetic data feedback loops are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "persuasion-manipulation",
+      "score": 2,
+      "summary": "The 'Applications we will not pursue' section includes a specific named commitment not to build AI that facilitates surveillance or manipulation of democratic processes, going beyond principle-level acknowledgment.",
+      "clauses": ["Section: Applications We Will Not Pursue — Surveillance and Manipulation"],
+      "notes": "This is one of the few operationally specific commitments in the document; the prohibition is named and categorical."
+    },
+    {
+      "subcategory_id": "cbrn-misuse",
+      "score": 2,
+      "summary": "The 'Applications we will not pursue' section explicitly names weapons of mass destruction as a category Google will not develop AI for; this is a named categorical commitment.",
+      "clauses": ["Section: Applications We Will Not Pursue — Weapons of Mass Destruction"],
+      "notes": "Strong negative commitment; no evaluation procedure or verification mechanism."
+    },
+    {
+      "subcategory_id": "cyber-offense",
+      "score": 1,
+      "summary": "Cybersecurity offensive applications are not explicitly named in the 'Applications we will not pursue' list; Principle 5 covers safety broadly but cyber offense is not a distinct commitment.",
+      "clauses": ["Principle 5: Build and Test for Safety"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "military-escalation",
+      "score": 2,
+      "summary": "The 'Applications we will not pursue' section includes a named commitment not to develop AI for weapons or technologies that cause harm beyond what is expected under international law, which covers autonomous weapons.",
+      "clauses": ["Section: Applications We Will Not Pursue — Weapons"],
+      "notes": "Named categorical prohibition; no enforcement mechanism or verification."
+    },
+    {
+      "subcategory_id": "strategic-instability",
+      "score": 1,
+      "summary": "Arms race dynamics are acknowledged in the principles' background framing but no specific commitment addresses strategic instability.",
+      "clauses": ["Section: Introduction"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "regulatory-capture",
+      "score": 1,
+      "summary": "Principle 7 commits Google to supporting multi-stakeholder AI governance, which implicitly addresses capture concerns, but there is no anti-capture commitment.",
+      "clauses": ["Principle 7: Make Available for Uses that Accord with Principles"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "capability-overhang",
+      "score": 1,
+      "summary": "Principle 5 calls for safety testing during development but does not address staged release or capability overhang specifically.",
+      "clauses": ["Principle 5: Build and Test for Safety"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "enforcement-gaps",
+      "score": 1,
+      "summary": "The principles mention internal review processes for AI applications, but no governance mechanism with real enforcement capability is described.",
+      "clauses": ["Section: Our Processes"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "jurisdictional-arbitrage",
+      "score": 0,
+      "summary": "Jurisdictional arbitrage is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "economic-concentration",
+      "score": 1,
+      "summary": "Principle 1 (Be socially beneficial) acknowledges that AI benefits should be broadly distributed, not concentrated, but this is aspirational.",
+      "clauses": ["Principle 1: Be Socially Beneficial"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "labor-polarization",
+      "score": 1,
+      "summary": "Principle 1 acknowledges economic disruption from AI as a consideration in assessing whether AI is beneficial, but no specific commitment addresses labor polarization.",
+      "clauses": ["Principle 1: Be Socially Beneficial"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "productivity-paradox",
+      "score": 1,
+      "summary": "Uneven distribution of AI benefits is noted under Principle 1 as a concern to weigh, but no commitment or mechanism is specified.",
+      "clauses": ["Principle 1: Be Socially Beneficial"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "deskilling",
+      "score": 0,
+      "summary": "Human deskilling and cognitive atrophy are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "loss-of-agency",
+      "score": 2,
+      "summary": "Principle 3 (Be built and tested for safety) and Principle 6 (Uphold high standards of scientific excellence) together include a named commitment to preserve user autonomy and avoid undue dependence on AI systems.",
+      "clauses": ["Principle 6: Uphold High Standards of Scientific Excellence"],
+      "notes": "This is stronger than peers on this dimension due to the named autonomy commitment."
+    },
+    {
+      "subcategory_id": "social-isolation",
+      "score": 0,
+      "summary": "Social isolation and AI companionship effects are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "cultural-homogenization",
+      "score": 1,
+      "summary": "Principle 2 (Avoid creating or reinforcing bias) touches on cultural diversity in the context of fairness, but cultural homogenization as a distinct risk is not addressed.",
+      "clauses": ["Principle 2: Avoid Creating or Reinforcing Unfair Bias"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "misaligned-superintelligence",
+      "score": 1,
+      "summary": "Existential AI risk is acknowledged in the background section as a reason to take AI safety seriously, but no specific commitment or procedure addresses misaligned superintelligence.",
+      "clauses": ["Section: Introduction"],
+      "notes": "The Google AI Principles predates the frontier safety framing; DeepMind's FSF provides the operational counterpart."
+    },
+    {
+      "subcategory_id": "irreversible-loss-of-control",
+      "score": 1,
+      "summary": "Principle 5 includes a commitment to avoid unintended consequences and irreversible outcomes, but this is framed as a general safety principle rather than a specific commitment.",
+      "clauses": ["Principle 5: Build and Test for Safety"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "value-lock-in",
+      "score": 1,
+      "summary": "Value pluralism and avoiding concentration of power are acknowledged under Principle 1 but as background considerations, not operational commitments.",
+      "clauses": ["Principle 1: Be Socially Beneficial"],
+      "notes": ""
+    }
+  ],
+  "meta_observations": [
+    "The Google AI Principles (2018, updated incrementally) are a high-level principles document with limited operational specificity; they function as governance framing rather than a frontier safety framework and should be read alongside DeepMind's FSF for the operational layer.",
+    "The 'Applications we will not pursue' section is the strongest part of the document — providing named categorical prohibitions (WMD, weapons beyond international law, surveillance for authoritarian regimes, manipulation of democratic processes) that go beyond principle statements.",
+    "Compared to the RSP, Preparedness Framework, and FSF, this document scores notably higher on socioeconomic and societal risks (principle-level acknowledgments exist across more categories) but lower on technical safety specificity.",
+    "The document does not have a meaningful accountability mechanism for most commitments; no internal review process with named oversight body is described in a way that would qualify for a score of 3.",
+    "As a 2018 document, it predates the frontier safety framing that emerged 2023-2025; its principles-based approach reflects the pre-GPT-4 governance paradigm and has not been updated to incorporate the more operational tier-based frameworks."
+  ]
+}

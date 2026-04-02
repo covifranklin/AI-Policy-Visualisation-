@@ -1,0 +1,217 @@
+{
+  "policy_id": "meta-rai",
+  "analyzed_date": "2026-04-01",
+  "scores": [
+    {
+      "subcategory_id": "goal-misalignment",
+      "score": 1,
+      "summary": "Meta's RAI framework acknowledges misalignment risks under its 'Safety' pillar and references internal red-teaming processes, but no specific evaluation thresholds or deployment requirements tied to alignment are defined.",
+      "clauses": ["Pillar: Safety", "Section: Red Teaming and Evaluations"],
+      "notes": "Meta's open-source model release strategy creates particular tension here — alignment requirements apply pre-release but cannot govern post-release use."
+    },
+    {
+      "subcategory_id": "deceptive-alignment",
+      "score": 0,
+      "summary": "Deceptive alignment is not addressed as a distinct risk category.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "emergent-capabilities",
+      "score": 1,
+      "summary": "The RAI framework references capability evaluations before model release, but no structured tier-based system for detecting dangerous emergent capabilities is defined.",
+      "clauses": ["Section: Pre-Release Evaluations"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "loss-of-oversight",
+      "score": 1,
+      "summary": "Human oversight is mentioned as a principle under Meta's responsible deployment guidance, but the open-source release model fundamentally limits Meta's ability to commit to ongoing oversight post-release.",
+      "clauses": ["Pillar: Accountability"],
+      "notes": "The open-weight release strategy creates a structural ceiling on achievable oversight commitments."
+    },
+    {
+      "subcategory_id": "supply-chain",
+      "score": 0,
+      "summary": "Supply chain vulnerabilities are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "model-theft",
+      "score": 0,
+      "summary": "Meta's open-weight release strategy means model theft prevention is not a commitment; weights are intentionally made available.",
+      "clauses": [],
+      "notes": "Scores 0 by design; the policy is premised on open release rather than weight protection."
+    },
+    {
+      "subcategory_id": "data-poisoning",
+      "score": 1,
+      "summary": "Data quality and training integrity are mentioned under Meta's responsible AI practices, but no specific anti-poisoning evaluation procedure is defined.",
+      "clauses": ["Section: Responsible Training Practices"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "dependency-monoculture",
+      "score": 1,
+      "summary": "Meta explicitly frames open-source AI as a counter to monoculture dependency risk — the argument that open models prevent single-vendor lock-in is made in the RAI documentation.",
+      "clauses": ["Section: Open Source and AI Safety"],
+      "notes": "Unusual position: Meta argues open-source release is the mitigation for monoculture risk rather than a contributor to it."
+    },
+    {
+      "subcategory_id": "epistemic-collapse",
+      "score": 1,
+      "summary": "Epistemic risks including misinformation are acknowledged under the RAI framework's 'Transparency' pillar, but no operational commitment addresses them.",
+      "clauses": ["Pillar: Transparency"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "synthetic-data-loops",
+      "score": 0,
+      "summary": "Synthetic data feedback loops are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "persuasion-manipulation",
+      "score": 2,
+      "summary": "Meta's RAI framework includes specific named restrictions on using AI for political manipulation and targeted influence operations; these are built into the Llama model's acceptable use policy with specific prohibited use cases.",
+      "clauses": ["Section: Acceptable Use Policy — Prohibited Uses", "Pillar: Safety"],
+      "notes": "The inclusion in the Acceptable Use Policy provides operational specificity; however the open-weight release limits enforcement after distribution."
+    },
+    {
+      "subcategory_id": "cbrn-misuse",
+      "score": 2,
+      "summary": "CBRN uplift evaluations are conducted pre-release on Llama models; Meta commits to not releasing models that provide meaningful CBRN uplift, and this is documented in model cards.",
+      "clauses": ["Section: Pre-Release Evaluations — CBRN", "Section: Llama Model Cards"],
+      "notes": "The open-weight release model means that post-release CBRN misuse cannot be prevented through deployment controls, only through initial capability evaluation."
+    },
+    {
+      "subcategory_id": "cyber-offense",
+      "score": 2,
+      "summary": "Cyber offense capabilities are assessed pre-release and the Acceptable Use Policy prohibits deployment for automated cyberattack purposes; documented in model cards.",
+      "clauses": ["Section: Pre-Release Evaluations — Cyber", "Section: Acceptable Use Policy"],
+      "notes": "Same structural limitation as CBRN: enforcement after open-weight release is not possible."
+    },
+    {
+      "subcategory_id": "military-escalation",
+      "score": 1,
+      "summary": "Military and weapons applications are listed as prohibited uses in the Acceptable Use Policy, but no evaluation procedure or escalation threshold is defined.",
+      "clauses": ["Section: Acceptable Use Policy — Prohibited Uses"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "strategic-instability",
+      "score": 1,
+      "summary": "Meta argues that open-source AI promotes distributed development and reduces single-actor dominance, which is framed as a strategic stability benefit, but no specific commitment addresses arms race dynamics.",
+      "clauses": ["Section: Open Source and AI Safety"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "regulatory-capture",
+      "score": 1,
+      "summary": "Meta's RAI documentation mentions engagement with governments and standards bodies but includes no anti-capture commitments.",
+      "clauses": ["Section: Stakeholder Engagement"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "capability-overhang",
+      "score": 1,
+      "summary": "Pre-release evaluation is conducted before model releases, but there is no staged deployment system; once models are released as open weights, capability overhang controls are not applicable.",
+      "clauses": ["Section: Pre-Release Evaluations"],
+      "notes": "Open-weight release inherently limits the effectiveness of overhang controls."
+    },
+    {
+      "subcategory_id": "enforcement-gaps",
+      "score": 1,
+      "summary": "Meta has internal responsible AI review processes, but the open-weight distribution model means enforcement after release is structurally limited to the Acceptable Use Policy, which has no technical enforcement mechanism.",
+      "clauses": ["Section: Responsible AI Review Process"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "jurisdictional-arbitrage",
+      "score": 0,
+      "summary": "Jurisdictional arbitrage is not addressed; the open-weight model exacerbates this risk.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "economic-concentration",
+      "score": 2,
+      "summary": "Meta makes a specific operational commitment to open-source AI distribution as a mechanism for reducing economic concentration in frontier AI; the Llama release programme is framed as anti-concentration policy.",
+      "clauses": ["Section: Open Source and AI Safety", "Section: Why We Open Source"],
+      "notes": "This is a genuine differentiator from closed-model peers; the anti-concentration commitment is operationalised through the release programme itself."
+    },
+    {
+      "subcategory_id": "labor-polarization",
+      "score": 1,
+      "summary": "Labor displacement and economic disruption are acknowledged under Meta's broader responsible AI framing, but no specific commitment addresses labor polarization.",
+      "clauses": ["Pillar: Be Socially Beneficial"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "productivity-paradox",
+      "score": 1,
+      "summary": "Uneven distribution of AI benefits is acknowledged in principle but no specific commitment or mechanism addresses productivity paradox risk.",
+      "clauses": ["Pillar: Be Socially Beneficial"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "deskilling",
+      "score": 0,
+      "summary": "Human deskilling is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "loss-of-agency",
+      "score": 1,
+      "summary": "User autonomy is mentioned in Meta's responsible deployment guidance, but no specific commitment to preventing AI dependence or loss of agency is articulated.",
+      "clauses": ["Pillar: Accountability"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "social-isolation",
+      "score": 1,
+      "summary": "Given Meta's social platform context, AI companionship effects are acknowledged as a relevant concern; Meta AI product guidelines mention mental health and connection safeguards, but these are not formalised in the RAI framework.",
+      "clauses": ["Section: User Wellbeing"],
+      "notes": "Meta's platform context makes this more salient than for other policy holders; notable that even here the score is only 1."
+    },
+    {
+      "subcategory_id": "cultural-homogenization",
+      "score": 1,
+      "summary": "Cultural and linguistic diversity is noted as a consideration in Meta's AI development principles; no specific commitment addresses homogenization risk.",
+      "clauses": ["Pillar: Be Socially Beneficial"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "misaligned-superintelligence",
+      "score": 1,
+      "summary": "Existential risk from misaligned AI is acknowledged in Meta's responsible AI framing but is not a specific evaluated risk category; Meta's approach is to conduct safety research (FAIR) without a structured deployment framework for this risk.",
+      "clauses": ["Section: Long-term Safety Research"],
+      "notes": "Meta's position differs from Anthropic/DeepMind in treating catastrophic risk as a research problem rather than a deployment governance problem."
+    },
+    {
+      "subcategory_id": "irreversible-loss-of-control",
+      "score": 1,
+      "summary": "Irreversible harms are mentioned as a category of concern in the RAI framework's risk assessment approach, but no specific commitment or threshold is defined.",
+      "clauses": ["Section: Risk Assessment Principles"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "value-lock-in",
+      "score": 1,
+      "summary": "Value pluralism is mentioned in connection with Meta's open-source strategy as a mechanism for avoiding single-actor value imposition, but this is framing rather than a commitment.",
+      "clauses": ["Section: Open Source and AI Safety"],
+      "notes": ""
+    }
+  ],
+  "meta_observations": [
+    "Meta's RAI framework is structurally distinct from all other policies in this set because its central commitment — open-weight model release — both addresses certain risks (economic concentration, monoculture) and creates structural ceilings on others (model theft, post-release control, enforcement).",
+    "The framework scores lower on technical safety specificity than Anthropic/DeepMind/OpenAI, reflecting Meta's position that open-source AI is itself the primary safety intervention rather than deployment restrictions.",
+    "Meta scores uniquely well on economic-concentration because the open-source release programme is the commitment — this is not present at all in the other five policies.",
+    "The absence of a tier-based dangerous capability framework (analogous to ASL, SL, or CCL systems) is the most significant gap relative to peers; pre-release evaluations are conducted but without published thresholds or deployment halt conditions.",
+    "Meta's approach prioritises breadth of principle coverage over depth of operational commitment; most subcategories score 1 (acknowledged but not operationalised) rather than 0 or 2.",
+    "The open-weight release model fundamentally limits accountability mechanisms: there is no technical means to recall or restrict model use after weights are published, which caps achievable scores on enforcement-related categories regardless of stated policy."
+  ]
+}

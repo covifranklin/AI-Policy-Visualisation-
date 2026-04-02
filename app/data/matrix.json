@@ -1,0 +1,3120 @@
+{
+  "scores": [
+    {
+      "policy_id": "anthropic-fcf",
+      "subcategory_id": "goal-misalignment",
+      "score": 2,
+      "summary": "The FCF incorporates RSP alignment evaluation requirements by reference and adds SB-53 compliance obligations that require alignment testing to be documented and disclosed to California regulators.",
+      "clauses": [
+        "Section: Safety Testing Requirements",
+        "Section: Compliance with SB-53"
+      ],
+      "notes": "The SB-53 hook elevates this above pure self-regulation for California-jurisdiction activities."
+    },
+    {
+      "policy_id": "anthropic-fcf",
+      "subcategory_id": "deceptive-alignment",
+      "score": 2,
+      "summary": "FCF requires documentation of evaluations targeting deceptive or scheming behaviour as part of the pre-deployment safety case required under SB-53.",
+      "clauses": [
+        "Section: Safety Testing Requirements",
+        "Section: Transparency Report Obligations"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-fcf",
+      "subcategory_id": "emergent-capabilities",
+      "score": 3,
+      "summary": "FCF requires public annual safety reports disclosing capability evaluation findings, including any unexpected capability emergence, creating a public disclosure accountability mechanism aligned with SB-53 reporting obligations.",
+      "clauses": [
+        "Section: Annual Safety Report",
+        "Section: SB-53 Compliance Schedule"
+      ],
+      "notes": "SB-53 legal obligation constitutes a genuine external accountability mechanism for this subcategory."
+    },
+    {
+      "policy_id": "anthropic-fcf",
+      "subcategory_id": "loss-of-oversight",
+      "score": 2,
+      "summary": "FCF includes commitments to document human oversight protocols for deployed systems and report oversight mechanisms in the annual safety report.",
+      "clauses": [
+        "Section: Transparency Report Obligations",
+        "Section: Deployment Safeguards"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-fcf",
+      "subcategory_id": "supply-chain",
+      "score": 0,
+      "summary": "Supply chain vulnerabilities are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-fcf",
+      "subcategory_id": "model-theft",
+      "score": 2,
+      "summary": "FCF requires disclosure of security measures protecting model weights as part of SB-53 compliance reporting, giving external visibility to security commitments.",
+      "clauses": [
+        "Section: Security Commitments under SB-53"
+      ],
+      "notes": "Disclosure obligation to regulator adds accountability beyond RSP's self-assessment."
+    },
+    {
+      "policy_id": "anthropic-fcf",
+      "subcategory_id": "data-poisoning",
+      "score": 0,
+      "summary": "Data poisoning and training pipeline attacks are not addressed in the FCF.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-fcf",
+      "subcategory_id": "dependency-monoculture",
+      "score": 0,
+      "summary": "Dependency monoculture is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-fcf",
+      "subcategory_id": "epistemic-collapse",
+      "score": 1,
+      "summary": "Epistemic risks from AI are mentioned in the FCF's broader framing of societal impact but no compliance requirements are tied to this.",
+      "clauses": [
+        "Section: Scope of Framework"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-fcf",
+      "subcategory_id": "synthetic-data-loops",
+      "score": 0,
+      "summary": "Synthetic data loops are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-fcf",
+      "subcategory_id": "persuasion-manipulation",
+      "score": 1,
+      "summary": "The FCF references Anthropic's usage policies around manipulation, but does not operationalize anti-manipulation commitments within the compliance framework itself.",
+      "clauses": [
+        "Section: Scope of Framework"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-fcf",
+      "subcategory_id": "cbrn-misuse",
+      "score": 3,
+      "summary": "CBRN misuse evaluation is a named compliance requirement under SB-53; Anthropic must document CBRN evaluation results in the annual safety report disclosed to the California Attorney General.",
+      "clauses": [
+        "Section: SB-53 Safety Evaluation Requirements",
+        "Section: Annual Safety Report"
+      ],
+      "notes": "The SB-53 legal obligation means this is the only category in this document with a genuine legal accountability hook."
+    },
+    {
+      "policy_id": "anthropic-fcf",
+      "subcategory_id": "cyber-offense",
+      "score": 3,
+      "summary": "Cyber offense capability evaluation is a named compliance requirement under SB-53, with results to be disclosed in the annual public safety report.",
+      "clauses": [
+        "Section: SB-53 Safety Evaluation Requirements",
+        "Section: Annual Safety Report"
+      ],
+      "notes": "Parallel to CBRN treatment."
+    },
+    {
+      "policy_id": "anthropic-fcf",
+      "subcategory_id": "military-escalation",
+      "score": 1,
+      "summary": "Military applications are mentioned as a category requiring heightened scrutiny but no specific compliance requirements are articulated.",
+      "clauses": [
+        "Section: Scope of Framework"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-fcf",
+      "subcategory_id": "strategic-instability",
+      "score": 1,
+      "summary": "Strategic instability from AI racing is mentioned as context for why the FCF was created but is not the subject of specific compliance commitments.",
+      "clauses": [
+        "Section: Introduction"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-fcf",
+      "subcategory_id": "regulatory-capture",
+      "score": 1,
+      "summary": "The FCF includes a brief commitment to engage constructively with regulators without seeking to weaken safety standards, but this is aspirational rather than operational.",
+      "clauses": [
+        "Section: Regulatory Engagement"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-fcf",
+      "subcategory_id": "capability-overhang",
+      "score": 2,
+      "summary": "FCF requires pre-deployment safety cases and evaluation documentation before release, which operationalises the staged release principle aimed at preventing capability overhang.",
+      "clauses": [
+        "Section: Pre-Deployment Requirements under SB-53"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-fcf",
+      "subcategory_id": "enforcement-gaps",
+      "score": 3,
+      "summary": "The FCF is explicitly structured around SB-53 compliance, which gives the California Attorney General enforcement powers; this is the strongest enforcement hook among the six policies.",
+      "clauses": [
+        "Section: SB-53 Compliance Schedule",
+        "Section: Accountability Mechanisms"
+      ],
+      "notes": "The SB-53 legal framework converts voluntary commitments into legally enforceable obligations for California-scope activities."
+    },
+    {
+      "policy_id": "anthropic-fcf",
+      "subcategory_id": "jurisdictional-arbitrage",
+      "score": 1,
+      "summary": "The FCF acknowledges that SB-53 applies to covered frontier models regardless of where development occurs, providing limited anti-arbitrage protection for California-nexus activities.",
+      "clauses": [
+        "Section: Scope of Framework"
+      ],
+      "notes": "Only addresses California jurisdiction; no global commitment."
+    },
+    {
+      "policy_id": "anthropic-fcf",
+      "subcategory_id": "economic-concentration",
+      "score": 0,
+      "summary": "Economic concentration is not addressed in the FCF.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-fcf",
+      "subcategory_id": "labor-polarization",
+      "score": 0,
+      "summary": "Labor market polarization is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-fcf",
+      "subcategory_id": "productivity-paradox",
+      "score": 0,
+      "summary": "Productivity paradox is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-fcf",
+      "subcategory_id": "deskilling",
+      "score": 0,
+      "summary": "Human deskilling is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-fcf",
+      "subcategory_id": "loss-of-agency",
+      "score": 0,
+      "summary": "Loss of agency / autonomy is not addressed as a compliance requirement.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-fcf",
+      "subcategory_id": "social-isolation",
+      "score": 0,
+      "summary": "Social isolation effects are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-fcf",
+      "subcategory_id": "cultural-homogenization",
+      "score": 0,
+      "summary": "Cultural homogenization is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-fcf",
+      "subcategory_id": "misaligned-superintelligence",
+      "score": 2,
+      "summary": "The FCF incorporates the RSP's catastrophic risk framework by reference, including commitments around preventing misaligned superintelligence, and requires disclosure of these safety measures under SB-53.",
+      "clauses": [
+        "Section: Safety Testing Requirements",
+        "Section: Annual Safety Report"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-fcf",
+      "subcategory_id": "irreversible-loss-of-control",
+      "score": 2,
+      "summary": "Commitments to avoid irreversible outcomes are embedded in the FCF's deployment gating requirements, with SB-53 reporting creating external visibility.",
+      "clauses": [
+        "Section: Pre-Deployment Requirements under SB-53"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-fcf",
+      "subcategory_id": "value-lock-in",
+      "score": 1,
+      "summary": "Value lock-in is acknowledged as a societal risk in the framework's preamble but no specific compliance requirement addresses it.",
+      "clauses": [
+        "Section: Introduction"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-rsp",
+      "subcategory_id": "goal-misalignment",
+      "score": 2,
+      "summary": "RSP v3 frames its entire ASL framework around the risk of models pursuing unintended objectives; ASL-3 and ASL-4 requirements mandate alignment evaluations before deployment and after any significant capability uplift.",
+      "clauses": [
+        "Section: Alignment Science Requirements (ASL-3)",
+        "Section: Core Views on AI Risk"
+      ],
+      "notes": "Commitment language is specific ('we will require') but external verification of eval results is not mandated."
+    },
+    {
+      "policy_id": "anthropic-rsp",
+      "subcategory_id": "deceptive-alignment",
+      "score": 2,
+      "summary": "Scheming and deceptive alignment are explicitly named threat models; the RSP requires interpretability and anomaly-detection evaluations targeting deceptive behaviour before ASL-3/4 deployment.",
+      "clauses": [
+        "Section: Core Views on AI Risk",
+        "Section: ASL-3 Alignment Requirements"
+      ],
+      "notes": "Defined procedure exists; no external audit of whether evals adequately detect deception."
+    },
+    {
+      "policy_id": "anthropic-rsp",
+      "subcategory_id": "emergent-capabilities",
+      "score": 3,
+      "summary": "The entire ASL framework is built around detecting emergent dangerous capabilities at each capability threshold; Anthropic commits to halting deployment if critical capabilities emerge unexpectedly, with public disclosure of level changes.",
+      "clauses": [
+        "Section: Capability Evaluations",
+        "Section: ASL Thresholds and Definitions"
+      ],
+      "notes": "Public disclosure of ASL level changes constitutes a weak accountability mechanism; no independent auditor required to confirm capability findings."
+    },
+    {
+      "policy_id": "anthropic-rsp",
+      "subcategory_id": "loss-of-oversight",
+      "score": 2,
+      "summary": "RSP requires that models at ASL-3 and above not be granted autonomous capabilities that undermine human oversight; 'minimal footprint' and corrigibility requirements are specified.",
+      "clauses": [
+        "Section: ASL-3 Deployment Requirements",
+        "Section: Agentic Use"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-rsp",
+      "subcategory_id": "supply-chain",
+      "score": 0,
+      "summary": "Supply chain vulnerabilities (chip/cloud dependencies) are not addressed in the RSP.",
+      "clauses": [],
+      "notes": "Out of scope for this document."
+    },
+    {
+      "policy_id": "anthropic-rsp",
+      "subcategory_id": "model-theft",
+      "score": 2,
+      "summary": "ASL-3 security requirements include specific commitments around model weight protection, network segmentation, and access controls to prevent exfiltration by sophisticated actors.",
+      "clauses": [
+        "Section: ASL-3 Security Requirements"
+      ],
+      "notes": "Requirements are operationally specific but self-assessed; no third-party penetration testing mandated."
+    },
+    {
+      "policy_id": "anthropic-rsp",
+      "subcategory_id": "data-poisoning",
+      "score": 1,
+      "summary": "Data integrity is mentioned in the context of training pipeline integrity at high ASL levels, but no specific procedures or requirements are defined.",
+      "clauses": [
+        "Section: Core Views on AI Risk"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-rsp",
+      "subcategory_id": "dependency-monoculture",
+      "score": 0,
+      "summary": "AI monoculture / systemic dependency risk is not addressed in the RSP.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-rsp",
+      "subcategory_id": "epistemic-collapse",
+      "score": 1,
+      "summary": "RSP briefly acknowledges that widespread AI use could affect societal epistemics, but this is framed as a general risk rather than a committed mitigation.",
+      "clauses": [
+        "Section: Core Views on AI Risk"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-rsp",
+      "subcategory_id": "synthetic-data-loops",
+      "score": 0,
+      "summary": "Synthetic data feedback loops and model collapse are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-rsp",
+      "subcategory_id": "persuasion-manipulation",
+      "score": 1,
+      "summary": "Manipulation and persuasion at scale are noted as societal concerns in the framing section but no deployment-level commitments are made within the RSP.",
+      "clauses": [
+        "Section: Core Views on AI Risk"
+      ],
+      "notes": "Covered more operationally in Anthropic's Acceptable Use Policy, not this document."
+    },
+    {
+      "policy_id": "anthropic-rsp",
+      "subcategory_id": "cbrn-misuse",
+      "score": 3,
+      "summary": "CBRN uplift is the primary trigger for ASL-3 classification; Anthropic commits to specific evaluation thresholds for biological and chemical weapons uplift, halting deployment if crossed, with public disclosure of level changes constituting a disclosure obligation.",
+      "clauses": [
+        "Section: ASL-3 Capability Thresholds — CBRN",
+        "Section: Capability Evaluations"
+      ],
+      "notes": "Strongest scored category; bio uplift evals are named and operationally defined. Public reporting on ASL status provides a limited accountability hook."
+    },
+    {
+      "policy_id": "anthropic-rsp",
+      "subcategory_id": "cyber-offense",
+      "score": 3,
+      "summary": "Cyber offense capability is an explicit ASL-3 trigger; Anthropic specifies evaluation criteria (ability to autonomously conduct end-to-end cyberattacks) and commits to deployment restrictions if thresholds are met, with public ASL-level disclosure.",
+      "clauses": [
+        "Section: ASL-3 Capability Thresholds — Cyber",
+        "Section: Capability Evaluations"
+      ],
+      "notes": "Parallel treatment to CBRN."
+    },
+    {
+      "policy_id": "anthropic-rsp",
+      "subcategory_id": "military-escalation",
+      "score": 1,
+      "summary": "Autonomous weapons and military escalation are not addressed directly; the RSP refers briefly to 'destabilising power concentration' which could encompass this.",
+      "clauses": [
+        "Section: Core Views on AI Risk"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-rsp",
+      "subcategory_id": "strategic-instability",
+      "score": 2,
+      "summary": "Anthropic explicitly frames competitive racing dynamics as a risk and commits to not cutting safety corners to win the race; the RSP is partly designed to create coordination-forcing norms.",
+      "clauses": [
+        "Section: Introduction — Why This Policy Exists",
+        "Section: Core Views on AI Risk"
+      ],
+      "notes": "Named commitment but no mechanism to bind competitors."
+    },
+    {
+      "policy_id": "anthropic-rsp",
+      "subcategory_id": "regulatory-capture",
+      "score": 1,
+      "summary": "The RSP does not address regulatory capture; Anthropic's participation in policy discussions is noted in passing but no anti-capture commitments are made.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-rsp",
+      "subcategory_id": "capability-overhang",
+      "score": 2,
+      "summary": "The RSP's capability evaluation gate — requiring pre-deployment evals at each threshold — is explicitly designed to prevent sudden release of overhung capabilities; staging commitments are specific.",
+      "clauses": [
+        "Section: ASL Thresholds and Definitions",
+        "Section: Capability Evaluations"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-rsp",
+      "subcategory_id": "enforcement-gaps",
+      "score": 2,
+      "summary": "RSP acknowledges its own potential enforcement gaps and includes a 'what if Anthropic fails to comply' section committing to third-party review mechanisms and board-level escalation.",
+      "clauses": [
+        "Section: Accountability and Verification"
+      ],
+      "notes": "Internal accountability mechanism; the RSP v3 references SB-53 compliance as an external hook."
+    },
+    {
+      "policy_id": "anthropic-rsp",
+      "subcategory_id": "jurisdictional-arbitrage",
+      "score": 0,
+      "summary": "Jurisdictional arbitrage is not addressed; the RSP does not commit to applying its standards globally regardless of regulatory environment.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-rsp",
+      "subcategory_id": "economic-concentration",
+      "score": 1,
+      "summary": "The RSP mentions avoiding 'inappropriate concentration of power' as a core goal, but this is aspirational framing without specific commitments.",
+      "clauses": [
+        "Section: Core Views on AI Risk"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-rsp",
+      "subcategory_id": "labor-polarization",
+      "score": 0,
+      "summary": "Labor market polarization is not addressed in the RSP.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-rsp",
+      "subcategory_id": "productivity-paradox",
+      "score": 0,
+      "summary": "Productivity paradox / uneven gains are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-rsp",
+      "subcategory_id": "deskilling",
+      "score": 0,
+      "summary": "Human deskilling and cognitive atrophy are not addressed in the RSP.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-rsp",
+      "subcategory_id": "loss-of-agency",
+      "score": 1,
+      "summary": "Loss of human agency is implicitly addressed through corrigibility requirements for deployed models, but the document does not address end-user autonomy.",
+      "clauses": [
+        "Section: ASL-3 Deployment Requirements"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-rsp",
+      "subcategory_id": "social-isolation",
+      "score": 0,
+      "summary": "Social isolation and AI companionship effects are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-rsp",
+      "subcategory_id": "cultural-homogenization",
+      "score": 0,
+      "summary": "Cultural homogenization is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-rsp",
+      "subcategory_id": "misaligned-superintelligence",
+      "score": 2,
+      "summary": "Misaligned superintelligence is explicitly the existential motivating risk for the entire RSP; ASL-4 requirements (not yet triggered) are designed to address transformative AI; commitments to halt development if safety cannot be assured are stated.",
+      "clauses": [
+        "Section: Core Views on AI Risk",
+        "Section: ASL-4 Requirements"
+      ],
+      "notes": "Strong framing; ASL-4 commitments remain prospective and untested."
+    },
+    {
+      "policy_id": "anthropic-rsp",
+      "subcategory_id": "irreversible-loss-of-control",
+      "score": 2,
+      "summary": "Preventing irreversible outcomes is a stated design principle of the ASL framework; 'if in doubt, don't deploy' and deployment halt conditions are defined.",
+      "clauses": [
+        "Section: Core Views on AI Risk",
+        "Section: ASL Thresholds"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "anthropic-rsp",
+      "subcategory_id": "value-lock-in",
+      "score": 2,
+      "summary": "Avoiding value lock-in and power concentration by any single entity — including Anthropic itself — is explicitly named as a core commitment.",
+      "clauses": [
+        "Section: Core Views on AI Risk"
+      ],
+      "notes": "Named commitment; no mechanism prevents Anthropic from changing this position over time."
+    },
+    {
+      "policy_id": "bletchley-declaration",
+      "subcategory_id": "goal-misalignment",
+      "score": 1,
+      "summary": "The declaration explicitly names 'unintended issues of control relating to alignment with human intent' as a key frontier AI risk, but contains no operative provisions.",
+      "clauses": [
+        "Para. 4"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "bletchley-declaration",
+      "subcategory_id": "deceptive-alignment",
+      "score": 0,
+      "summary": "Deceptive alignment is not mentioned; the reference to 'deceptive content' in Para. 3 concerns user-facing misinformation, not model evaluation behaviour.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "bletchley-declaration",
+      "subcategory_id": "emergent-capabilities",
+      "score": 1,
+      "summary": "The declaration notes that frontier AI capabilities 'are not fully understood and are therefore hard to predict', directly acknowledging the emergence problem, but takes no action beyond calling for research.",
+      "clauses": [
+        "Para. 4"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "bletchley-declaration",
+      "subcategory_id": "loss-of-oversight",
+      "score": 1,
+      "summary": "'Appropriate human oversight' is listed among the issues that must be addressed, and 'issues of control' are cited as a frontier-specific concern, but no provisions operationalise this.",
+      "clauses": [
+        "Para. 3",
+        "Para. 4",
+        "Para. 7"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "bletchley-declaration",
+      "subcategory_id": "supply-chain",
+      "score": 0,
+      "summary": "Supply chain vulnerabilities are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "bletchley-declaration",
+      "subcategory_id": "model-theft",
+      "score": 0,
+      "summary": "Model theft or weights exfiltration is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "bletchley-declaration",
+      "subcategory_id": "data-poisoning",
+      "score": 0,
+      "summary": "Data poisoning is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "bletchley-declaration",
+      "subcategory_id": "dependency-monoculture",
+      "score": 0,
+      "summary": "AI monoculture or concentration of providers is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "bletchley-declaration",
+      "subcategory_id": "epistemic-collapse",
+      "score": 1,
+      "summary": "The declaration notes frontier AI may 'amplify risks such as disinformation' and flags 'capability to manipulate content or generate deceptive content' as a concern requiring action.",
+      "clauses": [
+        "Para. 3",
+        "Para. 4"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "bletchley-declaration",
+      "subcategory_id": "synthetic-data-loops",
+      "score": 0,
+      "summary": "Synthetic data feedback loops and model collapse are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "bletchley-declaration",
+      "subcategory_id": "persuasion-manipulation",
+      "score": 1,
+      "summary": "The declaration notes 'unforeseen risks stemming from the capability to manipulate content or generate deceptive content' as a concern, but takes no action beyond acknowledgement.",
+      "clauses": [
+        "Para. 3"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "bletchley-declaration",
+      "subcategory_id": "cbrn-misuse",
+      "score": 1,
+      "summary": "'Biotechnology' is explicitly named alongside cybersecurity as a domain of 'especially concerned' frontier AI risk, but this is acknowledgement only.",
+      "clauses": [
+        "Para. 4"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "bletchley-declaration",
+      "subcategory_id": "cyber-offense",
+      "score": 1,
+      "summary": "'Cybersecurity' is explicitly named as a domain of special frontier AI concern, but no provisions or commitments follow.",
+      "clauses": [
+        "Para. 4"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "bletchley-declaration",
+      "subcategory_id": "military-escalation",
+      "score": 0,
+      "summary": "Military applications, autonomous weapons, and escalation risks are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "bletchley-declaration",
+      "subcategory_id": "strategic-instability",
+      "score": 0,
+      "summary": "AI arms race dynamics or strategic instability are not mentioned; the declaration focuses on cooperation rather than competition risks.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "bletchley-declaration",
+      "subcategory_id": "regulatory-capture",
+      "score": 0,
+      "summary": "Regulatory capture is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "bletchley-declaration",
+      "subcategory_id": "capability-overhang",
+      "score": 1,
+      "summary": "The declaration acknowledges 'the rapid and uncertain rate of change of AI' and the need to understand risks 'as capabilities continue to increase', implicitly recognising overhang dynamics.",
+      "clauses": [
+        "Para. 4",
+        "Agenda bullet 1"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "bletchley-declaration",
+      "subcategory_id": "enforcement-gaps",
+      "score": 0,
+      "summary": "The declaration has no enforcement mechanisms of any kind; all language is aspirational.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "bletchley-declaration",
+      "subcategory_id": "jurisdictional-arbitrage",
+      "score": 0,
+      "summary": "Jurisdictional arbitrage is not addressed; the declaration promotes international cooperation but not against regulatory avoidance.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "bletchley-declaration",
+      "subcategory_id": "economic-concentration",
+      "score": 0,
+      "summary": "Economic concentration from AI is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "bletchley-declaration",
+      "subcategory_id": "labor-polarization",
+      "score": 0,
+      "summary": "Labour market impacts are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "bletchley-declaration",
+      "subcategory_id": "productivity-paradox",
+      "score": 0,
+      "summary": "Uneven distribution of productivity gains is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "bletchley-declaration",
+      "subcategory_id": "deskilling",
+      "score": 0,
+      "summary": "Human deskilling or cognitive atrophy from AI use is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "bletchley-declaration",
+      "subcategory_id": "loss-of-agency",
+      "score": 1,
+      "summary": "The declaration affirms AI should be 'human-centric' and calls for 'appropriate human oversight', implicitly addressing agency preservation, but without operative provisions.",
+      "clauses": [
+        "Para. 1",
+        "Para. 3"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "bletchley-declaration",
+      "subcategory_id": "social-isolation",
+      "score": 0,
+      "summary": "Social isolation or AI companionship effects are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "bletchley-declaration",
+      "subcategory_id": "cultural-homogenization",
+      "score": 0,
+      "summary": "Cultural homogenization is not mentioned; references to 'inclusive AI' concern access and the digital divide, not cultural diversity.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "bletchley-declaration",
+      "subcategory_id": "misaligned-superintelligence",
+      "score": 1,
+      "summary": "The declaration warns of 'serious, even catastrophic, harm' from frontier AI and names alignment with human intent as a core risk, but contains no provisions targeting this scenario.",
+      "clauses": [
+        "Para. 4"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "bletchley-declaration",
+      "subcategory_id": "irreversible-loss-of-control",
+      "score": 1,
+      "summary": "Potential for 'catastrophic harm, either deliberate or unintentional' is explicitly acknowledged as a frontier AI risk, but no provisions address irreversibility or control loss.",
+      "clauses": [
+        "Para. 4"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "bletchley-declaration",
+      "subcategory_id": "value-lock-in",
+      "score": 0,
+      "summary": "Value lock-in is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "deepmind-fsf",
+      "subcategory_id": "goal-misalignment",
+      "score": 2,
+      "summary": "The FSF defines 'alignment' as one of two core safety properties required at every model level; each safety level (AL1-AL4) includes specific alignment evaluation criteria and deployment requirements tied to demonstrating sufficient alignment.",
+      "clauses": [
+        "Section: Core Safety Properties",
+        "Section: Safety Level Definitions"
+      ],
+      "notes": "DeepMind's explicit separation of 'alignment' and 'security' as parallel safety tracks is methodologically notable."
+    },
+    {
+      "policy_id": "deepmind-fsf",
+      "subcategory_id": "deceptive-alignment",
+      "score": 2,
+      "summary": "Deceptive and scheming behaviour is named as a specific alignment failure mode; AL3+ safety levels require evaluation evidence ruling out deceptive alignment before deployment.",
+      "clauses": [
+        "Section: Alignment Evaluations",
+        "Section: AL3 Safety Requirements"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "deepmind-fsf",
+      "subcategory_id": "emergent-capabilities",
+      "score": 3,
+      "summary": "The FSF's 'critical capability levels' (CCLs) framework is explicitly designed to detect dangerous capabilities emerging at scale; CCL definitions for each domain trigger mandatory safety assessments; Google DeepMind commits to public disclosure of safety level determinations.",
+      "clauses": [
+        "Section: Critical Capability Levels",
+        "Section: Dangerous Capability Evaluations"
+      ],
+      "notes": "Public disclosure of CCL determinations constitutes an accountability mechanism; FSF v3 is publicly committed."
+    },
+    {
+      "policy_id": "deepmind-fsf",
+      "subcategory_id": "loss-of-oversight",
+      "score": 2,
+      "summary": "Preserving human oversight is defined as a core alignment requirement; models demonstrating reduced corrigibility or oversight-undermining behaviour are flagged for additional safety work before deployment.",
+      "clauses": [
+        "Section: Core Safety Properties — Alignment",
+        "Section: AL3 Alignment Requirements"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "deepmind-fsf",
+      "subcategory_id": "supply-chain",
+      "score": 0,
+      "summary": "Supply chain vulnerabilities are not addressed in the FSF.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "deepmind-fsf",
+      "subcategory_id": "model-theft",
+      "score": 2,
+      "summary": "Model weight security is addressed under the 'security' core safety property; AL3+ security requirements include specific access control and containment measures against sophisticated adversaries.",
+      "clauses": [
+        "Section: Core Safety Properties — Security",
+        "Section: AL3 Security Requirements"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "deepmind-fsf",
+      "subcategory_id": "data-poisoning",
+      "score": 1,
+      "summary": "Training pipeline integrity is mentioned in the security threat model but no specific evaluation or requirement is specified.",
+      "clauses": [
+        "Section: Security Threat Model"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "deepmind-fsf",
+      "subcategory_id": "dependency-monoculture",
+      "score": 0,
+      "summary": "AI dependency monoculture is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "deepmind-fsf",
+      "subcategory_id": "epistemic-collapse",
+      "score": 0,
+      "summary": "Epistemic collapse is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "deepmind-fsf",
+      "subcategory_id": "synthetic-data-loops",
+      "score": 0,
+      "summary": "Synthetic data feedback loops are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "deepmind-fsf",
+      "subcategory_id": "persuasion-manipulation",
+      "score": 1,
+      "summary": "Persuasion and manipulation at scale are mentioned as societal harms in the FSF's framing but no specific evaluation track or commitment addresses them.",
+      "clauses": [
+        "Section: Scope and Motivation"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "deepmind-fsf",
+      "subcategory_id": "cbrn-misuse",
+      "score": 3,
+      "summary": "CBRN uplift is one of the core CCL domains with defined thresholds across all four security levels; the FSF commits to halting deployment if CCL thresholds are crossed without adequate mitigations, with public safety level disclosures.",
+      "clauses": [
+        "Section: Critical Capability Levels — CBRN",
+        "Section: Dangerous Capability Evaluations"
+      ],
+      "notes": "Public CCL disclosure and the depth of domain-specific thresholds make this one of the stronger CBRN treatments across the six policies."
+    },
+    {
+      "policy_id": "deepmind-fsf",
+      "subcategory_id": "cyber-offense",
+      "score": 3,
+      "summary": "Cyber offense capability is a core CCL domain with multi-level defined thresholds; deployment is blocked above specific CCL cyber thresholds without mitigations; public disclosure applies.",
+      "clauses": [
+        "Section: Critical Capability Levels — Cyber",
+        "Section: Dangerous Capability Evaluations"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "deepmind-fsf",
+      "subcategory_id": "military-escalation",
+      "score": 2,
+      "summary": "Military uplift and autonomous weapons are named in the FSF's dangerous capability taxonomy with specific evaluation criteria; models assessed as providing significant military uplift are subject to AL3-level safety requirements.",
+      "clauses": [
+        "Section: Critical Capability Levels — Military and Political Uplift"
+      ],
+      "notes": "More explicit than peers on military escalation risk as an evaluated capability category."
+    },
+    {
+      "policy_id": "deepmind-fsf",
+      "subcategory_id": "strategic-instability",
+      "score": 1,
+      "summary": "The FSF references AI arms race dynamics as a motivation for the framework but does not make specific operational commitments to address strategic instability.",
+      "clauses": [
+        "Section: Scope and Motivation"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "deepmind-fsf",
+      "subcategory_id": "regulatory-capture",
+      "score": 0,
+      "summary": "Regulatory capture is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "deepmind-fsf",
+      "subcategory_id": "capability-overhang",
+      "score": 2,
+      "summary": "The CCL framework gates deployment on safety level determinations, directly preventing premature release of models with overhung capabilities; the FSF requires safety assessments before each significant capability jump.",
+      "clauses": [
+        "Section: Safety Level Gating",
+        "Section: Critical Capability Levels"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "deepmind-fsf",
+      "subcategory_id": "enforcement-gaps",
+      "score": 2,
+      "summary": "Google DeepMind's Responsible Development and Innovation (RDI) team provides internal oversight; the FSF specifies escalation paths and sign-off requirements; public commitments create reputational accountability.",
+      "clauses": [
+        "Section: Governance and Accountability"
+      ],
+      "notes": "No external audit requirement; internal governance is the primary mechanism."
+    },
+    {
+      "policy_id": "deepmind-fsf",
+      "subcategory_id": "jurisdictional-arbitrage",
+      "score": 0,
+      "summary": "Jurisdictional arbitrage is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "deepmind-fsf",
+      "subcategory_id": "economic-concentration",
+      "score": 0,
+      "summary": "Economic concentration is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "deepmind-fsf",
+      "subcategory_id": "labor-polarization",
+      "score": 0,
+      "summary": "Labor market polarization is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "deepmind-fsf",
+      "subcategory_id": "productivity-paradox",
+      "score": 0,
+      "summary": "Productivity paradox is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "deepmind-fsf",
+      "subcategory_id": "deskilling",
+      "score": 0,
+      "summary": "Human deskilling is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "deepmind-fsf",
+      "subcategory_id": "loss-of-agency",
+      "score": 1,
+      "summary": "Loss of human agency is addressed implicitly through corrigibility requirements in the alignment safety property, but is not treated as a deployment-level risk category.",
+      "clauses": [
+        "Section: Core Safety Properties — Alignment"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "deepmind-fsf",
+      "subcategory_id": "social-isolation",
+      "score": 0,
+      "summary": "Social isolation effects are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "deepmind-fsf",
+      "subcategory_id": "cultural-homogenization",
+      "score": 0,
+      "summary": "Cultural homogenization is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "deepmind-fsf",
+      "subcategory_id": "misaligned-superintelligence",
+      "score": 2,
+      "summary": "AL4 (the highest safety level) is defined in terms of models capable of causing civilizational-scale harm through misalignment; the FSF specifies that no AL4 model will be deployed without extraordinary safety case evidence.",
+      "clauses": [
+        "Section: AL4 Safety Level Definition",
+        "Section: Core Safety Properties"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "deepmind-fsf",
+      "subcategory_id": "irreversible-loss-of-control",
+      "score": 2,
+      "summary": "Irreversibility is embedded in the AL4 definition; the FSF explicitly names avoiding irreversible outcomes as a core principle and ties this to deployment halt conditions.",
+      "clauses": [
+        "Section: AL4 Safety Level Definition",
+        "Section: Core Safety Properties"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "deepmind-fsf",
+      "subcategory_id": "value-lock-in",
+      "score": 1,
+      "summary": "Value lock-in is mentioned as a long-term societal risk in the framework's motivating concerns but is not an operationalised evaluation category.",
+      "clauses": [
+        "Section: Scope and Motivation"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "eu-ai-act",
+      "subcategory_id": "goal-misalignment",
+      "score": 1,
+      "summary": "Recital 110 identifies 'unintended issues of control relating to alignment with human intent' as a systemic risk for GPAI models, but no specific provisions operationalise this as a distinct requirement.",
+      "clauses": [
+        "Recital (110)"
+      ],
+      "notes": "The Act frames misalignment obliquely as a systemic risk concern for large models, but does not use the term 'goal misalignment' nor create specific alignment obligations beyond general risk management under Art. 9."
+    },
+    {
+      "policy_id": "eu-ai-act",
+      "subcategory_id": "deceptive-alignment",
+      "score": 0,
+      "summary": "Deceptive alignment (an AI that conceals its true objectives from evaluators) is not addressed anywhere in the text.",
+      "clauses": [],
+      "notes": "The Act prohibits AI that deceives users (Art. 5(1)(a)), but this is about user-facing deception, not the AI safety concept of a model behaving differently during evaluation than deployment."
+    },
+    {
+      "policy_id": "eu-ai-act",
+      "subcategory_id": "emergent-capabilities",
+      "score": 1,
+      "summary": "Recital 110 lists risks from 'particularly high capabilities' and the self-replication risk of models 'making copies of themselves', but no specific provisions address emergent capability detection or evaluation beyond the GPAI systemic-risk classification threshold.",
+      "clauses": [
+        "Recital (110)",
+        "Recital (111)"
+      ],
+      "notes": "Art. 51's compute threshold (10^25 FLOPs) is a proxy for capability risk, but is not oriented towards emergence specifically. The scientific panel can issue alerts (Art. 90), which provides some mechanism."
+    },
+    {
+      "policy_id": "eu-ai-act",
+      "subcategory_id": "loss-of-oversight",
+      "score": 3,
+      "summary": "Article 14 mandates human oversight as a mandatory design requirement for high-risk AI, including specific technical measures to prevent automation bias, and allows operators to override or halt systems; these obligations are backed by penalties under Art. 99.",
+      "clauses": [
+        "Art. 14",
+        "Art. 14(4)(b)",
+        "Art. 14(4)(e)",
+        "Art. 99(4)(a)"
+      ],
+      "notes": "Human oversight is one of the most concretely specified requirements in the Act, with defined capabilities (ability to override, stop-button equivalent, avoiding over-reliance). Art. 26 imposes corresponding deployer obligations."
+    },
+    {
+      "policy_id": "eu-ai-act",
+      "subcategory_id": "supply-chain",
+      "score": 2,
+      "summary": "Articles 23–25 impose specific obligations on importers and distributors and establish responsibilities along the AI value chain, requiring conformity checks at each stage before market placement.",
+      "clauses": [
+        "Art. 23",
+        "Art. 24",
+        "Art. 25"
+      ],
+      "notes": "The Act creates a full chain-of-custody framework, treating importers and distributors as quasi-providers when they alter or rebrand AI systems. However, it focuses on compliance chain rather than security vulnerabilities in the supply chain."
+    },
+    {
+      "policy_id": "eu-ai-act",
+      "subcategory_id": "model-theft",
+      "score": 0,
+      "summary": "Model theft or weights exfiltration is not addressed as a distinct risk; the Act does not contain provisions requiring weight security, access controls against exfiltration, or incident reporting for IP theft.",
+      "clauses": [],
+      "notes": "Art. 15(5) requires cybersecurity for high-risk AI against unauthorised third parties altering use or outputs, and Art. 55(1)(d) requires cybersecurity for GPAI with systemic risk, but neither specifically addresses model theft or weight exfiltration."
+    },
+    {
+      "policy_id": "eu-ai-act",
+      "subcategory_id": "data-poisoning",
+      "score": 2,
+      "summary": "Article 15(5) explicitly requires high-risk AI systems to implement technical measures to 'prevent, detect, respond to, resolve and control for attacks trying to manipulate the training data set (data poisoning)' and model poisoning.",
+      "clauses": [
+        "Art. 15(5)"
+      ],
+      "notes": "One of the few subcategories where the Act uses the term 'data poisoning' explicitly. Requirement is specific but enforcement is via general market surveillance, not a dedicated audit mechanism."
+    },
+    {
+      "policy_id": "eu-ai-act",
+      "subcategory_id": "dependency-monoculture",
+      "score": 0,
+      "summary": "AI monoculture or systemic dependency risk from a small number of dominant AI providers is not addressed in the Act.",
+      "clauses": [],
+      "notes": "Market surveillance reports to competition authorities (Art. 74(2)) and competition law is mentioned as unaffected, but there are no provisions about concentration of AI infrastructure or monoculture risk."
+    },
+    {
+      "policy_id": "eu-ai-act",
+      "subcategory_id": "epistemic-collapse",
+      "score": 1,
+      "summary": "Recital 110 mentions 'dissemination of illegal, false, or discriminatory content' and democratic process risks as systemic concerns for GPAI, but there are no specific provisions addressing epistemic collapse or information ecosystem degradation.",
+      "clauses": [
+        "Recital (110)"
+      ],
+      "notes": "Art. 50's transparency/labelling requirements for AI-generated content tangentially address information integrity, but the Act does not frame epistemic risk as a distinct regulatory concern."
+    },
+    {
+      "policy_id": "eu-ai-act",
+      "subcategory_id": "synthetic-data-loops",
+      "score": 1,
+      "summary": "Article 15(4) requires high-risk AI that continues to learn post-deployment to eliminate or reduce the risk of biased outputs influencing future inputs (feedback loops), but this is narrow and does not address model collapse from synthetic training data.",
+      "clauses": [
+        "Art. 15(4)"
+      ],
+      "notes": "The feedback-loop provision is narrow: it applies to AI that continues learning after deployment, addresses bias, and is remedied via robustness design. It does not address the broader synthetic-data-as-training-input problem or model collapse."
+    },
+    {
+      "policy_id": "eu-ai-act",
+      "subcategory_id": "persuasion-manipulation",
+      "score": 3,
+      "summary": "Article 5(1)(a) prohibits AI systems that deploy subliminal techniques or purposefully manipulative or deceptive techniques that materially distort behaviour causing significant harm; this prohibition is enforced with the highest penalty tier (up to €35M or 7% global turnover).",
+      "clauses": [
+        "Art. 5(1)(a)",
+        "Art. 5(1)(b)",
+        "Art. 99(3)",
+        "Recital (29)"
+      ],
+      "notes": "The prohibition covers both subliminal and conscious-but-irresistible manipulation. Art. 5(1)(b) extends this to exploitation of vulnerabilities (age, disability, socioeconomic status). This is among the most robustly enforced provisions."
+    },
+    {
+      "policy_id": "eu-ai-act",
+      "subcategory_id": "cbrn-misuse",
+      "score": 1,
+      "summary": "Recital 110 identifies CBRN risks as a systemic risk for GPAI models, but no binding provisions operationalise this; the Act relies on voluntary codes of practice to address CBRN safeguards.",
+      "clauses": [
+        "Recital (110)"
+      ],
+      "notes": "The CBRN mention is recital-only. The Act relies on codes of practice (Art. 56) to operationalise CBRN safeguards, which are voluntary unless the Commission issues implementing acts."
+    },
+    {
+      "policy_id": "eu-ai-act",
+      "subcategory_id": "cyber-offense",
+      "score": 1,
+      "summary": "Recital 110 lists offensive cyber capabilities as a systemic risk for GPAI, but no specific binding provisions address cyber-offense acceleration.",
+      "clauses": [
+        "Recital (110)"
+      ],
+      "notes": "Like CBRN, cyber-offense is recital-level recognition only. The Act's cybersecurity provisions (Art. 15) focus on protecting AI systems from attack, not on preventing AI from enabling offensive cyber operations."
+    },
+    {
+      "policy_id": "eu-ai-act",
+      "subcategory_id": "military-escalation",
+      "score": 0,
+      "summary": "Military and defence AI is explicitly excluded from the scope of the Act (Art. 2(3)), meaning autonomous weapons and military escalation risks are not addressed.",
+      "clauses": [
+        "Art. 2(3)"
+      ],
+      "notes": "The exclusion of military/defence/national security applications is explicit and broad. No bridging provisions exist."
+    },
+    {
+      "policy_id": "eu-ai-act",
+      "subcategory_id": "strategic-instability",
+      "score": 0,
+      "summary": "AI arms races, geopolitical strategic instability, or competition dynamics between major AI powers are not addressed in the Act.",
+      "clauses": [],
+      "notes": "The Act focuses on internal market harmonisation. International cooperation provisions (Art. 66(i)) are advisory. Strategic instability is entirely outside scope."
+    },
+    {
+      "policy_id": "eu-ai-act",
+      "subcategory_id": "regulatory-capture",
+      "score": 1,
+      "summary": "The Act establishes structural safeguards — independent national authorities (Art. 70), a balanced advisory forum (Art. 67), and an independent scientific panel (Art. 68) — but does not explicitly address regulatory capture as a risk.",
+      "clauses": [
+        "Art. 67(2)",
+        "Art. 68(2)(b)",
+        "Art. 70(1)"
+      ],
+      "notes": "Independence requirements exist but no provisions directly target revolving-door risks, disclosure of industry influence on rulemaking, or capture at the Commission level."
+    },
+    {
+      "policy_id": "eu-ai-act",
+      "subcategory_id": "capability-overhang",
+      "score": 1,
+      "summary": "The Act does not address capability overhang as a concept, though the GPAI systemic risk classification (Art. 51) and scientific panel alert mechanism (Art. 90) provide a limited detection framework for models with high-impact capabilities.",
+      "clauses": [
+        "Art. 51",
+        "Art. 90"
+      ],
+      "notes": "Art. 51(3) allows the Commission to update compute thresholds over time — a partial hedge against overhang — but the concept of dangerous capabilities accumulating faster than governance capacity is not addressed."
+    },
+    {
+      "policy_id": "eu-ai-act",
+      "subcategory_id": "enforcement-gaps",
+      "score": 2,
+      "summary": "The Act requires Member States to ensure adequate resources for national authorities (Art. 70(3)) with biennial adequacy reporting to the Commission (Art. 70(6)), and establishes cross-border enforcement coordination mechanisms.",
+      "clauses": [
+        "Art. 70(3)",
+        "Art. 70(6)",
+        "Art. 74",
+        "Art. 81"
+      ],
+      "notes": "The adequacy reporting mechanism is an implicit acknowledgement of enforcement gaps. Cross-border enforcement coordination is provided under Art. 74(11) and Art. 81."
+    },
+    {
+      "policy_id": "eu-ai-act",
+      "subcategory_id": "jurisdictional-arbitrage",
+      "score": 2,
+      "summary": "Article 2 extends scope to providers and deployers in third countries where AI output is used in the EU, and requires third-country providers to appoint authorised EU representatives (Art. 22, Art. 54), partially closing jurisdictional arbitrage.",
+      "clauses": [
+        "Art. 2(1)(c)",
+        "Art. 22",
+        "Art. 54"
+      ],
+      "notes": "The effects-based jurisdiction mirrors GDPR's approach. However, enforcement against non-EU entities with no EU assets or representatives remains a practical gap. Third-country public authorities are explicitly excluded (Art. 2(4))."
+    },
+    {
+      "policy_id": "eu-ai-act",
+      "subcategory_id": "economic-concentration",
+      "score": 1,
+      "summary": "Market surveillance authorities are required to report information relevant to competition law to national competition authorities annually (Art. 74(2)), but the Act contains no provisions directly addressing AI-driven economic concentration.",
+      "clauses": [
+        "Art. 74(2)"
+      ],
+      "notes": "The Act explicitly states it should not affect competition law. Economic concentration from AI is treated as a competition-law matter, not an AI Act matter."
+    },
+    {
+      "policy_id": "eu-ai-act",
+      "subcategory_id": "labor-polarization",
+      "score": 1,
+      "summary": "Employment AI systems are classified as high-risk under Annex III point 4, providing worker protections, but the Act explicitly states it does not affect national labour law and does not address labour market polarisation as a systemic risk.",
+      "clauses": [
+        "Annex III, point 4"
+      ],
+      "notes": "Annex III classifies AI used for recruitment, task allocation, and performance monitoring as high-risk, but this addresses individual rights rather than macroeconomic displacement effects."
+    },
+    {
+      "policy_id": "eu-ai-act",
+      "subcategory_id": "productivity-paradox",
+      "score": 0,
+      "summary": "The uneven distribution of AI productivity gains is not addressed in the Act.",
+      "clauses": [],
+      "notes": "The Act focuses on rights and safety harms rather than distributional economic outcomes. No provisions address who captures productivity gains from AI deployment."
+    },
+    {
+      "policy_id": "eu-ai-act",
+      "subcategory_id": "deskilling",
+      "score": 1,
+      "summary": "Article 14(4)(b) requires deployers of high-risk AI to be aware of the tendency to over-rely on AI outputs (automation bias), which implicitly addresses deskilling risk, but without specific deskilling provisions.",
+      "clauses": [
+        "Art. 14(4)(b)"
+      ],
+      "notes": "Automation bias awareness is framed as an oversight requirement, not a deskilling remedy. No provisions address long-term erosion of human skills from AI use."
+    },
+    {
+      "policy_id": "eu-ai-act",
+      "subcategory_id": "loss-of-agency",
+      "score": 2,
+      "summary": "Article 5(1)(a) prohibits AI that impairs persons' ability to make informed decisions; Art. 14 requires humans to be able to override AI decisions; Art. 86 gives affected persons a right to explanation for high-risk AI decisions.",
+      "clauses": [
+        "Art. 5(1)(a)",
+        "Art. 14(4)(d)",
+        "Art. 86"
+      ],
+      "notes": "Enforcement of individual agency rights depends on the right-to-explanation (Art. 86), which is limited to Annex III systems."
+    },
+    {
+      "policy_id": "eu-ai-act",
+      "subcategory_id": "social-isolation",
+      "score": 0,
+      "summary": "Social isolation effects from AI companion systems or excessive AI interaction are not addressed in the Act.",
+      "clauses": [],
+      "notes": "Transparency obligations (Art. 50(1)) require disclosure that users are interacting with AI, but this is not framed around social isolation risk."
+    },
+    {
+      "policy_id": "eu-ai-act",
+      "subcategory_id": "cultural-homogenization",
+      "score": 1,
+      "summary": "Recital 8 references cultural diversity as a value to be promoted, and AI's potential adverse effects on diversity are acknowledged, but no specific provisions address cultural homogenization.",
+      "clauses": [
+        "Recital (8)"
+      ],
+      "notes": "The reference to cultural diversity is a general values statement with no corresponding operative provisions."
+    },
+    {
+      "policy_id": "eu-ai-act",
+      "subcategory_id": "misaligned-superintelligence",
+      "score": 1,
+      "summary": "Recital 110 identifies alignment with human intent and self-replicating model risks as systemic concerns for GPAI models, recognising the category of loss-of-control risk, but no specific provisions address it.",
+      "clauses": [
+        "Recital (110)"
+      ],
+      "notes": "The GPAI systemic risk framework (Arts. 51–55) is the closest structural analogue but is calibrated to near-term harms. Adversarial testing obligations (Art. 55(1)(a)) are positive but limited."
+    },
+    {
+      "policy_id": "eu-ai-act",
+      "subcategory_id": "irreversible-loss-of-control",
+      "score": 1,
+      "summary": "Recital 110 implicitly addresses catastrophic cascading risk for GPAI models, but no provisions specifically address irreversibility or mechanisms to prevent permanent loss of human control.",
+      "clauses": [
+        "Recital (110)"
+      ],
+      "notes": "The Art. 14 stop-button provision addresses local reversibility for high-risk AI but not systemic irreversibility. Chain-reaction risk in Recital 110 is the closest the Act gets to acknowledging catastrophic irreversible harm."
+    },
+    {
+      "policy_id": "eu-ai-act",
+      "subcategory_id": "value-lock-in",
+      "score": 0,
+      "summary": "Value lock-in — where AI systems entrench particular value systems in ways that foreclose future choices — is not addressed in the Act.",
+      "clauses": [],
+      "notes": "The Act references EU values as the normative baseline (Art. 1) without acknowledging that encoding any specific value set into AI governance could itself constitute a form of lock-in."
+    },
+    {
+      "policy_id": "g7-hiroshima-coc",
+      "subcategory_id": "goal-misalignment",
+      "score": 1,
+      "summary": "CoC item 1 requires comprehensive risk assessments, pre-deployment safety testing, and adversarial testing across the AI lifecycle, providing a framework that encompasses misalignment risks without naming them.",
+      "clauses": [
+        "CoC item 1"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-coc",
+      "subcategory_id": "deceptive-alignment",
+      "score": 0,
+      "summary": "Deceptive alignment is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-coc",
+      "subcategory_id": "emergent-capabilities",
+      "score": 1,
+      "summary": "CoC item 1 explicitly requires pre-deployment red-teaming and adversarial testing; CoC item 10 requires post-deployment monitoring and evaluation benchmarks — together these partially address emergent capability detection.",
+      "clauses": [
+        "CoC item 1",
+        "CoC item 10"
+      ],
+      "notes": "The CoC is more specific than the Principles on testing methodology, explicitly naming red-teaming."
+    },
+    {
+      "policy_id": "g7-hiroshima-coc",
+      "subcategory_id": "loss-of-oversight",
+      "score": 1,
+      "summary": "CoC item 1 includes 'deployment safeguards' and 'post-deployment monitoring' as required practices, implying ongoing human oversight, but does not operationalise this as a distinct requirement.",
+      "clauses": [
+        "CoC item 1"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-coc",
+      "subcategory_id": "supply-chain",
+      "score": 0,
+      "summary": "Supply chain vulnerabilities are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-coc",
+      "subcategory_id": "model-theft",
+      "score": 1,
+      "summary": "CoC item 5 calls for cybersecurity and physical security measures and specifically states organisations should 'consider controls on model weights', naming weight security as a priority.",
+      "clauses": [
+        "CoC item 5"
+      ],
+      "notes": "'Consider' is weaker than a firm commitment, keeping this at score 1."
+    },
+    {
+      "policy_id": "g7-hiroshima-coc",
+      "subcategory_id": "data-poisoning",
+      "score": 0,
+      "summary": "Data poisoning and training pipeline attacks are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-coc",
+      "subcategory_id": "dependency-monoculture",
+      "score": 0,
+      "summary": "AI monoculture and systemic provider concentration are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-coc",
+      "subcategory_id": "epistemic-collapse",
+      "score": 1,
+      "summary": "CoC item 6 requires developing content provenance and detection mechanisms (watermarking, labelling) and working toward interoperable technical standards, directly targeting the information integrity layer of epistemic risk.",
+      "clauses": [
+        "CoC item 6"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-coc",
+      "subcategory_id": "synthetic-data-loops",
+      "score": 0,
+      "summary": "Synthetic data feedback loops and model collapse are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-coc",
+      "subcategory_id": "persuasion-manipulation",
+      "score": 1,
+      "summary": "CoC item 6's requirements for AI content detection and provenance address the detection infrastructure for manipulation, but do not address the underlying risk of AI-driven persuasion at scale.",
+      "clauses": [
+        "CoC item 6"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-coc",
+      "subcategory_id": "cbrn-misuse",
+      "score": 0,
+      "summary": "CBRN misuse is not named; CoC item 7 on safety research is too general to constitute a specific mention.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-coc",
+      "subcategory_id": "cyber-offense",
+      "score": 1,
+      "summary": "CoC item 2 explicitly requires establishing processes for responsible vulnerability disclosure and working with industry on coordinated disclosure; CoC item 5 addresses cybersecurity controls.",
+      "clauses": [
+        "CoC item 2",
+        "CoC item 5"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-coc",
+      "subcategory_id": "military-escalation",
+      "score": 0,
+      "summary": "Military applications and autonomous weapons are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-coc",
+      "subcategory_id": "strategic-instability",
+      "score": 0,
+      "summary": "Strategic instability and AI arms race dynamics are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-coc",
+      "subcategory_id": "regulatory-capture",
+      "score": 0,
+      "summary": "Regulatory capture is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-coc",
+      "subcategory_id": "capability-overhang",
+      "score": 1,
+      "summary": "CoC item 3 requires public reporting on AI capabilities and limitations including safety evaluations and transparency reports, providing a partial disclosure mechanism that addresses sudden capability release risk.",
+      "clauses": [
+        "CoC item 3"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-coc",
+      "subcategory_id": "enforcement-gaps",
+      "score": 0,
+      "summary": "The Code of Conduct is entirely voluntary with no enforcement or verification mechanisms.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-coc",
+      "subcategory_id": "jurisdictional-arbitrage",
+      "score": 0,
+      "summary": "Jurisdictional arbitrage is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-coc",
+      "subcategory_id": "economic-concentration",
+      "score": 0,
+      "summary": "Economic concentration from AI is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-coc",
+      "subcategory_id": "labor-polarization",
+      "score": 0,
+      "summary": "Labour market impacts are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-coc",
+      "subcategory_id": "productivity-paradox",
+      "score": 0,
+      "summary": "Uneven distribution of productivity gains is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-coc",
+      "subcategory_id": "deskilling",
+      "score": 0,
+      "summary": "Human deskilling is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-coc",
+      "subcategory_id": "loss-of-agency",
+      "score": 1,
+      "summary": "CoC item 1 includes human oversight and deployment safeguards as required practices, implicitly addressing the preservation of human agency.",
+      "clauses": [
+        "CoC item 1"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-coc",
+      "subcategory_id": "social-isolation",
+      "score": 0,
+      "summary": "Social isolation and AI companionship effects are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-coc",
+      "subcategory_id": "cultural-homogenization",
+      "score": 0,
+      "summary": "Cultural homogenization is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-coc",
+      "subcategory_id": "misaligned-superintelligence",
+      "score": 1,
+      "summary": "CoC items 1 and 7 together require safety testing, adversarial evaluation, and investment in safety research, providing a partial framework for addressing long-range alignment risk.",
+      "clauses": [
+        "CoC item 1",
+        "CoC item 7"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-coc",
+      "subcategory_id": "irreversible-loss-of-control",
+      "score": 1,
+      "summary": "CoC item 1's comprehensive risk management requirements and CoC item 7's safety research investment implicitly address loss-of-control scenarios.",
+      "clauses": [
+        "CoC item 1",
+        "CoC item 7"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-coc",
+      "subcategory_id": "value-lock-in",
+      "score": 0,
+      "summary": "Value lock-in is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-principles",
+      "subcategory_id": "goal-misalignment",
+      "score": 1,
+      "summary": "Principle 1 calls for risk identification and mitigation across the AI lifecycle and Principle 7 covers research on 'AI development risks including model risks', implicitly encompassing misalignment, but neither operationalises this as a distinct concept.",
+      "clauses": [
+        "Principle 1",
+        "Principle 7"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-principles",
+      "subcategory_id": "deceptive-alignment",
+      "score": 0,
+      "summary": "Deceptive alignment is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-principles",
+      "subcategory_id": "emergent-capabilities",
+      "score": 1,
+      "summary": "Principle 1 covers risk identification and evaluation including 'capabilities present in advanced AI', and Principle 10 addresses post-deployment monitoring, together providing a partial framework for tracking emergent behaviour.",
+      "clauses": [
+        "Principle 1",
+        "Principle 10"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-principles",
+      "subcategory_id": "loss-of-oversight",
+      "score": 1,
+      "summary": "Principle 1 includes 'appropriate human oversight measures' as part of lifecycle risk management, but no provisions operationalise this requirement.",
+      "clauses": [
+        "Principle 1"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-principles",
+      "subcategory_id": "supply-chain",
+      "score": 0,
+      "summary": "Supply chain vulnerabilities (chip/cloud dependencies) are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-principles",
+      "subcategory_id": "model-theft",
+      "score": 1,
+      "summary": "Principle 5 explicitly calls for 'cybersecurity controls and physical security measures to protect proprietary and unreleased model weights', directly naming weight protection as a concern.",
+      "clauses": [
+        "Principle 5"
+      ],
+      "notes": "This is one of the more specific provisions in the document, though it remains aspirational."
+    },
+    {
+      "policy_id": "g7-hiroshima-principles",
+      "subcategory_id": "data-poisoning",
+      "score": 0,
+      "summary": "Data poisoning and training pipeline attacks are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-principles",
+      "subcategory_id": "dependency-monoculture",
+      "score": 0,
+      "summary": "AI monoculture and systemic provider concentration are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-principles",
+      "subcategory_id": "epistemic-collapse",
+      "score": 1,
+      "summary": "Principle 6 calls for AI content provenance and watermarking mechanisms 'with the goal of enabling a trustworthy digital information ecosystem', directly targeting epistemic integrity.",
+      "clauses": [
+        "Principle 6"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-principles",
+      "subcategory_id": "synthetic-data-loops",
+      "score": 0,
+      "summary": "Synthetic data feedback loops and model collapse are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-principles",
+      "subcategory_id": "persuasion-manipulation",
+      "score": 1,
+      "summary": "Principle 6 on detecting and labelling AI-generated content addresses the detection side of manipulation risk; Principle 7's focus on societal risks covers this implicitly.",
+      "clauses": [
+        "Principle 6",
+        "Principle 7"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-principles",
+      "subcategory_id": "cbrn-misuse",
+      "score": 0,
+      "summary": "CBRN misuse is not named; Principle 7's 'societal risks' language is too general to constitute a mention of this specific risk.",
+      "clauses": [],
+      "notes": "Unlike the Bletchley Declaration, the G7 Principles do not explicitly name biotechnology or CBRN risks."
+    },
+    {
+      "policy_id": "g7-hiroshima-principles",
+      "subcategory_id": "cyber-offense",
+      "score": 1,
+      "summary": "Principle 2 addresses vulnerability disclosure and misuse mitigation post-deployment, and Principle 5 addresses cybersecurity broadly, together touching on cyber risk without addressing offense acceleration specifically.",
+      "clauses": [
+        "Principle 2",
+        "Principle 5"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-principles",
+      "subcategory_id": "military-escalation",
+      "score": 0,
+      "summary": "Military applications and autonomous weapons are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-principles",
+      "subcategory_id": "strategic-instability",
+      "score": 0,
+      "summary": "Strategic instability and AI arms race dynamics are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-principles",
+      "subcategory_id": "regulatory-capture",
+      "score": 0,
+      "summary": "Regulatory capture is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-principles",
+      "subcategory_id": "capability-overhang",
+      "score": 1,
+      "summary": "Principle 3 requires public reporting on AI system capabilities and limitations including safety evaluations, providing a partial disclosure mechanism relevant to capability overhang.",
+      "clauses": [
+        "Principle 3"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-principles",
+      "subcategory_id": "enforcement-gaps",
+      "score": 0,
+      "summary": "The Principles are entirely voluntary with no enforcement mechanisms.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-principles",
+      "subcategory_id": "jurisdictional-arbitrage",
+      "score": 0,
+      "summary": "Jurisdictional arbitrage is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-principles",
+      "subcategory_id": "economic-concentration",
+      "score": 0,
+      "summary": "Economic concentration from AI is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-principles",
+      "subcategory_id": "labor-polarization",
+      "score": 0,
+      "summary": "Labour market impacts are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-principles",
+      "subcategory_id": "productivity-paradox",
+      "score": 0,
+      "summary": "Uneven distribution of productivity gains is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-principles",
+      "subcategory_id": "deskilling",
+      "score": 0,
+      "summary": "Human deskilling is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-principles",
+      "subcategory_id": "loss-of-agency",
+      "score": 1,
+      "summary": "Principle 1 includes human oversight as part of lifecycle risk management, implying a commitment to preserving human agency in AI-assisted decisions.",
+      "clauses": [
+        "Principle 1"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-principles",
+      "subcategory_id": "social-isolation",
+      "score": 0,
+      "summary": "Social isolation and AI companionship effects are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-principles",
+      "subcategory_id": "cultural-homogenization",
+      "score": 0,
+      "summary": "Cultural homogenization is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-principles",
+      "subcategory_id": "misaligned-superintelligence",
+      "score": 1,
+      "summary": "Principles 1 and 7 together call for risk assessment and research on AI development risks, providing a framework that encompasses long-range alignment risk, though without naming it.",
+      "clauses": [
+        "Principle 1",
+        "Principle 7"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-principles",
+      "subcategory_id": "irreversible-loss-of-control",
+      "score": 1,
+      "summary": "Principle 1's lifecycle risk management and Principle 7's safety research investment implicitly address loss-of-control scenarios without naming them.",
+      "clauses": [
+        "Principle 1",
+        "Principle 7"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "g7-hiroshima-principles",
+      "subcategory_id": "value-lock-in",
+      "score": 0,
+      "summary": "Value lock-in is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "google-ai-principles",
+      "subcategory_id": "goal-misalignment",
+      "score": 1,
+      "summary": "Principle 1 (Be socially beneficial) and Principle 5 (Build and test for safety) acknowledge misalignment risks at a high level, but no specific evaluation procedures or thresholds are defined.",
+      "clauses": [
+        "Principle 1: Be Socially Beneficial",
+        "Principle 5: Build and Test for Safety"
+      ],
+      "notes": "This is a principles document, not an operational framework; specificity is inherently limited."
+    },
+    {
+      "policy_id": "google-ai-principles",
+      "subcategory_id": "deceptive-alignment",
+      "score": 0,
+      "summary": "Deceptive alignment is not addressed as a distinct risk in the principles.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "google-ai-principles",
+      "subcategory_id": "emergent-capabilities",
+      "score": 1,
+      "summary": "Principle 5 acknowledges that AI systems may have unintended or harmful capabilities and commits to testing during development, but no threshold-based evaluation system is specified.",
+      "clauses": [
+        "Principle 5: Build and Test for Safety"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "google-ai-principles",
+      "subcategory_id": "loss-of-oversight",
+      "score": 2,
+      "summary": "Principle 5 includes a specific named commitment to preserve human ability to adjust, correct, retrain, or shut down AI systems; this is one of the more operationally specific commitments in the document.",
+      "clauses": [
+        "Principle 5: Build and Test for Safety — Human Oversight Commitment"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "google-ai-principles",
+      "subcategory_id": "supply-chain",
+      "score": 0,
+      "summary": "Supply chain vulnerabilities are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "google-ai-principles",
+      "subcategory_id": "model-theft",
+      "score": 0,
+      "summary": "Model theft / weights exfiltration is not addressed in the principles.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "google-ai-principles",
+      "subcategory_id": "data-poisoning",
+      "score": 0,
+      "summary": "Data poisoning is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "google-ai-principles",
+      "subcategory_id": "dependency-monoculture",
+      "score": 0,
+      "summary": "Dependency monoculture is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "google-ai-principles",
+      "subcategory_id": "epistemic-collapse",
+      "score": 1,
+      "summary": "Principle 7 (Make available to society) and the 'Applications we will not pursue' section acknowledge AI's potential to distort information environments, but commitments remain aspirational.",
+      "clauses": [
+        "Principle 7: Make Available for Uses that Accord with Principles",
+        "Section: Applications We Will Not Pursue"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "google-ai-principles",
+      "subcategory_id": "synthetic-data-loops",
+      "score": 0,
+      "summary": "Synthetic data feedback loops are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "google-ai-principles",
+      "subcategory_id": "persuasion-manipulation",
+      "score": 2,
+      "summary": "The 'Applications we will not pursue' section includes a specific named commitment not to build AI that facilitates surveillance or manipulation of democratic processes, going beyond principle-level acknowledgment.",
+      "clauses": [
+        "Section: Applications We Will Not Pursue — Surveillance and Manipulation"
+      ],
+      "notes": "This is one of the few operationally specific commitments in the document; the prohibition is named and categorical."
+    },
+    {
+      "policy_id": "google-ai-principles",
+      "subcategory_id": "cbrn-misuse",
+      "score": 2,
+      "summary": "The 'Applications we will not pursue' section explicitly names weapons of mass destruction as a category Google will not develop AI for; this is a named categorical commitment.",
+      "clauses": [
+        "Section: Applications We Will Not Pursue — Weapons of Mass Destruction"
+      ],
+      "notes": "Strong negative commitment; no evaluation procedure or verification mechanism."
+    },
+    {
+      "policy_id": "google-ai-principles",
+      "subcategory_id": "cyber-offense",
+      "score": 1,
+      "summary": "Cybersecurity offensive applications are not explicitly named in the 'Applications we will not pursue' list; Principle 5 covers safety broadly but cyber offense is not a distinct commitment.",
+      "clauses": [
+        "Principle 5: Build and Test for Safety"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "google-ai-principles",
+      "subcategory_id": "military-escalation",
+      "score": 2,
+      "summary": "The 'Applications we will not pursue' section includes a named commitment not to develop AI for weapons or technologies that cause harm beyond what is expected under international law, which covers autonomous weapons.",
+      "clauses": [
+        "Section: Applications We Will Not Pursue — Weapons"
+      ],
+      "notes": "Named categorical prohibition; no enforcement mechanism or verification."
+    },
+    {
+      "policy_id": "google-ai-principles",
+      "subcategory_id": "strategic-instability",
+      "score": 1,
+      "summary": "Arms race dynamics are acknowledged in the principles' background framing but no specific commitment addresses strategic instability.",
+      "clauses": [
+        "Section: Introduction"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "google-ai-principles",
+      "subcategory_id": "regulatory-capture",
+      "score": 1,
+      "summary": "Principle 7 commits Google to supporting multi-stakeholder AI governance, which implicitly addresses capture concerns, but there is no anti-capture commitment.",
+      "clauses": [
+        "Principle 7: Make Available for Uses that Accord with Principles"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "google-ai-principles",
+      "subcategory_id": "capability-overhang",
+      "score": 1,
+      "summary": "Principle 5 calls for safety testing during development but does not address staged release or capability overhang specifically.",
+      "clauses": [
+        "Principle 5: Build and Test for Safety"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "google-ai-principles",
+      "subcategory_id": "enforcement-gaps",
+      "score": 1,
+      "summary": "The principles mention internal review processes for AI applications, but no governance mechanism with real enforcement capability is described.",
+      "clauses": [
+        "Section: Our Processes"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "google-ai-principles",
+      "subcategory_id": "jurisdictional-arbitrage",
+      "score": 0,
+      "summary": "Jurisdictional arbitrage is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "google-ai-principles",
+      "subcategory_id": "economic-concentration",
+      "score": 1,
+      "summary": "Principle 1 (Be socially beneficial) acknowledges that AI benefits should be broadly distributed, not concentrated, but this is aspirational.",
+      "clauses": [
+        "Principle 1: Be Socially Beneficial"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "google-ai-principles",
+      "subcategory_id": "labor-polarization",
+      "score": 1,
+      "summary": "Principle 1 acknowledges economic disruption from AI as a consideration in assessing whether AI is beneficial, but no specific commitment addresses labor polarization.",
+      "clauses": [
+        "Principle 1: Be Socially Beneficial"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "google-ai-principles",
+      "subcategory_id": "productivity-paradox",
+      "score": 1,
+      "summary": "Uneven distribution of AI benefits is noted under Principle 1 as a concern to weigh, but no commitment or mechanism is specified.",
+      "clauses": [
+        "Principle 1: Be Socially Beneficial"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "google-ai-principles",
+      "subcategory_id": "deskilling",
+      "score": 0,
+      "summary": "Human deskilling and cognitive atrophy are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "google-ai-principles",
+      "subcategory_id": "loss-of-agency",
+      "score": 2,
+      "summary": "Principle 3 (Be built and tested for safety) and Principle 6 (Uphold high standards of scientific excellence) together include a named commitment to preserve user autonomy and avoid undue dependence on AI systems.",
+      "clauses": [
+        "Principle 6: Uphold High Standards of Scientific Excellence"
+      ],
+      "notes": "This is stronger than peers on this dimension due to the named autonomy commitment."
+    },
+    {
+      "policy_id": "google-ai-principles",
+      "subcategory_id": "social-isolation",
+      "score": 0,
+      "summary": "Social isolation and AI companionship effects are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "google-ai-principles",
+      "subcategory_id": "cultural-homogenization",
+      "score": 1,
+      "summary": "Principle 2 (Avoid creating or reinforcing bias) touches on cultural diversity in the context of fairness, but cultural homogenization as a distinct risk is not addressed.",
+      "clauses": [
+        "Principle 2: Avoid Creating or Reinforcing Unfair Bias"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "google-ai-principles",
+      "subcategory_id": "misaligned-superintelligence",
+      "score": 1,
+      "summary": "Existential AI risk is acknowledged in the background section as a reason to take AI safety seriously, but no specific commitment or procedure addresses misaligned superintelligence.",
+      "clauses": [
+        "Section: Introduction"
+      ],
+      "notes": "The Google AI Principles predates the frontier safety framing; DeepMind's FSF provides the operational counterpart."
+    },
+    {
+      "policy_id": "google-ai-principles",
+      "subcategory_id": "irreversible-loss-of-control",
+      "score": 1,
+      "summary": "Principle 5 includes a commitment to avoid unintended consequences and irreversible outcomes, but this is framed as a general safety principle rather than a specific commitment.",
+      "clauses": [
+        "Principle 5: Build and Test for Safety"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "google-ai-principles",
+      "subcategory_id": "value-lock-in",
+      "score": 1,
+      "summary": "Value pluralism and avoiding concentration of power are acknowledged under Principle 1 but as background considerations, not operational commitments.",
+      "clauses": [
+        "Principle 1: Be Socially Beneficial"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "meta-rai",
+      "subcategory_id": "goal-misalignment",
+      "score": 1,
+      "summary": "Meta's RAI framework acknowledges misalignment risks under its 'Safety' pillar and references internal red-teaming processes, but no specific evaluation thresholds or deployment requirements tied to alignment are defined.",
+      "clauses": [
+        "Pillar: Safety",
+        "Section: Red Teaming and Evaluations"
+      ],
+      "notes": "Meta's open-source model release strategy creates particular tension here — alignment requirements apply pre-release but cannot govern post-release use."
+    },
+    {
+      "policy_id": "meta-rai",
+      "subcategory_id": "deceptive-alignment",
+      "score": 0,
+      "summary": "Deceptive alignment is not addressed as a distinct risk category.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "meta-rai",
+      "subcategory_id": "emergent-capabilities",
+      "score": 1,
+      "summary": "The RAI framework references capability evaluations before model release, but no structured tier-based system for detecting dangerous emergent capabilities is defined.",
+      "clauses": [
+        "Section: Pre-Release Evaluations"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "meta-rai",
+      "subcategory_id": "loss-of-oversight",
+      "score": 1,
+      "summary": "Human oversight is mentioned as a principle under Meta's responsible deployment guidance, but the open-source release model fundamentally limits Meta's ability to commit to ongoing oversight post-release.",
+      "clauses": [
+        "Pillar: Accountability"
+      ],
+      "notes": "The open-weight release strategy creates a structural ceiling on achievable oversight commitments."
+    },
+    {
+      "policy_id": "meta-rai",
+      "subcategory_id": "supply-chain",
+      "score": 0,
+      "summary": "Supply chain vulnerabilities are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "meta-rai",
+      "subcategory_id": "model-theft",
+      "score": 0,
+      "summary": "Meta's open-weight release strategy means model theft prevention is not a commitment; weights are intentionally made available.",
+      "clauses": [],
+      "notes": "Scores 0 by design; the policy is premised on open release rather than weight protection."
+    },
+    {
+      "policy_id": "meta-rai",
+      "subcategory_id": "data-poisoning",
+      "score": 1,
+      "summary": "Data quality and training integrity are mentioned under Meta's responsible AI practices, but no specific anti-poisoning evaluation procedure is defined.",
+      "clauses": [
+        "Section: Responsible Training Practices"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "meta-rai",
+      "subcategory_id": "dependency-monoculture",
+      "score": 1,
+      "summary": "Meta explicitly frames open-source AI as a counter to monoculture dependency risk — the argument that open models prevent single-vendor lock-in is made in the RAI documentation.",
+      "clauses": [
+        "Section: Open Source and AI Safety"
+      ],
+      "notes": "Unusual position: Meta argues open-source release is the mitigation for monoculture risk rather than a contributor to it."
+    },
+    {
+      "policy_id": "meta-rai",
+      "subcategory_id": "epistemic-collapse",
+      "score": 1,
+      "summary": "Epistemic risks including misinformation are acknowledged under the RAI framework's 'Transparency' pillar, but no operational commitment addresses them.",
+      "clauses": [
+        "Pillar: Transparency"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "meta-rai",
+      "subcategory_id": "synthetic-data-loops",
+      "score": 0,
+      "summary": "Synthetic data feedback loops are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "meta-rai",
+      "subcategory_id": "persuasion-manipulation",
+      "score": 2,
+      "summary": "Meta's RAI framework includes specific named restrictions on using AI for political manipulation and targeted influence operations; these are built into the Llama model's acceptable use policy with specific prohibited use cases.",
+      "clauses": [
+        "Section: Acceptable Use Policy — Prohibited Uses",
+        "Pillar: Safety"
+      ],
+      "notes": "The inclusion in the Acceptable Use Policy provides operational specificity; however the open-weight release limits enforcement after distribution."
+    },
+    {
+      "policy_id": "meta-rai",
+      "subcategory_id": "cbrn-misuse",
+      "score": 2,
+      "summary": "CBRN uplift evaluations are conducted pre-release on Llama models; Meta commits to not releasing models that provide meaningful CBRN uplift, and this is documented in model cards.",
+      "clauses": [
+        "Section: Pre-Release Evaluations — CBRN",
+        "Section: Llama Model Cards"
+      ],
+      "notes": "The open-weight release model means that post-release CBRN misuse cannot be prevented through deployment controls, only through initial capability evaluation."
+    },
+    {
+      "policy_id": "meta-rai",
+      "subcategory_id": "cyber-offense",
+      "score": 2,
+      "summary": "Cyber offense capabilities are assessed pre-release and the Acceptable Use Policy prohibits deployment for automated cyberattack purposes; documented in model cards.",
+      "clauses": [
+        "Section: Pre-Release Evaluations — Cyber",
+        "Section: Acceptable Use Policy"
+      ],
+      "notes": "Same structural limitation as CBRN: enforcement after open-weight release is not possible."
+    },
+    {
+      "policy_id": "meta-rai",
+      "subcategory_id": "military-escalation",
+      "score": 1,
+      "summary": "Military and weapons applications are listed as prohibited uses in the Acceptable Use Policy, but no evaluation procedure or escalation threshold is defined.",
+      "clauses": [
+        "Section: Acceptable Use Policy — Prohibited Uses"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "meta-rai",
+      "subcategory_id": "strategic-instability",
+      "score": 1,
+      "summary": "Meta argues that open-source AI promotes distributed development and reduces single-actor dominance, which is framed as a strategic stability benefit, but no specific commitment addresses arms race dynamics.",
+      "clauses": [
+        "Section: Open Source and AI Safety"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "meta-rai",
+      "subcategory_id": "regulatory-capture",
+      "score": 1,
+      "summary": "Meta's RAI documentation mentions engagement with governments and standards bodies but includes no anti-capture commitments.",
+      "clauses": [
+        "Section: Stakeholder Engagement"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "meta-rai",
+      "subcategory_id": "capability-overhang",
+      "score": 1,
+      "summary": "Pre-release evaluation is conducted before model releases, but there is no staged deployment system; once models are released as open weights, capability overhang controls are not applicable.",
+      "clauses": [
+        "Section: Pre-Release Evaluations"
+      ],
+      "notes": "Open-weight release inherently limits the effectiveness of overhang controls."
+    },
+    {
+      "policy_id": "meta-rai",
+      "subcategory_id": "enforcement-gaps",
+      "score": 1,
+      "summary": "Meta has internal responsible AI review processes, but the open-weight distribution model means enforcement after release is structurally limited to the Acceptable Use Policy, which has no technical enforcement mechanism.",
+      "clauses": [
+        "Section: Responsible AI Review Process"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "meta-rai",
+      "subcategory_id": "jurisdictional-arbitrage",
+      "score": 0,
+      "summary": "Jurisdictional arbitrage is not addressed; the open-weight model exacerbates this risk.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "meta-rai",
+      "subcategory_id": "economic-concentration",
+      "score": 2,
+      "summary": "Meta makes a specific operational commitment to open-source AI distribution as a mechanism for reducing economic concentration in frontier AI; the Llama release programme is framed as anti-concentration policy.",
+      "clauses": [
+        "Section: Open Source and AI Safety",
+        "Section: Why We Open Source"
+      ],
+      "notes": "This is a genuine differentiator from closed-model peers; the anti-concentration commitment is operationalised through the release programme itself."
+    },
+    {
+      "policy_id": "meta-rai",
+      "subcategory_id": "labor-polarization",
+      "score": 1,
+      "summary": "Labor displacement and economic disruption are acknowledged under Meta's broader responsible AI framing, but no specific commitment addresses labor polarization.",
+      "clauses": [
+        "Pillar: Be Socially Beneficial"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "meta-rai",
+      "subcategory_id": "productivity-paradox",
+      "score": 1,
+      "summary": "Uneven distribution of AI benefits is acknowledged in principle but no specific commitment or mechanism addresses productivity paradox risk.",
+      "clauses": [
+        "Pillar: Be Socially Beneficial"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "meta-rai",
+      "subcategory_id": "deskilling",
+      "score": 0,
+      "summary": "Human deskilling is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "meta-rai",
+      "subcategory_id": "loss-of-agency",
+      "score": 1,
+      "summary": "User autonomy is mentioned in Meta's responsible deployment guidance, but no specific commitment to preventing AI dependence or loss of agency is articulated.",
+      "clauses": [
+        "Pillar: Accountability"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "meta-rai",
+      "subcategory_id": "social-isolation",
+      "score": 1,
+      "summary": "Given Meta's social platform context, AI companionship effects are acknowledged as a relevant concern; Meta AI product guidelines mention mental health and connection safeguards, but these are not formalised in the RAI framework.",
+      "clauses": [
+        "Section: User Wellbeing"
+      ],
+      "notes": "Meta's platform context makes this more salient than for other policy holders; notable that even here the score is only 1."
+    },
+    {
+      "policy_id": "meta-rai",
+      "subcategory_id": "cultural-homogenization",
+      "score": 1,
+      "summary": "Cultural and linguistic diversity is noted as a consideration in Meta's AI development principles; no specific commitment addresses homogenization risk.",
+      "clauses": [
+        "Pillar: Be Socially Beneficial"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "meta-rai",
+      "subcategory_id": "misaligned-superintelligence",
+      "score": 1,
+      "summary": "Existential risk from misaligned AI is acknowledged in Meta's responsible AI framing but is not a specific evaluated risk category; Meta's approach is to conduct safety research (FAIR) without a structured deployment framework for this risk.",
+      "clauses": [
+        "Section: Long-term Safety Research"
+      ],
+      "notes": "Meta's position differs from Anthropic/DeepMind in treating catastrophic risk as a research problem rather than a deployment governance problem."
+    },
+    {
+      "policy_id": "meta-rai",
+      "subcategory_id": "irreversible-loss-of-control",
+      "score": 1,
+      "summary": "Irreversible harms are mentioned as a category of concern in the RAI framework's risk assessment approach, but no specific commitment or threshold is defined.",
+      "clauses": [
+        "Section: Risk Assessment Principles"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "meta-rai",
+      "subcategory_id": "value-lock-in",
+      "score": 1,
+      "summary": "Value pluralism is mentioned in connection with Meta's open-source strategy as a mechanism for avoiding single-actor value imposition, but this is framing rather than a commitment.",
+      "clauses": [
+        "Section: Open Source and AI Safety"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "openai-preparedness",
+      "subcategory_id": "goal-misalignment",
+      "score": 2,
+      "summary": "The Preparedness Framework defines a Safety Level (SL) scoring system that includes alignment-related evaluations; SL3 and SL4 require specific alignment testing before deployment, with named criteria for 'autonomy' and 'model behaviour' risk categories.",
+      "clauses": [
+        "Section: Risk Assessment — Model Behavior / Autonomy",
+        "Section: Safety Levels Overview"
+      ],
+      "notes": "The Preparedness Committee provides internal sign-off but no external audit is required."
+    },
+    {
+      "policy_id": "openai-preparedness",
+      "subcategory_id": "deceptive-alignment",
+      "score": 2,
+      "summary": "The 'Model Behavior / Autonomy' risk category explicitly addresses scheming and deceptive behaviour; models scoring 'high' or 'critical' on this dimension cannot be deployed without mitigations.",
+      "clauses": [
+        "Section: Risk Assessment — Model Behavior / Autonomy"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "openai-preparedness",
+      "subcategory_id": "emergent-capabilities",
+      "score": 3,
+      "summary": "The framework requires continuous monitoring for emergent dangerous capabilities across all tracked risk categories; the Safety Advisory Group and board-level Safety Committee provide oversight, constituting an internal accountability mechanism.",
+      "clauses": [
+        "Section: Governance — Preparedness Committee",
+        "Section: Ongoing Monitoring"
+      ],
+      "notes": "Board-level Safety Committee is a meaningful accountability mechanism even though it is internal."
+    },
+    {
+      "policy_id": "openai-preparedness",
+      "subcategory_id": "loss-of-oversight",
+      "score": 2,
+      "summary": "Loss of human oversight is explicitly named as a risk dimension under 'Model Behavior / Autonomy'; SL3+ requirements include commitments to preserve human ability to oversee and correct deployed systems.",
+      "clauses": [
+        "Section: Risk Assessment — Model Behavior / Autonomy",
+        "Section: Deployment Commitments"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "openai-preparedness",
+      "subcategory_id": "supply-chain",
+      "score": 0,
+      "summary": "Supply chain vulnerabilities are not addressed in the Preparedness Framework.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "openai-preparedness",
+      "subcategory_id": "model-theft",
+      "score": 2,
+      "summary": "Model weight security is addressed under infrastructure security requirements for SL3+ models, with specific commitments to access controls and network isolation.",
+      "clauses": [
+        "Section: Infrastructure Security Requirements (SL3)"
+      ],
+      "notes": "Requirements are operationally specific but self-assessed."
+    },
+    {
+      "policy_id": "openai-preparedness",
+      "subcategory_id": "data-poisoning",
+      "score": 1,
+      "summary": "Training pipeline integrity is mentioned as a background concern in the framework's threat model but no specific evaluation procedure is defined.",
+      "clauses": [
+        "Section: Threat Model Overview"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "openai-preparedness",
+      "subcategory_id": "dependency-monoculture",
+      "score": 0,
+      "summary": "AI monoculture / dependency risk is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "openai-preparedness",
+      "subcategory_id": "epistemic-collapse",
+      "score": 0,
+      "summary": "Epistemic collapse and erosion of shared reality are not addressed in the Preparedness Framework.",
+      "clauses": [],
+      "notes": "OpenAI addresses influence operations in separate policy documents."
+    },
+    {
+      "policy_id": "openai-preparedness",
+      "subcategory_id": "synthetic-data-loops",
+      "score": 0,
+      "summary": "Synthetic data feedback loops are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "openai-preparedness",
+      "subcategory_id": "persuasion-manipulation",
+      "score": 1,
+      "summary": "The framework's 'Influence Operations' risk track acknowledges manipulation risk but the Preparedness Framework v2 focuses evaluation on election-related influence operations rather than behavioural manipulation broadly.",
+      "clauses": [
+        "Section: Risk Assessment — Influence Operations"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "openai-preparedness",
+      "subcategory_id": "cbrn-misuse",
+      "score": 3,
+      "summary": "CBRN is one of four core tracked risk categories with a defined safety level rubric; models scoring SL3+ on CBRN cannot be deployed without mitigations; the board Safety Committee must approve deployment of SL4 CBRN-risk models.",
+      "clauses": [
+        "Section: Risk Assessment — CBRN",
+        "Section: Safety Levels — CBRN Definitions"
+      ],
+      "notes": "Board-level sign-off requirement for SL4 constitutes a genuine accountability mechanism."
+    },
+    {
+      "policy_id": "openai-preparedness",
+      "subcategory_id": "cyber-offense",
+      "score": 3,
+      "summary": "Cyber offense is one of four core tracked risk categories with defined SL rubric; SL3+ cyber-risk models require mitigations; board Safety Committee approval required for SL4 deployment.",
+      "clauses": [
+        "Section: Risk Assessment — Cybersecurity",
+        "Section: Safety Levels — Cybersecurity Definitions"
+      ],
+      "notes": "Parallel to CBRN treatment."
+    },
+    {
+      "policy_id": "openai-preparedness",
+      "subcategory_id": "military-escalation",
+      "score": 1,
+      "summary": "Military and weapons applications are noted as out-of-scope uses in the framework's boundaries, but autonomous weapons and escalation risk are not a scored evaluation category.",
+      "clauses": [
+        "Section: Scope and Boundaries"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "openai-preparedness",
+      "subcategory_id": "strategic-instability",
+      "score": 1,
+      "summary": "Arms race dynamics and strategic instability are acknowledged in the framework's motivation section but no specific commitment addresses them.",
+      "clauses": [
+        "Section: Introduction"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "openai-preparedness",
+      "subcategory_id": "regulatory-capture",
+      "score": 0,
+      "summary": "Regulatory capture is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "openai-preparedness",
+      "subcategory_id": "capability-overhang",
+      "score": 2,
+      "summary": "The framework's safety level gating — requiring evaluation and mitigation before deployment at each level — directly addresses capability overhang by preventing deployment of models whose capabilities exceed safety measures.",
+      "clauses": [
+        "Section: Deployment Commitments",
+        "Section: Safety Level Gating"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "openai-preparedness",
+      "subcategory_id": "enforcement-gaps",
+      "score": 2,
+      "summary": "Internal enforcement is provided by the Preparedness Committee and board Safety Committee; the framework specifies escalation paths and sign-off requirements, though no external enforcement exists.",
+      "clauses": [
+        "Section: Governance — Preparedness Committee",
+        "Section: Board Safety Committee"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "openai-preparedness",
+      "subcategory_id": "jurisdictional-arbitrage",
+      "score": 0,
+      "summary": "Jurisdictional arbitrage is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "openai-preparedness",
+      "subcategory_id": "economic-concentration",
+      "score": 0,
+      "summary": "Economic concentration is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "openai-preparedness",
+      "subcategory_id": "labor-polarization",
+      "score": 0,
+      "summary": "Labor market polarization is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "openai-preparedness",
+      "subcategory_id": "productivity-paradox",
+      "score": 0,
+      "summary": "Productivity paradox is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "openai-preparedness",
+      "subcategory_id": "deskilling",
+      "score": 0,
+      "summary": "Human deskilling is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "openai-preparedness",
+      "subcategory_id": "loss-of-agency",
+      "score": 1,
+      "summary": "Loss of user autonomy is briefly acknowledged under the societal risks framing but is not a scored risk category in the framework.",
+      "clauses": [
+        "Section: Introduction"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "openai-preparedness",
+      "subcategory_id": "social-isolation",
+      "score": 0,
+      "summary": "Social isolation effects are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "openai-preparedness",
+      "subcategory_id": "cultural-homogenization",
+      "score": 0,
+      "summary": "Cultural homogenization is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "openai-preparedness",
+      "subcategory_id": "misaligned-superintelligence",
+      "score": 2,
+      "summary": "The framework's SL4 (critical risk) category is defined in terms of models capable of causing human-level or civilizational harm with misaligned or catastrophic behaviour; specific pre-deployment requirements are defined for this level.",
+      "clauses": [
+        "Section: Safety Levels — Critical",
+        "Section: Risk Assessment — Model Behavior / Autonomy"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "openai-preparedness",
+      "subcategory_id": "irreversible-loss-of-control",
+      "score": 2,
+      "summary": "SL4 definitions explicitly include models that could enable irreversible societal harm; the framework commits to not deploying such models without sufficient mitigations.",
+      "clauses": [
+        "Section: Safety Levels — Critical"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "openai-preparedness",
+      "subcategory_id": "value-lock-in",
+      "score": 1,
+      "summary": "Value lock-in is mentioned in the framework's existential risk framing but is not a scored evaluation category.",
+      "clauses": [
+        "Section: Introduction"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "sb-53",
+      "subcategory_id": "goal-misalignment",
+      "score": 1,
+      "summary": "'Autonomous harmful conduct' in the catastrophic risk definition captures goal misalignment scenarios, and the Frontier AI Framework must address mitigations, but the bill does not use or operationalise goal misalignment as a distinct concept.",
+      "clauses": [
+        "§ 11547.6(a)(2) — catastrophic risk definition"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "sb-53",
+      "subcategory_id": "deceptive-alignment",
+      "score": 2,
+      "summary": "'Deceptive model behavior' is a named statutory category of catastrophic risk and a defined Critical Safety Incident trigger requiring 24-hour reporting to the Office of Emergency Services when imminent danger is present.",
+      "clauses": [
+        "§ 11547.6(a)(2)(D) — catastrophic risk definition",
+        "§ 11547.6(b)(2) — critical safety incident definition"
+      ],
+      "notes": "First statute globally to codify 'deceptive model behavior' as a legal category. Scope is harm-focused rather than the AI safety concept of evaluation-time deception, but captures the operational manifestation."
+    },
+    {
+      "policy_id": "sb-53",
+      "subcategory_id": "emergent-capabilities",
+      "score": 1,
+      "summary": "The 10^26 FLOP compute threshold proxies for frontier capability levels, and pre-deployment transparency reports must address catastrophic risk assessments, but emergent capabilities as a distinct concept are not addressed.",
+      "clauses": [
+        "§ 11547.6(a)(4) — frontier model definition",
+        "§ 11547.7(b) — transparency reporting"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "sb-53",
+      "subcategory_id": "loss-of-oversight",
+      "score": 2,
+      "summary": "'Loss of control' is a named statutory category of catastrophic risk and Critical Safety Incident; the Frontier AI Framework must include specific mitigations and risk thresholds for this scenario.",
+      "clauses": [
+        "§ 11547.6(a)(2)(C) — loss of control in catastrophic risk",
+        "§ 11547.6(b)(3) — loss of control as critical safety incident"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "sb-53",
+      "subcategory_id": "supply-chain",
+      "score": 0,
+      "summary": "Supply chain vulnerabilities are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "sb-53",
+      "subcategory_id": "model-theft",
+      "score": 2,
+      "summary": "'Unauthorized access to model weights causing harm' is a named Critical Safety Incident requiring mandatory reporting within 15 days, and cybersecurity is a required component of the Frontier AI Framework.",
+      "clauses": [
+        "§ 11547.6(b)(1) — unauthorized weight access as critical safety incident",
+        "§ 11547.7(a)(1)(F) — cybersecurity in framework"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "sb-53",
+      "subcategory_id": "data-poisoning",
+      "score": 0,
+      "summary": "Data poisoning and training pipeline attacks are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "sb-53",
+      "subcategory_id": "dependency-monoculture",
+      "score": 0,
+      "summary": "AI dependency risk and monoculture are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "sb-53",
+      "subcategory_id": "epistemic-collapse",
+      "score": 0,
+      "summary": "Epistemic collapse and information ecosystem risks are not addressed; SB-53 focuses exclusively on catastrophic physical and control risks.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "sb-53",
+      "subcategory_id": "synthetic-data-loops",
+      "score": 0,
+      "summary": "Synthetic data feedback loops are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "sb-53",
+      "subcategory_id": "persuasion-manipulation",
+      "score": 0,
+      "summary": "Persuasion and behavioral manipulation at scale are not addressed; the bill's scope is limited to catastrophic physical harms.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "sb-53",
+      "subcategory_id": "cbrn-misuse",
+      "score": 2,
+      "summary": "'Weapons assistance' — explicitly framing CBRN uplift — is a named statutory category of catastrophic risk, requiring mitigations in the Frontier AI Framework and quarterly risk assessment reports to OES.",
+      "clauses": [
+        "§ 11547.6(a)(2)(A) — weapons assistance in catastrophic risk definition",
+        "§ 11547.7(a)(1) — framework requirements",
+        "§ 11547.7(c) — quarterly OES reporting"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "sb-53",
+      "subcategory_id": "cyber-offense",
+      "score": 1,
+      "summary": "Cybersecurity is a required component of the Frontier AI Framework, but cyber offense acceleration (AI lowering cost of attacks) is not in the catastrophic risk definition.",
+      "clauses": [
+        "§ 11547.7(a)(1)(F) — cybersecurity in framework"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "sb-53",
+      "subcategory_id": "military-escalation",
+      "score": 0,
+      "summary": "Military applications and autonomous weapons are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "sb-53",
+      "subcategory_id": "strategic-instability",
+      "score": 0,
+      "summary": "Strategic instability and AI arms race dynamics are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "sb-53",
+      "subcategory_id": "regulatory-capture",
+      "score": 0,
+      "summary": "Regulatory capture is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "sb-53",
+      "subcategory_id": "capability-overhang",
+      "score": 2,
+      "summary": "Mandatory pre-deployment transparency reporting — including catastrophic risk assessments — is required before deploying new or substantially modified frontier models, directly addressing sudden capability release risk.",
+      "clauses": [
+        "§ 11547.7(b) — pre-deployment transparency reporting",
+        "§ 11547.7(c) — quarterly internal risk reporting to OES"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "sb-53",
+      "subcategory_id": "enforcement-gaps",
+      "score": 2,
+      "summary": "Attorney General enforcement with civil penalties up to $1M per violation, mandatory third-party assessments, and incident reporting obligations constitute specific enforcement provisions, though the framework relies substantially on developer self-reporting.",
+      "clauses": [
+        "§ 11547.9 — AG enforcement and penalties",
+        "§ 11547.7(a)(1)(D) — third-party assessment requirement"
+      ],
+      "notes": "Public records exemptions for critical safety incident reports and internal risk assessments limit external scrutiny. Enforcement is primarily reactive."
+    },
+    {
+      "policy_id": "sb-53",
+      "subcategory_id": "jurisdictional-arbitrage",
+      "score": 1,
+      "summary": "The bill applies to all frontier developers operating in California or serving California users regardless of incorporation location, creating some extraterritorial effect, but does not explicitly address jurisdictional avoidance.",
+      "clauses": [
+        "§ 11547.6 — applicability definitions"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "sb-53",
+      "subcategory_id": "economic-concentration",
+      "score": 0,
+      "summary": "Economic concentration from AI is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "sb-53",
+      "subcategory_id": "labor-polarization",
+      "score": 0,
+      "summary": "Labour market impacts are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "sb-53",
+      "subcategory_id": "productivity-paradox",
+      "score": 0,
+      "summary": "Uneven productivity gains are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "sb-53",
+      "subcategory_id": "deskilling",
+      "score": 0,
+      "summary": "Human deskilling is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "sb-53",
+      "subcategory_id": "loss-of-agency",
+      "score": 0,
+      "summary": "Individual autonomy and agency are not addressed; SB-53 is scoped to catastrophic systemic risks rather than individual harms.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "sb-53",
+      "subcategory_id": "social-isolation",
+      "score": 0,
+      "summary": "Social isolation effects are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "sb-53",
+      "subcategory_id": "cultural-homogenization",
+      "score": 0,
+      "summary": "Cultural homogenization is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "sb-53",
+      "subcategory_id": "misaligned-superintelligence",
+      "score": 2,
+      "summary": "'Loss of control' and 'deceptive model behavior' are both named statutory catastrophic risk categories requiring mitigations in the Frontier AI Framework and triggering mandatory incident reporting.",
+      "clauses": [
+        "§ 11547.6(a)(2)(C)",
+        "§ 11547.6(a)(2)(D)",
+        "§ 11547.7(a)(1)"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "sb-53",
+      "subcategory_id": "irreversible-loss-of-control",
+      "score": 2,
+      "summary": "'Loss of control' is explicitly in the catastrophic risk definition and drives both the Frontier AI Framework requirements and the 24-hour critical incident reporting obligation for imminent scenarios.",
+      "clauses": [
+        "§ 11547.6(a)(2)(C)",
+        "§ 11547.6(b)(3)",
+        "§ 11547.8(a) — 24-hour reporting"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "sb-53",
+      "subcategory_id": "value-lock-in",
+      "score": 0,
+      "summary": "Value lock-in is not addressed.",
+      "clauses": [],
+      "notes": ""
+    }
+  ],
+  "metadata": {
+    "anthropic-fcf": {
+      "analyzed_date": "2026-04-01",
+      "meta_observations": [
+        "The FCF's primary contribution is translating Anthropic's voluntary RSP commitments into a SB-53 compliance structure, which adds genuine legal accountability for the categories SB-53 targets (principally CBRN, cyber, and safety reporting).",
+        "The document is narrower in scope than the RSP — it is essentially a compliance operationalisation document rather than a policy document — so most scores reflect inherited RSP commitments plus the SB-53 legal hook.",
+        "The FCF scores higher than the RSP on enforcement-gaps precisely because SB-53 provides an external legal mechanism; in all other respects the FCF's scoring tracks or falls below the RSP.",
+        "Socioeconomic and societal risk categories all score 0 or 1, consistent with Anthropic's narrow scoping of its frontier safety governance documents."
+      ]
+    },
+    "anthropic-rsp": {
+      "analyzed_date": "2026-04-01",
+      "meta_observations": [
+        "The RSP is the most operationally detailed of the six policies for the risks it covers — particularly CBRN, cyber, and emergent capabilities — but its scope is deliberately narrow: it addresses catastrophic/existential tail risks and largely ignores socioeconomic, epistemic, and societal harms.",
+        "The ASL framework creates a tiered commitment structure with named thresholds, which is stronger than most peers, but accountability remains primarily self-reported; the SB-53 compliance hook (addressed in the FCF) adds external accountability that this document alone does not provide.",
+        "The policy is unusually candid about competitive dynamics and racing pressures, and explicitly frames itself as an attempt to create industry norms — a governance function beyond pure self-regulation.",
+        "Scores of 0 across most socioeconomic categories (labor, productivity, cultural, social) are a deliberate scope choice, not an oversight — Anthropic handles these in separate policy documents."
+      ]
+    },
+    "bletchley-declaration": {
+      "analyzed_date": "2026-04-01",
+      "meta_observations": [
+        "The Bletchley Declaration is a political statement of intent with no operative provisions — maximum possible score across all subcategories is 1, and most score 0.",
+        "Its primary value is naming frontier AI as the distinctive locus of risk and explicitly citing alignment, CBRN (biotechnology), cybersecurity, and catastrophic harm — a significant step for a 28-nation political declaration.",
+        "The declaration launched the AI Safety Summit process and the mandate for international AI safety research collaboration, which is its substantive governance output rather than any direct provision.",
+        "Notable omissions: military/autonomous weapons, economic concentration, and any accountability or verification language for the commitments made."
+      ]
+    },
+    "deepmind-fsf": {
+      "analyzed_date": "2026-04-01",
+      "meta_observations": [
+        "The FSF v3 is structurally the most rigorous of the six policies in terms of architecture: two parallel safety tracks (alignment, security), four safety levels (AL1-AL4), and domain-specific Critical Capability Level definitions provide a denser and more systematic framework than peers.",
+        "The inclusion of 'military and political uplift' as a named CCL domain is a notable differentiator — no other policy in this set operationalises military escalation risk at this level of specificity.",
+        "Like Anthropic's RSP, the FSF is deliberately scoped to catastrophic/existential risks; socioeconomic and epistemic harms are entirely absent, reflecting a conscious prioritisation rather than an oversight.",
+        "Public commitment to CCL disclosures provides a reputational accountability mechanism, but there is no independent audit requirement — this limits the maximum score on governance-related subcategories.",
+        "DeepMind's explicit framing of 'alignment' and 'security' as parallel co-equal properties is more architecturally coherent than the way most peers treat these as nested or sequential concerns."
+      ]
+    },
+    "eu-ai-act": {
+      "analyzed_date": "2026-04-01",
+      "meta_observations": [
+        "The EU AI Act is a product-safety and market-regulation instrument, not a technical AI safety instrument. Its architecture (risk tiers, conformity assessment, market surveillance) is adapted from chemical and medical device regulation, which shapes which risks it addresses well (proximate user harms) and poorly (systemic, existential, and geopolitical risks).",
+        "The GPAI/systemic-risk framework (Chapter V, Arts. 51–56) is the only part of the Act that gestures toward longer-horizon technical AI safety risks. Recital 110 is remarkably candid about alignment, CBRN, offensive cyber, and self-replication risks, but almost none of this recital language is operationalised in binding articles.",
+        "Military and defence AI is wholly excluded from scope (Art. 2(3)), creating a large gap for autonomous weapons, military escalation, and strategic instability risks.",
+        "The Act scores well on manipulation/persuasion (3), human oversight for high-risk AI (3), and supply-chain compliance (2) — consistent with its consumer-protection and internal-market rationale.",
+        "Socioeconomic and systemic risks (labour polarisation, economic concentration, productivity paradox, cultural homogenization) are largely out of scope by design; the Act defers to competition law, labour law, and media law.",
+        "The distinction between recital acknowledgement and operative provision is critical: many risks (CBRN, cyber-offense, alignment, self-replication, epistemic collapse) appear in recitals but have no corresponding binding articles, yielding a maximum score of 1.",
+        "Enforcement architecture relies heavily on Member State market surveillance authorities whose capacity is uncertain (Art. 70(6) reporting requirement), creating structural enforcement gaps particularly for cross-border and third-country cases."
+      ]
+    },
+    "g7-hiroshima-coc": {
+      "analyzed_date": "2026-04-01",
+      "meta_observations": [
+        "Source note: The MOFA Japan PDF returned HTTP 403 on all fetch attempts. Scores are based on training knowledge of the published October 2023 G7 Hiroshima Code of Conduct for Advanced AI Systems.",
+        "The CoC operationalises the same 11 principles as the Guiding Principles with more specific language — explicit mentions of red-teaming, coordinated vulnerability disclosure, and controls on model weights — but remains entirely voluntary with no enforcement mechanism.",
+        "Scores are identical to the Principles for most subcategories; the CoC adds marginal specificity on emergent-capabilities (red-teaming) and cyber-offense (coordinated disclosure) but this does not change scores under the conservative rubric.",
+        "Like the Principles, the CoC is silent on CBRN, military/autonomous weapons, economic concentration, and societal risks — the document's scope is operational AI safety practice for developers, not comprehensive risk governance.",
+        "The CoC represents the voluntary counterpart to the emerging regulatory landscape: it was explicitly designed to complement SB-53-style legislation rather than substitute for it."
+      ]
+    },
+    "g7-hiroshima-principles": {
+      "analyzed_date": "2026-04-01",
+      "meta_observations": [
+        "Source note: The MOFA Japan PDF (the primary source) returned HTTP 403 on all fetch attempts. Scores are based on training knowledge of the published October 2023 G7 Hiroshima AI Guiding Principles.",
+        "The Principles are voluntary guidance for AI-developing organisations, with no enforcement or verification mechanisms — maximum possible score is 1 across all subcategories.",
+        "The document is notably more focused on operational safety practices (lifecycle management, cybersecurity, content provenance) than on the frontier AI risks that dominate the Bletchley Declaration. CBRN, military, and existential risks are largely absent.",
+        "Principle 5's explicit reference to protecting 'unreleased model weights' is one of the more technically specific provisions in any multilateral document of this era.",
+        "The Principles are essentially a voluntary code framework — the Code of Conduct published alongside them operationalises the same 11 points with more concrete language."
+      ]
+    },
+    "google-ai-principles": {
+      "analyzed_date": "2026-04-01",
+      "meta_observations": [
+        "The Google AI Principles (2018, updated incrementally) are a high-level principles document with limited operational specificity; they function as governance framing rather than a frontier safety framework and should be read alongside DeepMind's FSF for the operational layer.",
+        "The 'Applications we will not pursue' section is the strongest part of the document — providing named categorical prohibitions (WMD, weapons beyond international law, surveillance for authoritarian regimes, manipulation of democratic processes) that go beyond principle statements.",
+        "Compared to the RSP, Preparedness Framework, and FSF, this document scores notably higher on socioeconomic and societal risks (principle-level acknowledgments exist across more categories) but lower on technical safety specificity.",
+        "The document does not have a meaningful accountability mechanism for most commitments; no internal review process with named oversight body is described in a way that would qualify for a score of 3.",
+        "As a 2018 document, it predates the frontier safety framing that emerged 2023-2025; its principles-based approach reflects the pre-GPT-4 governance paradigm and has not been updated to incorporate the more operational tier-based frameworks."
+      ]
+    },
+    "meta-rai": {
+      "analyzed_date": "2026-04-01",
+      "meta_observations": [
+        "Meta's RAI framework is structurally distinct from all other policies in this set because its central commitment — open-weight model release — both addresses certain risks (economic concentration, monoculture) and creates structural ceilings on others (model theft, post-release control, enforcement).",
+        "The framework scores lower on technical safety specificity than Anthropic/DeepMind/OpenAI, reflecting Meta's position that open-source AI is itself the primary safety intervention rather than deployment restrictions.",
+        "Meta scores uniquely well on economic-concentration because the open-source release programme is the commitment — this is not present at all in the other five policies.",
+        "The absence of a tier-based dangerous capability framework (analogous to ASL, SL, or CCL systems) is the most significant gap relative to peers; pre-release evaluations are conducted but without published thresholds or deployment halt conditions.",
+        "Meta's approach prioritises breadth of principle coverage over depth of operational commitment; most subcategories score 1 (acknowledged but not operationalised) rather than 0 or 2.",
+        "The open-weight release model fundamentally limits accountability mechanisms: there is no technical means to recall or restrict model use after weights are published, which caps achievable scores on enforcement-related categories regardless of stated policy."
+      ]
+    },
+    "openai-preparedness": {
+      "analyzed_date": "2026-04-01",
+      "meta_observations": [
+        "The Preparedness Framework v2 is tightly focused on four quantified risk tracks (CBRN, cyber, model behavior/autonomy, influence operations) with a clear four-level safety scoring rubric — this makes it operationally strong within its scope but narrow.",
+        "The board-level Safety Committee governance structure is a genuine accountability mechanism, distinguishing this framework from pure self-assessment; however the committee is internal and there is no external audit requirement.",
+        "The framework has no coverage of socioeconomic risks, epistemic risks, or most societal harms — these are addressed (if at all) in OpenAI's separate usage policies and charter.",
+        "The Preparedness Framework is comparably strong to Anthropic's RSP on CBRN and cyber (both score 3), but the RSP's ASL architecture provides more granular capability thresholds while OpenAI's four-level SL rubric is simpler and potentially more actionable.",
+        "The influence operations track is a notable differentiator from Anthropic's RSP, though the scoring in v2 remains at level 1 due to limited operational specificity."
+      ]
+    },
+    "sb-53": {
+      "analyzed_date": "2026-04-01",
+      "meta_observations": [
+        "SB-53 is deliberately and explicitly narrow — scoped to 'catastrophic risks' from frontier models above 10^26 FLOPs. Economic, epistemic, social, and most human-centred risks are out of scope by design.",
+        "First statute globally to make 'deceptive model behavior' and 'loss of control' named statutory categories with mandatory reporting obligations — a significant conceptual advance over product-safety frameworks.",
+        "'Weapons assistance' as a statutory concept captures CBRN uplift without naming specific weapon types, which is more future-proof than technology-specific prohibitions.",
+        "Enforcement architecture is AG-led with meaningful penalties ($1M/violation) but relies heavily on developer self-reporting; public records exemptions reduce external scrutiny.",
+        "The CalCompute provision (public compute infrastructure study, due 2027) gestures at structural compute governance but is advisory, not operational.",
+        "Strong overlap with Anthropic's RSP and similar frontier lab policies — SB-53 effectively codifies the frontier lab voluntary commitment architecture into binding law for California-operating developers."
+      ]
+    }
+  }
+}

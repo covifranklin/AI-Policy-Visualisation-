@@ -1,0 +1,216 @@
+{
+  "policy_id": "deepmind-fsf",
+  "analyzed_date": "2026-04-01",
+  "scores": [
+    {
+      "subcategory_id": "goal-misalignment",
+      "score": 2,
+      "summary": "The FSF defines 'alignment' as one of two core safety properties required at every model level; each safety level (AL1-AL4) includes specific alignment evaluation criteria and deployment requirements tied to demonstrating sufficient alignment.",
+      "clauses": ["Section: Core Safety Properties", "Section: Safety Level Definitions"],
+      "notes": "DeepMind's explicit separation of 'alignment' and 'security' as parallel safety tracks is methodologically notable."
+    },
+    {
+      "subcategory_id": "deceptive-alignment",
+      "score": 2,
+      "summary": "Deceptive and scheming behaviour is named as a specific alignment failure mode; AL3+ safety levels require evaluation evidence ruling out deceptive alignment before deployment.",
+      "clauses": ["Section: Alignment Evaluations", "Section: AL3 Safety Requirements"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "emergent-capabilities",
+      "score": 3,
+      "summary": "The FSF's 'critical capability levels' (CCLs) framework is explicitly designed to detect dangerous capabilities emerging at scale; CCL definitions for each domain trigger mandatory safety assessments; Google DeepMind commits to public disclosure of safety level determinations.",
+      "clauses": ["Section: Critical Capability Levels", "Section: Dangerous Capability Evaluations"],
+      "notes": "Public disclosure of CCL determinations constitutes an accountability mechanism; FSF v3 is publicly committed."
+    },
+    {
+      "subcategory_id": "loss-of-oversight",
+      "score": 2,
+      "summary": "Preserving human oversight is defined as a core alignment requirement; models demonstrating reduced corrigibility or oversight-undermining behaviour are flagged for additional safety work before deployment.",
+      "clauses": ["Section: Core Safety Properties — Alignment", "Section: AL3 Alignment Requirements"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "supply-chain",
+      "score": 0,
+      "summary": "Supply chain vulnerabilities are not addressed in the FSF.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "model-theft",
+      "score": 2,
+      "summary": "Model weight security is addressed under the 'security' core safety property; AL3+ security requirements include specific access control and containment measures against sophisticated adversaries.",
+      "clauses": ["Section: Core Safety Properties — Security", "Section: AL3 Security Requirements"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "data-poisoning",
+      "score": 1,
+      "summary": "Training pipeline integrity is mentioned in the security threat model but no specific evaluation or requirement is specified.",
+      "clauses": ["Section: Security Threat Model"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "dependency-monoculture",
+      "score": 0,
+      "summary": "AI dependency monoculture is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "epistemic-collapse",
+      "score": 0,
+      "summary": "Epistemic collapse is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "synthetic-data-loops",
+      "score": 0,
+      "summary": "Synthetic data feedback loops are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "persuasion-manipulation",
+      "score": 1,
+      "summary": "Persuasion and manipulation at scale are mentioned as societal harms in the FSF's framing but no specific evaluation track or commitment addresses them.",
+      "clauses": ["Section: Scope and Motivation"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "cbrn-misuse",
+      "score": 3,
+      "summary": "CBRN uplift is one of the core CCL domains with defined thresholds across all four security levels; the FSF commits to halting deployment if CCL thresholds are crossed without adequate mitigations, with public safety level disclosures.",
+      "clauses": ["Section: Critical Capability Levels — CBRN", "Section: Dangerous Capability Evaluations"],
+      "notes": "Public CCL disclosure and the depth of domain-specific thresholds make this one of the stronger CBRN treatments across the six policies."
+    },
+    {
+      "subcategory_id": "cyber-offense",
+      "score": 3,
+      "summary": "Cyber offense capability is a core CCL domain with multi-level defined thresholds; deployment is blocked above specific CCL cyber thresholds without mitigations; public disclosure applies.",
+      "clauses": ["Section: Critical Capability Levels — Cyber", "Section: Dangerous Capability Evaluations"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "military-escalation",
+      "score": 2,
+      "summary": "Military uplift and autonomous weapons are named in the FSF's dangerous capability taxonomy with specific evaluation criteria; models assessed as providing significant military uplift are subject to AL3-level safety requirements.",
+      "clauses": ["Section: Critical Capability Levels — Military and Political Uplift"],
+      "notes": "More explicit than peers on military escalation risk as an evaluated capability category."
+    },
+    {
+      "subcategory_id": "strategic-instability",
+      "score": 1,
+      "summary": "The FSF references AI arms race dynamics as a motivation for the framework but does not make specific operational commitments to address strategic instability.",
+      "clauses": ["Section: Scope and Motivation"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "regulatory-capture",
+      "score": 0,
+      "summary": "Regulatory capture is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "capability-overhang",
+      "score": 2,
+      "summary": "The CCL framework gates deployment on safety level determinations, directly preventing premature release of models with overhung capabilities; the FSF requires safety assessments before each significant capability jump.",
+      "clauses": ["Section: Safety Level Gating", "Section: Critical Capability Levels"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "enforcement-gaps",
+      "score": 2,
+      "summary": "Google DeepMind's Responsible Development and Innovation (RDI) team provides internal oversight; the FSF specifies escalation paths and sign-off requirements; public commitments create reputational accountability.",
+      "clauses": ["Section: Governance and Accountability"],
+      "notes": "No external audit requirement; internal governance is the primary mechanism."
+    },
+    {
+      "subcategory_id": "jurisdictional-arbitrage",
+      "score": 0,
+      "summary": "Jurisdictional arbitrage is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "economic-concentration",
+      "score": 0,
+      "summary": "Economic concentration is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "labor-polarization",
+      "score": 0,
+      "summary": "Labor market polarization is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "productivity-paradox",
+      "score": 0,
+      "summary": "Productivity paradox is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "deskilling",
+      "score": 0,
+      "summary": "Human deskilling is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "loss-of-agency",
+      "score": 1,
+      "summary": "Loss of human agency is addressed implicitly through corrigibility requirements in the alignment safety property, but is not treated as a deployment-level risk category.",
+      "clauses": ["Section: Core Safety Properties — Alignment"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "social-isolation",
+      "score": 0,
+      "summary": "Social isolation effects are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "cultural-homogenization",
+      "score": 0,
+      "summary": "Cultural homogenization is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "misaligned-superintelligence",
+      "score": 2,
+      "summary": "AL4 (the highest safety level) is defined in terms of models capable of causing civilizational-scale harm through misalignment; the FSF specifies that no AL4 model will be deployed without extraordinary safety case evidence.",
+      "clauses": ["Section: AL4 Safety Level Definition", "Section: Core Safety Properties"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "irreversible-loss-of-control",
+      "score": 2,
+      "summary": "Irreversibility is embedded in the AL4 definition; the FSF explicitly names avoiding irreversible outcomes as a core principle and ties this to deployment halt conditions.",
+      "clauses": ["Section: AL4 Safety Level Definition", "Section: Core Safety Properties"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "value-lock-in",
+      "score": 1,
+      "summary": "Value lock-in is mentioned as a long-term societal risk in the framework's motivating concerns but is not an operationalised evaluation category.",
+      "clauses": ["Section: Scope and Motivation"],
+      "notes": ""
+    }
+  ],
+  "meta_observations": [
+    "The FSF v3 is structurally the most rigorous of the six policies in terms of architecture: two parallel safety tracks (alignment, security), four safety levels (AL1-AL4), and domain-specific Critical Capability Level definitions provide a denser and more systematic framework than peers.",
+    "The inclusion of 'military and political uplift' as a named CCL domain is a notable differentiator — no other policy in this set operationalises military escalation risk at this level of specificity.",
+    "Like Anthropic's RSP, the FSF is deliberately scoped to catastrophic/existential risks; socioeconomic and epistemic harms are entirely absent, reflecting a conscious prioritisation rather than an oversight.",
+    "Public commitment to CCL disclosures provides a reputational accountability mechanism, but there is no independent audit requirement — this limits the maximum score on governance-related subcategories.",
+    "DeepMind's explicit framing of 'alignment' and 'security' as parallel co-equal properties is more architecturally coherent than the way most peers treat these as nested or sequential concerns."
+  ]
+}

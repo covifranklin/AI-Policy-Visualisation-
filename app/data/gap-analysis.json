@@ -1,0 +1,403 @@
+{
+  "generated_date": "2026-04-02",
+  "policies_analyzed": 11,
+  "subcategories_analyzed": 29,
+  "note": "Analysis covers 11 of 25 policies in scope (priority set). 14 remaining policies not yet scored.",
+
+  "uncovered_risks": [
+    {
+      "subcategory_id": "dependency-monoculture",
+      "subcategory_name": "Dependency risk (AI monoculture)",
+      "category": "operational-infrastructure",
+      "max_score_across_all_policies": 1,
+      "policies_scoring_above_zero": ["meta-rai"],
+      "practical_meaning": "No governance framework substantively addresses the systemic fragility created by global dependence on a handful of AI providers and chip manufacturers. Meta claims open-source release is the mitigation, but this is a self-serving framing with no independent verification.",
+      "avg_score": 0.09
+    },
+    {
+      "subcategory_id": "synthetic-data-loops",
+      "subcategory_name": "Synthetic data feedback loops",
+      "category": "information-epistemic",
+      "max_score_across_all_policies": 1,
+      "policies_scoring_above_zero": ["eu-ai-act"],
+      "practical_meaning": "Model collapse from AI-on-AI training data is an emerging technical crisis with no governance response. The EU AI Act's narrow feedback-loop provision covers a different scenario (ongoing learning from biased outputs, not synthetic training data).",
+      "avg_score": 0.09
+    },
+    {
+      "subcategory_id": "regulatory-capture",
+      "subcategory_name": "Regulatory capture",
+      "category": "governance-institutional",
+      "max_score_across_all_policies": 1,
+      "policies_scoring_above_zero": ["eu-ai-act", "anthropic-rsp", "anthropic-fcf", "google-ai-principles", "meta-rai"],
+      "practical_meaning": "The risk that AI developers will shape regulation to entrench their dominance is mentioned only in passing across five frameworks, none with operational commitments. No framework contains anti-capture mechanisms, revolving-door restrictions, or industry-influence disclosure.",
+      "avg_score": 0.45
+    },
+    {
+      "subcategory_id": "epistemic-collapse",
+      "subcategory_name": "Epistemic collapse",
+      "category": "information-epistemic",
+      "max_score_across_all_policies": 1,
+      "policies_scoring_above_zero": ["eu-ai-act", "bletchley-declaration", "g7-hiroshima-principles", "g7-hiroshima-coc", "anthropic-rsp", "anthropic-fcf", "google-ai-principles", "meta-rai"],
+      "practical_meaning": "Widespread erosion of shared epistemic foundations — the inability to distinguish AI-generated from real — is broadly acknowledged but nowhere operationalised. Eight frameworks mention it; zero provide specific provisions beyond labelling requirements that address only a fraction of the problem.",
+      "avg_score": 0.73
+    },
+    {
+      "subcategory_id": "labor-polarization",
+      "subcategory_name": "Labor market polarization",
+      "category": "economic-systemic",
+      "max_score_across_all_policies": 1,
+      "policies_scoring_above_zero": ["eu-ai-act", "google-ai-principles", "meta-rai"],
+      "practical_meaning": "The hollowing out of mid-skill employment — potentially the most societally destabilising near-term AI impact — is mentioned in three policies, none with operational commitments. Governance frameworks have collectively decided this is not their problem.",
+      "avg_score": 0.27
+    },
+    {
+      "subcategory_id": "productivity-paradox",
+      "subcategory_name": "Productivity paradox / uneven gains",
+      "category": "economic-systemic",
+      "max_score_across_all_policies": 1,
+      "policies_scoring_above_zero": ["google-ai-principles", "meta-rai"],
+      "practical_meaning": "Only two policies acknowledge that AI productivity gains may accrue unevenly, and neither commits to any mechanism to address this. The distributional question — who captures the AI dividend — is almost entirely absent from global governance.",
+      "avg_score": 0.18
+    },
+    {
+      "subcategory_id": "deskilling",
+      "subcategory_name": "Human deskilling / cognitive atrophy",
+      "category": "human-societal",
+      "max_score_across_all_policies": 1,
+      "policies_scoring_above_zero": ["eu-ai-act"],
+      "practical_meaning": "The EU AI Act mentions automation bias awareness for high-risk AI deployers, which is the narrowest possible gesture toward deskilling risk. Systematic human cognitive and skill atrophy from AI delegation has no governance response.",
+      "avg_score": 0.09
+    },
+    {
+      "subcategory_id": "social-isolation",
+      "subcategory_name": "Social isolation / AI companionship effects",
+      "category": "human-societal",
+      "max_score_across_all_policies": 1,
+      "policies_scoring_above_zero": ["meta-rai"],
+      "practical_meaning": "Only Meta (uniquely, given its social platform context) acknowledges AI companionship risks at all. The substitution of AI for human relationships — and its mental health consequences — has no governance framework.",
+      "avg_score": 0.09
+    },
+    {
+      "subcategory_id": "cultural-homogenization",
+      "subcategory_name": "Cultural homogenization",
+      "category": "human-societal",
+      "max_score_across_all_policies": 1,
+      "policies_scoring_above_zero": ["eu-ai-act", "google-ai-principles", "meta-rai"],
+      "practical_meaning": "The risk that global AI systems trained predominantly on English-language Western data will compress linguistic and cultural diversity is mentioned in three policies, none with operational protections.",
+      "avg_score": 0.27
+    }
+  ],
+
+  "weakly_covered_risks": [
+    {
+      "subcategory_id": "goal-misalignment",
+      "subcategory_name": "Goal misalignment / specification gaming",
+      "category": "alignment-control",
+      "max_binding_score": 1,
+      "max_voluntary_score": 2,
+      "best_voluntary_policies": ["anthropic-rsp", "anthropic-fcf", "openai-preparedness", "deepmind-fsf"],
+      "binding_policies_coverage": "EU AI Act mentions in Recital 110 only; SB-53 captures via 'autonomous harmful conduct' but does not operationalise misalignment as a concept",
+      "gap_description": "The most fundamental alignment risk — systems optimising for the wrong objective — is operationalised only in private-sector frameworks. No binding law creates alignment evaluation requirements."
+    },
+    {
+      "subcategory_id": "emergent-capabilities",
+      "subcategory_name": "Emergent capabilities risk",
+      "category": "alignment-control",
+      "max_binding_score": 1,
+      "max_voluntary_score": 3,
+      "best_voluntary_policies": ["anthropic-rsp", "anthropic-fcf", "openai-preparedness", "deepmind-fsf"],
+      "binding_policies_coverage": "EU AI Act uses a compute threshold as a proxy; SB-53 uses a compute threshold. Neither creates emergent capability detection requirements.",
+      "gap_description": "The entire evaluations-based approach to detecting dangerous emergent capabilities is a private-sector invention (RSP/Preparedness/FSF). Binding law uses compute thresholds as a blunt proxy. The gap between frontier lab practice and legal requirements is largest here."
+    },
+    {
+      "subcategory_id": "military-escalation",
+      "subcategory_name": "Military escalation / autonomous weapons",
+      "category": "security-conflict",
+      "max_binding_score": 0,
+      "max_voluntary_score": 2,
+      "best_voluntary_policies": ["deepmind-fsf", "google-ai-principles"],
+      "binding_policies_coverage": "EU AI Act explicitly excludes military and defence applications. SB-53 does not address military AI. No binding law touches this.",
+      "gap_description": "Autonomous weapons and military escalation risk are the most consequential uncovered category in binding law. The EU's military exclusion is intentional — and creates a governance void that no other binding instrument fills."
+    },
+    {
+      "subcategory_id": "strategic-instability",
+      "subcategory_name": "Strategic instability (AI arms race)",
+      "category": "security-conflict",
+      "max_binding_score": 0,
+      "max_voluntary_score": 2,
+      "best_voluntary_policies": ["anthropic-rsp"],
+      "binding_policies_coverage": "No binding policy addresses AI arms race dynamics or competitive racing incentives.",
+      "gap_description": "Only Anthropic's RSP has a specific commitment on racing dynamics (and only for itself). The geopolitical meta-risk — that safety corners get cut in national competition — has no multilateral governance response."
+    },
+    {
+      "subcategory_id": "value-lock-in",
+      "subcategory_name": "Value lock-in",
+      "category": "longterm-existential",
+      "max_binding_score": 0,
+      "max_voluntary_score": 2,
+      "best_voluntary_policies": ["anthropic-rsp"],
+      "binding_policies_coverage": "No binding law addresses the risk of AI systems permanently entrenching specific value systems or power structures.",
+      "gap_description": "Binding law does not acknowledge that early AI governance choices could lock in particular ideological configurations. Only Anthropic names this risk explicitly, with the notable caveat that no mechanism prevents Anthropic from changing its position."
+    },
+    {
+      "subcategory_id": "economic-concentration",
+      "subcategory_name": "Economic concentration / rent extraction",
+      "category": "economic-systemic",
+      "max_binding_score": 1,
+      "max_voluntary_score": 2,
+      "best_voluntary_policies": ["meta-rai"],
+      "binding_policies_coverage": "EU AI Act defers to competition law; SB-53 does not address it. No binding AI-specific instrument addresses concentration.",
+      "gap_description": "Winner-take-most dynamics in AI are addressed only in Meta's open-source framing — which is itself a concentrated provider's self-serving argument. Binding AI governance has no structural response to AI-driven economic concentration."
+    }
+  ],
+
+  "coverage_by_creator": {
+    "western-gov": {
+      "policies_in_matrix": ["eu-ai-act", "sb-53"],
+      "avg_score": 0.86,
+      "strongest_areas": [
+        "loss-of-oversight (EU AI Act Art. 14 = score 3)",
+        "persuasion-manipulation (EU AI Act Art. 5 = score 3)",
+        "data-poisoning (EU AI Act Art. 15(5) = score 2)",
+        "supply-chain (EU AI Act Arts. 23-25 = score 2)",
+        "deceptive-alignment (SB-53 as first statute to codify = score 2)",
+        "cbrn-misuse (SB-53 weapons assistance = score 2)"
+      ],
+      "weakest_areas": [
+        "military-escalation (EU explicitly excludes; SB-53 silent = score 0/0)",
+        "strategic-instability (both silent = score 0/0)",
+        "dependency-monoculture (both silent = score 0/0)",
+        "synthetic-data-loops (EU narrow provision only; SB-53 silent)",
+        "value-lock-in (both silent = score 0/0)"
+      ],
+      "notable_patterns": "Western government binding law is strong on proximate, near-term harms (manipulation, oversight, supply chain) but weak on systemic, strategic, and long-horizon risks. SB-53 is uniquely technically precise for a statute — first to codify 'deceptive model behavior' and 'loss of control' as legal categories. EU AI Act's military exclusion is its most consequential gap. Both instruments rely heavily on compute thresholds rather than capability evaluations."
+    },
+    "multilateral": {
+      "policies_in_matrix": ["bletchley-declaration", "g7-hiroshima-principles", "g7-hiroshima-coc"],
+      "avg_score": 0.38,
+      "strongest_areas": [
+        "goal-misalignment (acknowledged across all three)",
+        "loss-of-oversight (mentioned in all three)",
+        "epistemic-collapse (G7 watermarking/provenance)",
+        "cbrn-misuse (Bletchley names biotechnology)",
+        "model-theft (G7 explicitly references unreleased weights)",
+        "misaligned-superintelligence (Bletchley 'catastrophic harm' language)"
+      ],
+      "weakest_areas": [
+        "All economic-systemic categories = 0 across all three",
+        "All human-societal categories = 0 across all three",
+        "military-escalation = 0 across all three",
+        "strategic-instability = 0 across all three",
+        "enforcement-gaps = 0 (all entirely voluntary)"
+      ],
+      "notable_patterns": "Multilateral instruments function as political declarations that name risks but generate no binding obligations. Maximum achievable score is 1 for all three. Their value is in international consensus-building, not operational governance. The G7 CoC adds marginal specificity over the Principles (explicit red-teaming, coordinated disclosure) but both remain below actionable threshold. Bletchley's explicit CBRN/biotechnology naming is its most substantive contribution."
+    },
+    "private-sector": {
+      "policies_in_matrix": ["anthropic-rsp", "anthropic-fcf", "openai-preparedness", "deepmind-fsf", "google-ai-principles", "meta-rai"],
+      "avg_score": 1.06,
+      "strongest_areas": [
+        "cbrn-misuse (RSP, FCF, OpenAI, DeepMind all score 3)",
+        "cyber-offense (RSP, FCF, OpenAI, DeepMind all score 3)",
+        "emergent-capabilities (RSP, FCF, OpenAI, DeepMind score 3)",
+        "deceptive-alignment (RSP, FCF, OpenAI, DeepMind score 2)",
+        "loss-of-oversight (most score 2)",
+        "model-theft (RSP, FCF, OpenAI, DeepMind score 2)"
+      ],
+      "weakest_areas": [
+        "economic-concentration (only Meta scores above 1)",
+        "labor-polarization (all score 0 except Google and Meta at 1)",
+        "dependency-monoculture (only Meta at 1)",
+        "synthetic-data-loops (all score 0)",
+        "supply-chain (all score 0 — only EU AI Act addresses this)"
+      ],
+      "notable_patterns": "Private sector frameworks are systematically more operationally sophisticated on frontier safety risks than any binding law. The RSP/Preparedness/FSF tier-based evaluation architectures represent the governance frontier for CBRN, cyber, and emergent capabilities — but are entirely self-assessed and legally unenforceable without hooks like SB-53. The FCF's SB-53 compliance architecture is the closest existing model for converting voluntary commitments into legal obligations. Google AI Principles (2018, pre-GPT-4 paradigm) scores higher than peers on socioeconomic categories; DeepMind FSF uniquely includes military uplift as an evaluated CCL domain."
+    }
+  },
+
+  "binding_vs_voluntary": {
+    "binding_avg_score": 0.86,
+    "partial_binding_avg_score": 1.24,
+    "voluntary_avg_score": 0.78,
+    "note": "Binding = eu-ai-act, sb-53. Partial = anthropic-rsp (self-regulatory commitment with SB-53 hook). Voluntary = all others.",
+    "where_voluntary_outperforms_binding": [
+      {
+        "subcategory_id": "emergent-capabilities",
+        "binding_max": 1,
+        "voluntary_max": 3,
+        "explanation": "Private sector tier-based capability evaluations (ASL, SL, CCL frameworks) are 3 full scoring tiers ahead of binding law's compute-threshold proxies."
+      },
+      {
+        "subcategory_id": "deceptive-alignment",
+        "binding_max": 2,
+        "voluntary_max": 2,
+        "explanation": "SB-53 and private sector frameworks are evenly matched on deceptive alignment — uniquely, the statute codified the concept first (2025), validating the lab frameworks that created it."
+      },
+      {
+        "subcategory_id": "cbrn-misuse",
+        "binding_max": 2,
+        "voluntary_max": 3,
+        "explanation": "Private sector bio-uplift evaluation thresholds (RSP, Preparedness, FSF) are more operationally specific than SB-53's statutory category and vastly more specific than the EU Act's recital acknowledgement."
+      },
+      {
+        "subcategory_id": "cyber-offense",
+        "binding_max": 1,
+        "voluntary_max": 3,
+        "explanation": "Private sector cyber evaluation frameworks far exceed any binding law's treatment. EU Act and SB-53 address cybersecurity (protecting AI systems) not cyber offense acceleration (AI as attack tool)."
+      },
+      {
+        "subcategory_id": "goal-misalignment",
+        "binding_max": 1,
+        "voluntary_max": 2,
+        "explanation": "Alignment evaluation requirements exist only in private sector frameworks. Binding law does not create alignment obligations."
+      },
+      {
+        "subcategory_id": "strategic-instability",
+        "binding_max": 0,
+        "voluntary_max": 2,
+        "explanation": "Only Anthropic's RSP (voluntary) names and addresses racing dynamics. No binding law acknowledges this as a governance problem."
+      },
+      {
+        "subcategory_id": "military-escalation",
+        "binding_max": 0,
+        "voluntary_max": 2,
+        "explanation": "DeepMind and Google AI Principles contain named commitments on autonomous weapons; EU AI Act explicitly excludes military applications."
+      },
+      {
+        "subcategory_id": "value-lock-in",
+        "binding_max": 0,
+        "voluntary_max": 2,
+        "explanation": "Anthropic RSP uniquely names value lock-in as a core concern; no binding law acknowledges it."
+      }
+    ],
+    "where_binding_outperforms_voluntary": [
+      {
+        "subcategory_id": "loss-of-oversight",
+        "binding_max": 3,
+        "voluntary_max": 2,
+        "explanation": "EU AI Act Art. 14 human oversight mandate with enforcement penalties is the strongest human oversight provision across all 11 policies."
+      },
+      {
+        "subcategory_id": "persuasion-manipulation",
+        "binding_max": 3,
+        "voluntary_max": 2,
+        "explanation": "EU AI Act's Art. 5 prohibition with €35M/7% GTO penalty is the strongest manipulation provision. Private sector policies have named commitments but no enforcement."
+      },
+      {
+        "subcategory_id": "supply-chain",
+        "binding_max": 2,
+        "voluntary_max": 0,
+        "explanation": "EU AI Act's importer/distributor chain-of-custody obligations are the only supply chain provision across all 11 policies."
+      },
+      {
+        "subcategory_id": "data-poisoning",
+        "binding_max": 2,
+        "voluntary_max": 1,
+        "explanation": "EU AI Act Art. 15(5) explicitly names data poisoning as a required mitigation; private sector policies mention it only in passing."
+      },
+      {
+        "subcategory_id": "jurisdictional-arbitrage",
+        "binding_max": 2,
+        "voluntary_max": 1,
+        "explanation": "EU AI Act's effects-based jurisdiction mirrors GDPR extraterritoriality; SB-53 applies to all California-serving developers. Private sector frameworks make no global commitment."
+      }
+    ],
+    "headline_finding": "Private sector self-regulation is systematically ahead of binding law on frontier AI risks (CBRN, cyber, emergent capabilities, alignment), while binding law leads on proximate consumer protection risks (manipulation, human oversight, supply chain). The governance frontier is in San Francisco, not Brussels or Sacramento. This creates a structural dependency: the world's most consequential AI safety commitments currently rest on voluntary corporate policies that can be revised, weakened, or abandoned without legal consequence."
+  },
+
+  "key_findings": {
+    "top_undergoverned": [
+      {
+        "rank": 1,
+        "subcategory_id": "military-escalation",
+        "subcategory_name": "Military escalation / autonomous weapons",
+        "avg_score": 0.73,
+        "max_binding_score": 0,
+        "why_critical": "The EU AI Act explicitly excludes military applications. No international treaty governs autonomous weapons. The only governance is two corporate principles documents (DeepMind FSF, Google AI Principles). Given AI's direct applicability to military decision systems, this is the most consequential explicit governance exclusion in the dataset."
+      },
+      {
+        "rank": 2,
+        "subcategory_id": "strategic-instability",
+        "subcategory_name": "Strategic instability (AI arms race)",
+        "avg_score": 0.64,
+        "max_binding_score": 0,
+        "why_critical": "The race to build more powerful AI systems faster than safety measures can keep up is the meta-risk underlying all other frontier AI risks. No binding instrument attempts to address competitive racing dynamics. Only Anthropic has a voluntary racing commitment — and it cannot bind its competitors."
+      },
+      {
+        "rank": 3,
+        "subcategory_id": "dependency-monoculture",
+        "subcategory_name": "Dependency risk (AI monoculture)",
+        "avg_score": 0.09,
+        "max_binding_score": 0,
+        "why_critical": "Global AI infrastructure is concentrating in 3-5 companies and 1-2 chip manufacturers. A failure, breach, or geopolitical disruption of this infrastructure has no governance framework. Supply chain security exists for chips (export controls) but not for AI service concentration."
+      },
+      {
+        "rank": 4,
+        "subcategory_id": "epistemic-collapse",
+        "subcategory_name": "Epistemic collapse",
+        "avg_score": 0.73,
+        "max_binding_score": 1,
+        "why_critical": "Eight policies acknowledge epistemic risks; zero provide binding provisions beyond basic labelling requirements. The AI-driven erosion of shared reality — affecting elections, public health, judicial systems, and democratic discourse — is named everywhere and governed nowhere."
+      },
+      {
+        "rank": 5,
+        "subcategory_id": "value-lock-in",
+        "subcategory_name": "Value lock-in",
+        "avg_score": 0.64,
+        "max_binding_score": 0,
+        "why_critical": "The possibility that current AI development choices will permanently constrain future value pluralism is raised only by Anthropic. No binding law acknowledges that encoding specific values into AI systems at civilizational scale could foreclose future human choice."
+      }
+    ],
+    "top_governed": [
+      {
+        "rank": 1,
+        "subcategory_id": "cbrn-misuse",
+        "subcategory_name": "CBRN misuse enablement",
+        "avg_score": 1.82,
+        "max_score_any_policy": 3,
+        "why_well_covered": "CBRN is the one risk where binding law (SB-53) and private sector frameworks (RSP, FCF, OpenAI, DeepMind) both achieve score 2-3. The bio-uplift evaluation frameworks at Anthropic and OpenAI are the most operationally specific safety provisions in the entire dataset."
+      },
+      {
+        "rank": 2,
+        "subcategory_id": "cyber-offense",
+        "subcategory_name": "Cyber offense acceleration",
+        "avg_score": 1.82,
+        "max_score_any_policy": 3,
+        "why_well_covered": "Parallel to CBRN in frontier lab frameworks; cyber offense is one of only four or five risks where private sector frameworks achieve score 3. The gap is that SB-53's treatment is weaker than the private sector frameworks it nominally enforces."
+      },
+      {
+        "rank": 3,
+        "subcategory_id": "loss-of-oversight",
+        "subcategory_name": "Loss of human oversight",
+        "avg_score": 1.73,
+        "max_score_any_policy": 3,
+        "why_well_covered": "EU AI Act Art. 14 is the most technically specific human oversight mandate in any binding instrument. SB-53's 'loss of control' category adds statutory legitimacy. Nine of 11 policies score ≥1."
+      },
+      {
+        "rank": 4,
+        "subcategory_id": "emergent-capabilities",
+        "subcategory_name": "Emergent capabilities risk",
+        "avg_score": 1.73,
+        "max_score_any_policy": 3,
+        "why_well_covered": "Four private sector frameworks achieve score 3 through tier-based capability evaluation systems. The gap: binding law only scores 1 (compute thresholds), so this is well-governed only among voluntary frameworks."
+      },
+      {
+        "rank": 5,
+        "subcategory_id": "enforcement-gaps",
+        "subcategory_name": "Enforcement gaps",
+        "avg_score": 1.36,
+        "max_score_any_policy": 3,
+        "why_well_covered": "Three policies achieve score 2-3 (EU AI Act, SB-53, Anthropic FCF). The FCF's SB-53 integration is the most sophisticated enforcement architecture: voluntarily constructed but legally backed by the AG penalty mechanism."
+      }
+    ],
+    "headline_gap": "The governance frontier is in San Francisco, not Brussels. Private sector frameworks — built without legislative compulsion — are systematically more operationally advanced on the most dangerous AI risks (CBRN, cyber, emergent capabilities, deceptive alignment) than any binding law. This creates a profound structural fragility: the world's most consequential AI safety commitments currently rest on voluntary corporate policies that can be revised or abandoned without legal consequence. SB-53 and the Anthropic FCF represent the earliest working model for converting these voluntary commitments into legally enforceable obligations — but only for California-jurisdiction activities, only for frontier-scale models, and only for the risks those instruments cover. The vast majority of the risk taxonomy remains ungoverned by binding law.",
+    "surprises": [
+      "SB-53 is more technically precise on existential AI risk than the entire EU AI Act, despite being a single US state statute rather than a comprehensive 27-nation regulation. It is the first binding law anywhere to codify 'deceptive model behavior' and 'loss of control' as named legal categories.",
+      "The EU AI Act, widely regarded as the world's most comprehensive AI law, scores 0 on military escalation (explicit exclusion), strategic instability, value lock-in, social isolation, and model theft — five categories where some private sector frameworks provide meaningful coverage.",
+      "Meta's open-source release strategy makes it the only policy in the dataset to substantively address economic concentration (score 2) — by framing the release programme itself as the anti-concentration commitment. Whether this is a genuine governance contribution or a competitive strategy wrapped in governance language is a legitimate question.",
+      "The multilateral instruments (Bletchley, G7 Hiroshima) score identically on most categories because they cover the same conceptual territory at the same level of abstraction. The two G7 documents are functionally one policy expressed twice.",
+      "Regulatory capture — the risk that AI developers will shape the governance ecosystem to serve their interests — is the one governance failure mode that governance frameworks systematically refuse to address. All five policies that mention it score 1 (acknowledgement only) with no anti-capture mechanisms.",
+      "Supply chain risk (chip/cloud concentration) is addressed only in EU AI Act (score 2 for compliance chain obligations). No frontier safety framework mentions it — despite chip export controls being the most active AI governance lever in 2024-2025.",
+      "DeepMind's Frontier Safety Framework is the only private sector document that explicitly includes military and political uplift as an evaluated dangerous capability domain, making it the most comprehensive private sector framework on security-conflict risks."
+    ]
+  }
+}

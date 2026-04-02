@@ -1,0 +1,217 @@
+{
+  "policy_id": "sb-53",
+  "analyzed_date": "2026-04-01",
+  "scores": [
+    {
+      "subcategory_id": "goal-misalignment",
+      "score": 1,
+      "summary": "'Autonomous harmful conduct' in the catastrophic risk definition captures goal misalignment scenarios, and the Frontier AI Framework must address mitigations, but the bill does not use or operationalise goal misalignment as a distinct concept.",
+      "clauses": ["§ 11547.6(a)(2) — catastrophic risk definition"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "deceptive-alignment",
+      "score": 2,
+      "summary": "'Deceptive model behavior' is a named statutory category of catastrophic risk and a defined Critical Safety Incident trigger requiring 24-hour reporting to the Office of Emergency Services when imminent danger is present.",
+      "clauses": ["§ 11547.6(a)(2)(D) — catastrophic risk definition", "§ 11547.6(b)(2) — critical safety incident definition"],
+      "notes": "First statute globally to codify 'deceptive model behavior' as a legal category. Scope is harm-focused rather than the AI safety concept of evaluation-time deception, but captures the operational manifestation."
+    },
+    {
+      "subcategory_id": "emergent-capabilities",
+      "score": 1,
+      "summary": "The 10^26 FLOP compute threshold proxies for frontier capability levels, and pre-deployment transparency reports must address catastrophic risk assessments, but emergent capabilities as a distinct concept are not addressed.",
+      "clauses": ["§ 11547.6(a)(4) — frontier model definition", "§ 11547.7(b) — transparency reporting"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "loss-of-oversight",
+      "score": 2,
+      "summary": "'Loss of control' is a named statutory category of catastrophic risk and Critical Safety Incident; the Frontier AI Framework must include specific mitigations and risk thresholds for this scenario.",
+      "clauses": ["§ 11547.6(a)(2)(C) — loss of control in catastrophic risk", "§ 11547.6(b)(3) — loss of control as critical safety incident"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "supply-chain",
+      "score": 0,
+      "summary": "Supply chain vulnerabilities are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "model-theft",
+      "score": 2,
+      "summary": "'Unauthorized access to model weights causing harm' is a named Critical Safety Incident requiring mandatory reporting within 15 days, and cybersecurity is a required component of the Frontier AI Framework.",
+      "clauses": ["§ 11547.6(b)(1) — unauthorized weight access as critical safety incident", "§ 11547.7(a)(1)(F) — cybersecurity in framework"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "data-poisoning",
+      "score": 0,
+      "summary": "Data poisoning and training pipeline attacks are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "dependency-monoculture",
+      "score": 0,
+      "summary": "AI dependency risk and monoculture are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "epistemic-collapse",
+      "score": 0,
+      "summary": "Epistemic collapse and information ecosystem risks are not addressed; SB-53 focuses exclusively on catastrophic physical and control risks.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "synthetic-data-loops",
+      "score": 0,
+      "summary": "Synthetic data feedback loops are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "persuasion-manipulation",
+      "score": 0,
+      "summary": "Persuasion and behavioral manipulation at scale are not addressed; the bill's scope is limited to catastrophic physical harms.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "cbrn-misuse",
+      "score": 2,
+      "summary": "'Weapons assistance' — explicitly framing CBRN uplift — is a named statutory category of catastrophic risk, requiring mitigations in the Frontier AI Framework and quarterly risk assessment reports to OES.",
+      "clauses": ["§ 11547.6(a)(2)(A) — weapons assistance in catastrophic risk definition", "§ 11547.7(a)(1) — framework requirements", "§ 11547.7(c) — quarterly OES reporting"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "cyber-offense",
+      "score": 1,
+      "summary": "Cybersecurity is a required component of the Frontier AI Framework, but cyber offense acceleration (AI lowering cost of attacks) is not in the catastrophic risk definition.",
+      "clauses": ["§ 11547.7(a)(1)(F) — cybersecurity in framework"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "military-escalation",
+      "score": 0,
+      "summary": "Military applications and autonomous weapons are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "strategic-instability",
+      "score": 0,
+      "summary": "Strategic instability and AI arms race dynamics are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "regulatory-capture",
+      "score": 0,
+      "summary": "Regulatory capture is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "capability-overhang",
+      "score": 2,
+      "summary": "Mandatory pre-deployment transparency reporting — including catastrophic risk assessments — is required before deploying new or substantially modified frontier models, directly addressing sudden capability release risk.",
+      "clauses": ["§ 11547.7(b) — pre-deployment transparency reporting", "§ 11547.7(c) — quarterly internal risk reporting to OES"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "enforcement-gaps",
+      "score": 2,
+      "summary": "Attorney General enforcement with civil penalties up to $1M per violation, mandatory third-party assessments, and incident reporting obligations constitute specific enforcement provisions, though the framework relies substantially on developer self-reporting.",
+      "clauses": ["§ 11547.9 — AG enforcement and penalties", "§ 11547.7(a)(1)(D) — third-party assessment requirement"],
+      "notes": "Public records exemptions for critical safety incident reports and internal risk assessments limit external scrutiny. Enforcement is primarily reactive."
+    },
+    {
+      "subcategory_id": "jurisdictional-arbitrage",
+      "score": 1,
+      "summary": "The bill applies to all frontier developers operating in California or serving California users regardless of incorporation location, creating some extraterritorial effect, but does not explicitly address jurisdictional avoidance.",
+      "clauses": ["§ 11547.6 — applicability definitions"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "economic-concentration",
+      "score": 0,
+      "summary": "Economic concentration from AI is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "labor-polarization",
+      "score": 0,
+      "summary": "Labour market impacts are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "productivity-paradox",
+      "score": 0,
+      "summary": "Uneven productivity gains are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "deskilling",
+      "score": 0,
+      "summary": "Human deskilling is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "loss-of-agency",
+      "score": 0,
+      "summary": "Individual autonomy and agency are not addressed; SB-53 is scoped to catastrophic systemic risks rather than individual harms.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "social-isolation",
+      "score": 0,
+      "summary": "Social isolation effects are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "cultural-homogenization",
+      "score": 0,
+      "summary": "Cultural homogenization is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "misaligned-superintelligence",
+      "score": 2,
+      "summary": "'Loss of control' and 'deceptive model behavior' are both named statutory catastrophic risk categories requiring mitigations in the Frontier AI Framework and triggering mandatory incident reporting.",
+      "clauses": ["§ 11547.6(a)(2)(C)", "§ 11547.6(a)(2)(D)", "§ 11547.7(a)(1)"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "irreversible-loss-of-control",
+      "score": 2,
+      "summary": "'Loss of control' is explicitly in the catastrophic risk definition and drives both the Frontier AI Framework requirements and the 24-hour critical incident reporting obligation for imminent scenarios.",
+      "clauses": ["§ 11547.6(a)(2)(C)", "§ 11547.6(b)(3)", "§ 11547.8(a) — 24-hour reporting"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "value-lock-in",
+      "score": 0,
+      "summary": "Value lock-in is not addressed.",
+      "clauses": [],
+      "notes": ""
+    }
+  ],
+  "meta_observations": [
+    "SB-53 is deliberately and explicitly narrow — scoped to 'catastrophic risks' from frontier models above 10^26 FLOPs. Economic, epistemic, social, and most human-centred risks are out of scope by design.",
+    "First statute globally to make 'deceptive model behavior' and 'loss of control' named statutory categories with mandatory reporting obligations — a significant conceptual advance over product-safety frameworks.",
+    "'Weapons assistance' as a statutory concept captures CBRN uplift without naming specific weapon types, which is more future-proof than technology-specific prohibitions.",
+    "Enforcement architecture is AG-led with meaningful penalties ($1M/violation) but relies heavily on developer self-reporting; public records exemptions reduce external scrutiny.",
+    "The CalCompute provision (public compute infrastructure study, due 2027) gestures at structural compute governance but is advisory, not operational.",
+    "Strong overlap with Anthropic's RSP and similar frontier lab policies — SB-53 effectively codifies the frontier lab voluntary commitment architecture into binding law for California-operating developers."
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "policy_id": "eu-ai-act",
+  "analyzed_date": "2026-04-01",
+  "scores": [
+    {
+      "subcategory_id": "goal-misalignment",
+      "score": 1,
+      "summary": "Recital 110 identifies 'unintended issues of control relating to alignment with human intent' as a systemic risk for GPAI models, but no specific provisions operationalise this as a distinct requirement.",
+      "clauses": ["Recital (110)"],
+      "notes": "The Act frames misalignment obliquely as a systemic risk concern for large models, but does not use the term 'goal misalignment' nor create specific alignment obligations beyond general risk management under Art. 9."
+    },
+    {
+      "subcategory_id": "deceptive-alignment",
+      "score": 0,
+      "summary": "Deceptive alignment (an AI that conceals its true objectives from evaluators) is not addressed anywhere in the text.",
+      "clauses": [],
+      "notes": "The Act prohibits AI that deceives users (Art. 5(1)(a)), but this is about user-facing deception, not the AI safety concept of a model behaving differently during evaluation than deployment."
+    },
+    {
+      "subcategory_id": "emergent-capabilities",
+      "score": 1,
+      "summary": "Recital 110 lists risks from 'particularly high capabilities' and the self-replication risk of models 'making copies of themselves', but no specific provisions address emergent capability detection or evaluation beyond the GPAI systemic-risk classification threshold.",
+      "clauses": ["Recital (110)", "Recital (111)"],
+      "notes": "Art. 51's compute threshold (10^25 FLOPs) is a proxy for capability risk, but is not oriented towards emergence specifically. The scientific panel can issue alerts (Art. 90), which provides some mechanism."
+    },
+    {
+      "subcategory_id": "loss-of-oversight",
+      "score": 3,
+      "summary": "Article 14 mandates human oversight as a mandatory design requirement for high-risk AI, including specific technical measures to prevent automation bias, and allows operators to override or halt systems; these obligations are backed by penalties under Art. 99.",
+      "clauses": ["Art. 14", "Art. 14(4)(b)", "Art. 14(4)(e)", "Art. 99(4)(a)"],
+      "notes": "Human oversight is one of the most concretely specified requirements in the Act, with defined capabilities (ability to override, stop-button equivalent, avoiding over-reliance). Art. 26 imposes corresponding deployer obligations."
+    },
+    {
+      "subcategory_id": "supply-chain",
+      "score": 2,
+      "summary": "Articles 23–25 impose specific obligations on importers and distributors and establish responsibilities along the AI value chain, requiring conformity checks at each stage before market placement.",
+      "clauses": ["Art. 23", "Art. 24", "Art. 25"],
+      "notes": "The Act creates a full chain-of-custody framework, treating importers and distributors as quasi-providers when they alter or rebrand AI systems. However, it focuses on compliance chain rather than security vulnerabilities in the supply chain."
+    },
+    {
+      "subcategory_id": "model-theft",
+      "score": 0,
+      "summary": "Model theft or weights exfiltration is not addressed as a distinct risk; the Act does not contain provisions requiring weight security, access controls against exfiltration, or incident reporting for IP theft.",
+      "clauses": [],
+      "notes": "Art. 15(5) requires cybersecurity for high-risk AI against unauthorised third parties altering use or outputs, and Art. 55(1)(d) requires cybersecurity for GPAI with systemic risk, but neither specifically addresses model theft or weight exfiltration."
+    },
+    {
+      "subcategory_id": "data-poisoning",
+      "score": 2,
+      "summary": "Article 15(5) explicitly requires high-risk AI systems to implement technical measures to 'prevent, detect, respond to, resolve and control for attacks trying to manipulate the training data set (data poisoning)' and model poisoning.",
+      "clauses": ["Art. 15(5)"],
+      "notes": "One of the few subcategories where the Act uses the term 'data poisoning' explicitly. Requirement is specific but enforcement is via general market surveillance, not a dedicated audit mechanism."
+    },
+    {
+      "subcategory_id": "dependency-monoculture",
+      "score": 0,
+      "summary": "AI monoculture or systemic dependency risk from a small number of dominant AI providers is not addressed in the Act.",
+      "clauses": [],
+      "notes": "Market surveillance reports to competition authorities (Art. 74(2)) and competition law is mentioned as unaffected, but there are no provisions about concentration of AI infrastructure or monoculture risk."
+    },
+    {
+      "subcategory_id": "epistemic-collapse",
+      "score": 1,
+      "summary": "Recital 110 mentions 'dissemination of illegal, false, or discriminatory content' and democratic process risks as systemic concerns for GPAI, but there are no specific provisions addressing epistemic collapse or information ecosystem degradation.",
+      "clauses": ["Recital (110)"],
+      "notes": "Art. 50's transparency/labelling requirements for AI-generated content tangentially address information integrity, but the Act does not frame epistemic risk as a distinct regulatory concern."
+    },
+    {
+      "subcategory_id": "synthetic-data-loops",
+      "score": 1,
+      "summary": "Article 15(4) requires high-risk AI that continues to learn post-deployment to eliminate or reduce the risk of biased outputs influencing future inputs (feedback loops), but this is narrow and does not address model collapse from synthetic training data.",
+      "clauses": ["Art. 15(4)"],
+      "notes": "The feedback-loop provision is narrow: it applies to AI that continues learning after deployment, addresses bias, and is remedied via robustness design. It does not address the broader synthetic-data-as-training-input problem or model collapse."
+    },
+    {
+      "subcategory_id": "persuasion-manipulation",
+      "score": 3,
+      "summary": "Article 5(1)(a) prohibits AI systems that deploy subliminal techniques or purposefully manipulative or deceptive techniques that materially distort behaviour causing significant harm; this prohibition is enforced with the highest penalty tier (up to €35M or 7% global turnover).",
+      "clauses": ["Art. 5(1)(a)", "Art. 5(1)(b)", "Art. 99(3)", "Recital (29)"],
+      "notes": "The prohibition covers both subliminal and conscious-but-irresistible manipulation. Art. 5(1)(b) extends this to exploitation of vulnerabilities (age, disability, socioeconomic status). This is among the most robustly enforced provisions."
+    },
+    {
+      "subcategory_id": "cbrn-misuse",
+      "score": 1,
+      "summary": "Recital 110 identifies CBRN risks as a systemic risk for GPAI models, but no binding provisions operationalise this; the Act relies on voluntary codes of practice to address CBRN safeguards.",
+      "clauses": ["Recital (110)"],
+      "notes": "The CBRN mention is recital-only. The Act relies on codes of practice (Art. 56) to operationalise CBRN safeguards, which are voluntary unless the Commission issues implementing acts."
+    },
+    {
+      "subcategory_id": "cyber-offense",
+      "score": 1,
+      "summary": "Recital 110 lists offensive cyber capabilities as a systemic risk for GPAI, but no specific binding provisions address cyber-offense acceleration.",
+      "clauses": ["Recital (110)"],
+      "notes": "Like CBRN, cyber-offense is recital-level recognition only. The Act's cybersecurity provisions (Art. 15) focus on protecting AI systems from attack, not on preventing AI from enabling offensive cyber operations."
+    },
+    {
+      "subcategory_id": "military-escalation",
+      "score": 0,
+      "summary": "Military and defence AI is explicitly excluded from the scope of the Act (Art. 2(3)), meaning autonomous weapons and military escalation risks are not addressed.",
+      "clauses": ["Art. 2(3)"],
+      "notes": "The exclusion of military/defence/national security applications is explicit and broad. No bridging provisions exist."
+    },
+    {
+      "subcategory_id": "strategic-instability",
+      "score": 0,
+      "summary": "AI arms races, geopolitical strategic instability, or competition dynamics between major AI powers are not addressed in the Act.",
+      "clauses": [],
+      "notes": "The Act focuses on internal market harmonisation. International cooperation provisions (Art. 66(i)) are advisory. Strategic instability is entirely outside scope."
+    },
+    {
+      "subcategory_id": "regulatory-capture",
+      "score": 1,
+      "summary": "The Act establishes structural safeguards — independent national authorities (Art. 70), a balanced advisory forum (Art. 67), and an independent scientific panel (Art. 68) — but does not explicitly address regulatory capture as a risk.",
+      "clauses": ["Art. 67(2)", "Art. 68(2)(b)", "Art. 70(1)"],
+      "notes": "Independence requirements exist but no provisions directly target revolving-door risks, disclosure of industry influence on rulemaking, or capture at the Commission level."
+    },
+    {
+      "subcategory_id": "capability-overhang",
+      "score": 1,
+      "summary": "The Act does not address capability overhang as a concept, though the GPAI systemic risk classification (Art. 51) and scientific panel alert mechanism (Art. 90) provide a limited detection framework for models with high-impact capabilities.",
+      "clauses": ["Art. 51", "Art. 90"],
+      "notes": "Art. 51(3) allows the Commission to update compute thresholds over time — a partial hedge against overhang — but the concept of dangerous capabilities accumulating faster than governance capacity is not addressed."
+    },
+    {
+      "subcategory_id": "enforcement-gaps",
+      "score": 2,
+      "summary": "The Act requires Member States to ensure adequate resources for national authorities (Art. 70(3)) with biennial adequacy reporting to the Commission (Art. 70(6)), and establishes cross-border enforcement coordination mechanisms.",
+      "clauses": ["Art. 70(3)", "Art. 70(6)", "Art. 74", "Art. 81"],
+      "notes": "The adequacy reporting mechanism is an implicit acknowledgement of enforcement gaps. Cross-border enforcement coordination is provided under Art. 74(11) and Art. 81."
+    },
+    {
+      "subcategory_id": "jurisdictional-arbitrage",
+      "score": 2,
+      "summary": "Article 2 extends scope to providers and deployers in third countries where AI output is used in the EU, and requires third-country providers to appoint authorised EU representatives (Art. 22, Art. 54), partially closing jurisdictional arbitrage.",
+      "clauses": ["Art. 2(1)(c)", "Art. 22", "Art. 54"],
+      "notes": "The effects-based jurisdiction mirrors GDPR's approach. However, enforcement against non-EU entities with no EU assets or representatives remains a practical gap. Third-country public authorities are explicitly excluded (Art. 2(4))."
+    },
+    {
+      "subcategory_id": "economic-concentration",
+      "score": 1,
+      "summary": "Market surveillance authorities are required to report information relevant to competition law to national competition authorities annually (Art. 74(2)), but the Act contains no provisions directly addressing AI-driven economic concentration.",
+      "clauses": ["Art. 74(2)"],
+      "notes": "The Act explicitly states it should not affect competition law. Economic concentration from AI is treated as a competition-law matter, not an AI Act matter."
+    },
+    {
+      "subcategory_id": "labor-polarization",
+      "score": 1,
+      "summary": "Employment AI systems are classified as high-risk under Annex III point 4, providing worker protections, but the Act explicitly states it does not affect national labour law and does not address labour market polarisation as a systemic risk.",
+      "clauses": ["Annex III, point 4"],
+      "notes": "Annex III classifies AI used for recruitment, task allocation, and performance monitoring as high-risk, but this addresses individual rights rather than macroeconomic displacement effects."
+    },
+    {
+      "subcategory_id": "productivity-paradox",
+      "score": 0,
+      "summary": "The uneven distribution of AI productivity gains is not addressed in the Act.",
+      "clauses": [],
+      "notes": "The Act focuses on rights and safety harms rather than distributional economic outcomes. No provisions address who captures productivity gains from AI deployment."
+    },
+    {
+      "subcategory_id": "deskilling",
+      "score": 1,
+      "summary": "Article 14(4)(b) requires deployers of high-risk AI to be aware of the tendency to over-rely on AI outputs (automation bias), which implicitly addresses deskilling risk, but without specific deskilling provisions.",
+      "clauses": ["Art. 14(4)(b)"],
+      "notes": "Automation bias awareness is framed as an oversight requirement, not a deskilling remedy. No provisions address long-term erosion of human skills from AI use."
+    },
+    {
+      "subcategory_id": "loss-of-agency",
+      "score": 2,
+      "summary": "Article 5(1)(a) prohibits AI that impairs persons' ability to make informed decisions; Art. 14 requires humans to be able to override AI decisions; Art. 86 gives affected persons a right to explanation for high-risk AI decisions.",
+      "clauses": ["Art. 5(1)(a)", "Art. 14(4)(d)", "Art. 86"],
+      "notes": "Enforcement of individual agency rights depends on the right-to-explanation (Art. 86), which is limited to Annex III systems."
+    },
+    {
+      "subcategory_id": "social-isolation",
+      "score": 0,
+      "summary": "Social isolation effects from AI companion systems or excessive AI interaction are not addressed in the Act.",
+      "clauses": [],
+      "notes": "Transparency obligations (Art. 50(1)) require disclosure that users are interacting with AI, but this is not framed around social isolation risk."
+    },
+    {
+      "subcategory_id": "cultural-homogenization",
+      "score": 1,
+      "summary": "Recital 8 references cultural diversity as a value to be promoted, and AI's potential adverse effects on diversity are acknowledged, but no specific provisions address cultural homogenization.",
+      "clauses": ["Recital (8)"],
+      "notes": "The reference to cultural diversity is a general values statement with no corresponding operative provisions."
+    },
+    {
+      "subcategory_id": "misaligned-superintelligence",
+      "score": 1,
+      "summary": "Recital 110 identifies alignment with human intent and self-replicating model risks as systemic concerns for GPAI models, recognising the category of loss-of-control risk, but no specific provisions address it.",
+      "clauses": ["Recital (110)"],
+      "notes": "The GPAI systemic risk framework (Arts. 51–55) is the closest structural analogue but is calibrated to near-term harms. Adversarial testing obligations (Art. 55(1)(a)) are positive but limited."
+    },
+    {
+      "subcategory_id": "irreversible-loss-of-control",
+      "score": 1,
+      "summary": "Recital 110 implicitly addresses catastrophic cascading risk for GPAI models, but no provisions specifically address irreversibility or mechanisms to prevent permanent loss of human control.",
+      "clauses": ["Recital (110)"],
+      "notes": "The Art. 14 stop-button provision addresses local reversibility for high-risk AI but not systemic irreversibility. Chain-reaction risk in Recital 110 is the closest the Act gets to acknowledging catastrophic irreversible harm."
+    },
+    {
+      "subcategory_id": "value-lock-in",
+      "score": 0,
+      "summary": "Value lock-in — where AI systems entrench particular value systems in ways that foreclose future choices — is not addressed in the Act.",
+      "clauses": [],
+      "notes": "The Act references EU values as the normative baseline (Art. 1) without acknowledging that encoding any specific value set into AI governance could itself constitute a form of lock-in."
+    }
+  ],
+  "meta_observations": [
+    "The EU AI Act is a product-safety and market-regulation instrument, not a technical AI safety instrument. Its architecture (risk tiers, conformity assessment, market surveillance) is adapted from chemical and medical device regulation, which shapes which risks it addresses well (proximate user harms) and poorly (systemic, existential, and geopolitical risks).",
+    "The GPAI/systemic-risk framework (Chapter V, Arts. 51–56) is the only part of the Act that gestures toward longer-horizon technical AI safety risks. Recital 110 is remarkably candid about alignment, CBRN, offensive cyber, and self-replication risks, but almost none of this recital language is operationalised in binding articles.",
+    "Military and defence AI is wholly excluded from scope (Art. 2(3)), creating a large gap for autonomous weapons, military escalation, and strategic instability risks.",
+    "The Act scores well on manipulation/persuasion (3), human oversight for high-risk AI (3), and supply-chain compliance (2) — consistent with its consumer-protection and internal-market rationale.",
+    "Socioeconomic and systemic risks (labour polarisation, economic concentration, productivity paradox, cultural homogenization) are largely out of scope by design; the Act defers to competition law, labour law, and media law.",
+    "The distinction between recital acknowledgement and operative provision is critical: many risks (CBRN, cyber-offense, alignment, self-replication, epistemic collapse) appear in recitals but have no corresponding binding articles, yielding a maximum score of 1.",
+    "Enforcement architecture relies heavily on Member State market surveillance authorities whose capacity is uncertain (Art. 70(6) reporting requirement), creating structural enforcement gaps particularly for cross-border and third-country cases."
+  ]
+}

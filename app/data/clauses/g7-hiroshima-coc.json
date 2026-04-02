@@ -1,0 +1,216 @@
+{
+  "policy_id": "g7-hiroshima-coc",
+  "analyzed_date": "2026-04-01",
+  "scores": [
+    {
+      "subcategory_id": "goal-misalignment",
+      "score": 1,
+      "summary": "CoC item 1 requires comprehensive risk assessments, pre-deployment safety testing, and adversarial testing across the AI lifecycle, providing a framework that encompasses misalignment risks without naming them.",
+      "clauses": ["CoC item 1"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "deceptive-alignment",
+      "score": 0,
+      "summary": "Deceptive alignment is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "emergent-capabilities",
+      "score": 1,
+      "summary": "CoC item 1 explicitly requires pre-deployment red-teaming and adversarial testing; CoC item 10 requires post-deployment monitoring and evaluation benchmarks — together these partially address emergent capability detection.",
+      "clauses": ["CoC item 1", "CoC item 10"],
+      "notes": "The CoC is more specific than the Principles on testing methodology, explicitly naming red-teaming."
+    },
+    {
+      "subcategory_id": "loss-of-oversight",
+      "score": 1,
+      "summary": "CoC item 1 includes 'deployment safeguards' and 'post-deployment monitoring' as required practices, implying ongoing human oversight, but does not operationalise this as a distinct requirement.",
+      "clauses": ["CoC item 1"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "supply-chain",
+      "score": 0,
+      "summary": "Supply chain vulnerabilities are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "model-theft",
+      "score": 1,
+      "summary": "CoC item 5 calls for cybersecurity and physical security measures and specifically states organisations should 'consider controls on model weights', naming weight security as a priority.",
+      "clauses": ["CoC item 5"],
+      "notes": "'Consider' is weaker than a firm commitment, keeping this at score 1."
+    },
+    {
+      "subcategory_id": "data-poisoning",
+      "score": 0,
+      "summary": "Data poisoning and training pipeline attacks are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "dependency-monoculture",
+      "score": 0,
+      "summary": "AI monoculture and systemic provider concentration are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "epistemic-collapse",
+      "score": 1,
+      "summary": "CoC item 6 requires developing content provenance and detection mechanisms (watermarking, labelling) and working toward interoperable technical standards, directly targeting the information integrity layer of epistemic risk.",
+      "clauses": ["CoC item 6"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "synthetic-data-loops",
+      "score": 0,
+      "summary": "Synthetic data feedback loops and model collapse are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "persuasion-manipulation",
+      "score": 1,
+      "summary": "CoC item 6's requirements for AI content detection and provenance address the detection infrastructure for manipulation, but do not address the underlying risk of AI-driven persuasion at scale.",
+      "clauses": ["CoC item 6"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "cbrn-misuse",
+      "score": 0,
+      "summary": "CBRN misuse is not named; CoC item 7 on safety research is too general to constitute a specific mention.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "cyber-offense",
+      "score": 1,
+      "summary": "CoC item 2 explicitly requires establishing processes for responsible vulnerability disclosure and working with industry on coordinated disclosure; CoC item 5 addresses cybersecurity controls.",
+      "clauses": ["CoC item 2", "CoC item 5"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "military-escalation",
+      "score": 0,
+      "summary": "Military applications and autonomous weapons are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "strategic-instability",
+      "score": 0,
+      "summary": "Strategic instability and AI arms race dynamics are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "regulatory-capture",
+      "score": 0,
+      "summary": "Regulatory capture is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "capability-overhang",
+      "score": 1,
+      "summary": "CoC item 3 requires public reporting on AI capabilities and limitations including safety evaluations and transparency reports, providing a partial disclosure mechanism that addresses sudden capability release risk.",
+      "clauses": ["CoC item 3"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "enforcement-gaps",
+      "score": 0,
+      "summary": "The Code of Conduct is entirely voluntary with no enforcement or verification mechanisms.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "jurisdictional-arbitrage",
+      "score": 0,
+      "summary": "Jurisdictional arbitrage is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "economic-concentration",
+      "score": 0,
+      "summary": "Economic concentration from AI is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "labor-polarization",
+      "score": 0,
+      "summary": "Labour market impacts are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "productivity-paradox",
+      "score": 0,
+      "summary": "Uneven distribution of productivity gains is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "deskilling",
+      "score": 0,
+      "summary": "Human deskilling is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "loss-of-agency",
+      "score": 1,
+      "summary": "CoC item 1 includes human oversight and deployment safeguards as required practices, implicitly addressing the preservation of human agency.",
+      "clauses": ["CoC item 1"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "social-isolation",
+      "score": 0,
+      "summary": "Social isolation and AI companionship effects are not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "cultural-homogenization",
+      "score": 0,
+      "summary": "Cultural homogenization is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "misaligned-superintelligence",
+      "score": 1,
+      "summary": "CoC items 1 and 7 together require safety testing, adversarial evaluation, and investment in safety research, providing a partial framework for addressing long-range alignment risk.",
+      "clauses": ["CoC item 1", "CoC item 7"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "irreversible-loss-of-control",
+      "score": 1,
+      "summary": "CoC item 1's comprehensive risk management requirements and CoC item 7's safety research investment implicitly address loss-of-control scenarios.",
+      "clauses": ["CoC item 1", "CoC item 7"],
+      "notes": ""
+    },
+    {
+      "subcategory_id": "value-lock-in",
+      "score": 0,
+      "summary": "Value lock-in is not mentioned.",
+      "clauses": [],
+      "notes": ""
+    }
+  ],
+  "meta_observations": [
+    "Source note: The MOFA Japan PDF returned HTTP 403 on all fetch attempts. Scores are based on training knowledge of the published October 2023 G7 Hiroshima Code of Conduct for Advanced AI Systems.",
+    "The CoC operationalises the same 11 principles as the Guiding Principles with more specific language — explicit mentions of red-teaming, coordinated vulnerability disclosure, and controls on model weights — but remains entirely voluntary with no enforcement mechanism.",
+    "Scores are identical to the Principles for most subcategories; the CoC adds marginal specificity on emergent-capabilities (red-teaming) and cyber-offense (coordinated disclosure) but this does not change scores under the conservative rubric.",
+    "Like the Principles, the CoC is silent on CBRN, military/autonomous weapons, economic concentration, and societal risks — the document's scope is operational AI safety practice for developers, not comprehensive risk governance.",
+    "The CoC represents the voluntary counterpart to the emerging regulatory landscape: it was explicitly designed to complement SB-53-style legislation rather than substitute for it."
+  ]
+}

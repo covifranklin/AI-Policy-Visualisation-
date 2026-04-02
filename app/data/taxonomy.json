@@ -1,0 +1,197 @@
+{
+  "categories": [
+    {
+      "id": "alignment-control",
+      "name": "Alignment & Control Risks",
+      "subcategories": [
+        {
+          "id": "goal-misalignment",
+          "name": "Goal misalignment / specification gaming",
+          "description": "Models optimize the wrong objective (reward hacking, Goodhart's law). Can appear aligned in testing but fail in deployment."
+        },
+        {
+          "id": "deceptive-alignment",
+          "name": "Deceptive alignment / scheming",
+          "description": "Model behaves well during evaluation but pursues hidden goals. Key concern in frontier model governance."
+        },
+        {
+          "id": "emergent-capabilities",
+          "name": "Emergent capabilities risk",
+          "description": "New dangerous capabilities appear unexpectedly at scale. Undermines incremental regulation assumptions."
+        },
+        {
+          "id": "loss-of-oversight",
+          "name": "Loss of human oversight (automation overhang)",
+          "description": "Humans become unable to meaningfully supervise systems. Particularly relevant in high-speed domains (cyber, finance, military)."
+        }
+      ]
+    },
+    {
+      "id": "operational-infrastructure",
+      "name": "Operational & Infrastructure Risks",
+      "subcategories": [
+        {
+          "id": "supply-chain",
+          "name": "Supply chain vulnerabilities",
+          "description": "Dependence on chips (e.g. NVIDIA), cloud providers (e.g. AWS). Geopolitical chokepoints."
+        },
+        {
+          "id": "model-theft",
+          "name": "Model theft / weights exfiltration",
+          "description": "Theft of frontier model weights. Equivalent to proliferation risk (like nuclear tech leakage)."
+        },
+        {
+          "id": "data-poisoning",
+          "name": "Data poisoning / training pipeline attacks",
+          "description": "Adversaries manipulate training data. Leads to hidden backdoors or bias."
+        },
+        {
+          "id": "dependency-monoculture",
+          "name": "Dependency risk (AI monoculture)",
+          "description": "Over-reliance on a small number of models/providers. Systemic fragility if one fails or is compromised."
+        }
+      ]
+    },
+    {
+      "id": "information-epistemic",
+      "name": "Information & Epistemic Risks",
+      "subcategories": [
+        {
+          "id": "epistemic-collapse",
+          "name": "Epistemic collapse",
+          "description": "Widespread inability to distinguish true from false. Erosion of shared reality."
+        },
+        {
+          "id": "synthetic-data-loops",
+          "name": "Synthetic data feedback loops",
+          "description": "Models trained on AI-generated content degrade over time. \"Model collapse\" risk."
+        },
+        {
+          "id": "persuasion-manipulation",
+          "name": "Persuasion / behavioral manipulation",
+          "description": "AI optimized to influence beliefs or actions at scale. Political, commercial, or extremist use."
+        }
+      ]
+    },
+    {
+      "id": "security-conflict",
+      "name": "Security & Conflict Risks",
+      "subcategories": [
+        {
+          "id": "cbrn-misuse",
+          "name": "CBRN misuse enablement",
+          "description": "AI lowers barriers to developing chemical, biological, radiological, or nuclear weapons."
+        },
+        {
+          "id": "cyber-offense",
+          "name": "Cyber offense acceleration",
+          "description": "AI dramatically lowers cost of cyberattacks. Automated vulnerability discovery and exploitation."
+        },
+        {
+          "id": "military-escalation",
+          "name": "Military escalation / autonomous weapons",
+          "description": "Faster decision loops leading to instability. Reduced human control in warfare."
+        },
+        {
+          "id": "strategic-instability",
+          "name": "Strategic instability (AI arms race)",
+          "description": "States race to deploy unsafe systems. Analogous to nuclear brinkmanship."
+        }
+      ]
+    },
+    {
+      "id": "governance-institutional",
+      "name": "Governance & Institutional Risks",
+      "subcategories": [
+        {
+          "id": "regulatory-capture",
+          "name": "Regulatory capture",
+          "description": "Large labs influence regulation to entrench dominance."
+        },
+        {
+          "id": "capability-overhang",
+          "name": "Capability overhang",
+          "description": "Powerful models exist but are not yet deployed — sudden release risk."
+        },
+        {
+          "id": "enforcement-gaps",
+          "name": "Enforcement gaps",
+          "description": "Laws exist but cannot be effectively enforced (compute tracking, audits)."
+        },
+        {
+          "id": "jurisdictional-arbitrage",
+          "name": "Jurisdictional arbitrage",
+          "description": "Firms move development to weaker regulatory regimes."
+        }
+      ]
+    },
+    {
+      "id": "economic-systemic",
+      "name": "Economic & Systemic Risks",
+      "subcategories": [
+        {
+          "id": "economic-concentration",
+          "name": "Economic concentration / rent extraction",
+          "description": "AI creates winner-take-most dynamics. Extreme capital concentration."
+        },
+        {
+          "id": "labor-polarization",
+          "name": "Labor market polarization",
+          "description": "Hollowing out of mid-skill jobs. Not just displacement — structural inequality shift."
+        },
+        {
+          "id": "productivity-paradox",
+          "name": "Productivity paradox / uneven gains",
+          "description": "Benefits accrue slowly or unevenly, leading to social instability."
+        }
+      ]
+    },
+    {
+      "id": "human-societal",
+      "name": "Human & Societal Risks",
+      "subcategories": [
+        {
+          "id": "deskilling",
+          "name": "Human deskilling / cognitive atrophy",
+          "description": "Overreliance on AI reduces human capability."
+        },
+        {
+          "id": "loss-of-agency",
+          "name": "Loss of agency / autonomy",
+          "description": "People increasingly defer decisions to AI."
+        },
+        {
+          "id": "social-isolation",
+          "name": "Social isolation / AI companionship effects",
+          "description": "Substitution of human relationships with AI interactions."
+        },
+        {
+          "id": "cultural-homogenization",
+          "name": "Cultural homogenization",
+          "description": "Global models flatten linguistic and cultural diversity."
+        }
+      ]
+    },
+    {
+      "id": "longterm-existential",
+      "name": "Long-term / Existential Risks",
+      "subcategories": [
+        {
+          "id": "misaligned-superintelligence",
+          "name": "Misaligned superintelligence",
+          "description": "AI surpasses human control and optimization diverges from human values."
+        },
+        {
+          "id": "irreversible-loss-of-control",
+          "name": "Irreversible loss of control",
+          "description": "Systems that cannot be shut down or corrected."
+        },
+        {
+          "id": "value-lock-in",
+          "name": "Value lock-in",
+          "description": "Early AI systems entrench specific ideologies or power structures permanently."
+        }
+      ]
+    }
+  ]
+}
