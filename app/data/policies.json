@@ -60,30 +60,6 @@
     "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847"
   },
   {
-    "id": "canada-adm",
-    "name": "Canada Directive on Automated Decision-Making",
-    "short_name": "Canada ADM",
-    "creator_category": "western-gov",
-    "binding": "partial",
-    "status": "In force",
-    "year": 2019,
-    "jurisdiction": "Canada",
-    "source_file": "policy-sources/western-gov/canada-adm.pdf",
-    "url": "https://publications.gc.ca/collections/collection_2021/sct-tbs/BT48-31-2021-eng.pdf"
-  },
-  {
-    "id": "singapore-mgf",
-    "name": "Singapore Model AI Governance Framework",
-    "short_name": "Singapore MGF",
-    "creator_category": "western-gov",
-    "binding": "no",
-    "status": "Published 2020",
-    "year": 2020,
-    "jurisdiction": "Singapore",
-    "source_file": "policy-sources/western-gov/singapore-ai-gov.pdf",
-    "url": "https://www.imda.gov.sg/-/media/imda/files/about/emerging-tech-and-research/artificial-intelligence/mgf-for-agentic-ai.pdf"
-  },
-  {
     "id": "china-genai-measures",
     "name": "Interim Measures for the Management of Generative AI Services",
     "short_name": "China GenAI Measures",
@@ -142,18 +118,6 @@
     "jurisdiction": "G7 nations",
     "source_file": "policy-sources/multilateral/g7-hiroshima-coc.pdf",
     "url": "https://www.mofa.go.jp/files/100573473.pdf"
-  },
-  {
-    "id": "wh-voluntary-commitments",
-    "name": "White House Voluntary AI Commitments (2023)",
-    "short_name": "WH AI Commitments",
-    "creator_category": "us",
-    "binding": "no",
-    "status": "Adopted 2023",
-    "year": 2023,
-    "jurisdiction": "US (voluntary)",
-    "source_file": "policy-sources/multilateral/wh-voluntary-commitments.pdf",
-    "url": "https://bidenwhitehouse.archives.gov/wp-content/uploads/2023/09/Voluntary-AI-Commitments-September-2023.pdf"
   },
   {
     "id": "unesco-ai-ethics",

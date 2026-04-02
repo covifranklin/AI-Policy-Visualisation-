@@ -513,15 +513,26 @@ export const PolicyMatrix: FC = () => {
             </div>
             <div>
               <p className="text-slate-500 text-[10px] font-medium uppercase tracking-wider">Policies Analyzed</p>
-              <p className="text-slate-300 text-sm">of {policies.length} total</p>
+              <p className="text-slate-300 text-sm">frameworks in matrix</p>
             </div>
           </div>
 
           <div className="w-px h-10 bg-slate-800" />
 
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-emerald-600/20 border border-emerald-500/30 flex items-center justify-center">
-              <span className="text-emerald-400 font-bold text-lg">{summaryStats.avgCoverageScore.toFixed(2)}</span>
+            <div
+              className="w-10 h-10 rounded-lg border flex items-center justify-center"
+              style={{
+                backgroundColor: scoreToColor(summaryStats.avgCoverageScore) + '33',
+                borderColor: scoreToColor(summaryStats.avgCoverageScore)
+              }}
+            >
+              <span
+                className="font-bold text-lg"
+                style={{ color: scoreToColor(summaryStats.avgCoverageScore) }}
+              >
+                {summaryStats.avgCoverageScore.toFixed(2)}
+              </span>
             </div>
             <div>
               <p className="text-slate-500 text-[10px] font-medium uppercase tracking-wider">Avg Coverage</p>
