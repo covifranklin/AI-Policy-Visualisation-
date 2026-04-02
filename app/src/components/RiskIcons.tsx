@@ -6,22 +6,32 @@ interface IconProps {
   className?: string;
 }
 
-// Pixel art icons with precise pixel placement and frame-by-frame sprite animations
+// Pixel art icons with hover-triggered frame-by-frame sprite animations
 // Limited high-contrast palette: #1e293b (dark), #475569 (mid), #94a3b8 (light), #f1f5f9 (bright)
 
-// 1. Alignment & Control — Cracked compass with rotating broken needle
+// 1. Alignment & Control — Cracked compass, needle spins wildly on hover
 const AlignmentControlIcon: React.FC<IconProps> = ({ color = '#94a3b8', size = 32, className = '' }) => {
   const [frame, setFrame] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => setFrame(f => (f + 1) % 8), 100);
+    if (!isHovered) { setFrame(0); return; }
+    const interval = setInterval(() => setFrame(f => (f + 1) % 16), 50);
     return () => clearInterval(interval);
-  }, []);
+  }, [isHovered]);
 
-  const needleAngle = frame * 45;
+  const needleAngle = frame * 22.5;
 
   return (
-    <svg viewBox="0 0 32 32" width={size} height={size} className={className} shapeRendering="crispEdges">
+    <svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      className={className}
+      shapeRendering="crispEdges"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       {/* Compass ring - 8-bit circle */}
       <rect x="12" y="4" width="8" height="1" fill={color} />
       <rect x="12" y="27" width="8" height="1" fill={color} />
@@ -45,16 +55,16 @@ const AlignmentControlIcon: React.FC<IconProps> = ({ color = '#94a3b8', size = 3
       {/* Center pivot */}
       <rect x="15" y="15" width="2" height="2" fill="#f1f5f9" />
 
-      {/* Rotating needle - intact north */}
+      {/* Rotating needle */}
       <g style={{ transformOrigin: '16px 16px', transform: `rotate(${needleAngle}deg)` }}>
         {/* North needle - solid */}
-        <rect x="15" y="8" width="1" height="7" fill="#f1f5f9" />
-        <rect x="16" y="10" width="1" height="5" fill="#f1f5f9" />
+        <rect x="15" y="6" width="1" height="9" fill="#f1f5f9" />
+        <rect x="16" y="8" width="1" height="7" fill="#f1f5f9" />
         {/* South needle - cracked/broken */}
-        <rect x="15" y="18" width="1" height="4" fill="#475569" />
-        <rect x="16" y="20" width="1" height="3" fill="#475569" />
+        <rect x="15" y="18" width="1" height="5" fill="#475569" />
+        <rect x="16" y="20" width="1" height="4" fill="#475569" />
         {/* Crack offset */}
-        <rect x="17" y="19" width="1" height="2" fill="#475569" />
+        <rect x="17" y="19" width="1" height="3" fill="#475569" />
       </g>
 
       {/* Crack lines */}
@@ -64,19 +74,27 @@ const AlignmentControlIcon: React.FC<IconProps> = ({ color = '#94a3b8', size = 3
   );
 };
 
-// 2. Operational & Infrastructure — Circuit board with pulsing fracture
+// 2. Operational & Infrastructure — Circuit board with spreading fracture on hover
 const OperationalInfrastructureIcon: React.FC<IconProps> = ({ color = '#94a3b8', size = 32, className = '' }) => {
   const [frame, setFrame] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => setFrame(f => (f + 1) % 4), 150);
+    if (!isHovered) { setFrame(0); return; }
+    const interval = setInterval(() => setFrame(f => Math.min(f + 1, 8)), 100);
     return () => clearInterval(interval);
-  }, []);
-
-  const pulse = frame < 2;
+  }, [isHovered]);
 
   return (
-    <svg viewBox="0 0 32 32" width={size} height={size} className={className} shapeRendering="crispEdges">
+    <svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      className={className}
+      shapeRendering="crispEdges"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       {/* PCB outline */}
       <rect x="4" y="8" width="24" height="1" fill={color} />
       <rect x="4" y="23" width="24" height="1" fill={color} />
@@ -107,30 +125,42 @@ const OperationalInfrastructureIcon: React.FC<IconProps> = ({ color = '#94a3b8',
       <rect x="20" y="12" width="7" height="1" fill={color} />
       <rect x="20" y="19" width="7" height="1" fill={color} />
 
-      {/* Fracture - animated */}
-      {pulse && <rect x="8" y="10" width="2" height="1" fill="#f1f5f9" />}
-      <rect x="10" y="11" width="2" height="1" fill={color} />
-      <rect x="12" y="12" width="1" height="1" fill={color} />
-      <rect x="19" y="19" width="1" height="1" fill={color} />
-      <rect x="20" y="20" width="2" height="1" fill={color} />
-      {pulse && <rect x="22" y="21" width="2" height="1" fill="#f1f5f9" />}
+      {/* Fracture - spreads on hover */}
+      {frame >= 1 && <rect x="8" y="10" width="2" height="1" fill="#f1f5f9" />}
+      {frame >= 2 && <rect x="10" y="11" width="2" height="1" fill="#f1f5f9" />}
+      {frame >= 3 && <rect x="12" y="12" width="2" height="1" fill="#f1f5f9" />}
+      {frame >= 4 && <rect x="14" y="14" width="1" height="1" fill="#f1f5f9" />}
+      {frame >= 5 && <rect x="17" y="17" width="2" height="1" fill="#f1f5f9" />}
+      {frame >= 6 && <rect x="19" y="19" width="2" height="1" fill="#f1f5f9" />}
+      {frame >= 7 && <rect x="21" y="20" width="2" height="1" fill="#f1f5f9" />}
+      {frame >= 8 && <rect x="23" y="22" width="2" height="1" fill="#f1f5f9" />}
     </svg>
   );
 };
 
-// 3. Information & Epistemic — Glitching eye
+// 3. Information & Epistemic — Eye with glitching corruption on hover
 const InformationEpistemicIcon: React.FC<IconProps> = ({ color = '#94a3b8', size = 32, className = '' }) => {
   const [frame, setFrame] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => setFrame(f => (f + 1) % 6), 80);
+    if (!isHovered) { setFrame(0); return; }
+    const interval = setInterval(() => setFrame(f => (f + 1) % 8), 80);
     return () => clearInterval(interval);
-  }, []);
+  }, [isHovered]);
 
-  const glitchOffset = frame % 3;
+  const glitchOffset = isHovered ? (frame % 4) : 0;
 
   return (
-    <svg viewBox="0 0 32 32" width={size} height={size} className={className} shapeRendering="crispEdges">
+    <svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      className={className}
+      shapeRendering="crispEdges"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       {/* Eye outline - almond shape */}
       <rect x="8" y="10" width="2" height="1" fill={color} />
       <rect x="10" y="9" width="2" height="1" fill={color} />
@@ -157,12 +187,11 @@ const InformationEpistemicIcon: React.FC<IconProps> = ({ color = '#94a3b8', size
       <rect x="12" y="13" width="8" height="6" fill={color} />
       <rect x="13" y="14" width="6" height="4" fill="#1e293b" />
 
-      {/* Pupil - dilating */}
+      {/* Pupil - glitches on hover */}
       <rect x={14 + glitchOffset} y="15" width="2" height="2" fill="#f1f5f9" />
-      <rect x={15 + glitchOffset} y="16" width="1" height="1" fill="#1e293b" />
 
-      {/* Glitch lines - horizontal */}
-      {frame % 2 === 0 && (
+      {/* Glitch lines - only on hover */}
+      {isHovered && frame % 2 === 0 && (
         <>
           <rect x="6" y="14" width="4" height="1" fill="#f1f5f9" opacity="0.7" />
           <rect x="22" y="14" width="4" height="1" fill="#f1f5f9" opacity="0.7" />
@@ -172,24 +201,53 @@ const InformationEpistemicIcon: React.FC<IconProps> = ({ color = '#94a3b8', size
       )}
 
       {/* Glitch bar - vertical */}
-      {frame % 3 === 0 && (
+      {isHovered && frame % 3 === 0 && (
         <rect x="18" y="12" width="1" height="8" fill="#f1f5f9" opacity="0.4" />
       )}
     </svg>
   );
 };
 
-// 4. Security & Conflict — Shield with rotating reticle
+// 4. Security & Conflict — Shield with bullet ricochet on hover
 const SecurityConflictIcon: React.FC<IconProps> = ({ color = '#94a3b8', size = 32, className = '' }) => {
   const [frame, setFrame] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => setFrame(f => (f + 1) % 8), 120);
+    if (!isHovered) { setFrame(0); return; }
+    const interval = setInterval(() => {
+      setFrame(f => {
+        if (f >= 12) return 0; // Reset after animation completes
+        return f + 1;
+      });
+    }, 60);
     return () => clearInterval(interval);
-  }, []);
+  }, [isHovered]);
+
+  // Bullet position - travels from top-right, hits shield, ricochets
+  let bulletX = 28 - frame * 2;
+  let bulletY = 4 + frame;
+
+  // After impact (frame 6), ricochet
+  if (frame > 6) {
+    const ricochetFrame = frame - 6;
+    bulletX = 18 + ricochetFrame * 2;
+    bulletY = 14 - ricochetFrame;
+  }
+
+  // Spark at impact
+  const showSpark = frame === 6 || frame === 7;
 
   return (
-    <svg viewBox="0 0 32 32" width={size} height={size} className={className} shapeRendering="crispEdges">
+    <svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      className={className}
+      shapeRendering="crispEdges"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       {/* Shield outline */}
       <rect x="16" y="2" width="1" height="1" fill={color} />
       <rect x="14" y="3" width="5" height="1" fill={color} />
@@ -212,75 +270,128 @@ const SecurityConflictIcon: React.FC<IconProps> = ({ color = '#94a3b8', size = 3
       <rect x="14" y="14" width="5" height="5" fill={color} opacity="0.5" />
       <rect x="15" y="15" width="3" height="3" fill="#1e293b" />
 
-      {/* Rotating reticle */}
-      <g style={{ transformOrigin: '16px 16px', transform: `rotate(${frame * 45}deg)` }}>
-        <rect x="15" y="8" width="1" height="3" fill="#f1f5f9" />
-        <rect x="15" y="21" width="1" height="3" fill="#f1f5f9" />
-        <rect x="8" y="15" width="3" height="1" fill="#f1f5f9" />
-        <rect x="21" y="15" width="3" height="1" fill="#f1f5f9" />
-      </g>
+      {/* Static reticle */}
+      <rect x="15" y="8" width="1" height="3" fill="#f1f5f9" />
+      <rect x="15" y="21" width="1" height="3" fill="#f1f5f9" />
+      <rect x="8" y="15" width="3" height="1" fill="#f1f5f9" />
+      <rect x="21" y="15" width="3" height="1" fill="#f1f5f9" />
 
       {/* Center dot */}
       <rect x="15" y="15" width="2" height="2" fill="#f1f5f9" />
+
+      {/* Bullet - only animate on hover */}
+      {isHovered && frame < 12 && (
+        <>
+          <rect x={Math.floor(bulletX)} y={Math.floor(bulletY)} width="2" height="1" fill="#f1f5f9" />
+          {/* Bullet trail */}
+          {frame < 6 && (
+            <>
+              <rect x={Math.floor(bulletX + 2)} y={Math.floor(bulletY - 0.5)} width="2" height="1" fill="#f1f5f9" opacity="0.6" />
+              <rect x={Math.floor(bulletX + 4)} y={Math.floor(bulletY - 1)} width="2" height="1" fill="#f1f5f9" opacity="0.3" />
+            </>
+          )}
+        </>
+      )}
+
+      {/* Impact spark */}
+      {showSpark && (
+        <>
+          <rect x="17" y="13" width="1" height="1" fill="#f1f5f9" />
+          <rect x="18" y="12" width="1" height="1" fill="#f1f5f9" />
+          <rect x="16" y="12" width="1" height="1" fill="#f1f5f9" />
+        </>
+      )}
     </svg>
   );
 };
 
-// 5. Governance & Institutional — Cracked gavel
+// 5. Governance & Institutional — Gavel striking down on hover
 const GovernanceInstitutionalIcon: React.FC<IconProps> = ({ color = '#94a3b8', size = 32, className = '' }) => {
   const [frame, setFrame] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => setFrame(f => (f + 1) % 4), 100);
+    if (!isHovered) { setFrame(0); return; }
+    const interval = setInterval(() => {
+      setFrame(f => {
+        if (f >= 8) return 0; // Reset after animation
+        return f + 1;
+      });
+    }, 80);
     return () => clearInterval(interval);
-  }, []);
+  }, [isHovered]);
 
-  const shake = frame % 2;
+  // Gavel starts raised (frame 0-2), strikes down (3-5), impact (6-8)
+  const gavelY = frame < 3 ? -4 + frame * 2 : frame < 5 ? 2 + (frame - 3) * 3 : 8;
+  const gavelAngle = frame < 3 ? -30 : frame < 5 ? 0 : frame === 5 ? 5 : 0;
+  const showImpact = frame >= 5;
 
   return (
-    <svg viewBox="0 0 32 32" width={size} height={size} className={className} shapeRendering="crispEdges">
+    <svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      className={className}
+      shapeRendering="crispEdges"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       {/* Strike base */}
       <rect x="6" y="28" width="14" height="2" fill={color} />
       <rect x="8" y="26" width="10" height="2" fill={color} opacity="0.5" />
 
-      {/* Gavel handle - shaking */}
-      <g style={{ transform: `translate(${shake}px, 0)` }}>
-        <rect x="8" y="18" width="3" height="10" fill={color} transform="rotate(45 9.5 23)" />
-        <rect x="9" y="19" width="1" height="8" fill="#1e293b" transform="rotate(45 9.5 23)" />
-      </g>
+      {/* Gavel - strikes down on hover */}
+      <g style={{ transform: `translate(0, ${gavelY}px) rotate(${gavelAngle}deg)`, transformOrigin: '21px 10px' }}>
+        {/* Gavel handle */}
+        <rect x="18" y="14" width="3" height="8" fill={color} transform="rotate(45 19.5 18)" />
+        <rect x="19" y="15" width="1" height="6" fill="#1e293b" transform="rotate(45 19.5 18)" />
 
-      {/* Gavel head - shaking with cracks */}
-      <g style={{ transform: `translate(${shake}px, 0)` }}>
-        <rect x="16" y="6" width="10" height="8" fill={color} transform="rotate(45 21 10)" />
-        <rect x="17" y="7" width="8" height="6" fill="#1e293b" transform="rotate(45 21 10)" />
+        {/* Gavel head */}
+        <rect x="14" y="4" width="12" height="10" fill={color} transform="rotate(45 20 9)" />
+        <rect x="15" y="5" width="10" height="8" fill="#1e293b" transform="rotate(45 20 9)" />
 
         {/* Crack pattern */}
-        <rect x="18" y="8" width="2" height="1" fill="#f1f5f9" transform="rotate(45 21 10)" />
-        <rect x="20" y="9" width="1" height="2" fill="#f1f5f9" transform="rotate(45 21 10)" />
-        <rect x="19" y="11" width="2" height="1" fill="#f1f5f9" transform="rotate(45 21 10)" />
+        <rect x="16" y="6" width="2" height="1" fill="#f1f5f9" transform="rotate(45 20 9)" />
+        <rect x="18" y="7" width="1" height="2" fill="#f1f5f9" transform="rotate(45 20 9)" />
       </g>
 
-      {/* Impact particles */}
-      {frame === 0 && <rect x="12" y="25" width="1" height="1" fill="#f1f5f9" opacity="0.6" />}
-      {frame === 1 && <rect x="14" y="25" width="1" height="1" fill="#f1f5f9" opacity="0.5" />}
-      {frame === 2 && <rect x="11" y="26" width="1" height="1" fill="#f1f5f9" opacity="0.4" />}
+      {/* Impact particles - only on strike */}
+      {showImpact && (
+        <>
+          <rect x="14" y="25" width="1" height="1" fill="#f1f5f9" opacity="0.8" />
+          <rect x="16" y="25" width="1" height="1" fill="#f1f5f9" opacity="0.6" />
+          <rect x="12" y="26" width="1" height="1" fill="#f1f5f9" opacity="0.5" />
+          <rect x="18" y="26" width="1" height="1" fill="#f1f5f9" opacity="0.4" />
+        </>
+      )}
     </svg>
   );
 };
 
-// 6. Economic & Systemic — Tipping scales
+// 6. Economic & Systemic — Scales tipping dramatically on hover
 const EconomicSystemicIcon: React.FC<IconProps> = ({ color = '#94a3b8', size = 32, className = '' }) => {
   const [frame, setFrame] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => setFrame(f => (f + 1) % 8), 150);
+    if (!isHovered) { setFrame(0); return; }
+    const interval = setInterval(() => setFrame(f => (f + 1) % 20), 80);
     return () => clearInterval(interval);
-  }, []);
+  }, [isHovered]);
 
-  const tip = Math.sin(frame * 0.785) * 3;
+  // Dramatic tipping: -15 to +15 degrees
+  const tip = isHovered ? Math.sin(frame * 0.314) * 15 : -5;
 
   return (
-    <svg viewBox="0 0 32 32" width={size} height={size} className={className} shapeRendering="crispEdges">
+    <svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      className={className}
+      shapeRendering="crispEdges"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       {/* Base */}
       <rect x="12" y="29" width="8" height="2" fill={color} />
       <rect x="14" y="27" width="4" height="2" fill={color} />
@@ -292,127 +403,189 @@ const EconomicSystemicIcon: React.FC<IconProps> = ({ color = '#94a3b8', size = 3
       <rect x="14" y="6" width="4" height="4" fill="#f1f5f9" />
       <rect x="15" y="7" width="2" height="2" fill="#1e293b" />
 
-      {/* Beam - tipping */}
+      {/* Beam - dramatic tipping */}
       <g style={{ transformOrigin: '16px 8px', transform: `rotate(${tip}deg)` }}>
         <rect x="4" y="7" width="24" height="2" fill={color} />
 
-        {/* Left pan - heavy, low */}
-        <rect x="5" y="9" width="1" height="6" fill={color} />
-        <rect x="3" y="15" width="6" height="1" fill={color} />
-        <rect x="4" y="14" width="4" height="1" fill={color} opacity="0.5" />
-        {/* Weight */}
-        <rect x="4" y="16" width="4" height="3" fill={color} opacity="0.7" />
-        <rect x="5" y="17" width="2" height="2" fill="#f1f5f9" />
+        {/* Left pan - heavy, with weight */}
+        <rect x="5" y="9" width="1" height="8" fill={color} />
+        <rect x="3" y="17" width="6" height="1" fill={color} />
+        <rect x="4" y="16" width="4" height="1" fill={color} opacity="0.5" />
+        {/* Heavy weight */}
+        <rect x="4" y="18" width="4" height="4" fill={color} opacity="0.8" />
+        <rect x="5" y="19" width="2" height="3" fill="#f1f5f9" />
 
-        {/* Right pan - light, high */}
-        <rect x="26" y="9" width="1" height="3" fill={color} />
-        <rect x="24" y="12" width="6" height="1" fill={color} />
-        <rect x="25" y="11" width="4" height="1" fill={color} opacity="0.3" />
+        {/* Right pan - light, empty */}
+        <rect x="26" y="9" width="1" height="4" fill={color} />
+        <rect x="24" y="13" width="6" height="1" fill={color} />
+        <rect x="25" y="12" width="4" height="1" fill={color} opacity="0.3" />
       </g>
     </svg>
   );
 };
 
-// 7. Human & Societal — Fragmenting silhouette
+// 7. Human & Societal — Complete human figure that disintegrates on hover
 const HumanSocietalIcon: React.FC<IconProps> = ({ color = '#94a3b8', size = 32, className = '' }) => {
   const [frame, setFrame] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => setFrame(f => (f + 1) % 6), 120);
+    if (!isHovered) { setFrame(0); return; }
+    const interval = setInterval(() => {
+      setFrame(f => Math.min(f + 1, 10)); // 10 frames to fully disintegrate
+    }, 150);
     return () => clearInterval(interval);
-  }, []);
+  }, [isHovered]);
+
+  // Opacity decreases as frame increases
+  const bodyOpacity = isHovered ? Math.max(0, 1 - frame * 0.1) : 1;
+  const fragmentOpacity = isHovered ? frame * 0.1 : 0;
 
   return (
-    <svg viewBox="0 0 32 32" width={size} height={size} className={className} shapeRendering="crispEdges">
-      {/* Head */}
-      <rect x="13" y="4" width="6" height="6" fill={color} />
-      <rect x="14" y="5" width="4" height="4" fill="#1e293b" />
+    <svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      className={className}
+      shapeRendering="crispEdges"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {/* Complete human figure - fades out */}
+      <g opacity={bodyOpacity}>
+        {/* Head */}
+        <rect x="13" y="4" width="6" height="6" fill={color} />
+        <rect x="14" y="5" width="4" height="4" fill="#1e293b" />
 
-      {/* Body */}
-      <rect x="13" y="10" width="6" height="8" fill={color} />
-      <rect x="14" y="11" width="4" height="6" fill="#1e293b" />
+        {/* Body/torso */}
+        <rect x="12" y="10" width="8" height="10" fill={color} />
+        <rect x="13" y="11" width="6" height="8" fill="#1e293b" />
 
-      {/* Left arm - intact */}
-      <rect x="8" y="12" width="5" height="2" fill={color} />
-      <rect x="6" y="14" width="2" height="5" fill={color} />
+        {/* Left arm */}
+        <rect x="6" y="12" width="6" height="2" fill={color} />
+        <rect x="4" y="14" width="2" height="6" fill={color} />
 
-      {/* Right arm - fragmenting */}
-      <rect x="19" y="12" width="4" height="2" fill={color} />
-      {frame < 3 ? (
-        <rect x={23 + (frame % 2)} y={13 + Math.floor(frame / 2)} width="2" height="1" fill={color} opacity="0.6" />
-      ) : (
-        <rect x="24" y="14" width="1" height="1" fill={color} opacity="0.3" />
+        {/* Right arm */}
+        <rect x="20" y="12" width="6" height="2" fill={color} />
+        <rect x="24" y="14" width="2" height="6" fill={color} />
+
+        {/* Left leg */}
+        <rect x="11" y="20" width="4" height="8" fill={color} />
+        <rect x="10" y="28" width="6" height="2" fill={color} />
+
+        {/* Right leg */}
+        <rect x="17" y="20" width="4" height="8" fill={color} />
+        <rect x="16" y="28" width="6" height="2" fill={color} />
+      </g>
+
+      {/* Disintegration fragments - appear as body fades */}
+      {isHovered && frame > 0 && (
+        <g opacity={fragmentOpacity}>
+          {/* Head fragments */}
+          {frame >= 2 && <rect x="20" y="6" width="1" height="1" fill={color} />}
+          {frame >= 3 && <rect x="22" y="5" width="1" height="1" fill={color} />}
+
+          {/* Arm fragments */}
+          {frame >= 4 && <rect x="26" y="14" width="1" height="1" fill={color} />}
+          {frame >= 5 && <rect x="28" y="16" width="1" height="1" fill={color} />}
+
+          {/* Body fragments */}
+          {frame >= 5 && <rect x="22" y="15" width="1" height="1" fill={color} />}
+          {frame >= 6 && <rect x="24" y="18" width="1" height="1" fill={color} />}
+
+          {/* Leg fragments */}
+          {frame >= 7 && <rect x="22" y="24" width="1" height="1" fill={color} />}
+          {frame >= 8 && <rect x="24" y="27" width="1" height="1" fill={color} />}
+          {frame >= 9 && <rect x="26" y="29" width="1" height="1" fill={color} />}
+
+          {/* Floating dust */}
+          {frame >= 6 && <rect x="28" y="8" width="1" height="1" fill={color} opacity="0.4" />}
+          {frame >= 8 && <rect x="30" y="12" width="1" height="1" fill={color} opacity="0.3" />}
+          {frame >= 10 && <rect x="29" y="20" width="1" height="1" fill={color} opacity="0.2" />}
+        </g>
       )}
-
-      {/* Left leg - intact */}
-      <rect x="12" y="18" width="3" height="9" fill={color} />
-      <rect x="11" y="27" width="5" height="2" fill={color} />
-
-      {/* Right leg - fragmenting */}
-      <rect x="17" y="18" width="3" height="6" fill={color} />
-      {frame >= 2 && (
-        <rect x={17 + (frame - 2)} y={24 + (frame - 2)} width="2" height="2" fill={color} opacity="0.5" />
-      )}
-
-      {/* Floating fragments */}
-      {frame === 0 && <rect x="25" y="10" width="1" height="1" fill={color} opacity="0.4" />}
-      {frame === 1 && <rect x="26" y="12" width="1" height="1" fill={color} opacity="0.3" />}
-      {frame === 2 && <rect x="21" y="27" width="1" height="1" fill={color} opacity="0.4" />}
-      {frame === 3 && <rect x="23" y="28" width="1" height="1" fill={color} opacity="0.3" />}
     </svg>
   );
 };
 
-// 8. Long-term / Existential — Draining hourglass
+// 8. Long-term / Existential — Clear hourglass with draining sand
 const LongtermExistentialIcon: React.FC<IconProps> = ({ color = '#94a3b8', size = 32, className = '' }) => {
   const [frame, setFrame] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => setFrame(f => (f + 1) % 12), 200);
+    if (!isHovered) { setFrame(0); return; }
+    const interval = setInterval(() => {
+      setFrame(f => Math.min(f + 1, 12)); // 12 frames to empty
+    }, 200);
     return () => clearInterval(interval);
-  }, []);
+  }, [isHovered]);
 
-  const sandLevel = 10 - Math.floor(frame * 0.8);
-  const pileHeight = Math.floor(frame * 0.5);
+  const sandRemaining = isHovered ? 8 - Math.floor(frame * 0.6) : 8;
+  const pileHeight = isHovered ? Math.floor(frame * 0.4) : 0;
 
   return (
-    <svg viewBox="0 0 32 32" width={size} height={size} className={className} shapeRendering="crispEdges">
-      {/* Top cap */}
-      <rect x="10" y="2" width="12" height="2" fill={color} />
+    <svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      className={className}
+      shapeRendering="crispEdges"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {/* Top frame/cap */}
+      <rect x="8" y="2" width="16" height="2" fill={color} />
+      <rect x="6" y="4" width="20" height="1" fill={color} />
 
-      {/* Bottom cap */}
-      <rect x="10" y="28" width="12" height="2" fill={color} />
+      {/* Bottom frame/cap */}
+      <rect x="8" y="28" width="16" height="2" fill={color} />
+      <rect x="6" y="27" width="20" height="1" fill={color} />
 
-      {/* Glass outline - top chamber */}
-      <rect x="10" y="4" width="2" height="10" fill={color} />
-      <rect x="20" y="4" width="2" height="10" fill={color} />
-      <rect x="12" y="13" width="8" height="1" fill={color} />
+      {/* Side supports */}
+      <rect x="6" y="5" width="2" height="22" fill={color} />
+      <rect x="24" y="5" width="2" height="22" fill={color} />
 
-      {/* Glass outline - bottom chamber */}
-      <rect x="10" y="18" width="2" height="10" fill={color} />
-      <rect x="20" y="18" width="2" height="10" fill={color} />
-      <rect x="12" y="17" width="8" height="1" fill={color} />
+      {/* Glass bulbs - top */}
+      <rect x="10" y="6" width="1" height="10" fill={color} opacity="0.5" />
+      <rect x="21" y="6" width="1" height="10" fill={color} opacity="0.5" />
+      <rect x="11" y="15" width="10" height="1" fill={color} />
 
-      {/* Sand in top - depleting */}
-      {sandLevel > 0 && (
-        <rect x="12" y={13 - sandLevel} width="8" height={sandLevel} fill="#f1f5f9" opacity="0.5" />
+      {/* Glass bulbs - bottom */}
+      <rect x="10" y="17" width="1" height="9" fill={color} opacity="0.5" />
+      <rect x="21" y="17" width="1" height="9" fill={color} opacity="0.5" />
+      <rect x="11" y="25" width="10" height="1" fill={color} />
+
+      {/* Neck connection */}
+      <rect x="14" y="16" width="4" height="2" fill={color} />
+
+      {/* Sand in top bulb - depletes on hover */}
+      {sandRemaining > 0 && (
+        <rect x="12" y={15 - sandRemaining} width="8" height={sandRemaining} fill="#f1f5f9" opacity="0.6" />
       )}
 
-      {/* Neck */}
-      <rect x="15" y="14" width="2" height="3" fill={color} />
+      {/* Sand stream - flows on hover */}
+      {isHovered && frame < 12 && (
+        <>
+          <rect x="15" y="18" width="1" height="7" fill="#f1f5f9" />
+          {frame % 2 === 0 && <rect x="16" y="19" width="1" height="5" fill="#f1f5f9" opacity="0.7" />}
+        </>
+      )}
 
-      {/* Sand stream - flowing */}
-      {frame % 2 === 0 && <rect x="15" y="17" width="1" height="4" fill="#f1f5f9" />}
-      {frame % 2 === 1 && <rect x="16" y="17" width="1" height="4" fill="#f1f5f9" />}
-
-      {/* Sand pile in bottom - growing */}
+      {/* Sand pile in bottom - grows on hover */}
       {pileHeight > 0 && (
-        <rect x={14 - Math.floor(pileHeight / 2)} y={27 - pileHeight} width={4 + pileHeight} height={pileHeight} fill="#f1f5f9" opacity="0.6" />
+        <>
+          <rect x={13 - Math.floor(pileHeight / 3)} y={25 - pileHeight} width={6 + Math.floor(pileHeight / 2)} height={pileHeight} fill="#f1f5f9" opacity="0.6" />
+          {/* Pile slopes */}
+          {pileHeight >= 2 && <rect x="12" y="24" width="1" height="1" fill="#f1f5f9" opacity="0.5" />}
+          {pileHeight >= 2 && <rect x="19" y="24" width="1" height="1" fill="#f1f5f9" opacity="0.5" />}
+        </>
       )}
 
       {/* Falling grains */}
-      {frame % 3 === 0 && <rect x="14" y="22" width="1" height="1" fill="#f1f5f9" opacity="0.5" />}
-      {frame % 3 === 1 && <rect x="17" y="24" width="1" height="1" fill="#f1f5f9" opacity="0.4" />}
+      {isHovered && frame % 3 === 0 && frame < 12 && (
+        <rect x="14" y="22" width="1" height="1" fill="#f1f5f9" opacity="0.5" />
+      )}
     </svg>
   );
 };
