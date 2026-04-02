@@ -3002,6 +3002,263 @@
       "summary": "Value lock-in is not addressed.",
       "clauses": [],
       "notes": ""
+    },
+    {
+      "policy_id": "china-genai-measures",
+      "subcategory_id": "goal-misalignment",
+      "score": 1,
+      "summary": "The Measures reference 'accuracy and reliability' of AI-generated content but do not specifically address alignment risks or specification gaming.",
+      "clauses": [
+        "Article 4: Adherence to socialist core values"
+      ],
+      "notes": "Focus is on content accuracy rather than technical alignment."
+    },
+    {
+      "policy_id": "china-genai-measures",
+      "subcategory_id": "deceptive-alignment",
+      "score": 0,
+      "summary": "Deceptive alignment or scheming behavior is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "china-genai-measures",
+      "subcategory_id": "emergent-capabilities",
+      "score": 0,
+      "summary": "Emergent capabilities and unexpected model behaviors are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "china-genai-measures",
+      "subcategory_id": "loss-of-oversight",
+      "score": 1,
+      "summary": "Human oversight is implied through content moderation requirements, but no specific provisions for maintaining human control over AI systems.",
+      "clauses": [
+        "Article 14: Content moderation responsibilities"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "china-genai-measures",
+      "subcategory_id": "supply-chain",
+      "score": 0,
+      "summary": "Supply chain vulnerabilities (chips, cloud infrastructure) are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "china-genai-measures",
+      "subcategory_id": "model-theft",
+      "score": 0,
+      "summary": "Model weights protection and exfiltration risks are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "china-genai-measures",
+      "subcategory_id": "data-poisoning",
+      "score": 1,
+      "summary": "Training data quality is addressed through requirements for 'authentic, accurate, and objective' data, but poisoning attacks are not specifically mentioned.",
+      "clauses": [
+        "Article 7: Training data quality requirements"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "china-genai-measures",
+      "subcategory_id": "dependency-monoculture",
+      "score": 0,
+      "summary": "AI monoculture and systemic dependency risks are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "china-genai-measures",
+      "subcategory_id": "epistemic-collapse",
+      "score": 2,
+      "summary": "The Measures explicitly address misinformation and require providers to prevent generation of false information that could disrupt economic or social order.",
+      "clauses": [
+        "Article 4: Prohibition on false/harmful information",
+        "Article 14: Content moderation obligations"
+      ],
+      "notes": "Strong focus on information integrity from state perspective."
+    },
+    {
+      "policy_id": "china-genai-measures",
+      "subcategory_id": "synthetic-data-loops",
+      "score": 0,
+      "summary": "Synthetic data feedback loops and model collapse are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "china-genai-measures",
+      "subcategory_id": "persuasion-manipulation",
+      "score": 1,
+      "summary": "The Measures prohibit content that incites discrimination or undermines social stability, which could encompass manipulation, but no specific anti-manipulation provisions.",
+      "clauses": [
+        "Article 4: Content restrictions"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "china-genai-measures",
+      "subcategory_id": "cbrn-misuse",
+      "score": 0,
+      "summary": "CBRN weapons misuse is not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "china-genai-measures",
+      "subcategory_id": "cyber-offense",
+      "score": 0,
+      "summary": "Cyber offense capabilities and automated attacks are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "china-genai-measures",
+      "subcategory_id": "military-escalation",
+      "score": 0,
+      "summary": "Military applications and autonomous weapons are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "china-genai-measures",
+      "subcategory_id": "strategic-instability",
+      "score": 0,
+      "summary": "AI arms race dynamics and strategic instability are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "china-genai-measures",
+      "subcategory_id": "regulatory-capture",
+      "score": 0,
+      "summary": "Regulatory capture concerns are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "china-genai-measures",
+      "subcategory_id": "capability-overhang",
+      "score": 2,
+      "summary": "The Measures require security assessments before public release of generative AI services, creating a gating mechanism for powerful models.",
+      "clauses": [
+        "Article 17: Security assessment requirement",
+        "Article 18: Algorithm filing obligations"
+      ],
+      "notes": "Pre-deployment review is mandatory for all public-facing services."
+    },
+    {
+      "policy_id": "china-genai-measures",
+      "subcategory_id": "enforcement-gaps",
+      "score": 3,
+      "summary": "The Measures establish clear enforcement through the Cyberspace Administration of China (CAC) with powers to order corrections, suspend services, and impose penalties.",
+      "clauses": [
+        "Article 22: Enforcement and penalties",
+        "Article 23: Regulatory oversight by CAC"
+      ],
+      "notes": "Strong enforcement mechanism with dedicated regulator."
+    },
+    {
+      "policy_id": "china-genai-measures",
+      "subcategory_id": "jurisdictional-arbitrage",
+      "score": 2,
+      "summary": "The Measures apply to all generative AI services provided within China, regardless of where the provider is based, reducing arbitrage opportunities.",
+      "clauses": [
+        "Article 2: Territorial scope"
+      ],
+      "notes": "Extraterritorial reach for services accessible in China."
+    },
+    {
+      "policy_id": "china-genai-measures",
+      "subcategory_id": "economic-concentration",
+      "score": 0,
+      "summary": "Economic concentration and market power concerns are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "china-genai-measures",
+      "subcategory_id": "labor-polarization",
+      "score": 0,
+      "summary": "Labor market impacts are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "china-genai-measures",
+      "subcategory_id": "productivity-paradox",
+      "score": 0,
+      "summary": "Productivity and economic distribution effects are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "china-genai-measures",
+      "subcategory_id": "deskilling",
+      "score": 0,
+      "summary": "Human deskilling and cognitive atrophy are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "china-genai-measures",
+      "subcategory_id": "loss-of-agency",
+      "score": 1,
+      "summary": "The Measures require clear labeling of AI-generated content, which supports user awareness but does not address broader agency concerns.",
+      "clauses": [
+        "Article 12: Content labeling requirements"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "china-genai-measures",
+      "subcategory_id": "social-isolation",
+      "score": 0,
+      "summary": "Social isolation and AI companionship effects are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "china-genai-measures",
+      "subcategory_id": "cultural-homogenization",
+      "score": 1,
+      "summary": "The Measures require AI content to align with 'socialist core values' and respect cultural norms, but this is framed as content control rather than cultural preservation.",
+      "clauses": [
+        "Article 4: Socialist core values requirement"
+      ],
+      "notes": ""
+    },
+    {
+      "policy_id": "china-genai-measures",
+      "subcategory_id": "misaligned-superintelligence",
+      "score": 0,
+      "summary": "Long-term existential risks and superintelligence concerns are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "china-genai-measures",
+      "subcategory_id": "irreversible-loss-of-control",
+      "score": 0,
+      "summary": "Irreversible outcomes and loss of control scenarios are not addressed.",
+      "clauses": [],
+      "notes": ""
+    },
+    {
+      "policy_id": "china-genai-measures",
+      "subcategory_id": "value-lock-in",
+      "score": 1,
+      "summary": "The Measures explicitly require AI systems to adhere to socialist core values, which could be seen as value lock-in, though framed as ideological compliance.",
+      "clauses": [
+        "Article 4: Adherence to socialist core values"
+      ],
+      "notes": "State-mandated value alignment rather than philosophical concern."
     }
   ],
   "metadata": {

@@ -426,6 +426,21 @@ export const PolicyMatrix: FC = () => {
     day: 'numeric'
   })
 
+  // Calculate average score per category across all policies
+  const categoryAverages = useMemo(() => {
+    return categories.map(cat => {
+      const scores: number[] = []
+      for (const sub of cat.subcategories) {
+        for (const policy of policies) {
+          const entry = scoreLookup[policy.id]?.[sub.id]
+          if (entry) scores.push(entry.score)
+        }
+      }
+      const avg = scores.length > 0 ? scores.reduce((a, b) => a + b, 0) / scores.length : null
+      return { categoryId: cat.id, average: avg, count: scores.length }
+    })
+  }, [scoreLookup])
+
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col">
       {/* ── Page header ─────────────────────────────────────── */}
@@ -636,11 +651,12 @@ export const PolicyMatrix: FC = () => {
                 {categories.map(cat => {
                   const isExpanded = expanded.has(cat.id)
                   const colCount = isExpanded ? cat.subcategories.length : 1
+                  const shortName = cat.name.replace(' Risks', '').replace(/ & /g, ' \n& ')
                   return (
                     <th
                       key={cat.id}
                       colSpan={colCount}
-                      title={`Click to ${isExpanded ? 'collapse' : 'expand'} subcategories`}
+                      title={`${cat.name} - Click to ${isExpanded ? 'collapse' : 'expand'} subcategories`}
                       className={`border-b border-r border-slate-800 cursor-pointer select-none transition-colors ${isExpanded ? 'bg-slate-900' : 'bg-slate-950 hover:bg-slate-900'
                         }`}
                       style={{
@@ -648,27 +664,32 @@ export const PolicyMatrix: FC = () => {
                         top: 0,
                         zIndex: 20,
                         height: CATEGORY_HEADER_HEIGHT,
-                        width: isExpanded ? colCount * 52 : 68,
-                        minWidth: isExpanded ? colCount * 52 : 68,
+                        width: isExpanded ? colCount * 52 : 72,
+                        minWidth: isExpanded ? colCount * 52 : 72,
                         verticalAlign: 'middle',
+                        padding: '4px',
                       }}
                       onClick={() => toggleExpand(cat.id)}
                     >
-                      <div className="flex flex-col items-center justify-center gap-1 px-2 py-1 h-full">
+                      <div className="flex flex-col items-center justify-center gap-0.5 px-1 py-2 h-full">
                         <RiskIcon
                           categoryId={cat.id}
-                          size={20}
+                          size={22}
                           color={isExpanded ? '#94a3b8' : '#475569'}
                         />
                         <span
-                          className={`text-[10px] font-medium leading-tight text-center transition-colors ${isExpanded ? 'text-slate-300' : 'text-slate-500'
+                          className={`text-[9px] font-medium leading-tight text-center transition-colors ${isExpanded ? 'text-slate-300' : 'text-slate-500'
                             }`}
-                          style={{ maxWidth: isExpanded ? 'none' : 60 }}
+                          style={{
+                            maxWidth: isExpanded ? 'none' : 56,
+                            wordBreak: 'break-word',
+                            lineHeight: '1.1',
+                          }}
                         >
-                          {cat.name.replace(' Risks', '')}
+                          {shortName}
                         </span>
-                        <span className={`text-[9px] transition-colors ${isExpanded ? 'text-slate-400' : 'text-slate-600'}`}>
-                          {isExpanded ? '▲ collapse' : '▼ expand'}
+                        <span className={`text-[8px] transition-colors ${isExpanded ? 'text-slate-400' : 'text-slate-600'}`}>
+                          {isExpanded ? '▲' : '▼'}
                         </span>
                       </div>
                     </th>
@@ -890,6 +911,72 @@ export const PolicyMatrix: FC = () => {
                   })}
                 </Fragment>
               ))}
+
+              {/* Category Average Row */}
+              <tr className="bg-slate-900/80">
+                <td
+                  className="border-b border-r border-slate-800 px-3 py-2"
+                  style={{
+                    position: 'sticky',
+                    left: 0,
+                    zIndex: 10,
+                    width: 192,
+                    minWidth: 192,
+                  }}
+                >
+                  <span className="text-slate-300 text-xs font-semibold uppercase tracking-wider">Category Average</span>
+                </td>
+                {categories.map(cat => {
+                  const catAvg = categoryAverages.find(a => a.categoryId === cat.id)
+                  const isExpanded = expanded.has(cat.id)
+                  const avgValue = catAvg?.average ?? null
+
+                  if (isExpanded) {
+                    return cat.subcategories.map(sub => {
+                      const subScores: number[] = []
+                      for (const policy of policies) {
+                        const entry = scoreLookup[policy.id]?.[sub.id]
+                        if (entry) subScores.push(entry.score)
+                      }
+                      const subAvg = subScores.length > 0 ? subScores.reduce((a, b) => a + b, 0) / subScores.length : null
+                      return (
+                        <td
+                          key={sub.id}
+                          className="border-b border-r border-slate-800"
+                          style={{
+                            width: 52,
+                            minWidth: 52,
+                            height: 40,
+                            backgroundColor: subAvg !== null ? scoreToColor(subAvg) : '#0f172a',
+                          }}
+                        >
+                          <span className="flex items-center justify-center h-full w-full text-xs font-bold text-white/90 tabular-nums">
+                            {subAvg !== null ? subAvg.toFixed(1) : ''}
+                          </span>
+                        </td>
+                      )
+                    })
+                  } else {
+                    return (
+                      <td
+                        key={cat.id}
+                        title={`${cat.name}: ${avgValue?.toFixed(2) ?? 'no data'} average across all policies`}
+                        className="border-b border-r border-slate-800"
+                        style={{
+                          width: 72,
+                          minWidth: 72,
+                          height: 40,
+                          backgroundColor: avgValue !== null ? scoreToColor(avgValue) : '#0f172a',
+                        }}
+                      >
+                        <span className="flex items-center justify-center h-full w-full text-xs font-bold text-white/90 tabular-nums">
+                          {avgValue !== null ? avgValue.toFixed(2) : ''}
+                        </span>
+                      </td>
+                    )
+                  }
+                })}
+              </tr>
             </tbody>
           </table>
         </div>
