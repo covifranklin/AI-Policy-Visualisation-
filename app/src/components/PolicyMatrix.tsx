@@ -551,7 +551,7 @@ export const PolicyMatrix: FC = () => {
             </div>
             <div>
               <p className="text-slate-500 text-[10px] font-medium uppercase tracking-wider group-hover:text-amber-400 transition-colors">Critical Gaps</p>
-              <p className="text-slate-300 text-sm">subcategories ≤1 max score</p>
+              <p className="text-slate-300 text-sm">subcategories &lt;1.5 max score</p>
             </div>
           </button>
 
@@ -1186,7 +1186,7 @@ const CriticalGapsPanel: FC<CriticalGapsPanelProps> = ({ gaps, onClose }) => {
               </span>
             </div>
             <p className="text-slate-400 text-sm">
-              Subcategories where no policy scores above 1 (mentioned only)
+              Subcategories where no policy scores above 1.5 (below 'provisions')
             </p>
           </div>
           <button
