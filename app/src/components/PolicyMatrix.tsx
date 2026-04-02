@@ -389,22 +389,49 @@ export const PolicyMatrix: FC = () => {
     () => categories.flatMap(c => c.subcategories),
     []
   )
-  const summaryStats = useMemo(
-    () => computeSummaryStats(matrixEntries, allSubcategories, categories),
-    [allSubcategories]
-  )
 
-  const groupedPolicies = useMemo(() => {
-    const filtered = policies.filter(p => {
+  // Get filtered policies based on current filters
+  const filteredPolicies = useMemo(() => {
+    return policies.filter(p => {
       if (creatorFilter.size > 0 && !creatorFilter.has(p.creator_category)) return false
       if (bindingFilter.size > 0 && !bindingFilter.has(p.binding)) return false
       return true
     })
+  }, [creatorFilter, bindingFilter])
+
+  // Get matrix entries for filtered policies only
+  const filteredMatrixEntries = useMemo(() => {
+    const filteredPolicyIds = new Set(filteredPolicies.map(p => p.id))
+    return matrixEntries.filter(e => filteredPolicyIds.has(e.policy_id))
+  }, [filteredPolicies])
+
+  // Compute summary stats based on filtered data
+  const summaryStats = useMemo(
+    () => computeSummaryStats(filteredMatrixEntries, allSubcategories, categories),
+    [filteredMatrixEntries, allSubcategories]
+  )
+
+  // Compute category averages based on filtered data
+  const categoryAverages = useMemo(() => {
+    return categories.map(cat => {
+      const scores: number[] = []
+      for (const sub of cat.subcategories) {
+        for (const policy of filteredPolicies) {
+          const entry = scoreLookup[policy.id]?.[sub.id]
+          if (entry) scores.push(entry.score)
+        }
+      }
+      const avg = scores.length > 0 ? scores.reduce((a, b) => a + b, 0) / scores.length : null
+      return { categoryId: cat.id, average: avg, count: scores.length }
+    })
+  }, [scoreLookup, filteredPolicies])
+
+  const groupedPolicies = useMemo(() => {
     return CREATOR_GROUPS.map(g => ({
       ...g,
-      policies: filtered.filter(p => p.creator_category === g.id),
+      policies: filteredPolicies.filter(p => p.creator_category === g.id),
     })).filter(g => g.policies.length > 0)
-  }, [creatorFilter, bindingFilter])
+  }, [filteredPolicies])
 
   function getCategoryAvg(policyId: string, cat: Category): number | null {
     const scores = cat.subcategories.flatMap(sub => {
@@ -451,21 +478,6 @@ export const PolicyMatrix: FC = () => {
     month: 'short',
     day: 'numeric'
   })
-
-  // Calculate average score per category across all policies
-  const categoryAverages = useMemo(() => {
-    return categories.map(cat => {
-      const scores: number[] = []
-      for (const sub of cat.subcategories) {
-        for (const policy of policies) {
-          const entry = scoreLookup[policy.id]?.[sub.id]
-          if (entry) scores.push(entry.score)
-        }
-      }
-      const avg = scores.length > 0 ? scores.reduce((a, b) => a + b, 0) / scores.length : null
-      return { categoryId: cat.id, average: avg, count: scores.length }
-    })
-  }, [scoreLookup])
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col">
@@ -986,7 +998,7 @@ export const PolicyMatrix: FC = () => {
                   if (isExpanded) {
                     return cat.subcategories.map(sub => {
                       const subScores: number[] = []
-                      for (const policy of policies) {
+                      for (const policy of filteredPolicies) {
                         const entry = scoreLookup[policy.id]?.[sub.id]
                         if (entry) subScores.push(entry.score)
                       }
@@ -1133,6 +1145,7 @@ export const PolicyMatrix: FC = () => {
           categoryId={panelView.categoryId}
           categoryAverages={categoryAverages}
           scoreLookup={scoreLookup}
+          filteredPolicies={filteredPolicies}
           onClose={() => setPanelView(null)}
         />
       )}
@@ -1212,10 +1225,11 @@ interface CategoryDetailPanelProps {
   categoryId: string
   categoryAverages: { categoryId: string; average: number | null; count: number }[]
   scoreLookup: Record<string, Record<string, MatrixEntry>>
+  filteredPolicies: Policy[]
   onClose: () => void
 }
 
-const CategoryDetailPanel: FC<CategoryDetailPanelProps> = ({ categoryId, categoryAverages, scoreLookup, onClose }) => {
+const CategoryDetailPanel: FC<CategoryDetailPanelProps> = ({ categoryId, categoryAverages, scoreLookup, filteredPolicies, onClose }) => {
   const category = categories.find(c => c.id === categoryId)!
   const catAvg = categoryAverages.find(a => a.categoryId === categoryId)
 
@@ -1280,7 +1294,7 @@ const CategoryDetailPanel: FC<CategoryDetailPanelProps> = ({ categoryId, categor
             </p>
             {category.subcategories.map(sub => {
               const subScores: number[] = []
-              for (const policy of policies) {
+              for (const policy of filteredPolicies) {
                 const entry = scoreLookup[policy.id]?.[sub.id]
                 if (entry) subScores.push(entry.score)
               }
