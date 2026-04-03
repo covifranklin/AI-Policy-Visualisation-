@@ -305,7 +305,7 @@ const SecurityConflictIcon: React.FC<IconProps> = ({ color = '#94a3b8', size = 3
   );
 };
 
-// 5. Governance & Institutional — Gavel striking down on hover
+// 5. Governance & Institutional — Hammer/gavel striking down on hover
 const GovernanceInstitutionalIcon: React.FC<IconProps> = ({ color = '#94a3b8', size = 32, className = '' }) => {
   const [frame, setFrame] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
@@ -321,9 +321,8 @@ const GovernanceInstitutionalIcon: React.FC<IconProps> = ({ color = '#94a3b8', s
     return () => clearInterval(interval);
   }, [isHovered]);
 
-  // Gavel starts raised (frame 0-2), strikes down (3-5), impact (6-8)
-  const gavelY = frame < 3 ? -4 + frame * 2 : frame < 5 ? 2 + (frame - 3) * 3 : 8;
-  const gavelAngle = frame < 3 ? -30 : frame < 5 ? 0 : frame === 5 ? 5 : 0;
+  // Hammer starts raised (frame 0-2), strikes down (3-5), impact (6-8)
+  const hammerY = frame < 3 ? -6 + frame * 2 : frame < 5 ? 0 + (frame - 3) * 4 : 8;
   const showImpact = frame >= 5;
 
   return (
@@ -336,32 +335,46 @@ const GovernanceInstitutionalIcon: React.FC<IconProps> = ({ color = '#94a3b8', s
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Strike base */}
-      <rect x="6" y="28" width="14" height="2" fill={color} />
-      <rect x="8" y="26" width="10" height="2" fill={color} opacity="0.5" />
+      {/* Strike base/anvil */}
+      <rect x="4" y="28" width="18" height="2" fill={color} />
+      <rect x="6" y="26" width="14" height="2" fill={color} />
+      <rect x="8" y="24" width="10" height="2" fill={color} opacity="0.5" />
 
-      {/* Gavel - strikes down on hover */}
-      <g style={{ transform: `translate(0, ${gavelY}px) rotate(${gavelAngle}deg)`, transformOrigin: '21px 10px' }}>
-        {/* Gavel handle */}
-        <rect x="18" y="14" width="3" height="8" fill={color} transform="rotate(45 19.5 18)" />
-        <rect x="19" y="15" width="1" height="6" fill="#1e293b" transform="rotate(45 19.5 18)" />
+      {/* Hammer - strikes down on hover */}
+      <g style={{ transform: `translate(0, ${hammerY}px)` }}>
+        {/* Handle - vertical, distinct */}
+        <rect x="14" y="14" width="4" height="12" fill={color} />
+        <rect x="15" y="15" width="2" height="10" fill="#1e293b" />
 
-        {/* Gavel head */}
-        <rect x="14" y="4" width="12" height="10" fill={color} transform="rotate(45 20 9)" />
-        <rect x="15" y="5" width="10" height="8" fill="#1e293b" transform="rotate(45 20 9)" />
+        {/* Handle grip detail */}
+        <rect x="14" y="20" width="4" height="1" fill="#f1f5f9" opacity="0.3" />
+        <rect x="14" y="22" width="4" height="1" fill="#f1f5f9" opacity="0.3" />
 
-        {/* Crack pattern */}
-        <rect x="16" y="6" width="2" height="1" fill="#f1f5f9" transform="rotate(45 20 9)" />
-        <rect x="18" y="7" width="1" height="2" fill="#f1f5f9" transform="rotate(45 20 9)" />
+        {/* Hammer head - distinctive T-shape */}
+        <rect x="8" y="6" width="16" height="8" fill={color} />
+        <rect x="9" y="7" width="14" height="6" fill="#1e293b" />
+
+        {/* Hammer face (left side) */}
+        <rect x="8" y="8" width="2" height="4" fill="#f1f5f9" opacity="0.4" />
+
+        {/* Hammer poll (right side) */}
+        <rect x="22" y="8" width="2" height="4" fill="#f1f5f9" opacity="0.4" />
+
+        {/* Crack on hammer head */}
+        <rect x="13" y="8" width="1" height="1" fill="#f1f5f9" />
+        <rect x="14" y="9" width="1" height="1" fill="#f1f5f9" />
+        <rect x="15" y="10" width="1" height="1" fill="#f1f5f9" />
       </g>
 
       {/* Impact particles - only on strike */}
       {showImpact && (
         <>
-          <rect x="14" y="25" width="1" height="1" fill="#f1f5f9" opacity="0.8" />
-          <rect x="16" y="25" width="1" height="1" fill="#f1f5f9" opacity="0.6" />
-          <rect x="12" y="26" width="1" height="1" fill="#f1f5f9" opacity="0.5" />
-          <rect x="18" y="26" width="1" height="1" fill="#f1f5f9" opacity="0.4" />
+          <rect x="10" y="23" width="1" height="1" fill="#f1f5f9" opacity="0.8" />
+          <rect x="12" y="22" width="1" height="1" fill="#f1f5f9" opacity="0.7" />
+          <rect x="18" y="23" width="1" height="1" fill="#f1f5f9" opacity="0.6" />
+          <rect x="20" y="22" width="1" height="1" fill="#f1f5f9" opacity="0.5" />
+          <rect x="14" y="21" width="1" height="1" fill="#f1f5f9" opacity="0.4" />
+          <rect x="16" y="21" width="1" height="1" fill="#f1f5f9" opacity="0.4" />
         </>
       )}
     </svg>

@@ -882,6 +882,8 @@ export const PolicyMatrix: FC = () => {
                           key={sub.id}
                           className="border-b-2 border-r border-slate-700"
                           style={{
+                            position: 'relative',
+                            zIndex: 1,
                             width: 52,
                             minWidth: 52,
                             height: 44,
@@ -901,6 +903,8 @@ export const PolicyMatrix: FC = () => {
                         title={`${cat.name}: ${avgValue?.toFixed(2) ?? 'no data'} average across filtered policies`}
                         className="border-b-2 border-r border-slate-700"
                         style={{
+                          position: 'relative',
+                          zIndex: 1,
                           width: 72,
                           minWidth: 72,
                           height: 44,
