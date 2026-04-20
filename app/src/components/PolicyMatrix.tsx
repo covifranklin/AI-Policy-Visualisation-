@@ -891,6 +891,7 @@ export const PolicyMatrix: FC = () => {
                   }}
                 >
                   <span className="text-slate-200 text-xs font-bold uppercase tracking-wider">Category Average</span>
+                  <span className="block text-slate-500 text-[10px] mt-0.5 normal-case tracking-normal font-normal">avg of top 5 per risk factor</span>
                 </td>
                 {categories.map(cat => {
                   const catAvg = categoryAverages.find(a => a.categoryId === cat.id)
