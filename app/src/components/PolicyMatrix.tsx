@@ -433,18 +433,30 @@ export const PolicyMatrix: FC = () => {
     [filteredMatrixEntries, allSubcategories]
   )
 
-  // Compute category averages based on filtered data
+  // Compute category averages based on filtered data.
+  // For each subcategory, takes the top-5 policy scores and averages those,
+  // then averages across subcategories within the category.
   const categoryAverages = useMemo(() => {
+    const TOP_N = 5
     return categories.map(cat => {
-      const scores: number[] = []
+      const perSubcatAvgs: number[] = []
       for (const sub of cat.subcategories) {
-        for (const policy of filteredPolicies) {
-          const entry = scoreLookup[policy.id]?.[sub.id]
-          if (entry) scores.push(entry.score)
+        const scores = filteredPolicies
+          .flatMap(p => {
+            const entry = scoreLookup[p.id]?.[sub.id]
+            return entry ? [entry.score] : []
+          })
+          .sort((a, b) => b - a)
+          .slice(0, TOP_N)
+        if (scores.length > 0) {
+          perSubcatAvgs.push(scores.reduce((a, b) => a + b, 0) / scores.length)
         }
       }
-      const avg = scores.length > 0 ? scores.reduce((a, b) => a + b, 0) / scores.length : null
-      return { categoryId: cat.id, average: avg, count: scores.length }
+      const avg =
+        perSubcatAvgs.length > 0
+          ? perSubcatAvgs.reduce((a, b) => a + b, 0) / perSubcatAvgs.length
+          : null
+      return { categoryId: cat.id, average: avg, count: perSubcatAvgs.length }
     })
   }, [scoreLookup, filteredPolicies])
 
@@ -558,7 +570,7 @@ export const PolicyMatrix: FC = () => {
             </div>
             <div>
               <p className="text-slate-500 text-[10px] font-medium uppercase tracking-wider">Avg Coverage</p>
-              <p className="text-slate-300 text-sm">score across all cells</p>
+              <p className="text-slate-300 text-sm">top 5 policies per risk factor</p>
             </div>
           </div>
 
