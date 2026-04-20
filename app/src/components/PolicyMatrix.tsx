@@ -131,8 +131,24 @@ function computeSummaryStats(
   categories: Category[]
 ): SummaryStats {
   const analyzedPolicyIds = new Set(entries.map(e => e.policy_id))
-  const totalScore = entries.reduce((sum, e) => sum + e.score, 0)
-  const avgCoverageScore = entries.length > 0 ? totalScore / entries.length : 0
+
+  // Average of top-5 scores per subcategory, then mean across subcategories.
+  // Uses top-5 rather than all policies so scores aren't diluted by policies
+  // never designed to address a given risk.
+  const TOP_N = 5
+  const subcatIds = [...new Set(allSubcategories.map(s => s.id))]
+  const perSubcatAvgs = subcatIds.map(id => {
+    const scores = entries
+      .filter(e => e.subcategory_id === id)
+      .map(e => e.score)
+      .sort((a, b) => b - a)
+      .slice(0, TOP_N)
+    return scores.length > 0 ? scores.reduce((a, b) => a + b, 0) / scores.length : 0
+  })
+  const avgCoverageScore =
+    perSubcatAvgs.length > 0
+      ? perSubcatAvgs.reduce((a, b) => a + b, 0) / perSubcatAvgs.length
+      : 0
 
   const criticalGaps: CriticalGap[] = []
   for (const sub of allSubcategories) {
