@@ -900,11 +900,13 @@ export const PolicyMatrix: FC = () => {
 
                   if (isExpanded) {
                     return cat.subcategories.map(sub => {
-                      const subScores: number[] = []
-                      for (const policy of filteredPolicies) {
-                        const entry = scoreLookup[policy.id]?.[sub.id]
-                        if (entry) subScores.push(entry.score)
-                      }
+                      const subScores = filteredPolicies
+                        .flatMap(p => {
+                          const entry = scoreLookup[p.id]?.[sub.id]
+                          return entry ? [entry.score] : []
+                        })
+                        .sort((a, b) => b - a)
+                        .slice(0, 5)
                       const subAvg = subScores.length > 0 ? subScores.reduce((a, b) => a + b, 0) / subScores.length : null
                       return (
                         <td
